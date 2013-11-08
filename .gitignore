@@ -15,7 +15,7 @@ wp-content/uploads
 wp-content/w3tc
 wp-content/avatars
 wp-content/cache
-wp-content/themes/*/local-config.php
+local-config.php
 .buildpath
 .project
 .settings
