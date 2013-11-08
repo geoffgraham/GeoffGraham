@@ -1,0 +1,70 @@
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.prettyprint .pln { color: #000 }  /* plain text */
+
+@media screen {
+  .prettyprint .str { color: #080 }  /* string content */
+  .prettyprint .kwd { color: #008 }  /* a keyword */
+  .prettyprint .com { color: #800 }  /* a comment */
+  .prettyprint .typ { color: #606 }  /* a type name */
+  .prettyprint .lit { color: #066 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .prettyprint .pun, 
+  .prettyprint .opn, 
+  .prettyprint .clo { color: #660 }
+  .prettyprint .tag { color: #008 }  /* a markup tag name */
+  .prettyprint .atn { color: #606 }  /* a markup attribute name */
+  .prettyprint .atv { color: #080 }  /* a markup attribute value */
+  .prettyprint .dec, 
+  .prettyprint .var { color: #606 }  /* a declaration; a variable name */
+  .prettyprint .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .prettyprint .str { color: #060 }
+  .prettyprint .kwd { color: #006; font-weight: bold }
+  .prettyprint .com { color: #600; font-style: italic }
+  .prettyprint .typ { color: #404; font-weight: bold }
+  .prettyprint .lit { color: #044 }
+  .prettyprint .pun, .opn, .clo { color: #440 }
+  .prettyprint .tag { color: #006; font-weight: bold }
+  .prettyprint .atn { color: #404 }
+  .prettyprint .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint, 
+code.prettyprint, 
+.post-content pre.prettyprint,
+.post-content code.prettyprint,
+.comment-content pre.prettyprint,
+.comment-content code.prettyprint { padding: .7em; border: 1px solid #888; overflow: auto; word-wrap: normal; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 2;}
+
+code.prettyprint { display: block; }
+
+.comment-content pre.prettyprint code,
+.post-content pre.prettyprint code,
+pre.prettyprint code { padding: 0; margin: 0; border: none; display: block; white-space: pre;}
+
+/* Remove other possible styles */
+
+.prettyprint li, .prettyprint ol { margin: 0; padding: 0; }
+
+/* Specify class=linenums on a pre to get line numbering */
+.prettyprint ol.linenums { margin-top: 0; margin-bottom: 0; padding-left: 3em; list-style-type: decimal; } /* IE indents via margin-left */
+.prettyprint li.L0,
+.prettyprint li.L1,
+.prettyprint li.L2,
+.prettyprint li.L3,
+.prettyprint li.L5,
+.prettyprint li.L6,
+.prettyprint li.L7,
+.prettyprint li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+.prettyprint li.L1,
+.prettyprint li.L3,
+.prettyprint li.L5,
+.prettyprint li.L7,
+.prettyprint li.L9 { background: #eee }

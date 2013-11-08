@@ -1,0 +1,33 @@
+# BEGIN W3TC Minify cache
+Options -MultiViews
+<IfModule mod_mime.c>
+    AddEncoding gzip .gzip
+    <Files *.css.gzip>
+        ForceType text/css
+    </Files>
+    <Files *.js.gzip>
+        ForceType application/x-javascript
+    </Files>
+</IfModule>
+<IfModule mod_deflate.c>
+    <IfModule mod_setenvif.c>
+        SetEnvIfNoCase Request_URI \.gzip$ no-gzip
+    </IfModule>
+</IfModule>
+<IfModule mod_headers.c>
+    Header set Vary "Accept-Encoding"
+</IfModule>
+# END W3TC Minify cache
+# BEGIN W3TC Minify core
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /wp-content/cache/minify/
+    RewriteRule /w3tc_rewrite_test$ ../../plugins/w3-total-cache/pub/minify.php?w3tc_rewrite_test=1 [L]
+    RewriteCond %{HTTP:Accept-Encoding} gzip
+    RewriteRule .* - [E=APPEND_EXT:.gzip]
+    RewriteCond %{REQUEST_FILENAME}%{ENV:APPEND_EXT} -f
+    RewriteRule (.*) $1%{ENV:APPEND_EXT} [L]
+    RewriteRule ^(.+/[X]+\.css)$ ../../plugins/w3-total-cache/pub/minify.php?test_file=$1 [L]
+    RewriteRule ^(.+\.(css|js))$ ../../plugins/w3-total-cache/pub/minify.php?file=$1 [L]
+</IfModule>
+# END W3TC Minify core

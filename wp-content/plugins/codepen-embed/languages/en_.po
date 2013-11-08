@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CodePen Embed WordPress Plugin\n"
+"POT-Creation-Date: 2013-01-23 09:27-0500\n"
+"PO-Revision-Date: 2013-01-23 09:31-0500\n"
+"Last-Translator: \n"
+"Language-Team: JAWitt Designs <contact@jawittdesigns.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../tinymce/codepen-popup-form.php:47
+msgid "Username"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:49
+msgid "Codepen Username"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:53
+msgid "URL"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:55
+msgid "The Last Part of the Pen's URL"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:56
+msgid "Example: http://codepen.io/username/pen/"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:56
+msgid "JustThis"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:60
+msgid "Display Onload"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:62
+msgid "HTML"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:63
+msgid "CSS"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:64
+msgid "JavaScript"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:65
+msgid "Result"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:67
+msgid "Choose What Section to Display When the Pen Loads"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:71
+msgid "Height"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:73
+msgid "The Height of the Pen Embed"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:74
+msgid "Example: '300' not '300px'"
+msgstr ""
+
+#: ../tinymce/codepen-popup-form.php:79
+msgid "Insert"
+msgstr ""

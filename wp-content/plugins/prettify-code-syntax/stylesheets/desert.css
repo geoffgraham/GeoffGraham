@@ -1,0 +1,74 @@
+/* desert scheme ported from vim to google prettify */
+pre.prettyprint, 
+code.prettyprint, 
+pre.prettyprint code,
+.post-content pre.prettyprint,
+.post-content code.prettyprint,
+.post-content pre.prettyprint code,
+.comment-content pre.prettyprint,
+.comment-content code.prettyprint,
+.comment-content pre.prettyprint code { display: block; background-color: #333; }
+.prettyprint .nocode { background-color: none; color: #000 }
+.prettyprint .str { color: #ffa0a0 } /* string  - pink */
+.prettyprint .kwd { color: #f0e68c; font-weight: bold }
+.prettyprint .com { color: #87ceeb } /* comment - skyblue */
+.prettyprint .typ { color: #98fb98 } /* type    - lightgreen */
+.prettyprint .lit { color: #cd5c5c } /* literal - darkred */
+.prettyprint .pun { color: #fff }    /* punctuation */
+.prettyprint .pln { color: #fff }    /* plaintext */
+.prettyprint .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+.prettyprint .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+.prettyprint .atv { color: #ffa0a0 } /* attribute value - pink */
+.prettyprint .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+.comment-content pre.prettyprint code,
+.post-content pre.prettyprint code,
+pre.prettyprint code { padding: 0; margin: 0; border: none; display: block; white-space: pre;}
+
+pre.prettyprint, 
+code.prettyprint, 
+.post-content pre.prettyprint,
+.post-content code.prettyprint,
+.comment-content pre.prettyprint,
+.comment-content code.prettyprint { overflow: auto; word-wrap: normal; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 2;}
+
+.prettyprint li, .prettyprint ol { margin: 0; padding: 0; }
+
+/* Specify class=linenums on a pre to get line numbering */
+.prettyprint ol.linenums { padding-left: 3em; color: #AEAEAE } /* IE indents via margin-left */
+.prettyprint li.L0,
+.prettyprint li.L1,
+.prettyprint li.L2,
+.prettyprint li.L3,
+.prettyprint li.L5,
+.prettyprint li.L6,
+.prettyprint li.L7,
+.prettyprint li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+.prettyprint li.L1,
+.prettyprint li.L3,
+.prettyprint li.L5,
+.prettyprint li.L7,
+.prettyprint li.L9 { }
+
+@media print {
+  pre.prettyprint, 
+  code.prettyprint, 
+  pre.prettyprint code,
+  .post-content pre.prettyprint,
+  .post-content code.prettyprint,
+  .post-content pre.prettyprint code,
+  .comment-content pre.prettyprint,
+  .comment-content code.prettyprint,
+  .comment-content pre.prettyprint code { background-color: none }
+  .prettyprint .str { color: #060 }
+  .prettyprint .kwd { color: #006; font-weight: bold }
+  .prettyprint .prettyprint .com { color: #600; font-style: italic }
+  .prettyprint .typ { color: #404; font-weight: bold }
+  .prettyprint .lit { color: #044 }
+  .prettyprint .pun { color: #440 }
+  .prettyprint .pln { color: #000 }
+  .prettyprint .tag { color: #006; font-weight: bold }
+  .prettyprint .atn { color: #404 }
+  .prettyprint .atv { color: #060 }
+}
