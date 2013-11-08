@@ -3,7 +3,7 @@
 // ---------------------------------
 
 .blog {
-  article { font-weight: 400; }
+  font-weight: 400; // Rest of site body uses 200
   .banner h1 { font-family: $headingFont; }
   .module { padding: 0; }
   .subhead {
