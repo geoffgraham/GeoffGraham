@@ -25,4 +25,4 @@ docs/
 .DS_Store
 /.gitattributes
 wp-content/debug.log
-
+wp-content/themes/*/codekit-config.json
