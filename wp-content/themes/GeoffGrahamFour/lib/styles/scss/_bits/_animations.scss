@@ -1,0 +1,18 @@
+// ANIMATIONS
+// Dumping ground for custom animation effects
+// Uses _mixins/_keyframes.scss for mixin
+// Pre-defined animations are pulled in from _mixins/animate.sass
+// Documentation for pre-defined animations: http://thecssguru.freeiz.com/animate/
+// Documentation for Compass animation plugin: https://github.com/ericam/compass-animation
+// Documentation for keyframes mixin: https://github.com/ZeeAgency/compass-animation
+// ---------------------------------------------------------------------------------------
+
+@include keyframes(typing) {
+  from { width: 0 }
+  to { width: 15em }
+}
+
+@include keyframes(blink-caret) {
+  from, to { border-color: transparent }
+  50% { border-color: $teal; }
+}

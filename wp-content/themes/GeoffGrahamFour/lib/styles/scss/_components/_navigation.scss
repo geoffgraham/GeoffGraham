@@ -1,0 +1,217 @@
+// Navigations
+
+// The main menu
+		
+nav[role=navigation] {
+  clear: both;
+  position: relative;
+  z-index: 4;
+  -webkit-transition: all 0.3s ease-out;  
+		 -moz-transition: all 0.3s ease-out;
+		  -ms-transition: all 0.3s ease-out;
+			 -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+  @media #{$lake} { 
+    clear: none;
+  	max-height: none;
+  	@include grid-column(8);
+	}
+}
+		
+.js nav[role=navigation] {
+  max-height: 0;
+  overflow: hidden;
+  top: emCalc(-24px);
+  @media #{$lake} {
+    float: right;
+		overflow: visible;
+		top: emCalc(-5px);
+  }
+		@media #{$ocean} { 
+  	  float: left;
+	}
+}
+
+nav[role=navigation].active { max-height: 15em; }
+		
+nav[role=navigation] ul {
+  background: $primaryColor;
+  margin: 0;
+	padding: 0;
+	@media #{$lake} { 
+	  background: transparent;
+	  border: 0;
+	  float: right;
+  	margin: 0 0 0 -0.25em;
+ } 
+}
+
+nav[role=navigation] li {
+  text-align: center;
+  @media #{$lake} { 
+		display: inline-block;
+		margin-right: emCalc(15px);
+		text-align: right;
+  }
+}
+
+nav[role=navigation] li a {
+	display: block;
+	padding: 0 0.4em;
+	border-bottom: 1px solid $primaryDark;
+	@media #{$lake} { 
+		border: 0;
+		float: left;
+  }
+}
+
+// Main navigation toggle
+a.menu-icon {
+  content: "";
+  display: block;
+  float: right;
+  left: -0.825em;
+  top: emCalc(10px);
+	position: relative;
+	@include font-size(32);
+	@media #{$lake} { 
+  	display: none;
+	}
+}
+
+// The social icons
+nav[role=social] {
+  display: none;
+  position: relative;
+  li {
+    float: left;
+    margin-left: 1em;
+    text-align: right;
+  }
+  @media #{$ocean} { 
+  	  display: block;
+  	  float: right;
+      text-align: right;
+      width: 25%;
+  }
+}
+
+// NAVIGATION: MAIN
+
+nav[role=navigation] {
+  clear: both;
+  position: relative;
+  z-index: 4;
+  -webkit-transition: all 0.3s ease-out;  
+		 -moz-transition: all 0.3s ease-out;
+		  -ms-transition: all 0.3s ease-out;
+			 -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+  @media #{$lake} { 
+    clear: none;
+  	max-height: none;
+  	@include grid-column(8);
+	}
+	@media #{$ocean} {
+	  margin-left: 10%;
+  	@include grid-column(6);
+	}
+}
+		
+.js nav[role=navigation] {
+  max-height: 0;
+  @media #{$lake} {
+    float: right;
+  }
+		@media #{$ocean} { 
+  	  float: left;
+	}
+}
+
+nav[role=navigation].active { max-height: 15em; }
+		
+nav[role=navigation] ul {
+  background: $primaryColor;
+  margin: 0;
+	padding: 0;
+	top: emCalc(5px);
+	@media #{$lake} { 
+	  background: transparent;
+	  border: 0;
+	  float: right;
+  	margin: 0 0 0 -0.25em;
+ } 
+}
+
+nav[role=navigation] li {
+  font-weight: 800;
+  text-align: center;
+  @media #{$lake} { 
+		display: inline-block;
+		text-align: right;
+  }
+}
+
+nav[role=navigation] li a {
+	display: block;
+	padding: 0 0.4em;
+	border-bottom: 1px solid $primaryDark;
+	@media #{$lake} { 
+		border: 0;
+		float: left;
+  }
+}
+
+// ------------------------------------------------------
+
+// NAVIGATION: SOCIAL
+
+nav[role=social] {
+  display: none;
+  position: relative;
+  li {
+    float: left;
+    margin-left: 1em;
+    text-align: right;
+  }
+  a:hover { opacity: 0.8; }
+  @media #{$ocean} { 
+  	  display: block;
+  	  float: right;
+      text-align: right;
+      width: 28%;
+  }
+}
+
+// ------------------------------------------------------
+
+// NAVIGATION: ARTICLE PAGINATION
+
+nav[role=pagination] {
+  border-top: 1px solid $grayLight;
+  display: block;
+  font-family: $headingFont;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.25em;
+  max-width: none;
+  overflow: hidden;
+  text-transform: uppercase;
+  width: 100%;
+  a {
+    color: $grayLight;
+    display: block;
+    float: left;
+    padding: emCalc(15px);
+    text-align: center;
+    width: 50%;
+    @include font-size(15);
+    &:first-child {
+      border-right: 1px solid $grayLight;
+    }
+    &:hover {
+      background-color: $grayLighter;
+      color: $gray;
+    }
+  }
+}

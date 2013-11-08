@@ -1,0 +1,35 @@
+// The very, very bottom
+
+// Footer
+footer {
+  background: $grayLight;
+  clear: both;
+  color: $grayDark;
+  font-weight: 800;
+  min-height: 4em;
+  padding: 2em 0;
+  @include font-size(18);
+  @include text-shadow($white 0 1px 2px);
+  a {
+    color: $grayDark;
+    text-decoration: none;
+    @include transition();
+    &:hover { color: $grayDarkest; }
+  }
+  li { list-style: none; }
+  .copyright {
+    text-align: center;
+    @media #{$lake} { 
+  	  float: left;
+  	  margin-left: 1em;
+    }
+  }
+  nav { text-transform: lowercase; }
+  nav[role=navigation] {
+	  margin-left: 0;
+	}
+	nav[role=social] {
+	  top: -22px;
+	  @include font-size(20);
+	}
+}

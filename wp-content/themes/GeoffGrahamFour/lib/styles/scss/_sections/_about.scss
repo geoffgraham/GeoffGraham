@@ -1,0 +1,15 @@
+// ABOUT
+// Styles specific to the About page
+// ---------------------------------
+
+.cssgradients .about {
+  .hero {
+    @include background-image(linear-gradient($white 60%, lighten($teal, 20%)));
+  }
+}
+
+.no-cssgradients .about .hero {
+  background-image: url("../images/bg-gradient2.png");
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}

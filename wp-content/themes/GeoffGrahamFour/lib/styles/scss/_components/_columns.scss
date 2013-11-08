@@ -1,0 +1,23 @@
+// COLUMNS
+//  Split listed items up into even CSS columns
+
+.columns {
+  padding: 0;
+  text-align: center;
+  @include column-count(1);
+  @media #{$lake} {
+    text-align: left;
+	  @include column-count(2);
+  }
+  @media #{$bay} {
+	  @include column-count(3);
+  }
+  @media #{$ocean} {
+	  @include column-count(4);
+  }
+  li {
+    line-height: emCalc(25px);
+    list-style: none;
+    @include font-size(25);
+  }
+}

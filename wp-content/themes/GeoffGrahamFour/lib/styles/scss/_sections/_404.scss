@@ -1,0 +1,24 @@
+// 404
+// Styles specific to the 404 page
+// -------------------------------
+
+.fourohfour {
+  .banner {
+    background: #333 url("../images/bg-black-paper.png") repeat;
+  }
+  h1 { 
+    //font-family: $headingFont;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  h2 {
+    color: $white;
+    font-family: Menlo, monospace;
+    margin: 0 auto 1em;
+    width: 15em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .1em solid $teal;
+    @include animation(typing 2s steps(24, end), blink-caret 1s step-end infinite);
+  }
+}

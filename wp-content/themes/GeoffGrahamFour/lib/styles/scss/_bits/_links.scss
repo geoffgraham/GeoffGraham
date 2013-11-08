@@ -1,0 +1,26 @@
+// LINKS
+// ------------------------------------
+
+// Style all links
+a {
+  color: $primaryColor;
+  text-decoration: none;
+  @include transition(0.5s);
+  &:hover { color: $primaryDark; }
+}
+
+.tagged {
+  border: 1px solid $gray;
+  color: $gray;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-right: emCalc(15px);
+  padding: .2em .75em;
+  text-transform: uppercase;
+  @include border-radius(1em);
+  @include font-size(15);
+  &:hover {
+    border: 1px solid $grayDarkest;
+    color: $grayDarkest;
+  }
+}

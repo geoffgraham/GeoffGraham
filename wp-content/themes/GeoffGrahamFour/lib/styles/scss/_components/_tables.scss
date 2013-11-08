@@ -1,0 +1,19 @@
+// TABLES
+
+table {
+  width: 100%;
+  th { 
+    background: $grayLightest;
+    padding: emCalc(5px) emCalc(10px);
+    text-align: left; }
+  tr {
+    border-bottom: 1px solid $grayLight;
+    border-top: 1px solid $grayLight;
+    &:nth-child(even) {
+      background: $grayLightest;
+    }
+  }
+  td {
+    padding: emCalc(5px) emCalc(10px);
+  }
+}

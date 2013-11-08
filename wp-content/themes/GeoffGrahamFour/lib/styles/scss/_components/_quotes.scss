@@ -1,0 +1,94 @@
+// Quotes
+//  Little quote bubbles used for things like testimonials.
+
+.quote-wrapper { 
+  @extend .wrapper;
+  margin: emCalc(25px) 0;
+}
+
+.quote-bubble {
+  background-color: $grayLightest;
+  display: block;
+  height: auto;
+  position: relative;
+  @include grid-column(12, false, false, false, false, false, false, left);
+  @media #{$ocean} { 
+    @include font-size(22);
+    @include grid-column(9, false, false, false, false, false, false, left);
+  }
+}
+
+.tri-right.right-top:after {
+  display: none;
+  @media #{$ocean} {
+  	content: '';
+  	display: block;
+  	position: absolute;
+  	width: 0;
+  	height: 0;
+    left: auto;
+  	right: -20px;
+    top: 0px;
+  	bottom: auto;
+  	border: 20px solid;
+  	border-color: $grayLightest transparent transparent transparent;
+	}
+}
+
+.tri-right.btm-left:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: $grayLightest transparent transparent $grayLightest;
+	@media #{$ocean} { 
+	  display: none;
+ }
+}
+
+.quote-text {
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+  img { display: block; }
+  p {
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  }
+}
+
+.citation {
+  font-weight: 800;
+  top: emCalc(25px);
+  @include font-size(18);
+  @include grid-column(12, false, false, false, false, false, false, false);
+  @media #{$ocean} { 
+    display: inline-block;
+    left: 0;
+    line-height: emCalc(18px);
+    top: 0;
+    @include grid-column(3, false, false, false, false, false, false, false);
+  }
+  p {
+    @media #{$ocean} { 
+      position: relative;
+      top: emCalc(15px);
+    }
+  }
+  span {
+    font-weight: 200;
+  }
+  img {
+    display: none;
+    @media #{$ocean} { 
+      display: block;
+      width: 100%;
+  }
+  }
+}

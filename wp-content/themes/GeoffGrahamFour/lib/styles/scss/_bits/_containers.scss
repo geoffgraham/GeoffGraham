@@ -1,0 +1,85 @@
+// CONTAINERS
+// Wrappers and such
+// ------------------------------------
+
+// For wrapping modules in a grid row
+.wrapper { @include grid-row; }
+
+
+// The shell for featured content. Typically used as the foundation for banners, but can be used anywhere.
+.module {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+// Main content wrapper. 
+// Uses full width, then reduces to ten centered columns for a tidy, slim look.
+.content { 
+  padding: 2em 0 0 0;
+  @include grid-column(12, false, false, false, false, false, false, left);
+  @media #{$lake} {
+    @include grid-column(10, false, true, false, false, false, false, left);
+  }
+  @media #{$ocean} {
+    @include grid-column(8, false, true, false, false, false, false, left);
+  }
+}
+
+// Provides the full-width wrapper for content
+.article-body {
+  position: relative;
+  z-index: 0;
+}
+
+// The section that displays portfolio posts in a grid
+.work {
+  @extend .module;
+  background: $grayLightest;
+  background: url("../images/bg-maze.png");
+  border-bottom: 1px solid lighten($gray, 10%);
+  z-index: 0;
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1440dpi){ 
+    background: url("../images/bg-maze_@2X.png");
+    background-size: 15%;
+  }
+  @media #{$ocean} {
+    padding-top: 0;
+  }
+  h4 {
+    margin: 0.5em 0 -0.75em;
+    @media #{$lake} {
+  	  margin: 0 0 -0.75em;
+    }
+    @media #{$ocean} {
+  	  margin: 0 0 -1.25em;
+    }
+  }
+  article { @extend .post-thumb; }
+}
+
+// A simple container for holding post tags, extra information, etc.
+.footnote {
+  background: $primaryColor;
+  color: $white;
+  font-weight: 800;
+  margin: emCalc(35px) 0;
+  padding: emCalc(10px);
+  transition: background .2s ease-in;
+  @include border-radius(4px);
+  &:hover { background: $primaryDark; }
+  a { color: $white; }
+  a:hover { color: $white; }
+}
+
+// A container for holding tag links
+.tags {
+  border-top: 1px solid $grayLight;
+  color: $grayLight;
+  padding-top: emCalc(10px);
+  text-align: center;
+  @include font-size(25);
+  span {
+    position: relative;
+    top: emCalc(5px);
+  }
+}

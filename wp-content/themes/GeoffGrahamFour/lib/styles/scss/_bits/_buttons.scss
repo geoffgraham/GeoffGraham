@@ -1,0 +1,45 @@
+// BUTTONS
+// ------------------------------------
+
+// Back to top button
+.back-to-top {
+  background-color: rgba(135, 135, 135, 0.3);
+  border: 1px solid $grayLight;
+  bottom: emCalc(16px);
+  color: $black;
+  display: none;
+  padding: emCalc(5px) emCalc(8px);
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  z-index: 1;
+  @include border-radius(100%);
+  @include font-size(20);
+  @media #{$lake} {
+  	@include font-size(24);
+  }
+  @media #{$bay} {
+  	@include font-size(28);
+  }
+  @media #{$ocean} {
+  	padding: emCalc(10px) emCalc(18px);
+  }
+  &:hover { background-color: rgba(135, 135, 135, 0.5); }
+}
+
+// Default buttons
+[role="button"] {
+  @include button-base;
+  @include button-size($button-sml);
+  @include radius(3px);
+  @include single-transition;
+  @include inset-shadow(true);
+}
+
+.button-primary {
+  @include button-style($primary-color);
+}
+
+.button-secondary a {
+  @include button-style($gray);
+}

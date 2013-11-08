@@ -1,0 +1,102 @@
+// Headers
+
+header.main {
+  background: $primaryColor;
+  border-bottom: 1px solid $primaryDark;
+  height: emCalc(55px);
+  position: relative;
+  text-transform: lowercase;
+  z-index: 4;
+  @include animate(fadeInDown, 0.5s, 0.5s);
+  @include single-text-shadow($primaryDark, 1px, 1px, 2px);
+  @media #{$lake} { 
+   height: emCalc(70px);
+  }
+  .logo {
+    background: url("../images/nav-logo.png") center no-repeat;
+    background: url("../images/nav-logo.svg") center no-repeat;
+    background-size: 100%;
+    float: left;
+    height: emCalc(75px);
+    margin-left: 5%;
+    margin-top: 1%;
+    position: relative;
+    text-indent: emCalc(-9999px);
+    width: emCalc(75px);
+    z-index: 5;
+    @include animate(bounceInDown, 1.5s, 0.25s);
+    @media #{$lake} { 
+  	  height: emCalc(80px);
+  	  width: emCalc(80px);
+    }
+    @media #{$ocean} { 
+  	  height: emCalc(85px);
+  	  width: emCalc(85px);
+    }
+    &:hover { 
+      @media #{$bay} { 
+        @include scale(1.2);
+      } 
+    }
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  ul { position: relative; }
+  li {
+    @include font-size(24);
+    list-style: none;
+    @media #{$lake} { 
+  	  @include font-size(18);
+    }
+    @media #{$ocean} { 
+  	  @include font-size(24);
+    }
+  }
+  nav[role=navigation] {
+    ul {
+    top: 0;
+    @media #{$lake} { 
+  	  background: transparent;
+  	  border: 0;
+  	  float: right;
+    	margin: 0 0 0 -5em;
+    	top: emCalc(20px);
+      }
+    @media #{$ocean} { 
+      top: emCalc(25px);
+      }
+    }
+    li a { 
+      padding: 0.8em 0;
+      &:hover { opacity: 0.5; }
+    }
+    li.current-menu-item { opacity: 0.5; }
+    @media #{$ocean} {
+	    margin-left: 0;
+    }
+  }
+  nav[role=social] {
+    @media #{$ocean} { 
+      top: emCalc(15px);
+    }
+    li a { 
+      &:hover { opacity: 0.5; }
+    }
+  }
+}
+
+.no-svg header .logo {
+    background-image: url("../images/nav-logo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+    height: emCalc(90px);
+    margin-left: 5%;
+    position: relative;
+    text-indent: emCalc(-9999px);
+    top: emCalc(-5px);
+    width: emCalc(90px);
+    z-index: 5;
+  }

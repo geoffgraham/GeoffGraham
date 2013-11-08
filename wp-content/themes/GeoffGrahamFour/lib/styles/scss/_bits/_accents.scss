@@ -1,0 +1,37 @@
+// ACCENTS
+// Universal aesthetic acceents
+// ------------------------------------
+
+// Style selections
+::selection {
+  background: $primaryColor;
+  color: $white;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+
+h1 a::selection,
+h2 a::selection,
+h3 a::selection {
+  background: transparent;
+  color: transparent;
+  -webkit-text-stroke: 2px $primaryColor;
+}
+
+// Apply a box shadow on elements
+.shadow {
+  @include box-shadow($gray 0 2px 5px);
+}
+
+// Apply a dark background to an element
+.dark {
+  background: $grayLightest;
+  background: url("../images/bg-maze.png");
+  border-bottom: 1px solid $grayLight;
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1440dpi){ 
+    background: url("../images/bg-maze_@2X.png");
+    background-size: 15%;
+  }
+}

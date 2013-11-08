@@ -1,0 +1,34 @@
+// ARCHIVE
+// The index for posts, such as Tags
+// ---------------------------------
+
+.archive {
+  article {
+    border-top: 1px solid $grayLight;
+    &:first-child {
+      border: none;
+    }
+  }
+  .banner {
+    border-bottom: none;
+    @include box-shadow(none);
+    h1 { opacity: 0.8; }
+  }
+  .work {
+    padding-top: 2em;
+    @media #{$ocean} {
+  	  padding-top: 4em;
+    }
+  }
+}
+
+.cssgradients .archive .banner {
+  @include background-image(radial-gradient(70% 10%, circle, $peach, $teal));
+}
+
+.no-cssgradients .archive .banner {
+  background-image: url("../images/bg-gradient1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

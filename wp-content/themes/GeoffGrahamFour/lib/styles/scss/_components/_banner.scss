@@ -1,0 +1,29 @@
+// BANNER
+// Perfect for large headings that can be styled with custom backgrounds.
+.banner {
+  @extend .module;
+  background: $gray;
+  border-bottom: 1px solid $grayDark;
+  min-height: emCalc(125px);
+  text-align: center;
+  z-index: 1;
+  @include background-size(cover);
+  @media #{$lake} {
+      @include box-shadow($grayDark 0 0 10px inset);
+    }
+  @media #{$ocean} {
+      min-height: emCalc(150px);
+    }
+  h1 {
+    color: $white;
+    display: block;
+    font-family: $displayFont;
+    line-height: 1em;
+    padding: emCalc(10px) 0;
+    @include animate(fadeIn, 1.5s, 1s);
+    @include text-shadow ($grayDark 0 2px 8px);
+    @media #{$ocean} {
+      padding: 0;
+    }
+  }
+}

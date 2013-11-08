@@ -1,0 +1,19 @@
+// BLOG
+// Styles specific to the Blog and Blog posts
+// ---------------------------------
+
+.blog {
+  article { font-weight: 400; }
+  .banner h1 { font-family: $headingFont; }
+  .module { padding: 0; }
+  .subhead {
+    color: $grayDark;
+    font-size: 110%;
+    font-weight: 800;
+    line-height: 1.5em;
+    margin-bottom: emCalc(25px);
+    @media #{$bay} {
+      font-size: 125%;
+    }
+  }
+}

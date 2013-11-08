@@ -1,0 +1,23 @@
+// ALERTS
+// Warnings, validators and stuff
+// ------------------------------------
+
+// Contact Form 7 Plugin styles
+div.wpcf7-validation-errors {
+  background: $primaryColor;
+  border: 1px solid $primaryDark;
+  color: $white;
+  @include border-radius(4px);
+  @include grid-column(12);
+  @include text-shadow($primaryDark 0 1px 1px);
+  @media #{$lake} {
+    @include grid-column(10, false, true, false, false, false, false, left);
+  }
+}
+
+span.wpcf7-not-valid-tip {
+  background: lighten(red, 25%);
+  color: $white;
+  padding: 0 emCalc(10px);
+  @include border-radius(4px);
+}

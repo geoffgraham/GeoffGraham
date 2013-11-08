@@ -1,0 +1,47 @@
+// HOMEPAGE
+// The primary index of the site.
+// -------------------------------
+
+.home {
+  .hero {
+    // background: url("http://www.olliehusbanddesign.co.uk/test/catwalk.jpg") center center no-repeat;
+    background: url("../images/bg-home-hero.jpg") center center no-repeat;
+    background-size: cover;
+    // @include background-image(linear-gradient(lighten($teal, 20%), $grayLightest, lighten($peach, 10%)));
+    // @include background-image(radial-gradient(70% 10%, circle, lighten($peach, 10%), lighten($teal, 20%)));
+    text-align: center;
+  }
+  h1,
+  h2,
+  a[role="button"] {
+    @include animate(rotateInDownLeft, 1s, 1.25s);
+  }
+  h1,
+  h2 { 
+    color: $white;
+    font-family: $displayFont;
+    margin-top: 0;
+    text-transform: none;
+    @include text-shadow(0 2px 5px $grayDarkest);
+  }
+  h1 {
+    margin-bottom: 0.25em;
+    padding-top: 1em;
+    @media #{$lake} {
+        margin-bottom: 0.25em;
+    	  padding: 0.25em 0 0 0;
+    }
+  }
+  .work {
+    @media #{$ocean} {
+    	  padding-top: 1em;
+    }
+  }
+  .work {
+    @media #{$ocean} {
+    	  padding-top: 1em;
+  }
+  .ribbon-heading { 
+    margin: emCalc(15px) 0 emCalc(25px); }
+  }
+}

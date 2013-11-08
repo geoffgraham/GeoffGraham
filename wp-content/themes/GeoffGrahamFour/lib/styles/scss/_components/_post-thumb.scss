@@ -1,0 +1,53 @@
+// POST THUMBNAILS
+// Used for listing post summaries with a featured image, such as Portfolio items
+
+.post-thumb {
+  background: $white;
+  color: $grayDark;
+  float: left;
+  font-weight: 200;
+  margin-bottom: emCalc(30px);
+  margin-left: 4%;
+  overflow: hidden;
+  padding: 2% 2%;
+  width: 92%;
+  @include animate(fadeInUp, 0.5s, 0.5s);
+  @include border-radius(4px);
+  @include box-shadow($gray 0 2px 5px);
+  @include transition-duration(0.75s);
+  @media #{$lake} {
+	  margin-left: 2%;
+	  width: 47%;
+  }
+  @media #{$ocean} { 
+	  padding: 1% 1%;
+	  width: 30%;
+  }
+  &:nth-child(3) { 
+    display: none;
+    @media #{$ocean} {
+	    display: block;
+      margin-right: 0;
+    }
+  }
+  &:hover {
+    @include box-shadow($grayDark 0 2px 15px);
+  }
+  img { min-width: 100%; }
+  .description {
+  height: emCalc(70px);
+  overflow: hidden;
+  padding: 0 0.5em 0.75em;
+  @include font-size(20);
+  @media #{$lake} {
+	  height: emCalc(55px);
+    }
+  }
+  p { 
+  line-height: 1em;
+  @media #{$lake} {
+	  line-height: .75em;
+    }
+  }
+  a { color: $grayDark; }
+}
