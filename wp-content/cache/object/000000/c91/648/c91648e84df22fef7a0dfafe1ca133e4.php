@@ -1,1 +1,0 @@
-L}R<?php exit; ?>a:1:{s:7:"content";a:8:{s:22:"wlcms_o_hide_admin_bar";b:1;s:12:"widget_pages";b:1;s:15:"widget_calendar";b:1;s:16:"widget_tag_cloud";b:1;s:15:"widget_nav_menu";b:1;s:27:"widget_post_readtime_widget";b:1;s:26:"bta_portfolioitems_rewrite";b:1;s:26:"bta_testimonyitems_rewrite";b:1;}}
