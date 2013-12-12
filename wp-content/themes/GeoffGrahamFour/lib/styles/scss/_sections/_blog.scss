@@ -16,4 +16,5 @@
       font-size: 125%;
     }
   }
+  .title { @include grid-column(11, false, true, 0, 0, 0, false, left); }
 }

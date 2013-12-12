@@ -11,7 +11,9 @@
     <article <?php post_class('blog') ?> id="post-<?php the_ID(); ?>">
       <section class="banner">
         <div class="wrapper">
-          <h1><?php the_title(); ?></h1>
+          <div class="title">
+            <h1><?php the_title(); ?></h1>
+          </div>
         </div><!-- wrapper -->
       </section><!-- banner -->
   		<section class="module">

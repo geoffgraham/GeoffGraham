@@ -2,7 +2,7 @@
 <h2>White Label CMS Settings</h2>
  
 <div class="wlcms_opts" style="position:relative;">
-	<div id="wlcms-sidebar" style="position: absolute; top: 0; right: 0; width: 250px; border: 1px solid #ccc; padding: 20px;">
+	<div id="wlcms-sidebar" style="position: absolute; top: 0; right: 0; background-color:#FFFFFF; width: 250px; border: 1px solid #ccc; padding: 20px;">
 		<img src="<?php echo plugins_url('images/better-ebooks-ad.png', dirname(__FILE__)); ?>" alt="Better WordPress For Clients" title="Better WordPress For Clients" />
 	
 		<form method="post" onsubmit="return quickValidate()"  action="https://app.getresponse.com/add_contact_webform.html" target="_blank" >

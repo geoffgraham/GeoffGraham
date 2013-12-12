@@ -16,8 +16,8 @@ $wlcmsOptions = array(
 if ( version_compare( $wp_version, '3.2.5', '>=' ) )
 {
     $wlcmsOptions[] = array(
-            "name"  => "Hide WordPress Logo",
-            "desc"  => "Hide WordPress logo from the admin bar",
+            "name"  => "Hide WordPress Logos",
+            "desc"  => "Hide WordPress logo from the admin bar and home icon",
             "id"    => $wlcmsShortName."_hide_wp_adminbar",
             "type"  => "radio",
             "options" => array("1", "0"),
