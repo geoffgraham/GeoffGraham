@@ -295,4 +295,3 @@ function insert_custom_js() {
 }
 
 ?>
-
