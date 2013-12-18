@@ -26,3 +26,5 @@ docs/
 wp-content/debug.log
 wp-content/themes/*/codekit-config.json
 wp-content/uploads/
+wp-content/cache/
+wp-content/w3tc-config/
