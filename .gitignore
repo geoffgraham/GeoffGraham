@@ -26,3 +26,7 @@ docs/
 /.gitattributes
 wp-content/debug.log
 wp-content/themes/*/codekit-config.json
+wp-content/uploads/*.jpg
+wp-content/uploads/*.png
+wp-content/uploads/*.gif
+wp-content/uploads/*.svg
