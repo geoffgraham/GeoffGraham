@@ -1,0 +1,34 @@
+// Pie Chart Variables
+$pie-color: darken($orange,20%);
+
+// number of items in your list
+$items-in-list: 6;
+
+//Adjusts the Hue
+@function -modify-color($color, $counter, $depth: $items-in-list) {
+  @return adjust_hue($pie-color, $i * ($items-in-list * 3));
+}
+
+//Adjusts the Saturation.
+@function -modify-color($color, $counter, $depth: ($items-in-list + 1)) {
+  @return lighten($pie-color, $i * ($items-in-list + 1));
+}
+
+// The loop that steps through the li's and assigns them a different color
+$i: 0;
+@while $i < ($items-in-list + 1) {
+  [data-pie-id] li:nth-child(#{$i}) {
+    color: -modify-color($pie-color, $i);
+  }
+  $i: $i + 1;
+}
+
+// Set the SVG to 100% width to smooth responsive resizing (optional)
+// svg {
+//   width: 100%;
+// }
+
+ul[data-pie-id] {
+  list-style: none;
+  padding: 10px;
+}
