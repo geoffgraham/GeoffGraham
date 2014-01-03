@@ -263,6 +263,37 @@ function insert_custom_css() {
 	}
 }
 
+// Custom Head Injections
+add_action('admin_menu', 'custom_head_hooks');
+add_action('save_post', 'save_custom_head');
+add_action('wp_footer','insert_custom_head');
+function custom_head_hooks() {
+	add_meta_box('custom_head', 'Custom Head Scripts', 'custom_head_input', 'post', 'normal', 'high');
+	add_meta_box('custom_head', 'Custom Head Scripts', 'custom_head_input', 'page', 'normal', 'high');
+}
+
+function custom_head_input() {
+	global $post;
+	echo '<input type="hidden" name="custom_head_noncename" id="custom_head_noncename" value="'.wp_create_nonce('custom-head').'" />';
+	echo '<textarea name="custom_head" id="custom_head" rows="5" cols="30" style="width:100%;">'.get_post_meta($post->ID,'_custom_head',true).'</textarea>';
+}
+
+function save_custom_head($post_id) {
+	if (!wp_verify_nonce($_POST['custom_head_noncename'], 'custom-head')) return $post_id;
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+	$custom_head = $_POST['custom_head'];
+	update_post_meta($post_id, '_custom_head', $custom_head);
+}
+
+function insert_custom_head() {
+	if (is_page() || is_single()) {
+		if (have_posts()) : while (have_posts()) : the_post();
+			echo get_post_meta(get_the_ID(), '_custom_head', true);
+		endwhile; endif;
+		rewind_posts();
+	}
+}
+
 // Custom JS
 add_action('admin_menu', 'custom_js_hooks');
 add_action('save_post', 'save_custom_js');
@@ -288,7 +319,7 @@ function save_custom_js($post_id) {
 function insert_custom_js() {
 	if (is_page() || is_single()) {
 		if (have_posts()) : while (have_posts()) : the_post();
-			echo '<style type="text/javascript">'.get_post_meta(get_the_ID(), '_custom_js', true).'</style>';
+			echo '<script>'.get_post_meta(get_the_ID(), '_custom_js', true).'</script>';
 		endwhile; endif;
 		rewind_posts();
 	}
