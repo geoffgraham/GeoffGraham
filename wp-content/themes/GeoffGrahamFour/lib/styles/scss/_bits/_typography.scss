@@ -177,6 +177,7 @@ pre {
   background: $grayDarkest;
   color: white;
   font-family: $typewriter;
+  line-height: emCalc(22px);
   overflow: auto;
   padding: 0;
   position: relative;
@@ -189,9 +190,18 @@ pre {
      -moz-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
+  @include font-size(16);
+  @media #{$lake} {
+    @include font-size(18);
+    line-height: emCalc(24px);
+  }
+  @media #{$ocean} {
+    @include font-size(20);
+    line-height: emCalc(26px);
+  }
 }
 
-pre { 
+pre {
   padding-top: emCalc(30px); 
   &:before {
     background: $primaryColor;
