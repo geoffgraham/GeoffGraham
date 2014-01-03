@@ -1,23 +1,6 @@
 // WordPress-specific styles
 
-.post {}
-
-.entry-content {}
-.entry-content a {}
-.entry-content a:hover {}
-
-#meta {}
-.postmetadata {}
-
-#sidebar {}
-
-.navgation {}
-.next-posts {}
-.prev-posts {}
-
-#searchform {}
-#s {}
-#searchsubmt {}
+#wpadminbar { position: fixed !important; }
 	
 ol.commentlist {list-style: none;}
 ol.commentlist li {}
