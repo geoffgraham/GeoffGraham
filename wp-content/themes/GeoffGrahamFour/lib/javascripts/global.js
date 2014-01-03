@@ -67,7 +67,7 @@ $(document).ready(function(){
     $(this).animate({height:'35%'},800);
   });
   $(".chart .grape").mouseleave(function(){
-    $(this).animate({height:'40%'},800);
+    $(this).animate({height:'60%'},800);
   });
 });
 
