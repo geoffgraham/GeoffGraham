@@ -31,4 +31,13 @@ $i: 0;
 ul[data-pie-id] {
   list-style: none;
   padding: 10px;
+  @include grid-column(3);
+}
+
+#pizza {
+  @include grid-column(8, true, false, 1, false, false, false, right);
+  svg:not(:root) {
+    height: 100%;
+    width: 100%;
+  }
 }
