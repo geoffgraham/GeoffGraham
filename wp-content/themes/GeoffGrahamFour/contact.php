@@ -22,7 +22,7 @@
       <?php endwhile; endif; ?>
       </div><!-- content -->
     </div><!-- wrapper -->
-</section<!-- contact -->
+</section><!-- contact -->
 
 <script>
   $("h1").fitText(1.0, { minFontSize: '65px', maxFontSize: '200px' });
