@@ -6,30 +6,25 @@
  */
  get_header(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-		<article class="post" id="post-<?php the_ID(); ?>">
+<section class="page">
+  <div class="banner">
+    <div class="wrapper">
+      <h1><?php the_title(); ?></h1>
+    </div><!-- wrapper -->
+  </div><!-- banner -->
+    <div class="wrapper">
+      <div class="content">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php the_content(); ?>
+      <?php endwhile; endif; ?>
+      </div><!-- content -->
+    </div><!-- wrapper -->
+</section><!-- page -->
 
-			<h2><?php the_title(); ?></h2>
+<script>
+  $("h1").fitText(1.0, { minFontSize: '65px', maxFontSize: '200px' });
+  $("h1").lettering();
+</script>
 
-			<?php posted_on(); ?>
-
-			<div class="entry">
-
-				<?php the_content(); ?>
-
-				<?php wp_link_pages(array('before' => __('Pages: '), 'next_or_number' => 'number')); ?>
-
-			</div>
-
-			<?php edit_post_link(__('Edit this entry.'), '<p>', '</p>'); ?>
-
-		</article>
-		
-		<?php comments_template(); ?>
-
-		<?php endwhile; endif; ?>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
