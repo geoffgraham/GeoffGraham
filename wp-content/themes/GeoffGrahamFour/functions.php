@@ -319,7 +319,7 @@ function save_custom_js($post_id) {
 function insert_custom_js() {
 	if (is_page() || is_single()) {
 		if (have_posts()) : while (have_posts()) : the_post();
-			echo '<script>'.get_post_meta(get_the_ID(), '_custom_js', true).'</script>';
+			echo '<script type="text/javascript">'.get_post_meta(get_the_ID(), '_custom_js', true).'</script>';
 		endwhile; endif;
 		rewind_posts();
 	}

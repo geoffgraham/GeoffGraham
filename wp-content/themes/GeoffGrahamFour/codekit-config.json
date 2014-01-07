@@ -260,6 +260,18 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/lib\/styles\/scss\/_components\/_project-list.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_project-list.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_project-list.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/lib\/styles\/scss\/vendor\/_settings.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -684,6 +696,18 @@
       "initialSize" : 208545,
       "fileType" : 4096
     },
+    "\/lib\/styles\/scss\/_mixins\/_prefix.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_mixins\/_prefix.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_prefix.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/lib\/styles\/scss\/_bits\/_typography.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -775,17 +799,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/javascripts\/foundation\/foundation.dropdown.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.dropdown.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.dropdown-min.js",
-      "fileType" : 64
-    },
     "\/lib\/styles\/scss\/_sections\/_blog.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -810,6 +823,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/lib\/javascripts\/foundation\/foundation.dropdown.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.dropdown.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.dropdown-min.js",
+      "fileType" : 64
+    },
     "\/404.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -831,15 +855,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/blog.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/blog.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/_\/inc\/css\/color-picker.min.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -848,6 +863,15 @@
       "inputAbbreviatedPath" : "\/_\/inc\/css\/color-picker.min.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/blog.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/blog.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/javascripts\/foundation\/foundation.reveal.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1088,14 +1112,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
-    "\/single.php" : {
+    "\/lib\/javascripts\/global-min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/single.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/global-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/global-min-min.js",
+      "fileType" : 64
     },
     "\/lib\/styles\/scss\/_bits\/_containers.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1129,16 +1155,14 @@
       "initialSize" : 390166,
       "fileType" : 8192
     },
-    "\/lib\/javascripts\/global-min.js" : {
+    "\/single.php" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/global-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/global-min-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/single.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_components\/_post-thumb.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1170,6 +1194,18 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/lib\/styles\/scss\/_bits\/_progress.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_bits\/_progress.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_progress.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/_\/inc\/js\/media-uploader.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1191,17 +1227,6 @@
       "outputAbbreviatedPath" : "\/lib\/images\/bg-gradient2.png",
       "initialSize" : 1499,
       "fileType" : 8192
-    },
-    "\/lib\/javascripts\/vendor\/custom.modernizr.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr-min.js",
-      "fileType" : 64
     },
     "\/lib\/images\/nav-icon.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1226,16 +1251,27 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/images\/bg-icons_@2X.png" : {
+    "\/lib\/javascripts\/vendor\/custom.modernizr.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/images\/bg-icons_@2X.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/lib\/images\/bg-icons_@2X.png",
-      "initialSize" : 19534,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr-min.js",
+      "fileType" : 64
+    },
+    "\/lib\/javascripts\/foundation\/foundation.tooltips.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.tooltips.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.tooltips-min.js",
+      "fileType" : 64
     },
     "\/lib\/styles\/scss\/_bits\/_alerts.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1249,17 +1285,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/javascripts\/foundation\/foundation.tooltips.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.tooltips.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.tooltips-min.js",
-      "fileType" : 64
-    },
     "\/lib\/functions\/custom-post-types.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1268,6 +1293,17 @@
       "inputAbbreviatedPath" : "\/lib\/functions\/custom-post-types.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/lib\/images\/bg-icons_@2X.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/images\/bg-icons_@2X.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/lib\/images\/bg-icons_@2X.png",
+      "initialSize" : 19534,
+      "fileType" : 8192
     },
     "\/lib\/styles\/scss\/_components\/_banner.scss" : {
       "ignoreWasSetByUser" : 0,

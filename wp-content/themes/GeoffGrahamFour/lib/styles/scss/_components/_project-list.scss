@@ -1,0 +1,26 @@
+// PROJECT LIST
+// A list of displaying the current progress of projects
+
+// The unordered list
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// The list item
+.project {
+  margin-bottom: 1em;
+  position: relative;
+  h3 {
+    color: $white;
+    left: 1em;
+    line-height: 1;
+    position: absolute;
+    top: emCalc(-1px);
+  }
+  ::-webkit-progress-value { 
+    @include animate(bar-fill, 2s);
+    width: 0px;
+  }
+}

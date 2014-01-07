@@ -20,6 +20,7 @@
 @import "_mixins/_animate.sass";
 @import "_mixins/_animations.scss";
 @import "_mixins/_keyframes.sass";
+@import "_mixins/_prefix.scss";
 @import "_mixins/_rem.scss";
 
 
@@ -35,6 +36,7 @@
 @import "_bits/_grid.scss";
 @import "_bits/_hr.scss";
 @import "_bits/_links.scss";
+@import "_bits/_progress.scss";
 
 
 // IMPORT COMPONENT STYLES
@@ -51,6 +53,7 @@
 @import "_components/_navigation.scss";
 @import "_components/_pizza.scss";
 @import "_components/_post-thumb.scss";
+@import "_components/_project-list.scss";
 @import "_components/_quotes.scss";
 @import "_components/_splash.scss";
 @import "_components/_summary.scss";
