@@ -2,16 +2,17 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/lib\/javascripts\/foundation\/foundation.alerts.js" : {
+    "\/lib\/styles\/scss\/_animate\/_lightspeed\/_lightSpeedOut.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.alerts.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.alerts-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_lightspeed\/_lightSpeedOut.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_lightSpeedOut.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_bits\/_hr.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -25,27 +26,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/styles\/scss\/_animate\/_fading-exits\/_fadeOutUpBig.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_fading-exits\/_fadeOutUpBig.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_fadeOutUpBig.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/searchform.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/searchform.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/lib\/styles\/scss\/_mixins\/_keyframes.sass" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -58,38 +38,6 @@
       "fileType" : 2,
       "debugStyle" : 0
     },
-    "\/lib\/javascripts\/foundation\/foundation.joyride.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.joyride.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.joyride-min.js",
-      "fileType" : 64
-    },
-    "\/lib\/styles\/scss\/_animate\/_lightspeed\/_lightSpeedOut.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_lightspeed\/_lightSpeedOut.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_lightSpeedOut.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/_\/inc\/css\/color-picker.min.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_\/inc\/css\/color-picker.min.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/sidebar-portfolio.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -98,18 +46,6 @@
       "inputAbbreviatedPath" : "\/sidebar-portfolio.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/lib\/styles\/scss\/_sections\/_about.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_sections\/_about.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_about.css",
-      "fileType" : 4,
-      "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_animate\/_properties.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -123,6 +59,73 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/lib\/javascripts\/foundation\/foundation.joyride.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.joyride.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.joyride-min.js",
+      "fileType" : 64
+    },
+    "\/lib\/javascripts\/foundation\/foundation.alerts.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.alerts.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.alerts-min.js",
+      "fileType" : 64
+    },
+    "\/_\/inc\/css\/color-picker.min.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_\/inc\/css\/color-picker.min.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/lib\/styles\/scss\/_animate\/_fading-exits\/_fadeOutUpBig.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_fading-exits\/_fadeOutUpBig.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_fadeOutUpBig.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/lib\/styles\/scss\/vendor\/wordpress.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/vendor\/wordpress.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/wordpress.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/lib\/styles\/scss\/_sections\/_about.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_sections\/_about.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_about.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/index.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -132,17 +135,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/lib\/styles\/scss\/_animate\/_lightspeed\/_lightSpeedIn.scss" : {
+    "\/lib\/javascripts\/vendor\/custom.modernizr-min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_lightspeed\/_lightSpeedIn.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_lightSpeedIn.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr-min-min.js",
+      "fileType" : 64
     },
     "\/lib\/styles\/scss\/_animate\/_rotating-entrances\/_rotateIn.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -203,28 +205,26 @@
       "outputAbbreviatedPath" : "\/lib\/javascripts\/pizza-min.js",
       "fileType" : 64
     },
-    "\/lib\/javascripts\/vendor\/custom.modernizr-min.js" : {
+    "\/lib\/styles\/scss\/_animate\/_lightspeed\/_lightSpeedIn.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr-min-min.js",
-      "fileType" : 64
-    },
-    "\/lib\/styles\/scss\/vendor\/wordpress.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/vendor\/wordpress.scss",
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_lightspeed\/_lightSpeedIn.scss",
       "outputStyle" : 3,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/wordpress.css",
+      "outputAbbreviatedPath" : "\/lib\/styles\/_lightSpeedIn.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/searchform.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/searchform.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/javascripts\/global-min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -238,8 +238,8 @@
       "fileType" : 64
     },
     "\/lib\/styles\/scss\/_animate\/_fading-exits\/fading-exits.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_fading-exits\/fading-exits.scss",
@@ -341,15 +341,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_\/inc\/options-framework.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_\/inc\/options-framework.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeInDown.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -361,6 +352,15 @@
       "outputAbbreviatedPath" : "\/lib\/styles\/_fadeInDown.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/_\/inc\/options-framework.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_\/inc\/options-framework.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/apple-touch-icon-144x144-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
@@ -416,8 +416,8 @@
       "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_animate\/_lightspeed\/lightspeed.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_lightspeed\/lightspeed.scss",
@@ -426,6 +426,15 @@
       "outputAbbreviatedPath" : "\/lib\/styles\/lightspeed.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/sidebar.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sidebar.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_components\/_tables.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -439,15 +448,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sidebar.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sidebar.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/apple-touch-icon-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -459,17 +459,16 @@
       "initialSize" : 1785,
       "fileType" : 8192
     },
-    "\/lib\/styles\/scss\/_animate\/_bouncing-entrances\/_bounceIn.scss" : {
+    "\/lib\/images\/bg-icons_@2X.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_bouncing-entrances\/_bounceIn.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_bounceIn.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/lib\/images\/bg-icons_@2X.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/lib\/images\/bg-icons_@2X.png",
+      "initialSize" : 19534,
+      "fileType" : 8192
     },
     "\/lib\/styles\/scss\/_animate\/_fading-exits\/_fadeOutDownBig.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -483,16 +482,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/images\/bg-icons_@2X.png" : {
+    "\/lib\/styles\/scss\/_animate\/_bouncing-entrances\/_bounceIn.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/images\/bg-icons_@2X.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/lib\/images\/bg-icons_@2X.png",
-      "initialSize" : 19534,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_bouncing-entrances\/_bounceIn.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_bounceIn.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_sections\/_portfolio.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -528,6 +528,15 @@
       "initialSize" : 3633,
       "fileType" : 8192
     },
+    "\/page.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/page.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeInDownBig.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -551,15 +560,6 @@
       "outputAbbreviatedPath" : "\/lib\/styles\/_fadeOutLeftBig.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/page.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/page.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_bits\/_grid.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -617,17 +617,16 @@
       "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/jquery-min.js",
       "fileType" : 64
     },
-    "\/lib\/styles\/scss\/_animate\/_rotating-exits\/_rotateOutDownLeft.scss" : {
+    "\/lib\/javascripts\/foundation\/foundation.cookie.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_rotating-exits\/_rotateOutDownLeft.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_rotateOutDownLeft.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.cookie.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.cookie-min.js",
+      "fileType" : 64
     },
     "\/lib\/images\/bg-black-paper.png" : {
       "ignoreWasSetByUser" : 0,
@@ -640,6 +639,18 @@
       "initialSize" : 81220,
       "fileType" : 8192
     },
+    "\/lib\/styles\/scss\/_animate\/_rotating-exits\/_rotateOutDownLeft.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_rotating-exits\/_rotateOutDownLeft.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_rotateOutDownLeft.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -648,17 +659,6 @@
       "inputAbbreviatedPath" : "\/config.rb",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
-    },
-    "\/lib\/javascripts\/foundation\/foundation.cookie.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.cookie.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.cookie-min.js",
-      "fileType" : 64
     },
     "\/_\/inc\/js\/options-custom.js" : {
       "ignoreWasSetByUser" : 0,
@@ -765,18 +765,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/styles\/scss\/_animate\/_specials\/_hinge.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_specials\/_hinge.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_hinge.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeInUpBig.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -786,6 +774,18 @@
       "outputStyle" : 3,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/lib\/styles\/_fadeInUpBig.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/lib\/styles\/scss\/_animate\/_specials\/_hinge.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_specials\/_hinge.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_hinge.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -800,18 +800,6 @@
       "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/snap.svg-min.js",
       "fileType" : 64
     },
-    "\/lib\/styles\/scss\/_components\/_chart.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_chart.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_chart.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/lib\/styles\/scss\/_bits\/_links.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -824,9 +812,21 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/styles\/scss\/_mixins\/_animate.sass" : {
+    "\/lib\/styles\/scss\/_components\/_chart.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_chart.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_chart.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/lib\/styles\/scss\/_mixins\/_animate.sass" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_mixins\/_animate.sass",
@@ -905,6 +905,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/functions.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/lib\/javascripts\/foundation\/foundation.tooltips.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -915,18 +924,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.tooltips-min.js",
       "fileType" : 64
-    },
-    "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeIn.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeIn.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_fadeIn.css",
-      "fileType" : 4,
-      "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_components\/_quotes.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -952,14 +949,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/functions.php" : {
+    "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeIn.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeIn.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_fadeIn.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_components\/_footer.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1015,15 +1015,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/about.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/about.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/lib\/styles\/scss\/_components\/_pizza.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1035,6 +1026,15 @@
       "outputAbbreviatedPath" : "\/lib\/styles\/_pizza.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/about.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/about.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_animate\/_rotating-exits\/_rotateOutDownRight.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1072,8 +1072,8 @@
       "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_animate\/_flippers\/flippers.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_flippers\/flippers.scss",
@@ -1222,17 +1222,14 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/styles\/scss\/_components\/_summary.scss" : {
+    "\/search.php" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_summary.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_summary.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/search.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_components\/_header.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1257,15 +1254,6 @@
       "initialSize" : 2572,
       "fileType" : 8192
     },
-    "\/search.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/search.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/lib\/images\/nav-icon.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1277,15 +1265,15 @@
       "initialSize" : 128,
       "fileType" : 8192
     },
-    "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeInRight.scss" : {
+    "\/lib\/styles\/scss\/_components\/_summary.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeInRight.scss",
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_summary.scss",
       "outputStyle" : 3,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_fadeInRight.css",
+      "outputAbbreviatedPath" : "\/lib\/styles\/_summary.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -1298,6 +1286,18 @@
       "outputStyle" : 3,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/lib\/styles\/_rotateInUpLeft.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeInRight.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_fading-entrances\/_fadeInRight.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_fadeInRight.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -1396,15 +1396,6 @@
       "initialSize" : 5276,
       "fileType" : 8192
     },
-    "\/lib\/styles\/_animate\/animate.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/_animate\/animate.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/lib\/styles\/scss\/vendor\/icons.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1413,18 +1404,6 @@
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/vendor\/icons.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
-    },
-    "\/lib\/styles\/scss\/_animate\/_bouncing-exits\/_bounceOutLeft.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_bouncing-exits\/_bounceOutLeft.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_bounceOutLeft.css",
-      "fileType" : 4,
-      "debugStyle" : 0
     },
     "\/lib\/images\/bg-icons.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1436,17 +1415,6 @@
       "outputAbbreviatedPath" : "\/lib\/images\/bg-icons.png",
       "initialSize" : 9482,
       "fileType" : 8192
-    },
-    "\/lib\/javascripts\/vendor\/custom.modernizr.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr-min.js",
-      "fileType" : 64
     },
     "\/lib\/styles\/scss\/_animate\/_fading-exits\/_fadeOutRight.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1460,15 +1428,26 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/styles\/scss\/_components\/_splash.scss" : {
+    "\/lib\/javascripts\/vendor\/custom.modernizr.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/custom.modernizr-min.js",
+      "fileType" : 64
+    },
+    "\/lib\/styles\/scss\/_animate\/_bouncing-exits\/_bounceOutLeft.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_splash.scss",
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_bouncing-exits\/_bounceOutLeft.scss",
       "outputStyle" : 3,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_splash.css",
+      "outputAbbreviatedPath" : "\/lib\/styles\/_bounceOutLeft.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -1482,6 +1461,18 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.orbit-min.js",
       "fileType" : 64
+    },
+    "\/lib\/styles\/scss\/_components\/_splash.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_splash.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_splash.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_animate\/_rotating-entrances\/_rotateInDownLeft.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1645,8 +1636,8 @@
       "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_animate\/_specials\/specials.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_specials\/specials.scss",
@@ -1657,8 +1648,8 @@
       "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_animate\/_attention\/attention.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_attention\/attention.scss",
@@ -1841,17 +1832,14 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/styles\/scss\/vendor\/foundation.scss" : {
+    "\/_\/inc\/options-interface.php" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/vendor\/foundation.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/foundation.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/_\/inc\/options-interface.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_bits\/_alerts.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1865,14 +1853,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_\/inc\/options-interface.php" : {
+    "\/lib\/styles\/scss\/vendor\/foundation.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_\/inc\/options-interface.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/vendor\/foundation.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/foundation.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_animate\/_custom.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1897,6 +1888,17 @@
       "initialSize" : 1499,
       "fileType" : 8192
     },
+    "\/lib\/javascripts\/foundation\/foundation.magellan.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.magellan.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.magellan-min.js",
+      "fileType" : 64
+    },
     "\/lib\/styles\/scss\/_components\/_main-img.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1909,26 +1911,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/javascripts\/foundation\/foundation.magellan.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.magellan.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.magellan-min.js",
-      "fileType" : 64
-    },
-    "\/lib\/functions\/custom-post-types.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/functions\/custom-post-types.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/lib\/javascripts\/foundation\/foundation.topbar.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1940,9 +1922,18 @@
       "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.topbar-min.js",
       "fileType" : 64
     },
-    "\/lib\/styles\/scss\/_animate\/_bouncing-exits\/bouncing-exits.scss" : {
+    "\/lib\/functions\/custom-post-types.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/functions\/custom-post-types.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/lib\/styles\/scss\/_animate\/_bouncing-exits\/bouncing-exits.scss" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_bouncing-exits\/bouncing-exits.scss",
@@ -2043,17 +2034,14 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/lib\/styles\/scss\/_components\/_banner.scss" : {
+    "\/category.php" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_banner.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/lib\/styles\/_banner.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/category.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/javascripts\/vendor\/zepto.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2065,15 +2053,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/javascripts\/vendor\/zepto-min.js",
       "fileType" : 64
-    },
-    "\/category.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/category.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/lib\/styles\/scss\/_mixins\/_animations.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2098,6 +2077,18 @@
       "initialSize" : 600,
       "fileType" : 8192
     },
+    "\/lib\/styles\/scss\/_components\/_banner.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_components\/_banner.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/lib\/styles\/_banner.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/lib\/styles\/scss\/_bits\/_buttons.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2111,8 +2102,8 @@
       "debugStyle" : 0
     },
     "\/lib\/styles\/scss\/_animate\/_rotating-exits\/rotating-exits.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/lib\/styles\/scss\/_animate\/_rotating-exits\/rotating-exits.scss",
@@ -2145,44 +2136,6 @@
       "outputAbbreviatedPath" : "\/lib\/javascripts\/foundation\/foundation.clearing-min.js",
       "fileType" : 64
     },
-    "\/single.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/single.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/lib\/styles\/_mixins\/_animate.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/styles\/_mixins\/_animate.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/lib\/javascripts\/global.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/javascripts\/global.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/javascripts\/global-min.js",
-      "fileType" : 64
-    },
-    "\/sidebar-testimony.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sidebar-testimony.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/lib\/styles\/scss\/_animate\/_attention\/_wobble.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2194,6 +2147,35 @@
       "outputAbbreviatedPath" : "\/lib\/styles\/_wobble.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/single.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/single.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/sidebar-testimony.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sidebar-testimony.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/lib\/javascripts\/global.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/javascripts\/global.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/javascripts\/global-min.js",
+      "fileType" : 64
     },
     "\/lib\/styles\/scss\/global.scss" : {
       "ignoreWasSetByUser" : 0,
