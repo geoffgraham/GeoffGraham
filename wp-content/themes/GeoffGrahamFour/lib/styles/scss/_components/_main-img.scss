@@ -12,7 +12,7 @@
   @media #{$ocean} {
     min-height: emCalc(250px);
     top: 0;
-    @include animate(fadeInRightBig, 1s, 1s);
+    @include fadeInRightBig(1s, 1s, ease, both, hidden);
     @include grid-column(5, false, false, false, false, false, false, left);
   }
   img {

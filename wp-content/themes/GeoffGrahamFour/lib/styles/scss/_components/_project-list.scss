@@ -20,7 +20,7 @@
     top: emCalc(-1px);
   }
   ::-webkit-progress-value { 
-    @include animate(bar-fill, 2s);
+    @include animation(bar-fill 2s linear);
     width: 0px;
   }
 }

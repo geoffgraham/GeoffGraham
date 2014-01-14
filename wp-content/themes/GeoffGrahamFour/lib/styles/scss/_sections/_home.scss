@@ -4,17 +4,14 @@
 
 .home {
   .hero {
-    // background: url("http://www.olliehusbanddesign.co.uk/test/catwalk.jpg") center center no-repeat;
     background: url("../images/bg-home-hero.jpg") center center no-repeat;
     background-size: cover;
-    // @include background-image(linear-gradient(lighten($teal, 20%), $grayLightest, lighten($peach, 10%)));
-    // @include background-image(radial-gradient(70% 10%, circle, lighten($peach, 10%), lighten($teal, 20%)));
     text-align: center;
   }
   h1,
   h2,
   a[role="button"] {
-    @include animate(rotateInDownLeft, 1s, 1.25s);
+    @include rotateInDownLeft(1s, 1.25s, ease, both, hidden);
   }
   h1,
   h2 { 

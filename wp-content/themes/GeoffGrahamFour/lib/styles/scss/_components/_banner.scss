@@ -20,7 +20,7 @@
     font-family: $displayFont;
     line-height: 1em;
     padding: emCalc(10px) 0;
-    @include animate(fadeIn, 1.5s, 1s);
+    @include fadeIn(1.5s, 1s, ease, both, hidden);
     @include text-shadow ($grayDark 0 2px 8px);
     @media #{$ocean} {
       padding: 0;

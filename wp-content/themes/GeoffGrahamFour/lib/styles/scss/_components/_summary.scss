@@ -10,7 +10,7 @@
     @include grid-column(10, false, false, 1, false, false, false, left);
   }
   @media #{$ocean} {
-    @include animate(fadeInLeftBig, 1s, 1s);
+    @include fadeInLeftBig (1s, 1s, ease, both, hidden);
     @include grid-column(5, false, false, false, false, false, false, left);
   }
   h1 {
