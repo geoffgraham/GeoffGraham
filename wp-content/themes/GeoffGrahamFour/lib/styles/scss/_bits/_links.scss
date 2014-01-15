@@ -24,3 +24,11 @@ a {
     color: $grayDarkest;
   }
 }
+
+.download {
+  @extend .tagged;
+  font-size: 0.8em;
+  @media #{$puddle} {
+    font-size: 1em;
+  }
+}
