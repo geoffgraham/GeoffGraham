@@ -12,13 +12,15 @@ a {
 .tagged {
   border: 1px solid $gray;
   color: $gray;
+  display: inline-block;
   font-weight: 800;
   letter-spacing: 2px;
+  line-height: emCalc(25px);
   margin-right: emCalc(15px);
-  padding: .2em .75em;
+  padding: 0.25em 1em;
   text-transform: uppercase;
-  @include border-radius(1em);
-  @include font-size(15);
+  @include border-radius(2em);
+  @include font-size(14);
   &:hover {
     border: 1px solid $grayDarkest;
     color: $grayDarkest;
@@ -27,8 +29,8 @@ a {
 
 .download {
   @extend .tagged;
-  font-size: 0.85em;
-  @media #{$puddle} {
-    font-size: 1em;
-  }
+  font-size: 0.8em;
+  padding: .5em 1em;
+  text-align: center;
+  width: 100%;
 }
