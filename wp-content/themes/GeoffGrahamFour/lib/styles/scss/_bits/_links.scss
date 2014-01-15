@@ -27,7 +27,7 @@ a {
 
 .download {
   @extend .tagged;
-  font-size: 0.8em;
+  font-size: 0.85em;
   @media #{$puddle} {
     font-size: 1em;
   }
