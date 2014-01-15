@@ -24,3 +24,17 @@
     width: 0px;
   }
 }
+
+// The color key
+.project-key {
+  list-style: none;
+	overflow: hidden;
+	padding: 0;
+	li {
+  	color: $white;
+  	float: left;
+  	font-weight: bold;
+  	margin-right: emCalc(10px);
+  	padding: emCalc(10px);
+  }
+}
