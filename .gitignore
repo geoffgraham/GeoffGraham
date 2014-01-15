@@ -29,3 +29,5 @@ wp-content/themes/GeoffGrahamFour/codekit-config.json
 wp-content/uploads/
 wp-content/cache/
 wp-content/w3tc-config/
+wp-content/db.php
+wp-content/object-cache.php
