@@ -35,6 +35,8 @@
 </footer>
 
 	</div>
+	
+	<?php include ('sidebar-email-newsletter.php'); ?>
 
 	<?php wp_footer(); ?>
 

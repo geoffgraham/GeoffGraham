@@ -107,7 +107,7 @@
 
 <body>
 
-<header class="main" role="header">
+<header role="header" class="main" role="banner">
   <div class="wrapper">
     <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
     <a href="#menu" class="menu-icon" aria-hidden="true" data-icon="&#xe009;"></a>
