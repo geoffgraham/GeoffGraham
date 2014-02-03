@@ -6,6 +6,8 @@
  */
 ?>
 
+<?php include ('sidebar-email-newsletter.php'); ?>
+
 <footer>
   <div class="wrapper">
     <a href="#" class="back-to-top" aria-hidden="true" data-icon="&#xe008;"></a>
@@ -35,8 +37,6 @@
 </footer>
 
 	</div>
-	
-	<?php include ('sidebar-email-newsletter.php'); ?>
 
 	<?php wp_footer(); ?>
 
