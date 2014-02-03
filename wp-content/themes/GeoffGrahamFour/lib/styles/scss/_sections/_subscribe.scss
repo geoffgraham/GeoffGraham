@@ -1,0 +1,41 @@
+// SUBSCRIBE
+// Sidebar for Devigner Digest newsletter signup form.
+// ---------------------------------------------------
+
+.subscribe {
+  background: $black;
+  color: $white;
+  line-height: emCalc(21px);
+  padding: emCalc(40px) 0;
+  @include font-size(16);
+  @media #{$bay} {
+  	  background: $black url("../images/bg-airplane.svg") no-repeat right 0;
+    }
+  .no-svg .main-header {
+    @media #{$bay} {
+  	  background-image: url("../images/bg-airplane.png");
+    }
+  }
+  h2 {
+    @include prefix(animation, none);
+    margin: emCalc(10px) 0 0 0;
+    @include font-size(32);
+  }
+  .blurb {
+    @include grid-column(12);
+    @media #{$bay} {
+  	  @include grid-column(6);
+    }
+  }
+  .email-form {
+    @include grid-column(12);
+    @media #{$bay} {
+  	  @include grid-column(6);
+    }
+  }
+  form { @include grid-row(); }
+  input { width: 100%; height: emCalc(45px); }
+  button {
+    @include button-size($button-sml);
+  }
+}
