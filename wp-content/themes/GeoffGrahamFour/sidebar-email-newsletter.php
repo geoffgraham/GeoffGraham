@@ -22,7 +22,7 @@
           <input id="fieldEmail" placeholder="email@example.com" name="cm-ttykjjj-ttykjjj" type="email" pattern="[^ @]*@[^ @]*" required />
         </p>
         <p>
-          <button type="submit">Subscribe</button>
+          <button type="submit" onClick="_gaq.push(['_trackEvent', 'Email', 'Signup', 'Devigner Digest'])">Subscribe</button>
         </p>
       </form>
     </div>
