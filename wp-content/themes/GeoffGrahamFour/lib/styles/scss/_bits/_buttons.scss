@@ -39,7 +39,3 @@
 .button-primary {
   @include button-style($primary-color);
 }
-
-.button-secondary a {
-  @include button-style($gray);
-}
