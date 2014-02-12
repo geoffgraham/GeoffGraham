@@ -4,14 +4,12 @@
 .main-img {
   margin-top: emCalc(15px);
   text-align: center;
-  top: 10px;
   @include grid-column(12);
   @media #{$lake} {
     @include grid-column(10, false, false, 1, false, false, false, left);
   }
   @media #{$ocean} {
     min-height: emCalc(250px);
-    top: 0;
     @include fadeInRightBig(1s, 1s, ease, both, hidden);
     @include grid-column(5, false, false, false, false, false, false, left);
   }

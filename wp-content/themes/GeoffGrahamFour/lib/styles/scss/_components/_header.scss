@@ -45,7 +45,7 @@ header.main {
   }
   ul { position: relative; }
   li {
-    @include font-size(24);
+    @include font-size(20);
     list-style: none;
     @media #{$lake} { 
   	  @include font-size(18);
