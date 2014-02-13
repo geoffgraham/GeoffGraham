@@ -8,11 +8,7 @@ nav[role=navigation] {
   clear: both;
   position: relative;
   z-index: 4;
-  -webkit-transition: all 0.3s ease-out;  
-		 -moz-transition: all 0.3s ease-out;
-		  -ms-transition: all 0.3s ease-out;
-			 -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+  @include transition(all .3s ease-out);
   @media #{$lake} { 
     clear: none;
   	max-height: none;
