@@ -1,7 +1,9 @@
 // Navigations
+// Navigation, social, pagination
+// Toggle controlled in global.js
+// ------------------------------------
 
-// The main menu
-		
+// NAVIGATION: MAIN
 nav[role=navigation] {
   clear: both;
   position: relative;
@@ -15,6 +17,10 @@ nav[role=navigation] {
     clear: none;
   	max-height: none;
   	@include grid-column(8);
+	}
+	@media #{$ocean} {
+	  margin-left: 10%;
+  	@include grid-column(6);
 	}
 }
 		
@@ -47,6 +53,7 @@ nav[role=navigation] ul {
 }
 
 nav[role=navigation] li {
+  font-weight: 800;
   text-align: center;
   @media #{$lake} { 
 		display: inline-block;
@@ -93,72 +100,6 @@ nav[role=social] {
   	  float: right;
       text-align: right;
       width: 25%;
-  }
-}
-
-// NAVIGATION: MAIN
-
-nav[role=navigation] {
-  clear: both;
-  position: relative;
-  z-index: 4;
-  -webkit-transition: all 0.3s ease-out;  
-		 -moz-transition: all 0.3s ease-out;
-		  -ms-transition: all 0.3s ease-out;
-			 -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
-  @media #{$lake} { 
-    clear: none;
-  	max-height: none;
-  	@include grid-column(8);
-	}
-	@media #{$ocean} {
-	  margin-left: 10%;
-  	@include grid-column(6);
-	}
-}
-		
-.js nav[role=navigation] {
-  max-height: 0;
-  @media #{$lake} {
-    float: right;
-  }
-		@media #{$ocean} { 
-  	  float: left;
-	}
-}
-
-nav[role=navigation].active { max-height: 15em; }
-		
-nav[role=navigation] ul {
-  background: $primaryColor;
-  margin: 0;
-	padding: 0;
-	top: emCalc(5px);
-	@media #{$lake} { 
-	  background: transparent;
-	  border: 0;
-	  float: right;
-  	margin: 0 0 0 -0.25em;
- } 
-}
-
-nav[role=navigation] li {
-  font-weight: 800;
-  text-align: center;
-  @media #{$lake} { 
-		display: inline-block;
-		text-align: right;
-  }
-}
-
-nav[role=navigation] li a {
-	display: block;
-	padding: 0 0.4em;
-	border-bottom: 1px solid $primaryDark;
-	@media #{$lake} { 
-		border: 0;
-		float: left;
   }
 }
 
