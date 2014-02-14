@@ -122,24 +122,24 @@ function gallery_style($css) {
 
 // Clean the output of attributes of images in editor
 function image_tag_class($class, $id, $align, $size) {
-    $align = 'align' . esc_attr($align);
-    return $align;
+  $align = 'align' . esc_attr($align);
+  return $align;
 } 
 
 // Remove width and height in editor, for a better responsive world.
 function image_editor($html, $id, $alt, $title) {
-    return preg_replace(array(
-            '/\s+width="\d+"/i',
-            '/\s+height="\d+"/i',
-            '/alt=""/i'
-        ),
-        array(
-            '',
-            '',
-            '',
-            'alt="' . $title . '"'
-        ),
-        $html);
+  return preg_replace(array(
+    '/\s+width="\d+"/i',
+    '/\s+height="\d+"/i',
+    '/alt=""/i'
+  ),
+  array(
+    '',
+    '',
+    '',
+    'alt="' . $title . '"'
+  ),
+  $html);
 } 
 
 // Wrap images with figure tag 
