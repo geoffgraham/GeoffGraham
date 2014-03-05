@@ -19,7 +19,6 @@
     font-family: $displayFont;
     margin-top: 0;
     text-transform: none;
-    @include text-shadow(0 2px 5px $grayDarkest);
   }
   h1 {
     margin-bottom: 0.25em;
