@@ -29,7 +29,6 @@ input[type=submit] {
   @extend .button-primary;
   @media #{$lake} {
 	  width: emCalc(150px);
-	  @include button-size($button-sml, false, false);
   }
 }
 

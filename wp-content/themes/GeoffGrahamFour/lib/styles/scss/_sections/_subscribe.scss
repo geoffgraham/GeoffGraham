@@ -38,7 +38,5 @@
   }
   form { @include grid-row(); }
   input { width: 100%; height: emCalc(45px); }
-  button {
-    @include button-size($button-sml);
-  }
+  button {}
 }

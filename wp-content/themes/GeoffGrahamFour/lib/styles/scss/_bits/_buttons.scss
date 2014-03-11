@@ -1,6 +1,41 @@
 // BUTTONS
 // ------------------------------------
 
+// Button Mixin
+@mixin button($btn-bg: transparent, $btn-color: $blue, $btn-font-size: 15, $btn-hover-text: $white) {
+  background-color: $btn-bg;
+  border: 2px solid $btn-color;
+  color: $btn-color;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $btn-font-size;
+  font-weight: 500;
+  line-height: normal;
+  min-width: emCalc(100px);
+  padding: emCalc(5px);
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  @include border-radius(3px);
+  @include transition(all, .3s, false, false);
+  &:hover {
+    background-color: $btn-color;
+    background-color: rgba($btn-color, 0.7);
+    border-color: transparent;
+    color: $btn-hover-text;
+  }
+}
+
+// Default Primary Button
+[role="button"], button, .button[role="link"] {
+  @include button();
+}
+
+// Secondaery Button
+.btn-secondary {
+  @include button(transparent, $white, 15, $gray);
+}
+
 // Back to top button
 .back-to-top {
   background-color: rgba(135, 135, 135, 0.3);
@@ -25,17 +60,4 @@
   	padding: emCalc(10px) emCalc(18px);
   }
   &:hover { background-color: rgba(135, 135, 135, 0.5); }
-}
-
-// Default buttons
-[role="button"] {
-  @include button-base;
-  @include button-size($button-sml);
-  @include radius(3px);
-  @include single-transition;
-  @include inset-shadow(true);
-}
-
-.button-primary {
-  @include button-style($primary-color);
 }

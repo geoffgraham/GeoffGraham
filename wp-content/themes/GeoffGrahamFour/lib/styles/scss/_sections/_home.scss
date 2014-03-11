@@ -5,29 +5,31 @@
 .home {
   .hero {
     background: url("../images/bg-home-hero.jpg") center center no-repeat;
-    background-size: cover;
+    padding: emCalc(50px) 0;
     text-align: center;
+    @include background-size(cover);
   }
   h1,
   h2,
-  a[role="button"] {
+  a[role="link"] {
     @include rotateInDownLeft(1s, 1.25s, ease, both, hidden);
   }
   h1,
   h2 { 
     color: $white;
-    font-family: $displayFont;
     margin-top: 0;
     text-transform: none;
   }
   h1 {
     margin-bottom: 0.25em;
     padding-top: 1em;
+    text-transform: uppercase;
     @media #{$lake} {
         margin-bottom: 0.25em;
     	  padding: 0.25em 0 0 0;
     }
   }
+  h2 { font-family: $displayFont; }
   .work {
     @media #{$ocean} {
     	  padding-top: 1em;

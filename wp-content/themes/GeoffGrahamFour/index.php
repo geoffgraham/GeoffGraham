@@ -9,9 +9,10 @@
 
 <div class="home">
   <div class="hero">
-    <h1 aria-hidden="true" data-icon="&#xe007; &#xe005; &#xe006;"></h1>
+    <!--<h1 aria-hidden="true" data-icon="&#xe007; &#xe005; &#xe006;"></h1>-->
+    <h1>Geoff Graham</h1>
     <h2>web design and development</h2>
-    <a href="/contact" role="button" class="button-primary" alt="Hire Geoff Graham">Hire Me</a>
+    <a href="/contact" role="link" class="btn-secondary" alt="Hire Geoff Graham">Hire Me</a>
   </div><!-- hero -->
   <section class="work">
     <div class="wrapper">
@@ -54,7 +55,8 @@
 </div><!--  home -->
 
 <script>
-  $("h1").fitText(1.0, { minFontSize: '70px', maxFontSize: '200px' });
+  $("h1").fitText(1.0, { minFontSize: '45px', maxFontSize: '75px' });
+  $("h2").fitText(1.0, { minFontSize: '15px', maxFontSize: '45px' });
   $("h1").lettering();
 </script>
 
