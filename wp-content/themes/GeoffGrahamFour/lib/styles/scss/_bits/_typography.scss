@@ -252,18 +252,14 @@ pre.language-other {
 }
 
 code { 
-  background: none;
+  background: $grayLighter;
   font-family: $typewriter;
   overflow: auto;
-  padding: 15px;
+  padding: emCalc(5px);
   white-space: pre;
   @media #{$ocean} {
-      line-height: 28px;
+      line-height: emCalc(25px);;
       @include font-size(22);
-  }
-  &::selection {
-    background: $white;
-    color: $grayDarkest;
   }
 }
 
