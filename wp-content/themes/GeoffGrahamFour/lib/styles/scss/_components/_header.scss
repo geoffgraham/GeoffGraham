@@ -3,34 +3,37 @@
 header.main {
   background: $primaryColor;
   border-bottom: 1px solid $primaryDark;
-  height: emCalc(55px);
+  height: rem-calc(55);
   position: relative;
   text-transform: lowercase;
   z-index: 4;
   @include fadeInDown(0.5s, 0.5s, ease, both, hidden);
   @include single-text-shadow($primaryDark, 1px, 1px, 2px);
   @media #{$lake} { 
-   height: emCalc(70px);
+   height: rem-calc(80);
+  }
+  @media #{$ocean} { 
+   height: rem-calc(90);
   }
   .logo {
     background: url("../images/nav-logo.svg") center no-repeat;
     background-size: 100%;
     float: left;
-    height: emCalc(75px);
+    height: rem-calc(75);
     margin-left: 5%;
     margin-top: 1%;
     position: relative;
-    text-indent: emCalc(-9999px);
-    width: emCalc(75px);
+    text-indent: rem-calc(-9999);
+    width: rem-calc(75);
     z-index: 5;
     @include bounceInDown(1.5s, 0.25s, ease, both, hidden);
     @media #{$lake} { 
-  	  height: emCalc(80px);
-  	  width: emCalc(80px);
+  	  height: rem-calc(95);
+  	  width: rem-calc(95);
     }
     @media #{$ocean} { 
-  	  height: emCalc(85px);
-  	  width: emCalc(85px);
+  	  height: rem-calc(125);
+  	  width: rem-calc(125);
     }
     &:hover { 
       @media #{$bay} { 
@@ -61,14 +64,14 @@ header.main {
   	  border: 0;
   	  float: right;
     	margin: 0 0 0 -5em;
-    	top: emCalc(20px);
+    	top: rem-calc(20);
       }
     @media #{$ocean} { 
-      top: emCalc(25px);
+      top: rem-calc(25);
       }
     }
     li a { 
-      padding: 0.8em 0;
+      padding: 0.8rem 0;
       &:hover { opacity: 0.5; }
     }
     li.current-menu-item { opacity: 0.5; }
@@ -78,7 +81,7 @@ header.main {
   }
   nav[role=social] {
     @media #{$ocean} { 
-      top: emCalc(15px);
+      top: rem-calc(15);
     }
     li a { 
       &:hover { opacity: 0.5; }
@@ -91,11 +94,11 @@ header.main {
     background-position: center center;
     background-repeat: no-repeat;
     float: left;
-    height: emCalc(90px);
+    height: rem-calc(90);
     margin-left: 5%;
     position: relative;
-    text-indent: emCalc(-9999px);
-    top: emCalc(-5px);
-    width: emCalc(90px);
+    text-indent: rem-calc(-9999);
+    top: rem-calc(-5);
+    width: rem-calc(90);
     z-index: 5;
   }

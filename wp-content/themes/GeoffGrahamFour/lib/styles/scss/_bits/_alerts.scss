@@ -18,6 +18,6 @@ div.wpcf7-validation-errors {
 span.wpcf7-not-valid-tip {
   background: lighten(red, 25%);
   color: $white;
-  padding: 0 emCalc(10px);
+  padding: 0 rem-calc(10);
   @include border-radius(4px);
 }

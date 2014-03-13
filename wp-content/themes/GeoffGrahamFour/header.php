@@ -108,28 +108,26 @@
 <body>
 
 <header role="header" class="main" role="banner">
-  <div class="wrapper">
-    <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-    <a href="#menu" class="menu-icon" aria-hidden="true" data-icon="&#xe009;"></a>
-    <nav id="menu" class="primary" role="navigation">
-      <?php wp_nav_menu( array('menu' => 'primary') ); ?>
-    </nav><!-- primary -->
-    <nav class="social" role="social">
-      <ul>
-        <li>
-          <a alt="Follow Geoff Graham on Twitter" href="http://twitter.com/geoffreygraham" aria-hidden="true" data-icon="&#xe000;"></a>
-        </li>
-        <li>
-          <a alt="See Geoff Graham on LinkedIn" href="http://www.linkedin.com/in/geoffreyjgraham" aria-hidden="true" data-icon="&#xe001;"></a>
-        </li>
-        <li>
-          <a alt="Check out Geoff Graham on Codepen" href="https://codepen.io/geoffgraham" aria-hidden="true" data-icon="&#xe002;"></a>
-        </li>
-        <li>
-          <a alt="Subscribe to Geoff Graham Blog RSS" href="<?php bloginfo('rss_url'); ?>" aria-hidden="true" data-icon="&#xe004;"></a>
-        </li>
-      </ul>
-    </nav><!-- social -->
-  </div><!-- wrapper -->
+  <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+  <a href="#menu" class="menu-icon" aria-hidden="true" data-icon="&#xe009;"></a>
+  <nav id="menu" class="primary" role="navigation">
+    <?php wp_nav_menu( array('menu' => 'primary') ); ?>
+  </nav><!-- primary -->
+  <nav class="social" role="social">
+    <ul>
+      <li>
+        <a alt="Follow Geoff Graham on Twitter" href="http://twitter.com/geoffreygraham" aria-hidden="true" data-icon="&#xe000;"></a>
+      </li>
+      <li>
+        <a alt="See Geoff Graham on LinkedIn" href="http://www.linkedin.com/in/geoffreyjgraham" aria-hidden="true" data-icon="&#xe001;"></a>
+      </li>
+      <li>
+        <a alt="Check out Geoff Graham on Codepen" href="https://codepen.io/geoffgraham" aria-hidden="true" data-icon="&#xe002;"></a>
+      </li>
+      <li>
+        <a alt="Subscribe to Geoff Graham Blog RSS" href="<?php bloginfo('rss_url'); ?>" aria-hidden="true" data-icon="&#xe004;"></a>
+      </li>
+    </ul>
+  </nav><!-- social -->
 </header>
 

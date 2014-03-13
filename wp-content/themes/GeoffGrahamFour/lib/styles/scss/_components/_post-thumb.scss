@@ -6,7 +6,7 @@
   color: $grayDark;
   float: left;
   font-weight: 200;
-  margin-bottom: emCalc(30px);
+  margin-bottom: rem-calc(30);
   margin-left: 4%;
   overflow: hidden;
   padding: 2% 2%;
@@ -35,19 +35,16 @@
   }
   img { min-width: 100%; }
   .description {
-  height: emCalc(70px);
+  height: rem-calc(70);
   overflow: hidden;
-  padding: 0 0.5em 0.75em;
+  padding: 0 0.25rem 0.5rem;
   @include font-size(20);
   @media #{$lake} {
-	  height: emCalc(55px);
+	  height: rem-calc(65);
     }
   }
   p { 
-  line-height: 1em;
-  @media #{$lake} {
-	  line-height: .75em;
-    }
+    line-height: rem-calc(10);
   }
   a { color: $grayDark; }
 }

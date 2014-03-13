@@ -2,22 +2,18 @@
 // Should be used with .summary. Currently used as the top banner for Portfolio items.
 
 .main-img {
-  margin-top: emCalc(15px);
+  margin-top: rem-calc(15);
   text-align: center;
   @include grid-column(12);
-  @media #{$lake} {
-    @include grid-column(10, false, false, 1, false, false, false, left);
-  }
-  @media #{$ocean} {
-    min-height: emCalc(250px);
+  @media #{$bay} {
+    min-height: rem-calc(400);
     @include fadeInRightBig(1s, 1s, ease, both, hidden);
-    @include grid-column(5, false, false, false, false, false, false, left);
+    @include grid-column(6, false, false, false, false, false, false, left);
   }
   img {
-    @media #{$ocean} {
+    @media #{$bay} {
       bottom: 0;
       left: 0;
-      left: emCalc(-40px);
       position: absolute;
     }
   }

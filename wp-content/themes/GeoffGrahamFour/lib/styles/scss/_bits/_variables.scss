@@ -32,10 +32,10 @@ $displayFont:   "felt-tip-senior", sans-serif;
 $typewriter:    Menlo, Monaco, monospace;
 
 // Media Queries
-$baby:  emCalc(321px) !default;
-$mama:  emCalc(500px) !default;
-$uncle: emCalc(700px) !default;
-$papa:  emCalc(1000px) !default;
+$baby:  rem-calc(321) !default;
+$mama:  rem-calc(500) !default;
+$uncle: rem-calc(700) !default;
+$papa:  rem-calc(1000) !default;
 
 $screen: "only screen" !default;
 $puddle: "only screen and (min-width:"#{$baby}")" !default;

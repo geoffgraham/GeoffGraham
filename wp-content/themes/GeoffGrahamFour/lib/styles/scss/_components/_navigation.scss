@@ -23,11 +23,11 @@ nav[role=navigation] {
 .js nav[role=navigation] {
   max-height: 0;
   overflow: hidden;
-  top: emCalc(-24px);
+  top: rem-calc(-24);
   @media #{$lake} {
     float: right;
 		overflow: visible;
-		top: emCalc(-5px);
+		top: rem-calc(-5);
   }
 		@media #{$ocean} { 
   	  float: left;
@@ -44,7 +44,7 @@ nav[role=navigation] ul {
 	  background: transparent;
 	  border: 0;
 	  float: right;
-  	margin: 0 0 0 -0.25em;
+  	margin: 0 0 0 -0.25rem;
  } 
 }
 
@@ -53,14 +53,14 @@ nav[role=navigation] li {
   text-align: center;
   @media #{$lake} { 
 		display: inline-block;
-		margin-right: emCalc(15px);
+		margin-right: rem-calc(15);
 		text-align: right;
   }
 }
 
 nav[role=navigation] li a {
 	display: block;
-	padding: 0 0.4em;
+	padding: 0 0.4rem;
 	border-bottom: 1px solid $primaryDark;
 	@media #{$lake} { 
 		border: 0;
@@ -74,7 +74,7 @@ a.menu-icon {
   display: block;
   float: right;
   left: -0.825em;
-  top: emCalc(10px);
+  top: rem-calc(15);
 	position: relative;
 	@include font-size(32);
 	@media #{$lake} { 
@@ -139,7 +139,7 @@ nav[role=pagination] {
     color: $grayLight;
     display: block;
     float: left;
-    padding: emCalc(15px);
+    padding: rem-calc(15);
     text-align: center;
     width: 50%;
     @include font-size(15);

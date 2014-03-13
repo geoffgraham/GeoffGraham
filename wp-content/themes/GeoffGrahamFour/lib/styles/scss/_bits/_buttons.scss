@@ -2,7 +2,7 @@
 // ------------------------------------
 
 // Button Mixin
-@mixin button($btn-bg: transparent, $btn-color: $blue, $btn-font-size: 15, $btn-hover-text: $white) {
+@mixin button($btn-bg: transparent, $btn-color: $blue, $btn-font-size: 14, $btn-hover-text: $white) {
   background-color: $btn-bg;
   border: 2px solid $btn-color;
   color: $btn-color;
@@ -11,8 +11,7 @@
   font-size: $btn-font-size;
   font-weight: 500;
   line-height: normal;
-  min-width: emCalc(100px);
-  padding: emCalc(5px);
+  padding: rem-calc(5) rem-calc(15);
   position: relative;
   text-decoration: none;
   text-align: center;
@@ -33,17 +32,17 @@
 
 // Secondaery Button
 .btn-secondary {
-  @include button(transparent, $white, 15, $gray);
+  @include button(transparent, $white, 14, $gray);
 }
 
 // Back to top button
 .back-to-top {
   background-color: rgba(135, 135, 135, 0.3);
   border: 1px solid $grayLight;
-  bottom: emCalc(16px);
+  bottom: rem-calc(16);
   color: $black;
   display: none;
-  padding: emCalc(5px) emCalc(8px);
+  padding: rem-calc(5) rem-calc(8);
   position: fixed;
   right: 0;
   text-decoration: none;
@@ -57,7 +56,7 @@
   	@include font-size(28);
   }
   @media #{$ocean} {
-  	padding: emCalc(10px) emCalc(18px);
+  	padding: rem-calc(10) rem-calc(18);
   }
   &:hover { background-color: rgba(135, 135, 135, 0.5); }
 }

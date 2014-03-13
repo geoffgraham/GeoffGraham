@@ -21,7 +21,7 @@
     @include grid-column(9, false, true, false, false, false, false, left);
   }
   @media #{$ocean} {
-    @include grid-column(7, false, true, false, false, false, false, left);
+    @include grid-column(9, false, true, false, false, false, false, left);
   }
 }
 
@@ -46,13 +46,7 @@
     padding-top: 0;
   }
   h4 {
-    margin: 0.5em 0 -0.75em;
-    @media #{$lake} {
-  	  margin: 0 0 -0.75em;
-    }
-    @media #{$ocean} {
-  	  margin: 0 0 -1.25em;
-    }
+    margin: rem-calc(8) 0 rem-calc(-16);
   }
   article { @extend .post-thumb; }
 }
@@ -62,8 +56,8 @@
   background: $primaryColor;
   color: $white;
   font-weight: 800;
-  margin: emCalc(35px) 0;
-  padding: emCalc(10px);
+  margin: rem-calc(35) 0;
+  padding: rem-calc(10);
   transition: background .2s ease-in;
   @include border-radius(4px);
   &:hover { background: $primaryDark; }
@@ -75,11 +69,11 @@
 .tags {
   border-top: 1px solid $grayLight;
   color: $grayLight;
-  padding-top: emCalc(10px);
+  padding-top: rem-calc(10);
   text-align: center;
   @include font-size(25);
   span {
     position: relative;
-    top: emCalc(5px);
+    top: rem-calc(5);
   }
 }

@@ -15,9 +15,10 @@ a {
   display: inline-block;
   font-weight: 800;
   letter-spacing: 2px;
-  line-height: emCalc(25px);
-  margin-right: emCalc(15px);
-  padding: 0.25em 1em;
+  line-height: rem-calc(25);
+  margin-bottom: rem-calc(15);
+  margin-right: rem-calc(15);
+  padding: 0.25rem 1rem;
   text-transform: uppercase;
   @include border-radius(2em);
   @include font-size(14);
@@ -29,8 +30,8 @@ a {
 
 .download {
   @extend .tagged;
-  font-size: 0.8em;
-  padding: .5em 1em;
+  font-size: 0.8rem;
+  padding: .5rem 1rem;
   text-align: center;
   width: 100%;
 }

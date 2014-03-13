@@ -13,7 +13,7 @@
   li {
     display: block;
     height: 125px;
-    padding: emCalc(25px) 0;
+    padding: rem-calc(45) 0;
     position: relative;
     text-align: center;
     vertical-align: bottom;
@@ -22,13 +22,13 @@
     @media #{$bay} {
       display: inline-block;
       height: 450px;
-	    margin: 0 1.8% 0 0;
+	    margin: 0 2% 0 0;
 	    width: 14%;
   }
   }
   .axis { 
     display: none;
-    top: emCalc(-25px);
+    top: rem-calc(-35);
     width: 12%;
     @media #{$bay} {
       display: inline-block;
@@ -39,10 +39,10 @@
     background: $grayLight;
     @include font-size(18);
     @media #{$bay} {
-      margin: -.3em 0 3.1em 0;
+      margin: rem-calc(-5) 0 3.1rem 0;
     }
     @media #{$ocean} {
-      margin: -.9em 0 3.1em 0;
+      margin: rem-calc(-5) 0 3.1rem 0;
     }
   }
   .percent {
@@ -71,7 +71,6 @@
     @media #{$bay} {
       bottom: 20px;
       position: absolute;
-      @include font-size(16);
   }
   }
   .teal { 

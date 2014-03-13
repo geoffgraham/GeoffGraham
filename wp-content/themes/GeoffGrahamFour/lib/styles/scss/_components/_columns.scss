@@ -16,7 +16,7 @@
 	  @include column-count(4);
   }
   li {
-    line-height: emCalc(25px);
+    line-height: rem-calc(25);
     list-style: none;
     @include font-size(25);
   }

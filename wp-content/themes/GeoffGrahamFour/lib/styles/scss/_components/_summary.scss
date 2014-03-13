@@ -1,25 +1,24 @@
 // SUMMARY
 // Should be ussed with .main-img. Currently used as the top banner for Portfolio items.
 .summary {
-  line-height: emCalc(24px);
-  margin-top: emCalc(25px);
+  line-height: rem-calc(24);
+  margin-top: rem-calc(25);
   @include font-size(18);
   @include grid-column(12);
   @media #{$lake} {
     @include font-size(20);
-    @include grid-column(10, false, false, 1, false, false, false, left);
   }
-  @media #{$ocean} {
+  @media #{$bay} {
     @include fadeInLeftBig (1s, 1s, ease, both, hidden);
-    @include grid-column(5, false, false, false, false, false, false, left);
+    @include grid-column(6, false, false, false, false, false, false, left);
   }
   h1 {
-    line-height: emCalc(18px);
+    line-height: rem-calc(32);
     @include font-size(32);
     @media #{$ocean} {
-      line-height: emCalc(15px);
-      margin-bottom: emCalc(5px);
-      @include font-size(43);
+      line-height: rem-calc(40);
+      margin-bottom: rem-calc(15);
+      @include font-size(40);
     }
   }
 }

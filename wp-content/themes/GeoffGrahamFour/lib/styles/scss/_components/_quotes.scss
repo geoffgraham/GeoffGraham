@@ -3,7 +3,7 @@
 
 .quote-wrapper { 
   @extend .wrapper;
-  margin: emCalc(25px) 0;
+  margin: rem-calc(35) 0;
 }
 
 .quote-bubble {
@@ -58,27 +58,27 @@
   img { display: block; }
   p {
   /* remove webkit p margins */
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
+  -webkit-margin-before: 0rem;
+  -webkit-margin-after: 0rem;
   }
 }
 
 .citation {
   font-weight: 800;
-  top: emCalc(25px);
+  top: rem-calc(25);
   @include font-size(18);
   @include grid-column(12, false, false, false, false, false, false, false);
   @media #{$ocean} { 
     display: inline-block;
     left: 0;
-    line-height: emCalc(18px);
+    line-height: rem-calc(18);
     top: 0;
     @include grid-column(3, false, false, false, false, false, false, false);
   }
   p {
     @media #{$ocean} { 
       position: relative;
-      top: emCalc(15px);
+      top: rem-calc(15);
     }
   }
   span {

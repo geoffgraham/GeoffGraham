@@ -71,18 +71,24 @@
 	content: "\e00b";
 }
 
+html {
+  font-size: 16px;
+}
+
 // Global Type Styles
 body {
   color: $grayDarkest;
   font-family: $primaryFont;
-  font-size: 16px;
+  @include font-size(16);
   font-weight: 200;
-  line-height: emCalc(25px);
+  line-height: rem-calc(24);
   @media #{$bay} {
-    font-size: 20px;
+    line-height: rem-calc(35);
+    @include font-size(20);
   }
   @media #{$ocean} {
-    font-size: 26px;
+    line-height: rem-calc(39);
+    @include font-size(26);
   }
 }
 
@@ -97,10 +103,19 @@ h2 {
   color: $grayDark;
   font-family: $headingFont;
   font-weight: 800;
-  margin-top: emCalc(20px);
+  line-height: rem-calc(30);
+  margin-top: rem-calc(30);
   text-transform: uppercase;
+  @include font-size(25);
   @media #{$lake} {
-    margin-top: emCalc(30px);
+    line-height: rem-calc(36);
+    margin-top: rem-calc(40);
+    @include font-size(36);
+  }
+  @media #{$ocean} {
+    line-height: rem-calc(44);
+    margin-top: rem-calc(40);
+    @include font-size(40);
   }
   a { color: $grayDark; }
   a:hover { color: $grayDark; }
@@ -123,14 +138,14 @@ h5 {
   background-size: 75%;
   color: $black;
   font-family: $displayFont;
-  line-height: emCalc(50px);
-  padding-top: emCalc(12px);
+  line-height: rem-calc(60);
+  padding-top: rem-calc(22);
   text-align: center;
   @include font-size(20);
   @include grid-column(12, false, true, false, false, false, false, left);
   @media #{$lake} {
     background-size: auto;
-    padding-top: emCalc(15px);
+    padding-top: rem-calc(25);
     @include font-size(25);
   }
 }
@@ -140,8 +155,8 @@ blockquote {
   font-size: 115%;
   font-weight: 800;
   line-height: 150%;
-  margin: emCalc(20px) 0;
-  padding-left: emCalc(15px);
+  margin: rem-calc(20) 0;
+  padding-left: rem-calc(15);
   border-left: 3px solid $grayLight;
   @media #{$lake} {
     font-size: 120%;
@@ -153,15 +168,17 @@ blockquote {
 
 .subhead {
   color: $gray;
-  line-height: emCalc(22px);
-  margin-bottom: emCalc(5px);
+  line-height: rem-calc(22);
+  font-weight: 500;
+  margin-bottom: rem-calc(5);
   @include font-size(20);
   @media #{$bay} {
-    line-height: 28px;
+    line-height: rem-calc(28);
+    font-weight: 200;
     @include font-size(22);
   }
   @media #{$ocean} {
-    line-height: 32px;
+    line-height: rem-calc(32);
     @include font-size(24);
   }
 }
@@ -169,7 +186,7 @@ blockquote {
 article.blog {
   h2 { 
     border-bottom: 1px solid $grayLight;
-    padding-bottom: emCalc(5px);
+    padding-bottom: rem-calc(5);
   }
 }
 
@@ -177,7 +194,7 @@ pre {
   background: $grayDarkest;
   color: white;
   font-family: $typewriter;
-  line-height: emCalc(22px);
+  line-height: rem-calc(22);
   overflow: auto;
   padding: 0;
   position: relative;
@@ -193,16 +210,16 @@ pre {
   @include font-size(16);
   @media #{$lake} {
     @include font-size(18);
-    line-height: emCalc(24px);
+    line-height: rem-calc(24);
   }
   @media #{$ocean} {
     @include font-size(20);
-    line-height: emCalc(26px);
+    line-height: rem-calc(26);
   }
 }
 
 pre {
-  padding-top: emCalc(30px); 
+  padding-top: rem-calc(30); 
   &:before {
     background: $primaryColor;
     content: attr(rel);
@@ -210,9 +227,9 @@ pre {
     font-family: $primaryFont;
     font-weight: 800;
     left: 0;
-    padding: emCalc(5px) 0;
+    padding: rem-calc(5) 0;
     position: absolute;
-    text-indent: emCalc(15px);
+    text-indent: rem-calc(15);
     top: 0;
     width: 100%;
     @include text-shadow($primaryDark 0 1px 1px);
@@ -255,10 +272,10 @@ code {
   background: $grayLighter;
   font-family: $typewriter;
   overflow: auto;
-  padding: emCalc(5px);
+  padding: rem-calc(5);
   white-space: pre;
   @media #{$ocean} {
-      line-height: emCalc(25px);;
+      line-height: rem-calc(25);;
       @include font-size(22);
   }
 }

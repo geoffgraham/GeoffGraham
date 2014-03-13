@@ -17,7 +17,7 @@
     left: 1em;
     line-height: 1;
     position: absolute;
-    top: emCalc(-1px);
+    top: rem-calc(-1);
   }
   ::-webkit-progress-value { 
     @include animation(bar-fill 2s linear);
@@ -34,7 +34,7 @@
   	color: $white;
   	float: left;
   	font-weight: bold;
-  	margin-right: emCalc(10px);
-  	padding: emCalc(10px);
+  	margin-right: rem-calc(10);
+  	padding: rem-calc(10);
   }
 }

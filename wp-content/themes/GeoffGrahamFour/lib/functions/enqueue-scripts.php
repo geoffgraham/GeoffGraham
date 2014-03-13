@@ -12,7 +12,7 @@ function geoffgraham_scripts() {
 	wp_enqueue_style('global.css', get_template_directory_uri().'/lib/styles/global.css' );
 	
 	// Load Modernizr
-	wp_enqueue_script( 'modernizr.js', get_template_directory_uri() . '/lib/javascripts/vendor/custom.modernizr-min.js', array(), '1.0.0', false );
+	wp_enqueue_script( 'modernizr.js', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), '1.0.0', false );
 	
 	// Register and load jquery
 	if ( !is_admin() ) {

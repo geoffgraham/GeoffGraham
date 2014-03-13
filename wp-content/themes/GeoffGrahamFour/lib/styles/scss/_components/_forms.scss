@@ -12,7 +12,7 @@
 input:not([type=submit]), textarea {
   border: 1px solid $grayLight;
   color: $gray;
-  padding: emCalc(10px);
+  padding: rem-calc(10);
   @include border-radius(2px);
   @include transition(1s);
   &:hover {
@@ -21,18 +21,18 @@ input:not([type=submit]), textarea {
 }
 
 input:not([type=submit]) {
-  height: emCalc(35px);
+  height: rem-calc(35);
 }
 
 input[type=submit] {
   @extend [role="button"];
   @extend .button-primary;
   @media #{$lake} {
-	  width: emCalc(150px);
+	  width: rem-calc(150);
   }
 }
 
 textarea {
-  height: emCalc(112px);
+  height: rem-calc(112);
   max-width: 100%;
 }
