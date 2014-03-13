@@ -24,8 +24,9 @@ docs/
 .DS_Store
 /.gitattributes
 wp-content/debug.log
-wp-content/themes/*/codekit-config.json
-wp-content/themes/GeoffGrahamFour/codekit-config.json
+*.codekit-cache/
+*config.codekit
+*codekit-config.json
 wp-content/uploads/
 wp-content/cache/
 wp-content/w3tc-config/
