@@ -1,9 +1,6 @@
 // GLOBAL JAVASCRIPTS
 // ------------------
 
-// @codekit-append fittext.js
-// @codekit-append lettering.js
-
 // Main Menu Toggle
 $(document).ready(function() {
   $('body').addClass('js');
