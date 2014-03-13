@@ -4,13 +4,9 @@
   @extend .module;
   background: $grayLight;
   border-bottom: 1px solid $gray;
-  min-height: rem-calc(125);
   text-align: center;
   z-index: 1;
   @include background-size(cover);
-  @media #{$ocean} {
-      min-height: rem-calc(150);
-    }
   h1 {
     color: $white;
     display: block;
