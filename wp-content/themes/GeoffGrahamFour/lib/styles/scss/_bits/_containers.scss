@@ -9,7 +9,8 @@
 // The shell for featured content. Typically used as the foundation for banners, but can be used anywhere.
 .module {
   border-bottom: 1px solid $grayLight;
-  padding: rem-calc(25) 0;
+  padding-bottom: 0;
+  padding-top: rem-calc(25);
   position: relative;
 }
 

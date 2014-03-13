@@ -55,8 +55,8 @@
 </div><!--  home -->
 
 <script>
-  $("h1").fitText(1.0, { minFontSize: '40px', maxFontSize: '75px' });
-  $("h2").fitText(1.0, { minFontSize: '15px', maxFontSize: '45px' });
+  $("h1").fitText(1.0, { minFontSize: '30px', maxFontSize: '75px' });
+  $("h2").fitText(1.0, { minFontSize: '20px', maxFontSize: '45px' });
   $("h1").lettering();
 </script>
 

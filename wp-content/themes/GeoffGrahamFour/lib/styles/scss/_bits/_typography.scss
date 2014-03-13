@@ -96,7 +96,17 @@ h1 {
   color: $headingText;
   font-family: $headingFont;
   font-weight: 800;
+  line-height: rem-calc(35);
   text-transform: uppercase;
+  @include font-size(30);
+  @media #{$lake} {
+    line-height: rem-calc(47);
+    @include font-size(42);
+  }
+  @media #{$ocean} {
+    line-height: rem-calc(51);
+    @include font-size(45);
+  }
 }
 
 h2 {

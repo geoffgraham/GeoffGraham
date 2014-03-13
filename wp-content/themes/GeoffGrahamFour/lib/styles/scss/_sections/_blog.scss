@@ -4,6 +4,7 @@
 
 .blog {
   font-weight: 400; // Rest of site body uses 200
+  .banner { padding-bottom: rem-calc(25); }
   .banner h1 { font-family: $headingFont; }
   .subhead {
     color: $grayDark;
