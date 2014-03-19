@@ -57,6 +57,9 @@
   $("h1").lettering();
   $("h1").lettering('words');
 	$("h1").lettering('words').children("span").lettering();
+	$(document).ready(function(){
+    $(".content").fitVids();
+  });
 </script>
 
 <?php get_footer(); ?>
