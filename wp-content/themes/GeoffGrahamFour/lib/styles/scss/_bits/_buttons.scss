@@ -2,20 +2,20 @@
 // ------------------------------------
 
 // Button Mixin
-@mixin button($btn-bg: transparent, $btn-color: $blue, $btn-font-size: 14, $btn-hover-text: $white) {
+@mixin button($btn-bg: transparent, $btn-color: $blue, $btn-font-size: 18, $btn-hover-text: $white) {
   background-color: $btn-bg;
   border: 2px solid $btn-color;
   color: $btn-color;
   cursor: pointer;
   display: inline-block;
-  font-size: $btn-font-size;
   font-weight: 500;
   line-height: normal;
   padding: rem-calc(5) rem-calc(15);
   position: relative;
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
   @include border-radius(3px);
+  @include font-size($btn-font-size);
   @include transition(all, .3s, false, false);
   &:hover {
     background-color: $btn-color;
@@ -32,7 +32,7 @@
 
 // Secondaery Button
 .btn-secondary {
-  @include button(transparent, $white, 14, $gray);
+  @include button(transparent, $white, 18, $gray);
 }
 
 // Back to top button
