@@ -116,16 +116,16 @@
   <nav class="social" role="social">
     <ul>
       <li>
-        <a alt="Follow Geoff Graham on Twitter" href="http://twitter.com/geoffreygraham" aria-hidden="true" data-icon="&#xe000;"></a>
+        <a alt="Follow Geoff Graham on Twitter" href="http://twitter.com/geoffreygraham" aria-hidden="true" data-icon="&#xe000;" onClick="_gaq.push(['_trackEvent', 'Social', 'Click', 'Twitter', 1, false]);"></a>
       </li>
       <li>
-        <a alt="See Geoff Graham on LinkedIn" href="http://www.linkedin.com/in/geoffreyjgraham" aria-hidden="true" data-icon="&#xe001;"></a>
+        <a alt="See Geoff Graham on LinkedIn" href="http://www.linkedin.com/in/geoffreyjgraham" aria-hidden="true" data-icon="&#xe001;" onClick="_gaq.push(['_trackEvent', 'Social', 'Click', 'LinkedIn', 1, false]);"></a>
       </li>
       <li>
-        <a alt="Check out Geoff Graham on Codepen" href="https://codepen.io/geoffgraham" aria-hidden="true" data-icon="&#xe002;"></a>
+        <a alt="Check out Geoff Graham on Codepen" href="https://codepen.io/geoffgraham" aria-hidden="true" data-icon="&#xe002;" onClick="_gaq.push(['_trackEvent', 'Social', 'Click', 'CodePen', 1, false]);"></a>
       </li>
       <li>
-        <a alt="Subscribe to Geoff Graham Blog RSS" href="<?php bloginfo('rss_url'); ?>" aria-hidden="true" data-icon="&#xe004;"></a>
+        <a alt="Subscribe to Geoff Graham Blog RSS" href="<?php bloginfo('rss_url'); ?>" aria-hidden="true" data-icon="&#xe004;" onClick="_gaq.push(['_trackEvent', 'Social', 'Click', 'RSS', 1, false]);"></a>
       </li>
     </ul>
   </nav><!-- social -->
