@@ -72,9 +72,9 @@ header.main {
     }
     li a { 
       padding: 0.8rem 0;
-      &:hover { opacity: 0.5; }
+      &:hover { color: lighten($primaryColor, 25%); }
     }
-    li.current-menu-item { opacity: 0.5; }
+    li.current-menu-item { color: lighten($primaryColor, 25%); }
     @media #{$ocean} {
 	    margin-left: 0;
     }
