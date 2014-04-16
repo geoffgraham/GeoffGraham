@@ -19,7 +19,7 @@
 <?php include ('sidebar-portfolio-dark.php'); ?>
 
 <script>
-  $("h1").fitText(1.0, { minFontSize: '50px', maxFontSize: '300px' });
+  $("h1").fitText(1.0, { minFontSize: '25px', maxFontSize: '300px' });
   $("h1").lettering();
 </script>
 

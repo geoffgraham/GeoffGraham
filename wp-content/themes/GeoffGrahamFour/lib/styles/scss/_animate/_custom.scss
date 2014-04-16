@@ -12,7 +12,7 @@
 
 @include keyframes(typing) {
   from { width: 0 }
-  to { width: 15em }
+  to { width: 13em }
 }
 
 @include keyframes(blink-caret) {
