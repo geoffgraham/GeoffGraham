@@ -18,7 +18,7 @@
   		    </div><!-- subhead -->
   		    <?php echo get_post_meta($post->ID, "_summary", true); ?>
   		    <?php if ( get_post_meta($post->ID, "_site", true) ) { ?>
-  		      <p><a role="button" class="button-primary" href="http://<?php echo get_post_meta($post->ID, "_site", true); ?>" target="_blank" alt="<?php the_title(); ?>"><?php echo get_post_meta($post->ID, "_site", true); ?></a></p>
+  		      <p><a role="button" class="button-primary" href="http://<?php echo get_post_meta($post->ID, "_site", true); ?>" target="_blank" alt="<?php the_title(); ?>">Visit Site</a></p>
   		    <?php } // End check for site ?>
         </div><!-- summary -->
         <div class="main-img">
