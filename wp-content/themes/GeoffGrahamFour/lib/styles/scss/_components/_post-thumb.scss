@@ -38,10 +38,14 @@
   height: rem-calc(70);
   overflow: hidden;
   padding: 0 0.25rem 0.5rem;
-  @include font-size(20);
+  @include font-size(18);
   @media #{$lake} {
 	  height: rem-calc(65);
     }
+  }
+  h4 {
+    line-height: rem-calc(25);
+    @include font-size(18);
   }
   p { 
     line-height: rem-calc(10);
