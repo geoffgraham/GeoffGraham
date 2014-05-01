@@ -58,7 +58,7 @@
   $("h1").lettering('words');
 	$("h1").lettering('words').children("span").lettering();
 	$(document).ready(function(){
-    $(".content").fitVids();
+    $(".module").fitVids();
   });
 </script>
 
