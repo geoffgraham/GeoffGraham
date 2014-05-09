@@ -26,7 +26,6 @@ input:not([type=submit]) {
 
 input[type=submit] {
   @extend [role="button"];
-  @extend .button-primary;
   @media #{$lake} {
 	  width: rem-calc(150);
   }

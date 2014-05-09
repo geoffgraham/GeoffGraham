@@ -18,6 +18,9 @@
   // Enqueue javascripts
   require_once('lib/functions/enqueue-scripts.php');
   
+  // Enqueue plugins
+  require_once('lib/functions/enqueue-plugins.php');
+  
   // Custom post types
   require_once('lib/functions/custom-post-types.php');
   

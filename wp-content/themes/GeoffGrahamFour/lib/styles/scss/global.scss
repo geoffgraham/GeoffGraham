@@ -7,7 +7,7 @@
 // IMPORT VENDOR STYLES
 //------------------------------------------------------------------------------
 
-@import "compass/css3";
+@import "compass";
 @import "vendor/foundation.scss";
 @import "vendor/wordpress.scss";
 @import "vendor/normalize.scss";
@@ -54,6 +54,7 @@
 @import 
   "_components/_banner.scss",
   "_components/_chart.scss",
+  "_components/_code-blocks.scss",
   "_components/_columns.scss",
   "_components/_footer.scss",
   "_components/_forms.scss",

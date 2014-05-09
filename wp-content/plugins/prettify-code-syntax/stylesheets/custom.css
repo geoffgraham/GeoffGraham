@@ -26,14 +26,26 @@ pre.prettyprint code,
 
 .comment-content pre.prettyprint code,
 .post-content pre.prettyprint code,
-pre.prettyprint code { padding: 0; margin: 0; border: none; display: block; white-space: pre;}
+pre.prettyprint code { 
+  padding: 0; 
+  margin: 0; 
+  border: none !important; 
+  display: block; 
+  white-space: pre;
+}
 
 pre.prettyprint, 
 code.prettyprint, 
 .post-content pre.prettyprint,
 .post-content code.prettyprint,
 .comment-content pre.prettyprint,
-.comment-content code.prettyprint { overflow: auto; word-wrap: normal; -moz-tab-size: 2; -o-tab-size: 2; tab-size: 2;}
+.comment-content code.prettyprint { 
+  overflow: auto; 
+  word-wrap: normal; 
+  -moz-tab-size: 2; 
+  -o-tab-size: 2; 
+  tab-size: 2;
+}
 
 pre,
 pre.prettyprint, 
@@ -52,12 +64,13 @@ code.prettyprint,
 
 
 pre.prettyprint {
+       border: none !important;
 	width: 95%;
 	margin: 1em auto;
-        padding-bottom: 1.5em;
-        padding-left: 1em;
-        padding-right: 1em;
-	padding-top: 3em;
+        padding-bottom: 1.5em !important;
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+	padding-top: 3em !important;
 	white-space: pre-wrap;
 }
 
@@ -95,4 +108,4 @@ pre.inline { display: inline; }
   .prettyprint .atn { color: #404; }
   .prettyprint .atv { color: #060; }
 }
-																																																							
+																																																																																					

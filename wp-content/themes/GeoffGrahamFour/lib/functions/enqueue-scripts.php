@@ -11,6 +11,11 @@ function geoffgraham_scripts() {
 	// Load stylesheet
 	wp_enqueue_style('global.css', get_template_directory_uri().'/lib/styles/global.css' );
 	
+	// Load Prettyprint in single.php
+  if ( is_single() ) {
+    wp_enqueue_script('prettyprint', 'https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js', false ,'1.0', 'true' );
+  }
+	
 	// Load Modernizr
 	wp_enqueue_script( 'modernizr.js', get_template_directory_uri() . '/lib/javascripts/modernizr.js', array(), '1.0.0', false );
 	
