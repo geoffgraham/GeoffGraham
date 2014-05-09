@@ -9,17 +9,33 @@
 //conditional plugins - deactivate
 
 function geoffgraham_dequeue_styles() {
+  
+  // Contact Form 7 Styles
 	wp_dequeue_style( 'contact-form-7' );
 	wp_dequeue_style( 'contact-form-7-rtl' );
+	
+	// Prettify Styles
 	wp_dequeue_style( 'prettify' );
+	
+	// Disqus Styles
+	wp_dequeue_style( 'wp-pointer' );
+	
 }
 	 
 function geoffgraham_dequeue_javascript() {
+  
+  // Contact Form 7 Scripts
 	wp_dequeue_script( 'contact-form-7' );
 	wp_dequeue_script( 'jquery-form' );
+	
+	// Prettify Scripts
 	wp_dequeue_script( 'prettify' );
 	wp_dequeue_script( 'prettify-load' );
 	wp_dequeue_script( 'prettify-css' );
+	
+	// Disqus Scripts
+	wp_dequeue_script( 'wp-pointer' );
+	
 }
 
 add_action( 'wp_print_styles', 'geoffgraham_dequeue_styles', 100 );
@@ -37,6 +53,7 @@ function geoffgraham_enqueue_styles() {
 	// ...in single.php
 	if (is_single()) {
 		wp_enqueue_style( 'prettify' );
+		wp_enqueue_style( 'wp-pointer' );
 	}
 	
 }
@@ -55,6 +72,7 @@ function geoffgraham_enqueue_javascript() {
 		wp_enqueue_script( 'prettify' );
 		wp_enqueue_script( 'prettify-load' );
 		wp_enqueue_script( 'prettify-css' );
+		wp_enqueue_script( 'wp-pointer' );
 	}
 	
 }
