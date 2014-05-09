@@ -11,23 +11,21 @@ function geoffgraham_scripts() {
 	// Load stylesheet
 	wp_enqueue_style('global.css', get_template_directory_uri().'/lib/styles/global.css' );
 	
-	// Load Prettyprint in single.php
-  if ( is_single() ) {
-    wp_enqueue_script('prettyprint', 'https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js', false ,'1.0', 'true' );
-  }
-	
 	// Load Modernizr
 	wp_enqueue_script( 'modernizr.js', get_template_directory_uri() . '/lib/javascripts/modernizr.js', array(), '1.0.0', false );
 	
 	// Register and load jquery
 	if ( !is_admin() ) {
 			wp_deregister_script( 'jquery' );
-			wp_register_script( 'jquery', ( "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ), array(), '1.9.1', false);
-			wp_enqueue_script( 'jquery' );
   }
+    
+	wp_register_script( 'jquery', ( "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ), array(), '1.9.1', true);
+	wp_enqueue_script( 'jquery' );
 	
 	// Load custom scripts
-	wp_enqueue_script( 'global.js', get_template_directory_uri() . '/lib/javascripts/global-min.js', array(), '1.0.0', false );
+	wp_register_script( 'global.js', get_template_directory_uri() . '/lib/javascripts/global-min.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'global.js' );
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'geoffgraham_scripts' );

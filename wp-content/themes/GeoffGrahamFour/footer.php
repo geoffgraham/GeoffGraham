@@ -36,14 +36,55 @@
   </div><!-- wrapper -->
 </footer>
 
-	</div>
+</div>
 
-	<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
-<!-- Google Analytics -->
-	 
+<?php // Initialize scripts conditionally
+
+if ( is_front_page() ) {	
+echo '<script>';
+  echo '$(".hero h1").fitText(1.0, { minFontSize: "30px", maxFontSize: "75px" });';
+  echo '$(".hero h2").fitText(1.0, { minFontSize: "20px", maxFontSize: "45px" });';
+  echo '$(".hero h1").lettering();';
+echo '</script>';
+}
+
+if ( is_single() ) {
+echo '<script>';
+  echo '$("h1").fitText(1.0, { minFontSize: "24px", maxFontSize: "100px" });';
+  echo '$("h1").lettering();';
+  echo '$("h1").lettering("words");';
+	echo '$("h1").lettering("words").children("span").lettering();';
+  echo '$(".module").fitVids();';
+echo '</script>';
+}
+
+if ( is_page_template( 'contact.php' ) || is_post_type_archive('portfolio') ) {
+echo '<script>';
+  echo '$("h1").fitText(1.0, { minFontSize: "65px", maxFontSize: "200px" });';
+  echo '$("h1").lettering();';
+echo '</script>';
+}
+
+if ( s_page_template( 'about.php' ) ) {
+echo '<script>';
+  echo '$("h1").fitText(1.0, { minFontSize: "24px", maxFontSize: "100px" });';
+  echo '$("h1").lettering();';
+echo '</script>';
+}
+
+if ( is_404() ) {
+echo '<script>';
+  echo '$("h1").fitText(1.0, { minFontSize: "25px", maxFontSize: "300px" });';
+  echo '$("h1").lettering();';
+echo '</script>';
+}
+
+?>
+
+<?php // Google Analytics ?>
 <script>
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-15223728-1']);
   _gaq.push(['_trackPageview']);
@@ -53,7 +94,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
 	
 </body>

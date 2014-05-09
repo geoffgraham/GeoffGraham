@@ -24,9 +24,4 @@
     </div><!-- wrapper -->
 </section><!-- contact -->
 
-<script>
-  $("h1").fitText(1.0, { minFontSize: '65px', maxFontSize: '200px' });
-  $("h1").lettering();
-</script>
-
 <?php get_footer(); ?>

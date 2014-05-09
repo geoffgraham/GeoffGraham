@@ -51,41 +51,6 @@
 	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
 	-->';
 	} ?>
-	
-	<?php if (true == of_get_option('head_favicon')) {
-	echo '<link rel="shortcut icon" href="'.of_get_option("head_favicon").'" />';
-	echo '<!-- This is the traditional favicon.-->';
-	} ?>
-
-	<?php if (true == of_get_option('head_apple_touch_icon')) {
-	echo '<link rel="apple-touch-icon" href="'.of_get_option("head_apple_touch_icon").'">';
-	echo '<!-- The is the icon for iOS Web Clip.
-		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4 retina display-->';
-	} ?>
-
-	<?php if (true == of_get_option('meta_app_win_name')) {
-	echo '<!-- Windows 8 -->';
-	echo '<meta name="application-name" content="'.of_get_option("meta_app_win_name").'" /> ';
-	echo '<meta name="msapplication-TileColor" content="'.of_get_option("meta_app_win_color").'" /> ';
-	echo '<meta name="msapplication-TileImage" content="'.of_get_option("meta_app_win_image").'" />';
-	} ?>
-
-	<?php if (true == of_get_option('meta_app_twt_card')) {
-	echo '<!-- Twitter -->';
-	echo '<meta name="twitter:card" content="'.of_get_option("meta_app_twt_card").'" />';
-	echo '<meta name="twitter:site" content="'.of_get_option("meta_app_twt_site").'" />';
-	echo '<meta name="twitter:title" content="'.of_get_option("meta_app_twt_title").'">';
-	echo '<meta name="twitter:description" content="'.of_get_option("meta_app_twt_description").'" />';
-	echo '<meta name="twitter:url" content="'.of_get_option("meta_app_twt_url").'" />';
-	} ?>
-
-	<?php if (true == of_get_option('meta_app_fb_title')) {
-	echo '<!-- Facebook -->';
-	echo '<meta property="og:title" content="'.of_get_option("meta_app_fb_title").'" />';
-	echo '<meta property="og:description" content="'.of_get_option("meta_app_fb_description").'" />';
-	echo '<meta property="og:url" content="'.of_get_option("meta_app_fb_url").'" />';
-	echo '<meta property="og:image" content="'.of_get_option("meta_app_fb_image").'" />';
-	} ?>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

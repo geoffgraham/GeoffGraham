@@ -52,14 +52,4 @@
   <?php endwhile; endif; ?>
 </div><!-- blog -->
 
-<script>
-  $("h1").fitText(1.0, { minFontSize: '24px', maxFontSize: '100px' });
-  $("h1").lettering();
-  $("h1").lettering('words');
-	$("h1").lettering('words').children("span").lettering();
-	$(document).ready(function(){
-    $(".module").fitVids();
-  });
-</script>
-
 <?php get_footer(); ?>

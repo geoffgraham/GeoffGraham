@@ -14,17 +14,11 @@
   </div><!-- banner -->
     <div class="wrapper">
       <div class="content">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php the_content(); ?>
       <?php endwhile; endif; ?>
       </div><!-- content -->
     </div><!-- wrapper -->
 </section><!-- page -->
-
-<script>
-  $("h1").fitText(1.0, { minFontSize: '65px', maxFontSize: '200px' });
-  $("h1").lettering();
-</script>
-
 
 <?php get_footer(); ?>

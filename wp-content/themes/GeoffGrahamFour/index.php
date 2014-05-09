@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: Homepage
  * @package WordPress
  * @subpackage GeoffGrahamFour
  * @since GeoffGrahamFour 1.0
@@ -14,13 +14,13 @@
     <h2>web design and development</h2>
     <a href="/contact" role="link" class="btn-secondary" alt="Hire Geoff Graham">Hire Me</a>
   </div><!-- hero -->
+  
   <section class="work">
     <div class="wrapper">
       <h4 class="ribbon-heading">My Recent Work</h4>
       
-      <?php
-  		if ( have_posts() )
-  		the_post();
+      <?php if ( have_posts() )
+  		  the_post();
   		?>
   
   		<?php rewind_posts(); ?>
@@ -53,11 +53,5 @@
   </section><!-- work -->
   
 </div><!--  home -->
-
-<script>
-  $("h1").fitText(1.0, { minFontSize: '30px', maxFontSize: '75px' });
-  $("h2").fitText(1.0, { minFontSize: '20px', maxFontSize: '45px' });
-  $("h1").lettering();
-</script>
 
 <?php get_footer(); ?>
