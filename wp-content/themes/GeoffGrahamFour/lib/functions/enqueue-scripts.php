@@ -19,7 +19,7 @@ function geoffgraham_scripts() {
 			wp_deregister_script( 'jquery' );
   }
     
-	wp_register_script( 'jquery', ( "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ), array(), '1.9.1', true);
+	wp_register_script( 'jquery', ( "//code.jquery.com/jquery-1.11.0.min.js" ), array(), '1.9.1', true);
 	wp_enqueue_script( 'jquery' );
 	
 	// Load custom scripts
