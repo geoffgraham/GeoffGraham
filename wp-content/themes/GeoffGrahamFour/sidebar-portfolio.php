@@ -12,9 +12,9 @@
   <section class="work">
     <div class="wrapper">
       <?php if ( is_front_page() ) { ?>
-        <h4 class="ribbon-heading">My Recent Work</h4>';
+        <h4 class="ribbon-heading">My Recent Work</h4>
       <?php } else { ?>
-        <h4 class="ribbon-heading">More Work</h4>';
+        <h4 class="ribbon-heading">More Work</h4>
       <?php } ?>
       
     <?php
