@@ -67,7 +67,7 @@ echo '<script>';
 echo '</script>';
 }
 
-if ( s_page_template( 'about.php' ) ) {
+if ( is_page_template( 'about.php' ) ) {
 echo '<script>';
   echo '$("h1").fitText(1.0, { minFontSize: "24px", maxFontSize: "100px" });';
   echo '$("h1").lettering();';
