@@ -105,15 +105,21 @@ function optionsframework_options() {
 
 // Standard Meta
 	$options[] = array(
-		'name' => __('Head ID', 'geoffgraham'),
-		'desc' => __("", 'geoffgraham'),
-		'id' => 'meta_headid',
-		'std' => 'www-sitename-com',
+		'name' => __('Google Analytics', 'geoffgraham'),
+		'desc' => __("Google Analytics ID (e.g. UA-XXXXXXXX-1)", 'geoffgraham'),
+		'id' => 'meta_google_analytics_id',
+		'std' => '',
 		'type' => 'text');
-	$options[] = array(
-		'name' => __('Google Webmasters', 'geoffgraham'),
-		'desc' => __("Speaking of Google, don't forget to set your site up: <a href='http://google.com/webmasters' target='_blank'>http://google.com/webmasters</a>", 'geoffgraham'),
-		'id' => 'meta_google',
+  $options[] = array(
+		'name' => __('', 'geoffgraham'),
+		'desc' => __("Property Name", 'geoffgraham'),
+		'id' => 'meta_google_analytics_property',
+		'std' => '',
+		'type' => 'text');
+  $options[] = array(
+		'name' => __('Google+ Profile URL', 'geoffgraham'),
+		'desc' => __("Adds support for <a href='https://plus.google.com/authorship'>Google Authorship</a>", 'geoffgraham'),
+		'id' => 'meta_google_plus',
 		'std' => '',
 		'type' => 'text');
 	$options[] = array(
@@ -129,108 +135,21 @@ function optionsframework_options() {
 		'std' => 'width=device-width, initial-scale=1.0',
 		'type' => 'text');
 
-// Icons
-	$options[] = array(
-		'name' => __('Site Favicon', 'geoffgraham'),
-		'desc' => __('', 'geoffgraham'),
-		'id' => 'head_favicon',
-		'type' => 'upload');
-	$options[] = array(
-		'name' => __('Apple Touch Icon', 'geoffgraham'),
-		'desc' => __('', 'geoffgraham'),
-		'id' => 'head_apple_touch_icon',
-		'type' => 'upload');
-
-// App: Windows 8
-	$options[] = array(
-		'name' => __('App: Windows 8', 'geoffgraham'),
-		'desc' => __('Application Name', 'geoffgraham'),
-		'id' => 'meta_app_win_name',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('Tile Color', 'geoffgraham'),
-		'id' => 'meta_app_win_color',
-		'std' => '',
-		'type' => 'color');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('Tile Image', 'geoffgraham'),
-		'id' => 'meta_app_win_image',
-		'std' => '',
-		'type' => 'upload');
-
-// App: Twitter
-	$options[] = array(
-		'name' => __('App: Twitter Card', 'geoffgraham'),
-		'desc' => __('twitter:card (summary, photo, gallery, product, app, player)', 'geoffgraham'),
-		'id' => 'meta_app_twt_card',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('twitter:site (@username of website)', 'geoffgraham'),
-		'id' => 'meta_app_twt_site',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __("twitter:title (the user's Twitter ID)", 'geoffgraham'),
-		'id' => 'meta_app_twt_title',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('twitter:description (maximum 200 characters)', 'geoffgraham'),
-		'id' => 'meta_app_twt_description',
-		'std' => '',
-		'type' => 'textarea');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('twitter:url (url for the content)', 'geoffgraham'),
-		'id' => 'meta_app_twt_url',
+// Typekit
+  $options[] = array(
+		'name' => __('Typekit Kit ID', 'geoffgraham'),
+		'desc' => __('Just the ID for the Kit', 'geoffgraham'),
+		'id' => 'meta_typekit_id',
 		'std' => '',
 		'type' => 'text');
 
-// App: Facebook
-	$options[] = array(
-		'name' => __('App: Facebook', 'geoffgraham'),
-		'desc' => __('og:title', 'geoffgraham'),
-		'id' => 'meta_app_fb_title',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('og:description', 'geoffgraham'),
-		'id' => 'meta_app_fb_description',
-		'std' => '',
-		'type' => 'textarea');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('og:url', 'geoffgraham'),
-		'id' => 'meta_app_fb_url',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('og:image', 'geoffgraham'),
-		'id' => 'meta_app_fb_image',
-		'std' => '',
-		'type' => 'upload');
-
-
-
-
-
-
-
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('.', 'geoffgraham'),
-		'id' => '',
-		'std' => '',
-		'type' => 'text');
+// Option Types
+//	$options[] = array(
+//		'name' => __('', 'geoffgraham'),
+//		'desc' => __('.', 'geoffgraham'),
+//		'id' => '',
+//		'std' => '',
+//		'type' => 'text');
 
 //		'class' => 'mini',
 //
@@ -242,20 +161,20 @@ function optionsframework_options() {
 //	'type' => 'text');
 
 
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('', 'geoffgraham'),
-		'id' => '',
+//	$options[] = array(
+//		'name' => __('', 'geoffgraham'),
+//		'desc' => __('', 'geoffgraham'),
+//		'id' => '',
 //		'std' => '1',
-		'type' => 'checkbox');
+//		'type' => 'checkbox');
 
 
-	$options[] = array(
-		'name' => __('', 'geoffgraham'),
-		'desc' => __('.', 'geoffgraham'),
-		'id' => '',
-		'std' => '',
-		'type' => 'text');
+//	$options[] = array(
+//		'name' => __('', 'geoffgraham'),
+//		'desc' => __('.', 'geoffgraham'),
+//		'id' => '',
+//		'std' => '',
+//		'type' => 'text');
 
 	return $options;
 

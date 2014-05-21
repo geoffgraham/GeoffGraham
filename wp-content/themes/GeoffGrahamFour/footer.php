@@ -90,7 +90,11 @@ echo '</script>';
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-15223728-1', 'geoffgraham.me');
+  ga('create', <?php if (true == of_get_option('meta_google_analytics_id')) {
+	  echo '"'.of_get_option("meta_google_analytics_id").'"';
+	} ?>, <?php if (true == of_get_option('meta_google_analytics_property')) {
+	  echo '"'.of_get_option("meta_google_analytics_property").'"';
+	} ?>);
   ga('send', 'pageview');
 
 </script>
