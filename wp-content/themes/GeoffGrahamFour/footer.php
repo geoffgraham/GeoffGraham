@@ -92,7 +92,6 @@ echo '</script>';
 
   ga('create', 'UA-15223728-1', 'geoffgraham.me');
   ga('send', 'pageview');
-  ga(‘set’, ‘&uid’, {{USER_ID}});
 
 </script>
 	

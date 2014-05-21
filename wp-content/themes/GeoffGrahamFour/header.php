@@ -34,6 +34,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x757-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+  <link rel="author" href="https://plus.google.com/+GeoffGraham/posts" />
 	
 
 	<?php if (true == of_get_option('meta_author')) echo '<meta name="author" content="'.of_get_option("meta_author").'" />'; ?>
