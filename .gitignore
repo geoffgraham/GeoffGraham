@@ -1,5 +1,4 @@
 *~
-*.
 .DS_Store
 .buildpath
 .project
@@ -11,6 +10,7 @@ docs/
 backups/
 webroot/
 .htaccess
+.ftpass
 wp-content/themes/*/compass_app_log.txt
 wp-content/w3tc
 wp-content/avatars
