@@ -15,6 +15,9 @@
   // Theme support
   require_once('lib/functions/theme-support.php');
   
+  // Theme options
+  require_once('lib/functions/theme-options.php');
+  
   // Enqueue javascripts
   require_once('lib/functions/enqueue-scripts.php');
   

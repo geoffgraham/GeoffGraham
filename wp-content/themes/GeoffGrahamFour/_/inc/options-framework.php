@@ -46,7 +46,7 @@ function optionsframework_load_sanitization() {
 
 /* 
  * Creates the settings in the database by looping through the array
- * we supplied in options.php.  This is a neat way to do it since
+ * we supplied in functions.php.  This is a neat way to do it since
  * we won't have to save settings for headers, descriptions, or arguments.
  *
  * Read more about the Settings API in the WordPress codex:
@@ -61,7 +61,7 @@ function optionsframework_init() {
 	require_once dirname( __FILE__ ) . '/options-media-uploader.php';
 	
 	// Optionally Loads the options file from the theme
-	$location = apply_filters( 'options_framework_location', array( 'options.php' ) );
+	$location = apply_filters( 'options_framework_location', array( 'functions.php' ) );
 	$optionsfile = locate_template( $location );
 	
 	// Load settings
@@ -119,7 +119,7 @@ function optionsframework_page_capability( $capability ) {
 /* 
  * Adds default options to the database if they aren't already present.
  * May update this later to load only on plugin activation, or theme
- * activation since most people won't be editing the options.php
+ * activation since most people won't be editing the functions.php
  * on a regular basis.
  *
  * http://codex.wordpress.org/Function_Reference/add_option
@@ -154,7 +154,7 @@ function optionsframework_setdefaults() {
 		update_option( 'optionsframework', $optionsframework_settings );
 	}
 	
-	// Gets the default options data from the array in options.php
+	// Gets the default options data from the array in functions.php
 	$options =& _optionsframework_options();
 	
 	// If the options haven't been added to the database yet, they are added now
@@ -276,7 +276,7 @@ function optionsframework_validate( $input ) {
 	 * Restore Defaults.
 	 *
 	 * In the event that the user clicked the "Restore Defaults"
-	 * button, the options defined in the theme's options.php
+	 * button, the options defined in the theme's functions.php
 	 * file will be added to the option for the active theme.
 	 */
 
@@ -344,7 +344,7 @@ add_action( 'optionsframework_after_validate', 'optionsframework_save_options_no
  * Format Configuration Array.
  *
  * Get an array of all default values as set in
- * options.php. The 'id','std' and 'type' keys need
+ * functions.php. The 'id','std' and 'type' keys need
  * to be defined in the configuration array. In the
  * event that these keys are not present the option
  * will not be included in this function's output.
@@ -412,7 +412,7 @@ function optionsframework_adminbar() {
  * </code>
  *
  * Also allows for setting options via a return statement in the
- * options.php file.  For example (in options.php):
+ * functions.php file.  For example (in functions.php):
  *
  * <code>
  * return array(...);
@@ -424,8 +424,8 @@ function &_optionsframework_options() {
 	static $options = null;
 
 	if ( !$options ) {
-		// Load options from options.php file (if it exists)
-		$location = apply_filters( 'options_framework_location', array('options.php') );
+		// Load options from functions.php file (if it exists)
+		$location = apply_filters( 'options_framework_location', array('functions.php') );
 		if ( $optionsfile = locate_template( $location ) ) {
 			$maybe_options = require_once $optionsfile;
 			if ( is_array($maybe_options) ) {
