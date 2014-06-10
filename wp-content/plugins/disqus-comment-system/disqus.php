@@ -4,7 +4,7 @@ Plugin Name: Disqus Comment System
 Plugin URI: http://disqus.com/
 Description: The Disqus comment system replaces your WordPress comment system with your comments hosted and powered by Disqus. Head over to the Comments admin page to set up your DISQUS Comment System.
 Author: Disqus <team@disqus.com>
-Version: 2.74
+Version: 2.75
 Author URI: http://disqus.com/
 */
 
@@ -31,7 +31,7 @@ define('DISQUS_CAN_EXPORT',         is_file(dirname(__FILE__) . '/export.php'));
 if (!defined('DISQUS_DEBUG')) {
     define('DISQUS_DEBUG',          false);
 }
-define('DISQUS_VERSION',            '2.74');
+define('DISQUS_VERSION',            '2.75');
 define('DISQUS_SYNC_TIMEOUT',       30);
 
 /**
@@ -92,7 +92,7 @@ if ( !defined('PLUGINDIR') ) {
     define('PLUGINDIR', 'wp-content/plugins'); // Relative to ABSPATH.  For back compat.
 }
 
-define('DSQ_PLUGIN_URL', WP_CONTENT_URL . '/plugins/' . dsq_plugin_basename(__FILE__));
+define('DSQ_PLUGIN_URL', plugins_url() . '/' . dsq_plugin_basename(__FILE__));
 
 $mt_disqus_version = '2.01';
 /**
@@ -282,7 +282,7 @@ function dsq_sync_comments($comments) {
 
         // and follow up using legacy Disqus agent
         if (!$commentdata) {
-            $commentdata = $wpdb->get_row($wpdb->prepare( "SELECT comment_ID, comment_parent FROM $wpdb->comments WHERE comment_agent = 'Disqus/1.0:{$comment->id}' LIMIT 1"), ARRAY_A);
+            $commentdata = $wpdb->get_row($wpdb->prepare( "SELECT comment_ID, comment_parent FROM $wpdb->comments WHERE comment_agent = %s LIMIT 1", 'Disqus/1.0:'.$comment->id), ARRAY_A);
         }
         if (!$commentdata) {
             // Comment doesnt exist yet, lets insert it
@@ -861,7 +861,7 @@ function dsq_comments_text($comment_text) {
 
 function dsq_bloginfo_url($url) {
     if ( get_feed_link('comments_rss2') == $url && dsq_can_replace() ) {
-        return 'http://' . strtolower(get_option('disqus_forum_url')) . '.' . DISQUS_DOMAIN . DISQUS_RSS_PATH;
+        return 'https://' . strtolower(get_option('disqus_forum_url')) . '.' . DISQUS_DOMAIN . DISQUS_RSS_PATH;
     } else {
         return $url;
     }
@@ -1193,7 +1193,7 @@ function dsq_output_loop_comment_js($post_ids = null) {
             }
             var s = document.createElement('script'); s.async = true;
             s.type = 'text/javascript';
-            s.src = '//' + '<?php echo DISQUS_DOMAIN; ?>/forums/' + disqus_shortname + '/count.js';
+            s.src = '//' + disqus_shortname + '.<?php echo DISQUS_DOMAIN; ?>/count.js';
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     //]]>
@@ -1222,7 +1222,7 @@ function dsq_output_footer_comment_js() {
             }
             var s = document.createElement('script'); s.async = true;
             s.type = 'text/javascript';
-            s.src = '//' + '<?php echo DISQUS_DOMAIN; ?>/forums/' + disqus_shortname + '/count.js';
+            s.src = '//' + disqus_shortname + '.<?php echo DISQUS_DOMAIN; ?>/count.js';
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     //]]>
@@ -1236,8 +1236,8 @@ add_action('wp_footer', 'dsq_output_footer_comment_js');
 $dsq_prev_permalinks = array();
 
 function dsq_prev_permalink($post_id) {
-// if post not published, return
-    $post = &get_post($post_id);
+    $post = get_post($post_id);
+    // if post not published, return
     if ($post->post_status != 'publish') {
         return;
     }
@@ -1404,7 +1404,7 @@ function dsq_sso_login() {
     $button = get_option('disqus_sso_button');
     $icon = get_option('disqus_sso_icon');
     $sso_login_str = 'this.sso = {
-          name: "'.$sitename.'",
+          name: "'.wp_specialchars_decode($sitename, ENT_QUOTES).'",
           button: "'.$button.'",
           icon: "'.$icon.'",
           url: "'.$siteurl.'/wp-login.php",
