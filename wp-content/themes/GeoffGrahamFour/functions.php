@@ -42,6 +42,9 @@
   // Widget areas
   require_once('lib/functions/widget-areas.php');
   
+  // Disqus plugin functions
+  require_once('lib/functions/disqus.php');
+  
 
 ################################################################################
 // BOILERPLATE STUFF
