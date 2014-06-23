@@ -4,7 +4,7 @@ Plugin Name: Disqus Comment System
 Plugin URI: http://disqus.com/
 Description: The Disqus comment system replaces your WordPress comment system with your comments hosted and powered by Disqus. Head over to the Comments admin page to set up your DISQUS Comment System.
 Author: Disqus <team@disqus.com>
-Version: 2.75
+Version: 2.76
 Author URI: http://disqus.com/
 */
 
@@ -21,7 +21,7 @@ if (defined('DISQUS_LOCAL')) { // DISQUS defines this for local development purp
     define('DISQUS_IMPORTER_URL',   'http://dev.disqus.org:8001/');
 } else {
     define('DISQUS_DOMAIN',         'disqus.com');
-    define('DISQUS_IMPORTER_URL',   'http://import.disqus.com/');
+    define('DISQUS_IMPORTER_URL',   'https://import.disqus.com/');
 }
 define('DISQUS_URL',                'http://' . DISQUS_DOMAIN . '/');
 define('DISQUS_MEDIA_URL',          'http://' . DISQUS_DOMAIN . '/media/');
@@ -31,7 +31,7 @@ define('DISQUS_CAN_EXPORT',         is_file(dirname(__FILE__) . '/export.php'));
 if (!defined('DISQUS_DEBUG')) {
     define('DISQUS_DEBUG',          false);
 }
-define('DISQUS_VERSION',            '2.75');
+define('DISQUS_VERSION',            '2.76');
 define('DISQUS_SYNC_TIMEOUT',       30);
 
 /**
@@ -85,14 +85,9 @@ function dsq_plugin_basename($file) {
     return !empty($pieces[count($pieces)-1]) ? $pieces[count($pieces)-1] : $pieces[count($pieces)-2];
 }
 
-if ( !defined('WP_CONTENT_URL') ) {
-    define('WP_CONTENT_URL', get_option('siteurl') . '/wp-content');
-}
 if ( !defined('PLUGINDIR') ) {
     define('PLUGINDIR', 'wp-content/plugins'); // Relative to ABSPATH.  For back compat.
 }
-
-define('DSQ_PLUGIN_URL', plugins_url() . '/' . dsq_plugin_basename(__FILE__));
 
 $mt_disqus_version = '2.01';
 /**
@@ -149,6 +144,7 @@ function dsq_can_replace() {
     $replace = get_option('disqus_replace');
 
     if ( is_feed() )                       { return false; }
+    if ( !isset($post) )                   { return false; }
     if ( 'draft' == $post->post_status )   { return false; }
     if ( !get_option('disqus_forum_url') ) { return false; }
     else if ( 'all' == $replace )          { return true; }
@@ -967,7 +963,7 @@ function dsq_manage() {
         dsq_install();
     }
 
-    if (dsq_does_need_update() && isset($_POST['reset'])) {
+    if (dsq_does_need_update() && !isset($_POST['reset'])) {
         include_once(dirname(__FILE__) . '/upgrade.php');
     } else {
         include_once(dirname(__FILE__) . '/manage.php');
@@ -977,7 +973,7 @@ function dsq_manage() {
 function dsq_admin_head() {
     if (isset($_GET['page']) && $_GET['page'] == 'disqus') {
 ?>
-<link rel='stylesheet' href='<?php echo DSQ_PLUGIN_URL; ?>/media/styles/manage.css' type='text/css' />
+<link rel='stylesheet' href='<?php echo plugins_url( 'media/styles/manage.css', __FILE__ ); ?>' type='text/css' />
 <style type="text/css">
 .dsq-importing, .dsq-imported, .dsq-import-fail, .dsq-exporting, .dsq-exported, .dsq-export-fail {
     background: url(<?php echo admin_url('images/loading.gif'); ?>) left center no-repeat;
@@ -1100,7 +1096,7 @@ dsq_import_comments = function(wipe) {
 // HACK: Our own styles for older versions of WordPress.
         global $wp_version;
         if ( version_compare($wp_version, '2.5', '<') ) {
-            echo "<link rel='stylesheet' href='" . DSQ_PLUGIN_URL . "/media/styles/manage-pre25.css' type='text/css' />";
+            echo "<link rel='stylesheet' href='" . plugins_url( 'media/styles/manage-pre25.css', __FILE__ ) . "' type='text/css' />";
         }
     }
 }

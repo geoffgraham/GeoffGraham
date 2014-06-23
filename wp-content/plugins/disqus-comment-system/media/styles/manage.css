@@ -33,3 +33,10 @@ select.disqus-replace {
 	line-height: 41px;
 	margin: 15px 0 10px;
 }
+
+.dsq-alert {
+	color: #fff;
+	background: #e76c35;
+	border: 1px solid #8f3e1c;
+	padding: 5px;
+}

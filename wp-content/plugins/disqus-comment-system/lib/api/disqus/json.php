@@ -255,7 +255,7 @@ class JSON
                         $buf .= $e[$i];
                     }
                     $i++;
-                    return eval('return "'.str_replace('"','\"',$buf).'";');
+                    return $buf;
                     break;
                 case ":":
                     $state = IN_ASSIGN;
