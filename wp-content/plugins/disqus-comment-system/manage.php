@@ -110,33 +110,52 @@ $check_fields = array(
             'min' => 1,
             'max' => 64,
         ), 
-    'dsq_username' => array(
-            'key_name' => 'dsq_username',
-            'min' => 3,
-            'max' => 250,
-        ), 
     'disqus_replace' => array(
             'key_name' => 'disqus_replace',
             'min' => 3,
             'max' => 6,
-        )
+        ),
+    'dsq_username' => array(
+            'key_name' => 'dsq_username',
+            'min' => 3,
+            'max' => 250,
+        ),
     );
 
 // Check keys keys and remove bad input.
 foreach ( $check_fields as $key ) {
+
     if ( isset($_POST[$key['key_name']]) ) {
 
         // Strip tags before checking
         $_POST[$key['key_name']] = trim(strip_tags($_POST[$key['key_name']]));
 
-        if ( !is_valid_dsq_key($_POST[$key['key_name']], $key['min'], $key['max']) ) {
-            unset($_POST[$key['key_name']]);
+        // Check usernames independently because they can have special characters 
+        // or be email addresses
+        if ( 'dsq_username' ===  $key['key_name'] ) {
+            if ( !is_valid_dsq_username($_POST[$key['key_name']], $key['min'], $key['max']) ) {
+                unset($_POST[$key['key_name']]);
+            }
+        }
+        else {
+            if ( !is_valid_dsq_key($_POST[$key['key_name']], $key['min'], $key['max']) ) {
+                unset($_POST[$key['key_name']]);
+            }
         }
     }
 }
 
+function is_valid_dsq_username($value, $min=3, $max=250) {
+    if ( is_email($value) ) {
+        return true;
+    }
+    else {
+        return is_valid_dsq_key($value, $min, $max);
+    }
+}
+
 function is_valid_dsq_key($value, $min=1, $max=64) {
-    return preg_match('/^[\0-9\\:A-Za-z]{'.$min.','.$max.'}+$/', $value);
+    return preg_match('/^[\0-9\\:A-Za-z_-]{'.$min.','.$max.'}+$/', $value);
 }
 
 // Handle advanced options.
@@ -189,6 +208,7 @@ if ( 3 == $step && isset($_POST['dsq_forum']) && isset($_POST['dsq_user_api_key'
         update_option('disqus_api_key', $api_key);
         update_option('disqus_user_api_key', $_POST['dsq_user_api_key']);
         update_option('disqus_replace', 'all');
+        update_option('disqus_active', '1');
     }
 
     if (!empty($_POST['disqus_partner_key'])) {
@@ -284,7 +304,7 @@ case 1:
             <?php wp_nonce_field('dsq-wpnonce_install', 'dsq-form_nonce_install'); ?>
             <table class="form-table">
                 <tr>
-                    <th scope="row" valign="top"><?php echo dsq_i('Username'); ?></th>
+                    <th scope="row" valign="top"><?php echo dsq_i('Username or email'); ?></th>
                     <td>
                         <input id="dsq-username" name="dsq_username" tabindex="1" type="text" />
                         <a href="https://disqus.com/profile/signup/"><?php echo dsq_i('(don\'t have a Disqus Profile yet?)'); ?></a>
@@ -340,11 +360,11 @@ case 0:
         <h2><?php echo dsq_i('Settings'); ?></h2>
         <p><?php echo dsq_i('Version: %s', esc_html(DISQUS_VERSION)); ?></p>
         <?php
-        if (get_option('disqus_active') === '0') {
+        if (get_option('disqus_active') == '0') {
             // disqus is not active
-            echo dsq_i('<p class="status">Disqus comments are currently disabled. (<a href="?page=disqus&amp;active=1">Enable</a>)</p>');
+            echo dsq_i('<p class="status">Disqus comments are currently <span class="dsq-disabled-text">disabled</span>. (<a href="?page=disqus&amp;active=1">Enable</a>)</p>');
         } else {
-            echo dsq_i('<p class="status">Disqus comments are currently enabled. (<a href="?page=disqus&amp;active=0">Disable</a>)</p>');
+            echo dsq_i('<p class="status">Disqus comments are currently <span class="dsq-enabled-text">enabled</span>. (<a href="?page=disqus&amp;active=0">Disable</a>)</p>');
         }
         ?>
         <form method="POST" enctype="multipart/form-data">

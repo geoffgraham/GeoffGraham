@@ -40,3 +40,13 @@ select.disqus-replace {
 	border: 1px solid #8f3e1c;
 	padding: 5px;
 }
+
+.dsq-disabled-text {
+	color: #e76c35;
+	font-weight: 700;
+}
+
+.dsq-enabled-text {
+	color: #7fbd5a;
+	font-weight: 700;
+}
