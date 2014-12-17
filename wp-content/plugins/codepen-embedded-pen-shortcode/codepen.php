@@ -2,7 +2,7 @@
 /*
 Plugin Name: CodePen Embedded Pens Shortcode
 Description: Enables shortcode to embed Pens.
-Version: 0.1
+Version: 0.3
 License: GPL
 Author: Chris Coyier / CodePen
 Author URI: http://codepen.io
@@ -20,7 +20,8 @@ function createCodePenEmbed($atts, $content = null) {
     'theme_id'     => '0',
     'slug_hash'    => '',
     'default_tab'  => 'result',
-    'animations'   => 'stop-after-5'
+    'animations'   => 'run',
+    'line_numbers' => false
   ), $atts));
 
   if ($setting_override_theme_id) {
@@ -52,6 +53,7 @@ function createCodePenEmbed($atts, $content = null) {
 		$attrs .= " data-theme-id='" . $theme_to_use . "'";
 		$attrs .= " data-slug-hash='" . $slug_hash . "'";
 		$attrs .= " data-default-tab='" . $default_tab . "'";
+    $attrs .= " data-line-numbers='" . $line_numbers . "'";
 		$attrs .= " data-animations='" . $animations . "'";
 
 		if ($default_tab != 'result') {
