@@ -7,9 +7,9 @@ Tags: cms, custom, admin, branding, dashboard, administration, plugin, login, cl
 Author URI: http://www.videousermanuals.com/?utm_campaign=wlcms&utm_medium=plugin&utm_source=readme-txt
 Author:  Video User Manuals
 Requires at least: 3.3 
-Tested up to: 3.8
-Stable tag: 1.5.2
-Version:1.5.2
+Tested up to: 4.2
+Stable tag: 1.5.3
+Version:1.5.3
 
 Allows complete customization of dashboard panels and logos, removal of menus, giving editors access to widgets and menus plus lots more. Import/export your settings and include an RSS panel on the dashboard to feed your clients the latest posts from your blog to keep you top of mind whenever they login to their dashboard.
 
@@ -58,6 +58,9 @@ You can now brand the dashboard as well as the admin bar.
 5. Customize the homepage
 
 == Changelog ==
+
+= 1.5.3 =
+Security release. Better use of WordPress nonces and enhanced validation on import functionality. Disclosed by g0blin.
 
 = 1.5.2 =
 Login Logo width fixed for version wordpress 3.8

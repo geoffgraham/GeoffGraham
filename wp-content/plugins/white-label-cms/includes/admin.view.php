@@ -560,6 +560,7 @@ case "subsectionvars":
 <form method="post" action="<?php echo admin_url( 'options-general.php?page=wlcms-plugin.php&amp;action=import' );?>" enctype="multipart/form-data" id="importform" style="display:none">
 	Import File: <input type="file" name="wlcms_import" />
 	<input type="submit" value="Import" />
+	<?php echo wp_nonce_field( 'wlcms_import' ); ?>
 </form>
 
 <form method="get" action="<?php echo admin_url( 'options-general.php?page=wlcms-plugin.php' );?>" id="exportopts" style="display:none">
