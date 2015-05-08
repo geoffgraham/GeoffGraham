@@ -521,14 +521,12 @@ function wp_get_update_data() {
 	$counts = array( 'plugins' => 0, 'themes' => 0, 'wordpress' => 0, 'translations' => 0 );
 
 	if ( $plugins = current_user_can( 'update_plugins' ) ) {
-		wp_update_plugins(); // Check for Plugin updates
 		$update_plugins = get_site_transient( 'update_plugins' );
 		if ( ! empty( $update_plugins->response ) )
 			$counts['plugins'] = count( $update_plugins->response );
 	}
 
 	if ( $themes = current_user_can( 'update_themes' ) ) {
-		wp_update_themes(); // Check for Theme updates
 		$update_themes = get_site_transient( 'update_themes' );
 		if ( ! empty( $update_themes->response ) )
 			$counts['themes'] = count( $update_themes->response );
@@ -661,7 +659,6 @@ function wp_clean_update_cache() {
 	} else {
 		delete_site_transient( 'update_plugins' );
 	}
-	wp_clean_plugins_cache();
 	wp_clean_themes_cache();
 	delete_site_transient( 'update_core' );
 }
@@ -692,4 +689,4 @@ add_action( 'update_option_WPLANG', 'wp_clean_update_cache' , 10, 0 );
 
 add_action( 'wp_maybe_auto_update', 'wp_maybe_auto_update' );
 
-add_action('init', 'wp_schedule_update_checks');
+add_action( 'init', 'wp_schedule_update_checks' );

@@ -171,7 +171,7 @@ $('.contextual-help-tabs').delegate('a', 'click', function(e) {
 });
 
 $(document).ready( function() {
-	var checks, first, last, checked, sliced, mobileEvent, transitionTimeout, focusedRowActions,
+	var checks, first, last, checked, sliced, mobileEvent, transitionTimeout, focusedRowActions, $firstHeading,
 		lastClicked = false,
 		pageInput = $('input.current-page'),
 		currentPage = pageInput.val(),
@@ -368,9 +368,31 @@ $(document).ready( function() {
 		});
 	}
 
-	// Move .updated and .error alert boxes. Don't move boxes designed to be inline.
-	$('div.wrap h2:first').nextAll('div.updated, div.error').addClass('below-h2');
-	$('div.updated, div.error').not('.below-h2, .inline').insertAfter( $('div.wrap h2:first') );
+	// Move .notice, .updated and .error alert boxes. Don't move boxes designed to be inline.
+	$firstHeading = $( 'div.wrap h2:first' );
+	$firstHeading.nextAll( 'div.updated, div.error, div.notice' ).addClass( 'below-h2' );
+	$( 'div.updated, div.error, div.notice' ).not( '.below-h2, .inline' ).insertAfter( $firstHeading );
+
+	// Make notices dismissible
+	$( '.notice.is-dismissible' ).each( function() {
+		var $this = $( this ),
+			$button = $( '<button type="button" class="notice-dismiss"><span class="screen-reader-text"></span></button>' ),
+			btnText = commonL10n.dismiss || '';
+
+		// Ensure plain text
+		$button.find( '.screen-reader-text' ).text( btnText );
+
+		$this.append( $button );
+
+		$button.on( 'click.wp-dismiss-notice', function( event ) {
+			event.preventDefault();
+			$this.fadeTo( 100 , 0, function() {
+				$(this).slideUp( 100, function() {
+					$(this).remove();
+				});
+			});
+		});
+	});
 
 	// Init screen meta
 	screenMeta.init();
@@ -441,17 +463,22 @@ $(document).ready( function() {
 	});
 
 	// Show row actions on keyboard focus of its parent container element or any other elements contained within
-	$( 'td.post-title, td.title, td.comment, .bookmarks td.column-name, td.blogname, td.username, .dashboard-comment-wrap' ).focusin(function(){
-		clearTimeout( transitionTimeout );
-		focusedRowActions = $(this).find( '.row-actions' );
-		focusedRowActions.addClass( 'visible' );
-	}).focusout(function(){
-		// Tabbing between post title and .row-actions links needs a brief pause, otherwise
-		// the .row-actions div gets hidden in transit in some browsers (ahem, Firefox).
-		transitionTimeout = setTimeout(function(){
-			focusedRowActions.removeClass( 'visible' );
-		}, 30);
-	});
+	$( '#wpbody-content' ).on({
+		focusin: function() {
+			clearTimeout( transitionTimeout );
+			focusedRowActions = $( this ).find( '.row-actions' );
+			// transitionTimeout is necessary for Firefox, but Chrome won't remove the CSS class without a little help.
+			$( '.row-actions' ).not( this ).removeClass( 'visible' );
+			focusedRowActions.addClass( 'visible' );
+		},
+		focusout: function() {
+			// Tabbing between post title and .row-actions links needs a brief pause, otherwise
+			// the .row-actions div gets hidden in transit in some browsers (ahem, Firefox).
+			transitionTimeout = setTimeout( function() {
+				focusedRowActions.removeClass( 'visible' );
+			}, 30 );
+		}
+	}, 'td.post-title, td.title, td.comment, .tags td.column-name, .bookmarks td.column-name, td.blogname, .users-network td.column-blogs, td.username, .dashboard-comment-wrap' );
 
 	$('#default-password-nag-no').click( function() {
 		setUserSetting('default_password_nag', 'hide');
@@ -464,6 +491,8 @@ $(document).ready( function() {
 		var el = e.target, selStart, selEnd, val, scroll, sel;
 
 		if ( e.keyCode == 27 ) { // escape key
+			// when pressing Escape: Opera 12 and 27 blur form fields, IE 8 clears them
+			e.preventDefault();
 			$(el).data('tab-out', true);
 			return;
 		}
@@ -480,10 +509,6 @@ $(document).ready( function() {
 		selEnd = el.selectionEnd;
 		val = el.value;
 
-		try {
-			this.lastKey = 9; // not a standard DOM property, lastKey is to help stop Opera tab event. See blur handler below.
-		} catch(err) {}
-
 		if ( document.selection ) {
 			el.focus();
 			sel = document.selection.createRange();
@@ -499,11 +524,6 @@ $(document).ready( function() {
 			e.stopPropagation();
 		if ( e.preventDefault )
 			e.preventDefault();
-	});
-
-	$('#newcontent').bind('blur.wpevent_InsertTab', function() {
-		if ( this.lastKey && 9 == this.lastKey )
-			this.focus();
 	});
 
 	if ( pageInput.length ) {
