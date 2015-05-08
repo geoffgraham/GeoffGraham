@@ -44,7 +44,7 @@
   		<section class="module dark">
   		  <div class="wrapper">
   		    <div class="content">
-  		      <?php comments_template(); ?>
+  		      <?php comments_template(); ?>  		      
   		    </div><!-- content -->
   		  </div><!-- wrapper -->
   		</section><!-- module dark -->
