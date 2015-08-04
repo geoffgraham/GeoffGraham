@@ -155,12 +155,20 @@ $wlcmsOptions2 = array(
     array( "type" => "open"),
 
     array(
-            "name"  => "Hide 'Right Now'",
-            "desc"  => "Hides the right now panel",
+            "name"  => "Hide 'At a Glance'",
+            "desc"  => "Hides the at a glance panel",
             "id"    => $wlcmsShortName."_dashboard_remove_right_now",
             "type"  => "radio",
             "options" => array("1", "0"),
             "std"   => 0),
+
+    array(
+	    "name"  => "Hide 'Activity'",
+	    "desc"  => "Hides the activity panel",
+	    "id"    => $wlcmsShortName."_dashboard_remove_activity_panel",
+	    "type"  => "radio",
+	    "options" => array("1", "0"),
+	    "std"   => 0),
 
     array(
             "name"  => "Hide 'Recent Comments'",

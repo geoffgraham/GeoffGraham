@@ -4,17 +4,22 @@
 <div class="wlcms_opts" style="position:relative;">
 	<div id="wlcms-sidebar" style="position: absolute; top: 0; right: 0; background-color:#FFFFFF; width: 250px; border: 1px solid #ccc; padding: 20px;">
 		<img src="<?php echo plugins_url('images/better-ebooks-ad.png', dirname(__FILE__)); ?>" alt="Better WordPress For Clients" title="Better WordPress For Clients" />
-	
-		<form method="post" onsubmit="return quickValidate()"  action="https://app.getresponse.com/add_contact_webform.html" target="_blank" >
+		<form method="post" accept-charset="UTF-8" onsubmit="return quickValidate()"  action="https://sk199.infusionsoft.com/app/form/process/9168d81810d0fec71af66450f00861f4" target="_blank" name="Better WP ClickFunnels">
 		<div style="display: none;">
-		<input type="hidden" name="webform_id" value="422775" />
+			<input name="inf_form_xid" type="hidden" value="9168d81810d0fec71af66450f00861f4" />
+			<input name="inf_form_name" type="hidden" value="Better WP ClickFunnels" />
+			<input name="infusionsoft_version" type="hidden" value="1.41.0.37" />
+			<input name="inf_field_LeadSoruceId" type="hidden" value="148" />
+			<input id="_GaSource" name="inf_custom_GaSource" type="hidden" value="pluginad" />
+			<input id="_GaMedium" name="inf_custom_GaMedium" type="hidden" value="plugin" />
+			<input id="_GaCampaign" name="inf_custom_GaCampaign" type="hidden" value="wclms" />
 		</div>
 		<table style="text-align:left;margin-left: 20px;">
 		<tr>
-		<td><strong>Name: </strong><input id="sub_name" type="text" name="name" class="text"  tabindex="500" value="" style="width: 170px;"/></td>
+		<td><strong>Name: </strong><input id="sub_name" name="inf_field_FirstName" type="text" name="name" class="text"  tabindex="500" value="" style="width: 170px;"/></td>
 		</tr>
 		<tr>
-		<td><strong>Email: </strong>&nbsp;<input class="text" id="sub_email" type="text" name="email" tabindex="501"  value="" style="width: 170px;" /></td>
+		<td><strong>Email: </strong>&nbsp;<input class="text" id="sub_email" type="text" name="inf_field_Email" tabindex="501"  value="" style="width: 170px;" /></td>
 		</tr>
 		<tr>
 		<td style="text-align:center"><span class="submit"><input name="submit" type="image" alt="submit" tabindex="502" src="<?php echo plugins_url('images/download-button.png', dirname(__FILE__)); ?>" width="157" height="40" style="background: none; border: 0;" /></span></td>

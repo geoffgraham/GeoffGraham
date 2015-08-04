@@ -3,12 +3,12 @@
 Plugin Name: White Label CMS
 Plugin URI: http://www.videousermanuals.com/white-label-cms/?utm_campaign=wlcms&utm_medium=plugin&utm_source=readme-txt
 Description:  A plugin that allows you to brand WordPress CMS as your own
-Version: 1.5.3
+Version: 1.5.4
 Author: www.videousermanuals.com
 Author URI: http://www.videousermanuals.com/?utm_campaign=wlcms&utm_medium=plugin&utm_source=readme-txt
 */
 
-define('WLCMS','1.5.3');
+define('WLCMS','1.5.4');
 
 if ( ! defined('ABSPATH') ) {
         die('Please do not load this file directly.');
@@ -23,9 +23,9 @@ if ( ! defined('WP_BACKUP_DIR') ) {
         define('WP_BACKUP_DIR', $wpdbb_content_dir . '/');
 }
 
-if(!function_exists('wp_get_current_user')) {
-    include(ABSPATH . "wp-includes/pluggable.php"); 
-}
+//if(!function_exists('wp_get_current_user')) {
+//    include(ABSPATH . "wp-includes/pluggable.php");
+//}
  
 include('includes/conditionals.php');
 
@@ -151,7 +151,14 @@ unset($wp_meta_boxes['dashboard']['normal']['core']['custom_help_widget']);
 unset($wp_meta_boxes['dashboard']['normal']['core']['my_dashboard_widget']);
  
 }
- 
+
+function wlcms_remove_activity_panel()
+{
+	if( get_option('wlcms_o_dashboard_admin') && current_user_can('activate_plugins') ) { return; }
+	global $wp_meta_boxes;
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity']);
+}
+
 function wlcms_remove_right_now()
 {
     if( get_option('wlcms_o_dashboard_admin') && current_user_can('activate_plugins') ) { return; }

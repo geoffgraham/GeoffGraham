@@ -14,9 +14,14 @@ elseif(get_option('wlcms_o_developer_name'))
 	add_filter('admin_footer_text', 'wlcms_developer_link');
 }
 
-if (get_option('wlcms_o_dashboard_remove_right_now') == 1) 
+if (get_option('wlcms_o_dashboard_remove_right_now') == 1)
 {
 	add_action('wp_dashboard_setup', 'wlcms_remove_right_now');
+}
+
+if (get_option('wlcms_o_dashboard_remove_activity_panel') == 1)
+{
+	add_action('wp_dashboard_setup', 'wlcms_remove_activity_panel');
 }
 
 if (get_option('wlcms_o_dashboard_remove_recent_comments') == 1) 
