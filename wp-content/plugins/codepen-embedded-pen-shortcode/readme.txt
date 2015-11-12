@@ -1,14 +1,14 @@
-=== Plugin Name ===
+ === Plugin Name ===
 
 Plugin Name: CodePen Embedded Pens Shortcode
 Description: Enables shortcode to embed Pens.
-Version: 0.3
+Version: 0.4
 License: GPL
 Author: Chris Coyier / CodePen
 Author URI: http://codepen.io
 Requires at least: 2.6
-Tested up to: 4.0
-Stable tag: 0.3
+Tested up to: 4.3.1
+Stable tag: 0.4
 
 Allows the use of a special shortcode [codepen_embed] for embedding Pens from CodePen.
 
@@ -47,12 +47,13 @@ For old school manual installation people: copy the folder "codepen_embed" into 
 0.1 - Beta
 0.2 - Adding line_numbers attribute
 0.3 - Default for `data_animations` is now `run`, as documented.
+0.4 - Added `preview` attribute. Removed line numbers attribute.
 
 == Frequently Asked Questions ==
 
 **What is CodePen?**
 
-[CodePen](http://codepen.io) is a web app that allows anyone to create things with HTML, CSS, and JavaScript. 
+[CodePen](http://codepen.io) is a web app that allows anyone to create things with HTML, CSS, and JavaScript.
 
 **Why is this useful?**
 

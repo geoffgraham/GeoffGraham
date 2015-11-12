@@ -2,7 +2,7 @@
 /*
 Plugin Name: CodePen Embedded Pens Shortcode
 Description: Enables shortcode to embed Pens.
-Version: 0.3
+Version: 0.4
 License: GPL
 Author: Chris Coyier / CodePen
 Author URI: http://codepen.io
@@ -21,7 +21,7 @@ function createCodePenEmbed($atts, $content = null) {
     'slug_hash'    => '',
     'default_tab'  => 'result',
     'animations'   => 'run',
-    'line_numbers' => false
+    'preview'      => false
   ), $atts));
 
   if ($setting_override_theme_id) {
@@ -53,23 +53,18 @@ function createCodePenEmbed($atts, $content = null) {
 		$attrs .= " data-theme-id='" . $theme_to_use . "'";
 		$attrs .= " data-slug-hash='" . $slug_hash . "'";
 		$attrs .= " data-default-tab='" . $default_tab . "'";
-    $attrs .= " data-line-numbers='" . $line_numbers . "'";
 		$attrs .= " data-animations='" . $animations . "'";
 
-		if ($default_tab != 'result') {
-		  $tag = "div"; // has a <pre> inside and stuff.
-      // We can let escaping happen here because the code should probably be escaped.
-      // Although will that mean the sentence links are screwed up too? Probably.
-		} else {
-			$tag = "p";   // is just a sentence probably.
-      // single quotes are getting escaped
-      // WordPress is probably doing it
-      $content = str_replace('&#8217;', "'", html_entity_decode($content));
-		}
+    if ($preview) {
+      $attrs .= " data-preview='true'";
+    }
 
-		$embed =  "<$tag class='codepen' " . $attrs . ">\n";
+
+    $content = str_replace('&#8217;', "'", html_entity_decode($content));
+
+		$embed =  "<p class='codepen' " . $attrs . ">\n";
 		$embed .=   $content;
-		$embed .= "</$tag>\n";
+		$embed .= "</p>\n";
 
 		$embed .= '<script async src="//codepen.io/assets/embed/ei.js"></script>';
 
@@ -95,10 +90,10 @@ class CodePenEmbedSettingsPage {
 
   public function add_cp_embed_options_page() {
     add_options_page(
-      'CodePen Embed Settings Admin', 
-      'CodePen Embeds', 
-      'manage_options', 
-      'my-setting-admin', 
+      'CodePen Embed Settings Admin',
+      'CodePen Embeds',
+      'manage_options',
+      'my-setting-admin',
       array($this, 'create_admin_page')
     );
   }
@@ -106,28 +101,28 @@ class CodePenEmbedSettingsPage {
   public function create_admin_page() {
 
     $this->options = get_option('codepen_embed_options'); ?>
-    
+
     <div class="wrap">
 
         <?php screen_icon(); ?>
 
-        <h2>CodePen Embedded Pen Settings</h2> 
+        <h2>CodePen Embedded Pen Settings</h2>
 
         <form method="post" action="options.php">
 
 	        <?php
-	          settings_fields('codpen_embed_options_group');   
+	          settings_fields('codpen_embed_options_group');
 	          do_settings_sections('my-setting-admin');
-	          submit_button(); 
+	          submit_button();
 	        ?>
 
         </form>
 
     </div>
-  
+
   <?php }
 
-  public function page_init() {        
+  public function page_init() {
     register_setting(
       'codpen_embed_options_group',
       'codepen_embed_options',
@@ -139,23 +134,23 @@ class CodePenEmbedSettingsPage {
       '', // string that prints out a header
       array($this, 'print_section_info'),
       'my-setting-admin'
-    );  
+    );
 
     add_settings_field(
       'theme_id',
       'Default Theme ID',
       array($this, 'id_number_callback'),
       'my-setting-admin',
-      'setting_section_id'          
-    );  
+      'setting_section_id'
+    );
 
     add_settings_field(
       'override_theme_id',
       'Override Theme ID',
       array($this, 'override_id_number_callback'),
       'my-setting-admin',
-      'setting_section_id'          
-    );    
+      'setting_section_id'
+    );
   }
 
   public function sanitize($input) {

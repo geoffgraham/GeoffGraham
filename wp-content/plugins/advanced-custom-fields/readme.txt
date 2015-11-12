@@ -2,7 +2,8 @@
 Contributors: elliotcondon
 Tags: custom, field, custom field, advanced, simple fields, magic fields, more fields, repeater, matrix, post, type, text, textarea, file, image, edit, admin
 Requires at least: 3.5.0
-Tested up to: 4.2
+Tested up to: 4.3.1
+Stable tag: 4.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +106,11 @@ http://support.advancedcustomfields.com/
 
 
 == Changelog ==
+
+= 4.4.3 = 
+* WYSIWYG field: Added compatibility for WP 4.3 filters
+* Core: Minor fixes and improvements
+* Language: Updated Polish translation - thanks to Maciej
 
 = 4.4.2 =
 * Image field: Fixed UI bug when image has been removed via media library

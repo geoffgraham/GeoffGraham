@@ -16,6 +16,7 @@ wp-content/w3tc
 wp-content/avatars
 wp-content/cache
 local-config.php
+wp-config.php
 .buildpath
 .project
 .settings
