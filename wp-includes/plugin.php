@@ -8,7 +8,7 @@
  * To hook methods, you'll need to pass an array one of two ways.
  *
  * Any of the syntaxes explained in the PHP documentation for the
- * {@link http://us2.php.net/manual/en/language.pseudo-types.php#language.types.callback 'callback'}
+ * {@link https://secure.php.net/manual/en/language.pseudo-types.php#language.types.callback 'callback'}
  * type are valid.
  *
  * Also see the {@link https://codex.wordpress.org/Plugin_API Plugin API} for
@@ -50,7 +50,7 @@ if ( ! isset( $wp_current_filter ) )
  *
  *     function example_callback( $example ) {
  *         // Maybe modify $example in some way.
- *     	   return $example;
+ *         return $example;
  *     }
  *     add_filter( 'example_filter', 'example_callback' );
  *
@@ -191,9 +191,9 @@ function has_filter($tag, $function_to_check = false) {
  * @global array $merged_filters    Merges the filter hooks using this function.
  * @global array $wp_current_filter Stores the list of current filters with the current one last.
  *
- * @param string $tag   The name of the filter hook.
- * @param mixed  $value The value on which the filters hooked to `$tag` are applied on.
- * @param mixed  $var   Additional variables passed to the functions hooked to `$tag`.
+ * @param string $tag     The name of the filter hook.
+ * @param mixed  $value   The value on which the filters hooked to `$tag` are applied on.
+ * @param mixed  $var,... Additional variables passed to the functions hooked to `$tag`.
  * @return mixed The filtered value after all hooked functions are applied to it.
  */
 function apply_filters( $tag, $value ) {
@@ -245,7 +245,7 @@ function apply_filters( $tag, $value ) {
 /**
  * Execute functions hooked on a specific filter hook, specifying arguments in an array.
  *
- * @see 3.0.0
+ * @since 3.0.0
  *
  * @see apply_filters() This function is identical, but the arguments passed to the
  * functions hooked to `$tag` are supplied using an array.
@@ -465,8 +465,7 @@ function add_action($tag, $function_to_add, $priority = 10, $accepted_args = 1) 
  * possible to create new action hooks by simply calling this function,
  * specifying the name of the new hook using the `$tag` parameter.
  *
- * You can pass extra arguments to the hooks, much like you can with
- * {@see apply_filters()}.
+ * You can pass extra arguments to the hooks, much like you can with apply_filters().
  *
  * @since 1.2.0
  *
@@ -475,9 +474,9 @@ function add_action($tag, $function_to_add, $priority = 10, $accepted_args = 1) 
  * @global array $merged_filters    Merges the filter hooks using this function.
  * @global array $wp_current_filter Stores the list of current filters with the current one last
  *
- * @param string $tag The name of the action to be executed.
- * @param mixed  $arg Optional. Additional arguments which are passed on to the
- *                    functions hooked to the action. Default empty.
+ * @param string $tag     The name of the action to be executed.
+ * @param mixed  $arg,... Optional. Additional arguments which are passed on to the
+ *                        functions hooked to the action. Default empty.
  */
 function do_action($tag, $arg = '') {
 	global $wp_filter, $wp_actions, $merged_filters, $wp_current_filter;
@@ -656,6 +655,60 @@ function remove_all_actions($tag, $priority = false) {
 	return remove_all_filters($tag, $priority);
 }
 
+/**
+ * Fires functions attached to a deprecated filter hook.
+ *
+ * When a filter hook is deprecated, the apply_filters() call is replaced with
+ * apply_filters_deprecated(), which triggers a deprecation notice and then fires
+ * the original filter hook.
+ *
+ * @since 4.6.0
+ *
+ * @see _deprecated_hook()
+ *
+ * @param string $tag         The name of the filter hook.
+ * @param array  $args        Array of additional function arguments to be passed to apply_filters().
+ * @param string $version     The version of WordPress that deprecated the hook.
+ * @param string $replacement Optional. The hook that should have been used. Default false.
+ * @param string $message     Optional. A message regarding the change. Default null.
+ */
+function apply_filters_deprecated( $tag, $args, $version, $replacement = false, $message = null ) {
+	if ( ! has_filter( $tag ) ) {
+		return $args[0];
+	}
+
+	_deprecated_hook( $tag, $version, $replacement, $message );
+
+	return apply_filters_ref_array( $tag, $args );
+}
+
+/**
+ * Fires functions attached to a deprecated action hook.
+ *
+ * When an action hook is deprecated, the do_action() call is replaced with
+ * do_action_deprecated(), which triggers a deprecation notice and then fires
+ * the original hook.
+ *
+ * @since 4.6.0
+ *
+ * @see _deprecated_hook()
+ *
+ * @param string $tag         The name of the action hook.
+ * @param array  $args        Array of additional function arguments to be passed to do_action().
+ * @param string $version     The version of WordPress that deprecated the hook.
+ * @param string $replacement Optional. The hook that should have been used.
+ * @param string $message     Optional. A message regarding the change.
+ */
+function do_action_deprecated( $tag, $args, $version, $replacement = false, $message = null ) {
+	if ( ! has_action( $tag ) ) {
+		return;
+	}
+
+	_deprecated_hook( $tag, $version, $replacement, $message );
+
+	do_action_ref_array( $tag, $args );
+}
+
 //
 // Functions for handling plugins.
 //
@@ -675,13 +728,16 @@ function remove_all_actions($tag, $priority = false) {
 function plugin_basename( $file ) {
 	global $wp_plugin_paths;
 
+	// $wp_plugin_paths contains normalized paths.
+	$file = wp_normalize_path( $file );
+
+	arsort( $wp_plugin_paths );
 	foreach ( $wp_plugin_paths as $dir => $realdir ) {
 		if ( strpos( $file, $realdir ) === 0 ) {
 			$file = $dir . substr( $file, strlen( $realdir ) );
 		}
 	}
 
-	$file = wp_normalize_path( $file );
 	$plugin_dir = wp_normalize_path( WP_PLUGIN_DIR );
 	$mu_plugin_dir = wp_normalize_path( WPMU_PLUGIN_DIR );
 
@@ -697,7 +753,7 @@ function plugin_basename( $file ) {
  *
  * @since 3.9.0
  *
- * @see plugin_basename()
+ * @see wp_normalize_path()
  *
  * @global array $wp_plugin_paths
  *
@@ -829,7 +885,7 @@ function register_deactivation_hook($file, $function) {
  */
 function register_uninstall_hook( $file, $callback ) {
 	if ( is_array( $callback ) && is_object( $callback[0] ) ) {
-		_doing_it_wrong( __FUNCTION__, __( 'Only a static class method or function can be used in an uninstall hook.' ), '3.1' );
+		_doing_it_wrong( __FUNCTION__, __( 'Only a static class method or function can be used in an uninstall hook.' ), '3.1.0' );
 		return;
 	}
 

@@ -2,7 +2,7 @@
 /*
 Plugin Name: CodePen Embedded Pens Shortcode
 Description: Enables shortcode to embed Pens.
-Version: 0.4
+Version: 0.7.1
 License: GPL
 Author: Chris Coyier / CodePen
 Author URI: http://codepen.io
@@ -10,9 +10,9 @@ Author URI: http://codepen.io
 
 function createCodePenEmbed($atts, $content = null) {
 
-	$cp_opts = get_option('codepen_embed_options', null);
+  $cp_opts = get_option('codepen_embed_options', null);
 
-	$setting_theme_id = $cp_opts['theme_id'];
+  $setting_theme_id = $cp_opts['theme_id'];
   $setting_override_theme_id = $cp_opts['override_theme_id'];
 
   extract(shortcode_atts(array(
@@ -21,13 +21,15 @@ function createCodePenEmbed($atts, $content = null) {
     'slug_hash'    => '',
     'default_tab'  => 'result',
     'animations'   => 'run',
-    'preview'      => false
+    'preview'      => false,
+    'editable'     => false,
+    'version'      => '2'
   ), $atts));
 
   if ($setting_override_theme_id) {
     $theme_to_use = $setting_override_theme_id;
   } else {
-    if ($theme_id != 0) {
+    if ($theme_id !== 0) {
       $theme_to_use = $theme_id;
     } else if ($setting_theme_id) {
       $theme_to_use = $setting_theme_id;
@@ -36,41 +38,42 @@ function createCodePenEmbed($atts, $content = null) {
     }
   }
 
-	if (!$slug_hash) {
+  if (!$slug_hash) {
 
-		$error = "
-		<div style='padding: 10px; margin: 20px 0; text-align: center; border: 1px solid red; background: #ffebeb; border-radius: 10px;'>
-			<h3 style='margin: 0 0 10px 0;'>Uh oh!</h3>
-			<p style='margin: 0;'>Something is wrong with your CodePen shortcode.</p>
-		</div>";
+    $error = "
+    <div style='padding: 10px; margin: 20px 0; text-align: center; border: 1px solid red; background: #ffebeb; border-radius: 10px;'>
+      <h3 style='margin: 0 0 10px 0;'>Uh oh!</h3>
+      <p style='margin: 0;'>Something is wrong with your CodePen shortcode.</p>
+    </div>";
 
-		return $error;
+    return $error;
 
-	} else {
+  } else {
 
-		$attrs = "";
-		$attrs .= " data-height='" . $height . "'";
-		$attrs .= " data-theme-id='" . $theme_to_use . "'";
-		$attrs .= " data-slug-hash='" . $slug_hash . "'";
-		$attrs .= " data-default-tab='" . $default_tab . "'";
-		$attrs .= " data-animations='" . $animations . "'";
+    $attrs = "";
+    $attrs .= " data-height='" . $height . "'";
+    $attrs .= " data-theme-id='" . $theme_to_use . "'";
+    $attrs .= " data-slug-hash='" . $slug_hash . "'";
+    $attrs .= " data-default-tab='" . $default_tab . "'";
+    $attrs .= " data-animations='" . $animations . "'";
+    $attrs .= " data-editable='" . $editable . "'";
+    $attrs .= " data-embed-version='" . $version . "'";
 
     if ($preview) {
       $attrs .= " data-preview='true'";
     }
 
-
     $content = str_replace('&#8217;', "'", html_entity_decode($content));
 
-		$embed =  "<p class='codepen' " . $attrs . ">\n";
-		$embed .=   $content;
-		$embed .= "</p>\n";
+    $embed =  "<p class='codepen' " . $attrs . ">\n";
+    $embed .=   $content . $theme_id;
+    $embed .= "</p>\n";
 
-		$embed .= '<script async src="//codepen.io/assets/embed/ei.js"></script>';
+    $embed .= '<script async src="//codepen.io/assets/embed/ei.js"></script>';
 
-		return $embed;
+    return $embed;
 
-	}
+  }
 }
 
 add_shortcode('codepen_embed', 'createCodePenEmbed');
@@ -85,7 +88,7 @@ class CodePenEmbedSettingsPage {
 
   public function __construct() {
     add_action('admin_menu', array($this, 'add_cp_embed_options_page'));
-    add_action( 'admin_init', array($this, 'page_init'));
+    add_action('admin_init', array($this, 'page_init'));
   }
 
   public function add_cp_embed_options_page() {
@@ -110,11 +113,11 @@ class CodePenEmbedSettingsPage {
 
         <form method="post" action="options.php">
 
-	        <?php
-	          settings_fields('codpen_embed_options_group');
-	          do_settings_sections('my-setting-admin');
-	          submit_button();
-	        ?>
+          <?php
+            settings_fields('codpen_embed_options_group');
+            do_settings_sections('my-setting-admin');
+            submit_button();
+          ?>
 
         </form>
 
@@ -157,10 +160,12 @@ class CodePenEmbedSettingsPage {
     $new_input = array();
 
     if (isset($input['theme_id']))
-      $new_input['theme_id'] = absint($input['theme_id']);
+      $new_input['theme_id'] = trim($input['theme_id']);
+      //$new_input['theme_id'] = absint($input['theme_id']);
 
     if (isset($input['override_theme_id']))
-      $new_input['override_theme_id'] = absint($input['override_theme_id']);
+      $new_input['override_theme_id'] = trim($input['override_theme_id']);
+      //$new_input['override_theme_id'] = absint($input['override_theme_id']);
 
     return $new_input;
   }

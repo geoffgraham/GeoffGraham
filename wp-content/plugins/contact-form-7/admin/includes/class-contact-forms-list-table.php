@@ -100,6 +100,32 @@ class WPCF7_Contact_Form_List_Table extends WP_List_Table {
 		$url = admin_url( 'admin.php?page=wpcf7&post=' . absint( $item->id() ) );
 		$edit_link = add_query_arg( array( 'action' => 'edit' ), $url );
 
+		$output = sprintf(
+			'<a class="row-title" href="%1$s" title="%2$s">%3$s</a>',
+			esc_url( $edit_link ),
+			esc_attr( sprintf( __( 'Edit &#8220;%s&#8221;', 'contact-form-7' ),
+				$item->title() ) ),
+			esc_html( $item->title() ) );
+
+		$output = sprintf( '<strong>%s</strong>', $output );
+
+		if ( wpcf7_validate_configuration()
+		&& current_user_can( 'wpcf7_edit_contact_form', $item->id() ) ) {
+			$config_validator = new WPCF7_ConfigValidator( $item );
+
+			if ( $count_errors = $config_validator->count_errors() ) {
+				$error_notice = sprintf(
+					_n(
+						'%s configuration error found',
+						'%s configuration errors found',
+						$count_errors, 'contact-form-7' ),
+					number_format_i18n( $count_errors ) );
+				$output .= sprintf(
+					'<div class="config-error">%s</div>',
+					$error_notice );
+			}
+		}
+
 		$actions = array(
 			'edit' => sprintf( '<a href="%1$s">%2$s</a>',
 				esc_url( $edit_link ),
@@ -116,13 +142,9 @@ class WPCF7_Contact_Form_List_Table extends WP_List_Table {
 					esc_html( __( 'Duplicate', 'contact-form-7' ) ) ) ) );
 		}
 
-		$a = sprintf( '<a class="row-title" href="%1$s" title="%2$s">%3$s</a>',
-			esc_url( $edit_link ),
-			esc_attr( sprintf( __( 'Edit &#8220;%s&#8221;', 'contact-form-7' ),
-				$item->title() ) ),
-			esc_html( $item->title() ) );
+		$output .= $this->row_actions( $actions );
 
-		return '<strong>' . $a . '</strong> ' . $this->row_actions( $actions );
+		return $output;
 	}
 
 	function column_author( $item ) {

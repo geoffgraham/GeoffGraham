@@ -17,15 +17,15 @@
 
 	// Link settings.
 	api.Menus.data = {
-		nonce: '',
 		itemTypes: [],
 		l10n: {},
-		menuItemTransport: 'postMessage',
+		settingTransport: 'refresh',
 		phpIntMax: 0,
 		defaultSettingValues: {
 			nav_menu: {},
 			nav_menu_item: {}
-		}
+		},
+		locationSlugMappedToName: {}
 	};
 	if ( 'undefined' !== typeof _wpCustomizeNavMenusSettings ) {
 		$.extend( api.Menus.data, _wpCustomizeNavMenusSettings );
@@ -142,16 +142,8 @@
 			} );
 
 			// Clear the search results.
-			$( '.clear-results' ).on( 'click keydown', function( event ) {
-				if ( event.type === 'keydown' && ( 13 !== event.which && 32 !== event.which ) ) { // "return" or "space" keys only
-					return;
-				}
-
-				event.preventDefault();
-
-				$( '#menu-items-search' ).val( '' ).focus();
-				event.target.value = '';
-				self.search( event );
+			$( '.clear-results' ).on( 'click', function() {
+				self.$search.val( '' ).focus().trigger( 'keyup' );
 			} );
 
 			this.$el.on( 'input', '#custom-menu-item-name.invalid, #custom-menu-item-url.invalid', function() {
@@ -187,6 +179,8 @@
 
 			// Close the panel if the URL in the preview changes
 			api.previewer.bind( 'url', this.close );
+
+			self.delegateEvents();
 		},
 
 		// Search input change handler.
@@ -206,17 +200,13 @@
 				$otherSections.fadeOut( 100 );
 				$searchSection.find( '.accordion-section-content' ).slideDown( 'fast' );
 				$searchSection.addClass( 'open' );
-				$searchSection.find( '.clear-results' )
-					.prop( 'tabIndex', 0 )
-					.addClass( 'is-visible' );
+				$searchSection.find( '.clear-results' ).addClass( 'is-visible' );
 			} else if ( '' === event.target.value ) {
 				$searchSection.removeClass( 'open' );
 				$otherSections.show();
-				$searchSection.find( '.clear-results' )
-					.prop( 'tabIndex', -1 )
-					.removeClass( 'is-visible' );
+				$searchSection.find( '.clear-results' ).removeClass( 'is-visible' );
 			}
-			
+
 			this.searchTerm = event.target.value;
 			this.pages.search = 1;
 			this.doSearch( 1 );
@@ -248,7 +238,7 @@
 			$section.addClass( 'loading' );
 			self.loading = true;
 			params = {
-				'customize-menus-nonce': api.Menus.data.nonce,
+				'customize-menus-nonce': api.settings.nonce['customize-menus'],
 				'wp_customize': 'on',
 				'search': self.searchTerm,
 				'page': page
@@ -323,7 +313,7 @@
 			availableMenuItemContainer.find( '.accordion-section-title' ).addClass( 'loading' );
 			self.loading = true;
 			params = {
-				'customize-menus-nonce': api.Menus.data.nonce,
+				'customize-menus-nonce': api.settings.nonce['customize-menus'],
 				'wp_customize': 'on',
 				'type': type,
 				'object': object,
@@ -612,15 +602,21 @@
 			});
 		},
 
-		saveManageColumnsState: function() {
-			var hidden = this.hidden();
-			$.post( wp.ajax.settings.url, {
-				action: 'hidden-columns',
-				hidden: hidden,
+		saveManageColumnsState: _.debounce( function() {
+			var panel = this;
+			if ( panel._updateHiddenColumnsRequest ) {
+				panel._updateHiddenColumnsRequest.abort();
+			}
+
+			panel._updateHiddenColumnsRequest = wp.ajax.post( 'hidden-columns', {
+				hidden: panel.hidden(),
 				screenoptionnonce: $( '#screenoptionnonce' ).val(),
 				page: 'nav-menus'
-			});
-		},
+			} );
+			panel._updateHiddenColumnsRequest.always( function() {
+				panel._updateHiddenColumnsRequest = null;
+			} );
+		}, 2000 ),
 
 		checked: function( column ) {
 			this.container.addClass( 'field-' + column + '-active' );
@@ -631,12 +627,10 @@
 		},
 
 		hidden: function() {
-			this.hidden = function() {
-				return $( '.hide-column-tog' ).not( ':checked' ).map( function() {
-					var id = this.id;
-					return id.substring( id, id.length - 5 );
-				}).get().join( ',' );
-			};
+			return $( '.hide-column-tog' ).not( ':checked' ).map( function() {
+				var id = this.id;
+				return id.substring( 0, id.length - 5 );
+			}).get().join( ',' );
 		}
 	} );
 
@@ -806,19 +800,21 @@
 		/**
 		 * @param {array} themeLocations
 		 */
-		updateAssignedLocationsInSectionTitle: function( themeLocations ) {
+		updateAssignedLocationsInSectionTitle: function( themeLocationSlugs ) {
 			var section = this,
 				$title;
 
 			$title = section.container.find( '.accordion-section-title:first' );
 			$title.find( '.menu-in-location' ).remove();
-			_.each( themeLocations, function( themeLocation ) {
-				var $label = $( '<span class="menu-in-location"></span>' );
-				$label.text( api.Menus.data.l10n.menuLocation.replace( '%s', themeLocation ) );
+			_.each( themeLocationSlugs, function( themeLocationSlug ) {
+				var $label, locationName;
+				$label = $( '<span class="menu-in-location"></span>' );
+				locationName = api.Menus.data.locationSlugMappedToName[ themeLocationSlug ];
+				$label.text( api.Menus.data.l10n.menuLocation.replace( '%s', locationName ) );
 				$title.append( $label );
 			});
 
-			section.container.toggleClass( 'assigned-to-menu-location', 0 !== themeLocations.length );
+			section.container.toggleClass( 'assigned-to-menu-location', 0 !== themeLocationSlugs.length );
 
 		},
 
@@ -930,6 +926,19 @@
 				return parseInt( value, 10 );
 			};
 
+			// Edit menu button.
+			control.container.find( '.edit-menu' ).on( 'click', function() {
+				var menuId = control.setting();
+				api.section( 'nav_menu[' + menuId + ']' ).focus();
+			});
+			control.setting.bind( 'change', function() {
+				if ( 0 === control.setting() ) {
+					control.container.find( '.edit-menu' ).addClass( 'hidden' );
+				} else {
+					control.container.find( '.edit-menu' ).removeClass( 'hidden' );
+				}
+			});
+
 			// Add/remove menus from the available options when they are added and removed.
 			api.bind( 'add', function( setting ) {
 				var option, menuId, matches = setting.id.match( navMenuIdRegex );
@@ -985,6 +994,13 @@
 		 */
 		initialize: function( id, options ) {
 			var control = this;
+			control.expanded = new api.Value( false );
+			control.expandedArgumentsQueue = [];
+			control.expanded.bind( function( expanded ) {
+				var args = control.expandedArgumentsQueue.shift();
+				args = $.extend( {}, control.defaultExpandedArguments, args );
+				control.onChangeExpanded( expanded, args );
+			});
 			api.Control.prototype.initialize.call( control, id, options );
 			control.active.validate = function() {
 				var value, section = api.section( control.section() );
@@ -1362,25 +1378,84 @@
 		},
 
 		/**
-		 * Expand the menu item form control.
+		 * @since 4.6.0
+		 *
+		 * @param {Boolean} expanded
+		 * @param {Object} [params]
+		 * @returns {Boolean} false if state already applied
 		 */
-		expandForm: function() {
-			this.toggleForm( true );
+		_toggleExpanded: api.Section.prototype._toggleExpanded,
+
+		/**
+		 * @since 4.6.0
+		 *
+		 * @param {Object} [params]
+		 * @returns {Boolean} false if already expanded
+		 */
+		expand: api.Section.prototype.expand,
+
+		/**
+		 * Expand the menu item form control.
+		 *
+		 * @since 4.5.0 Added params.completeCallback.
+		 *
+		 * @param {Object}   [params] - Optional params.
+		 * @param {Function} [params.completeCallback] - Function to call when the form toggle has finished animating.
+		 */
+		expandForm: function( params ) {
+			this.expand( params );
 		},
 
 		/**
-		 * Collapse the menu item form control.
+		 * @since 4.6.0
+		 *
+		 * @param {Object} [params]
+		 * @returns {Boolean} false if already collapsed
 		 */
-		collapseForm: function() {
-			this.toggleForm( false );
+		collapse: api.Section.prototype.collapse,
+
+		/**
+		 * Collapse the menu item form control.
+		 *
+		 * @since 4.5.0 Added params.completeCallback.
+		 *
+		 * @param {Object}   [params] - Optional params.
+		 * @param {Function} [params.completeCallback] - Function to call when the form toggle has finished animating.
+		 */
+		collapseForm: function( params ) {
+			this.collapse( params );
 		},
 
 		/**
 		 * Expand or collapse the menu item control.
 		 *
-		 * @param {boolean|undefined} [showOrHide] If not supplied, will be inverse of current visibility
+		 * @deprecated this is poor naming, and it is better to directly set control.expanded( showOrHide )
+		 * @since 4.5.0 Added params.completeCallback.
+		 *
+		 * @param {boolean}  [showOrHide] - If not supplied, will be inverse of current visibility
+		 * @param {Object}   [params] - Optional params.
+		 * @param {Function} [params.completeCallback] - Function to call when the form toggle has finished animating.
 		 */
-		toggleForm: function( showOrHide ) {
+		toggleForm: function( showOrHide, params ) {
+			if ( typeof showOrHide === 'undefined' ) {
+				showOrHide = ! this.expanded();
+			}
+			if ( showOrHide ) {
+				this.expand( params );
+			} else {
+				this.collapse( params );
+			}
+		},
+
+		/**
+		 * Expand or collapse the menu item control.
+		 *
+		 * @since 4.6.0
+		 * @param {boolean}  [showOrHide] - If not supplied, will be inverse of current visibility
+		 * @param {Object}   [params] - Optional params.
+		 * @param {Function} [params.completeCallback] - Function to call when the form toggle has finished animating.
+		 */
+		onChangeExpanded: function( showOrHide, params ) {
 			var self = this, $menuitem, $inside, complete;
 
 			$menuitem = this.container;
@@ -1391,6 +1466,9 @@
 
 			// Already expanded or collapsed.
 			if ( $inside.is( ':visible' ) === showOrHide ) {
+				if ( params && params.completeCallback ) {
+					params.completeCallback();
+				}
 				return;
 			}
 
@@ -1407,6 +1485,10 @@
 						.removeClass( 'menu-item-edit-inactive' )
 						.addClass( 'menu-item-edit-active' );
 					self.container.trigger( 'expanded' );
+
+					if ( params && params.completeCallback ) {
+						params.completeCallback();
+					}
 				};
 
 				$menuitem.find( '.item-edit' ).attr( 'aria-expanded', 'true' );
@@ -1419,6 +1501,10 @@
 						.addClass( 'menu-item-edit-inactive' )
 						.removeClass( 'menu-item-edit-active' );
 					self.container.trigger( 'collapsed' );
+
+					if ( params && params.completeCallback ) {
+						params.completeCallback();
+					}
 				};
 
 				self.container.trigger( 'collapse' );
@@ -1431,14 +1517,31 @@
 		/**
 		 * Expand the containing menu section, expand the form, and focus on
 		 * the first input in the control.
+		 *
+		 * @since 4.5.0 Added params.completeCallback.
+		 *
+		 * @param {Object}   [params] - Params object.
+		 * @param {Function} [params.completeCallback] - Optional callback function when focus has completed.
 		 */
-		focus: function() {
-			var control = this, focusable;
+		focus: function( params ) {
+			params = params || {};
+			var control = this, originalCompleteCallback = params.completeCallback;
+
 			control.expandControlSection();
-			control.expandForm();
-			// Note that we can't use :focusable due to a jQuery UI issue. See: https://github.com/jquery/jquery-ui/pull/1583
-			focusable = control.container.find( '.menu-item-settings' ).find( 'input, select, textarea, button, object, a[href], [tabindex]' ).filter( ':visible' );
-			focusable.first().focus();
+
+			params.completeCallback = function() {
+				var focusable;
+
+				// Note that we can't use :focusable due to a jQuery UI issue. See: https://github.com/jquery/jquery-ui/pull/1583
+				focusable = control.container.find( '.menu-item-settings' ).find( 'input, select, textarea, button, object, a[href], [tabindex]' ).filter( ':visible' );
+				focusable.first().focus();
+
+				if ( originalCompleteCallback ) {
+					originalCompleteCallback();
+				}
+			};
+
+			control.expandForm( params );
 		},
 
 		/**
@@ -2266,7 +2369,7 @@
 			customizeId = 'nav_menu_item[' + String( placeholderId ) + ']';
 			settingArgs = {
 				type: 'nav_menu_item',
-				transport: 'postMessage',
+				transport: api.Menus.data.settingTransport,
 				previewer: api.previewer
 			};
 			setting = api.create( customizeId, customizeId, {}, settingArgs );
@@ -2355,7 +2458,7 @@
 			// Register the menu control setting.
 			api.create( customizeId, customizeId, {}, {
 				type: 'nav_menu',
-				transport: 'postMessage',
+				transport: api.Menus.data.settingTransport,
 				previewer: api.previewer
 			} );
 			api( customizeId ).set( $.extend(
@@ -2442,9 +2545,8 @@
 			}
 		} );
 
-		api.previewer.bind( 'refresh', function() {
-			api.previewer.refresh();
-		});
+		// Open and focus menu control.
+		api.previewer.bind( 'focus-nav-menu-item-control', api.Menus.focusMenuItemControl );
 	} );
 
 	/**
@@ -2488,7 +2590,7 @@
 				newCustomizeId = 'nav_menu[' + String( update.term_id ) + ']';
 				newSetting = api.create( newCustomizeId, newCustomizeId, settingValue, {
 					type: 'nav_menu',
-					transport: 'postMessage',
+					transport: api.Menus.data.settingTransport,
 					previewer: api.previewer
 				} );
 
@@ -2636,7 +2738,7 @@
 				newCustomizeId = 'nav_menu_item[' + String( update.post_id ) + ']';
 				newSetting = api.create( newCustomizeId, newCustomizeId, settingValue, {
 					type: 'nav_menu_item',
-					transport: 'postMessage',
+					transport: api.Menus.data.settingTransport,
 					previewer: api.previewer
 				} );
 

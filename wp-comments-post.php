@@ -19,9 +19,9 @@ nocache_headers();
 
 $comment = wp_handle_comment_submission( wp_unslash( $_POST ) );
 if ( is_wp_error( $comment ) ) {
-	$data = $comment->get_error_data();
+	$data = intval( $comment->get_error_data() );
 	if ( ! empty( $data ) ) {
-		wp_die( $comment->get_error_message(), $data );
+		wp_die( '<p>' . $comment->get_error_message() . '</p>', __( 'Comment Submission Failure' ), array( 'response' => $data, 'back_link' => true ) );
 	} else {
 		exit;
 	}
@@ -42,7 +42,7 @@ do_action( 'set_comment_cookies', $comment, $user );
 $location = empty( $_POST['redirect_to'] ) ? get_comment_link( $comment ) : $_POST['redirect_to'] . '#comment-' . $comment->comment_ID;
 
 /**
- * Filter the location URI to send the commenter after posting.
+ * Filters the location URI to send the commenter after posting.
  *
  * @since 2.0.5
  *

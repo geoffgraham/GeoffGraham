@@ -1,5 +1,7 @@
 (function($) {
 
+	'use strict';
+
 	if (typeof _wpcf7 == 'undefined' || _wpcf7 === null) {
 		_wpcf7 = {};
 	}
@@ -59,7 +61,7 @@
 				tag_type += '*';
 			}
 
-			components = _wpcf7.taggen.compose(tag_type, $form);
+			var components = _wpcf7.taggen.compose(tag_type, $form);
 			$(this).val(components);
 		});
 
@@ -121,6 +123,10 @@
 				options.push($(this).attr('name') + ':' + $(this).val());
 			}
 		});
+
+		if ('radio' == tagType) {
+			options.push('default:1');
+		}
 
 		options = (options.length > 0) ? options.join(' ') : '';
 

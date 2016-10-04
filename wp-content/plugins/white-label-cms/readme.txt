@@ -7,9 +7,9 @@ Tags: cms, custom, admin, branding, dashboard, administration, plugin, login, cl
 Author URI: http://www.videousermanuals.com/?utm_campaign=wlcms&utm_medium=plugin&utm_source=readme-txt
 Author:  Video User Manuals
 Requires at least: 3.3 
-Tested up to: 4.2
-Stable tag: 1.5.4
-Version:1.5.4
+Tested up to: 4.6
+Stable tag: 1.5.9
+Version:1.5.9
 
 Allows complete customization of dashboard panels and logos, removal of menus, giving editors access to widgets and menus plus lots more. Import/export your settings and include an RSS panel on the dashboard to feed your clients the latest posts from your blog to keep you top of mind whenever they login to their dashboard.
 
@@ -59,16 +59,31 @@ You can now brand the dashboard as well as the admin bar.
 
 == Changelog ==
 
+= 1.5.9 =
+Minor changes
+
+= 1.5.8 =
+Fixed minor bugs
+
+= 1.5.7 =
+Fixed issue with importer
+
+= 1.5.6 =
+Fixed bug with dashboard panels in wp-admin
+
+= 1.5.5 =
+WordPress v4.4.1 Compatibility
+
 = 1.5.4 =
 Fixed conflict with WP Mandrill plugin
-Added option to hide the activity panel in the dashbaord
+Added option to hide the activity panel in the dashboard
 Renamed Right Now widget to At a Glance
 
 = 1.5.3 =
 Security release. Better use of WordPress nonces and enhanced validation on import functionality. Disclosed by g0blin.
 
 = 1.5.2 =
-Login Logo width fixed for version wordpress 3.8
+Login Logo width fixed for version WordPress 3.8
 fixed 16px logo in admin bar on front end
 Fixed advert on wlcms advert on the settings page
 Fixed Dashboard logo not appear on dashboard for WP 3.8

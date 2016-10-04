@@ -107,6 +107,11 @@ function wpcf7_use_really_simple_captcha() {
 		WPCF7_USE_REALLY_SIMPLE_CAPTCHA );
 }
 
+function wpcf7_validate_configuration() {
+	return apply_filters( 'wpcf7_validate_configuration',
+		WPCF7_VALIDATE_CONFIGURATION );
+}
+
 function wpcf7_load_js() {
 	return apply_filters( 'wpcf7_load_js', WPCF7_LOAD_JS );
 }
@@ -245,8 +250,17 @@ function wpcf7_enctype_value( $enctype ) {
 
 function wpcf7_rmdir_p( $dir ) {
 	if ( is_file( $dir ) ) {
-		@unlink( $dir );
-		return true;
+		if ( ! $result = @unlink( $dir ) ) {
+			$stat = @stat( $dir );
+			$perms = $stat['mode'];
+			@chmod( $dir, $perms | 0200 ); // add write for owner
+
+			if ( ! $result = @unlink( $dir ) ) {
+				@chmod( $dir, $perms );
+			}
+		}
+
+		return $result;
 	}
 
 	if ( ! is_dir( $dir ) ) {

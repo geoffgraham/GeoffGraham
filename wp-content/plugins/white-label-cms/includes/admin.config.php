@@ -519,7 +519,7 @@ array( "name" => "Modify Menus",
 	"type" => "section"),
 array( "type" => "open"),
 
-array( "name" => "These changes will only effect people with the user role of <strong>Editor</strong>.  You are currently logged is as the admin, so you will not see any changes in the menus until you login with a different user role.",
+array( "name" => "These changes will only effect people with the user role of <strong>Editor</strong>.  You are currently logged in as the admin, so you will not see any changes in the menus until you login with a different user role.",
 	"type" => "message"),
 
 array("name" => "Choose A CMS Profile","desc" => "Which profile best fits your clients needs?","id" => $wlcmsShortName."_cms_profile","type" => "radioprofile","options" => array("1", "2","3"),	"std" => '1'),

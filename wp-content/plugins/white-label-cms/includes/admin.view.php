@@ -2,17 +2,14 @@
 <h2>White Label CMS Settings</h2>
  
 <div class="wlcms_opts" style="position:relative;">
-	<div id="wlcms-sidebar" style="position: absolute; top: 0; right: 0; background-color:#FFFFFF; width: 250px; border: 1px solid #ccc; padding: 20px;">
-		<img src="<?php echo plugins_url('images/better-ebooks-ad.png', dirname(__FILE__)); ?>" alt="Better WordPress For Clients" title="Better WordPress For Clients" />
-		<form method="post" accept-charset="UTF-8" onsubmit="return quickValidate()"  action="https://sk199.infusionsoft.com/app/form/process/9168d81810d0fec71af66450f00861f4" target="_blank" name="Better WP ClickFunnels">
+	<div id="wlcms-sidebar" style="position: absolute; top: 0; right: 0; z-index: 2; background-color:#FFFFFF; width: 250px; border: 1px solid #ccc; padding: 20px;">
+		<img src="<?php echo plugins_url('images/WPElevatoon-WP-Skyscraper-Image-232x337.jpg', dirname(__FILE__)); ?>" alt="Better Clients" title="Better Clients" />
+		<form method="post" accept-charset="UTF-8" onsubmit="return quickValidate()"  action="https://sk199.infusionsoft.com/app/form/process/6903821baa449ff51394d0f57cfd2cdb" target="_blank" name="Better WP ClickFunnels">
 		<div style="display: none;">
-			<input name="inf_form_xid" type="hidden" value="9168d81810d0fec71af66450f00861f4" />
-			<input name="inf_form_name" type="hidden" value="Better WP ClickFunnels" />
-			<input name="infusionsoft_version" type="hidden" value="1.41.0.37" />
+			<input name="inf_form_xid" type="hidden" value="6903821baa449ff51394d0f57cfd2cdb" />
+			<input name="inf_form_name" type="hidden" value="White Label CMS Form" />
+			<input name="infusionsoft_version" type="hidden" value="1.56.0.55" />
 			<input name="inf_field_LeadSoruceId" type="hidden" value="148" />
-			<input id="_GaSource" name="inf_custom_GaSource" type="hidden" value="pluginad" />
-			<input id="_GaMedium" name="inf_custom_GaMedium" type="hidden" value="plugin" />
-			<input id="_GaCampaign" name="inf_custom_GaCampaign" type="hidden" value="wclms" />
 		</div>
 		<table style="text-align:left;margin-left: 20px;">
 		<tr>
@@ -22,11 +19,11 @@
 		<td><strong>Email: </strong>&nbsp;<input class="text" id="sub_email" type="text" name="inf_field_Email" tabindex="501"  value="" style="width: 170px;" /></td>
 		</tr>
 		<tr>
-		<td style="text-align:center"><span class="submit"><input name="submit" type="image" alt="submit" tabindex="502" src="<?php echo plugins_url('images/download-button.png', dirname(__FILE__)); ?>" width="157" height="40" style="background: none; border: 0;" /></span></td>
+		<td style="text-align:center"><span class="submit"><input name="submit" type="image" alt="submit" tabindex="502" src="<?php echo plugins_url('images/WPElevation-WP-Skyscaper-Button-157x40.gif', dirname(__FILE__)); ?>" width="157" height="40" style="background: none; border: 0;" /></span></td>
 		</tr>
 		<tr>
 		<td style="padding-top: 20px;text-align:center;">
-		<a title="Privacy Policy" href="http://www.getresponse.com/permission-seal?lang=en" target="_blank"><img src="<?php echo plugins_url('images/privacy.png', dirname(__FILE__)); ?>"  alt="" title="" /></a>
+		<a title="Privacy Policy" href="http://www.wpelevation.com/privacy-policy/" target="_blank"><img src="<?php echo plugins_url('images/privacy.png', dirname(__FILE__)); ?>"  alt="" title="" /></a>
 		</td>
 		</tr>
 		</table>
@@ -50,7 +47,6 @@ case "open":
  
 </div>
 
- 
 <?php break;
 
 case "close":
@@ -99,11 +95,6 @@ echo '<ul id="menus">';
 	endforeach;
 	
 echo '</ul>';
- 
-?>
-		 
-	
-<?php
 
 break;
  
@@ -175,7 +166,6 @@ case 'textcustom':
  
  </div>
 
-
  <?php break;
 //********************************************************************/////////////////////////////////////////////////////////////////////////////////////
  
@@ -212,8 +202,6 @@ case "button":
  	
  	<input name="export_button" type="submit" value="Export" class="<?php echo $value['class']; ?>"/>
  <small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
-
-
 </div> 
  <?php
 break;
@@ -287,9 +275,9 @@ case 'select':
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
 	
 <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-<option value="0">choose a role</option>
+	<option value="0">choose a role</option>
 <?php foreach ($value['options'] as $role => $option) { ?>
-		<option value="<?php echo $role;?>"<?php if (get_option( $value['id'] ) == $role) { echo 'selected="selected"'; } elseif ($role==$value['std']) {echo 'selected="selected"';} ?>><?php echo $option; ?></option><?php } ?>
+	<option value="<?php echo $role;?>"<?php if (get_option( $value['id'] ) == $role) { echo 'selected="selected"'; } elseif ($role==$value['std']) {echo 'selected="selected"';} ?>><?php echo $option; ?></option><?php } ?>
 </select>
 
 	<small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
@@ -321,20 +309,23 @@ case 'selectnewnew':
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
 
 
-<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-<?php foreach ($value['options'] as $role => $option) { ?>
-		<option value="<?php echo $role;?>"<?php if (get_option( $value['id'] ) == $role) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?>
-</select>
+	<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
+	<?php 
+		foreach ($value['options'] as $role => $option) {
+	?>
+		<option value="<?php echo $role;?>"<?php if (get_option( $value['id'] ) == $role) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option>
+	<?php
+		}
+	?>
+	</select>
 
-<input name="delete_button" OnClick="javascript:return confirm('<?php _e('WARNING! Deleting a role can have severe consequences, proceed only if you know what you are doing.','wlcms')?>');" type="submit" value="delete" class="<?php echo $value['class']; ?>"/>	<small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
+	<input name="delete_button" OnClick="javascript:return confirm('<?php _e('WARNING! Deleting a role can have severe consequences, proceed only if you know what you are doing.','wlcms')?>');" type="submit" value="delete" class="<?php echo $value['class']; ?>"/>	<small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
 </div>
 </div>
 <?php
 break;
 
-
-
- case "headings":
+case "headings":
 ?>
 <label id="<?php echo (isset($value['id']) ? $value['id'] : '' ); ?>"><?php echo $value['heading']; ?> </label>
 <small><?php echo (isset($value['desc']) ?  $value['desc'] : '' ); ?></small><div class="clearfix"></div>
@@ -350,20 +341,20 @@ break;
 	<label id="<?php echo $value['id']; ?>" class="<?php echo (!empty($value['class'])?$value['class']:'');?>"><?php echo (isset($value['name']) ? $value['name'] : ''); ?></label>
 	
 <?php
-if(get_option($value['id']))
-    {  
-        $checked = "checked=\"checked\""; $remChecked = 'wlcms_remChecked';
-    }
-elseif ( ( ! get_option( 'wlcms_o_ver' ) ) && ($value['std'] == '1') )
-    {   
-        $checked = "checked=\"checked\"";
-        $remChecked = 'wlcms_remChecked';
-    }
-else
-    {
-        $checked = '';
-        $remChecked = '';
-    }
+	if(get_option($value['id']))
+	    {  
+	        $checked = "checked=\"checked\""; $remChecked = 'wlcms_remChecked';
+	    }
+	elseif ( ( ! get_option( 'wlcms_o_ver' ) ) && ($value['std'] == '1') )
+	    {   
+	        $checked = "checked=\"checked\"";
+	        $remChecked = 'wlcms_remChecked';
+	    }
+	else
+	    {
+	        $checked = '';
+	        $remChecked = '';
+	    }
 ?>
 <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> class="<?php echo $remChecked; ?>" />
 <?php echo (isset($value['label']) ? $value['label'] : '' ); ?>
@@ -373,8 +364,6 @@ else
  </div>
  <?php
 break;
-
-
 
 case "divopen":
 ?>
@@ -481,9 +470,9 @@ case "radioprofile":
 	<label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
 
 <?php 
-$counter = 1;
-foreach ($value['options'] as $option) { ?>
-		<?php 
+		$counter = 1;
+		foreach ($value['options'] as $option) { ?>
+			<?php 
 			switch ($counter) {
 				case 1:
 					$profileName = 'Custom';
@@ -498,17 +487,15 @@ foreach ($value['options'] as $option) { ?>
 					if(get_option($value['id']) ==  3){ $checked = "checked=\"checked\""; }else{ $checked = ""; }					
 					break;
 			}		
-		?>
-		<label class="radio<?php echo $profileName;?>"><?php echo $profileName;?><input type="radio" name="wlcms_o_radio_profiles" class="<?php echo $value['id']; ?>" value="<?php echo $counter; ?>" <?php echo $checked; ?> id="radio<?php echo $profileName; ?>" /></label>
-<?php
-$counter++;
-}
+			?>
+			<label class="radio<?php echo $profileName;?>"><?php echo $profileName;?><input type="radio" name="wlcms_o_radio_profiles" class="<?php echo $value['id']; ?>" value="<?php echo $counter; ?>" <?php echo $checked; ?> id="radio<?php echo $profileName; ?>" /></label>
+		<?php
+		$counter++;
+		}
 ?>
-
 	<small><?php echo $value['desc']; ?></small><div class="clearfix"></div>
  </div> 
 <?php break; 
-
 
 case "subtitle":
 ?>
@@ -523,14 +510,12 @@ break;
 case "section":
 
 $i++;
-
 ?>
 
 <div class="wlcms_section">
 <div class="wlcms_title"><h3><img src="<?php echo plugins_url('images/trans.png', dirname(__FILE__)); ?>" class="inactive" alt=""><?php echo $value['name']; ?></h3><span class="submit"><input name="save<?php echo $i; ?>" type="submit" style="font-size:10px" value="Save changes" />
 </span><div class="clearfix"></div></div>
 <div class="wlcms_options" style="display: none;">
-
  
 <?php break;
 case "subsection":
@@ -538,7 +523,6 @@ case "subsection":
 <div id="v<?php echo str_replace(" ", "", $value['name']); ?>" class="video-h">
 <h4><?php echo $value['name']; ?> <span class="submit"><input type="submit" value="clear" onclick="clearvid('v<?php echo str_replace(" ", "", $value['name']); ?>');return false;" /></span></h4>
 <div class="clearfix"></div>
-
 
 <?php break;
 case "subsectionvars":
@@ -569,8 +553,6 @@ case "subsectionvars":
 </form>
 
 <form method="get" action="<?php echo admin_url( 'options-general.php?page=wlcms-plugin.php' );?>" id="exportopts" style="display:none">
-
-
     <p> 
         Do you want to include images that were added using the media upload button? (If you choose yes, the image path will point to this domain)
     </p>
@@ -579,59 +561,40 @@ case "subsectionvars":
         <input type="radio" name="wlcms_export_imgs" value="yes" /> Yes
         <input type="radio" name="wlcms_export_imgs" value="no" checked="checked" /> No
         <input type="radio" name="wlcms_export_imgs" value="partial" /> Partial (the domain name will be updated and you will need to upload the images to the new domain)
-
     </p>
 
-    
     <input type="hidden" name="page" value="wlcms-plugin.php" />
     <input type="hidden" name="action" value="export" />
 
     <input type="submit" value="Export" />
 
 </form>
-
-<?php 
-if (!get_option('wpm_o_user_id')):
-
-    global $current_user;
-    get_currentuserinfo();
-
-
-
-?>
-
-<?php
-endif;
-?>
 </div>
 
     <script type="text/javascript">
 
 function quickValidate()
 {
-        if (! jQuery('#sub_name').val() ) 
-            {
-                alert('Your Name is required');
-                return false; 
-            }
-        if(! jQuery('#sub_email').val() )
-            {
-                alert('Your Email is required');
-                return false; 
-            }
-
-            return true;
-            
+    if (! jQuery('#sub_name').val() ) 
+        {
+            alert('Your Name is required');
+            return false; 
+        }
+    if(! jQuery('#sub_email').val() )
+        {
+            alert('Your Email is required');
+            return false; 
+        }
+    return true;           
 }
 
-        jQuery('.importbtn').click(function(){
-            jQuery('#importform').slideDown();
-        });
+jQuery('.importbtn').click(function(){
+    jQuery('#importform').slideDown();
+});
 
-        jQuery('.exportbtn').click(function(){
-            jQuery('#exportopts').slideDown();
-        });
-
+jQuery('.exportbtn').click(function(){
+    jQuery('#exportopts').slideDown();
+});
 
 jQuery(document).ready(function($) {
 		// Upload function goes here
@@ -642,13 +605,20 @@ jQuery(document).ready(function($) {
 		return false;
 		});
 
-		window.send_to_editor = function(html) {
-		imgurl = jQuery('img',html).attr('src');
-		jQuery('#'+formField).val(imgurl);
-		tb_remove();
+		window.send_to_editor = function(html) {            
+            var imgurl = '';
+            
+            // Parse out the image source
+            var regex = /<img[^>]+src=['"](.*?)['"]/i;
+            var matches = regex.exec( html );
+            if ( matches.length >= 2 ) {
+                imgurl = matches[ 1 ];
+            }
+
+    		jQuery('#'+formField).val(imgurl);
+    		tb_remove();
+            
 		}
-
-
 
 	var formfield=null;
 	window.original_send_to_editor = window.send_to_editor;

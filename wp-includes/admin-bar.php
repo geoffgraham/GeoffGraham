@@ -11,7 +11,7 @@
  * Instantiate the admin bar object and set it up as a global for access elsewhere.
  *
  * UNHOOKING THIS FUNCTION WILL NOT PROPERLY REMOVE THE ADMIN BAR.
- * For that, use show_admin_bar(false) or the 'show_admin_bar' filter.
+ * For that, use show_admin_bar(false) or the {@see 'show_admin_bar'} filter.
  *
  * @since 3.1.0
  * @access private
@@ -32,7 +32,7 @@ function _wp_admin_bar_init() {
 	/* Instantiate the admin bar */
 
 	/**
-	 * Filter the admin bar class to instantiate.
+	 * Filters the admin bar class to instantiate.
 	 *
 	 * @since 3.1.0
 	 *
@@ -51,13 +51,15 @@ function _wp_admin_bar_init() {
 }
 
 /**
- * Render the admin bar to the page based on the $wp_admin_bar->menu member var.
- * This is called very late on the footer actions so that it will render after anything else being
- * added to the footer.
+ * Renders the admin bar to the page based on the $wp_admin_bar->menu member var.
  *
- * It includes the action "admin_bar_menu" which should be used to hook in and
- * add new menus to the admin bar. That way you can be sure that you are adding at most optimal point,
- * right before the admin bar is rendered. This also gives you access to the $post global, among others.
+ * This is called very late on the footer actions so that it will render after
+ * anything else being added to the footer.
+ *
+ * It includes the {@see 'admin_bar_menu'} action which should be used to hook in and
+ * add new menus to the admin bar. That way you can be sure that you are adding at most
+ * optimal point, right before the admin bar is rendered. This also gives you access to
+ * the `$post` global, among others.
  *
  * @since 3.1.0
  *
@@ -558,8 +560,7 @@ function wp_admin_bar_edit_menu( $wp_admin_bar ) {
 			&& ( $post_type_object->show_in_admin_bar ) )
 		{
 			if ( 'draft' == $post->post_status ) {
-				$draft_link = set_url_scheme( get_permalink( $post->ID ) );
-				$preview_link = get_preview_post_link( $post, array(), $draft_link );
+				$preview_link = get_preview_post_link( $post );
 				$wp_admin_bar->add_menu( array(
 					'id' => 'preview',
 					'title' => $post_type_object->labels->view_item,
@@ -573,8 +574,8 @@ function wp_admin_bar_edit_menu( $wp_admin_bar ) {
 					'href' => get_permalink( $post->ID )
 				) );
 			}
-		} elseif ( 'edit-tags' == $current_screen->base
-			&& isset( $tag ) && is_object( $tag )
+		} elseif ( 'term' == $current_screen->base
+			&& isset( $tag ) && is_object( $tag ) && ! is_wp_error( $tag )
 			&& ( $tax = get_taxonomy( $tag->taxonomy ) )
 			&& $tax->public )
 		{
@@ -692,16 +693,16 @@ function wp_admin_bar_comments_menu( $wp_admin_bar ) {
 
 	$awaiting_mod = wp_count_comments();
 	$awaiting_mod = $awaiting_mod->moderated;
-	$awaiting_title = esc_attr( sprintf( _n( '%s comment awaiting moderation', '%s comments awaiting moderation', $awaiting_mod ), number_format_i18n( $awaiting_mod ) ) );
+	$awaiting_text = sprintf( _n( '%s comment awaiting moderation', '%s comments awaiting moderation', $awaiting_mod ), number_format_i18n( $awaiting_mod ) );
 
 	$icon  = '<span class="ab-icon"></span>';
-	$title = '<span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-' . $awaiting_mod . '">' . number_format_i18n( $awaiting_mod ) . '</span>';
+	$title = '<span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-' . $awaiting_mod . '" aria-hidden="true">' . number_format_i18n( $awaiting_mod ) . '</span>';
+	$title .= '<span class="screen-reader-text">' . $awaiting_text . '</span>';
 
 	$wp_admin_bar->add_menu( array(
 		'id'    => 'comments',
 		'title' => $icon . $title,
 		'href'  => admin_url('edit-comments.php'),
-		'meta'  => array( 'title' => $awaiting_title ),
 	) );
 }
 
@@ -873,13 +874,14 @@ function _admin_bar_bump_cb() { ?>
 }
 
 /**
- * Set the display status of the admin bar.
+ * Sets the display status of the admin bar.
  *
- * This can be called immediately upon plugin load. It does not need to be called from a function hooked to the init action.
+ * This can be called immediately upon plugin load. It does not need to be called
+ * from a function hooked to the {@see 'init'} action.
  *
  * @since 3.1.0
  *
- * @global WP_Admin_Bar $wp_admin_bar
+ * @global bool $show_admin_bar
  *
  * @param bool $show Whether to allow the admin bar to show.
  */
@@ -893,8 +895,8 @@ function show_admin_bar( $show ) {
  *
  * @since 3.1.0
  *
- * @global WP_Admin_Bar $wp_admin_bar
- * @global string       $pagenow
+ * @global bool   $show_admin_bar
+ * @global string $pagenow
  *
  * @return bool Whether the admin bar should be showing.
  */
@@ -922,7 +924,7 @@ function is_admin_bar_showing() {
 	}
 
 	/**
-	 * Filter whether to show the admin bar.
+	 * Filters whether to show the admin bar.
 	 *
 	 * Returning false to this hook is the recommended way to hide the admin bar.
 	 * The user's display preference is used for logged in users.
