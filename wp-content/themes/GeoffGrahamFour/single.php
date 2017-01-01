@@ -20,6 +20,13 @@
   		  <div class="wrapper">
   		    <div class="content">
     				<?php the_content(); ?>
+    				
+    				<?php // Displays a button if this is a Link Post Format
+							if(get_field('link_post_source')) {
+								echo '<a class="button" role="link" href="'.get_field('link_post_source').'">Direct Link</a>';
+							}
+						?>
+    				
   				  <p class="tags">
     				  <span aria-hidden="true" data-icon="&#xe003;"></span>
             	<?php // Get Post Tags
