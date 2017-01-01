@@ -19,6 +19,13 @@
   		<section class="module">
   		  <div class="wrapper">
   		    <div class="content">
+	  		    
+	  		    <?php // Displays a button if this is a Link Post Format
+							if(get_field('post_lead_paragraph')) {
+								echo '<p class="subhead">' . get_field('post_lead_paragraph') . '</p>';
+							}
+						?>
+	  		    
     				<?php the_content(); ?>
     				
     				<?php // Displays a button if this is a Link Post Format
