@@ -1,25 +1,25 @@
 <aside class="work-places">
 		<h3><span>Where you can find me</span></h3>
 		<div class="work-places__items">
-			<a class="work-places__item" href="#">
+			<a class="work-places__item" href="https://tri.be">
 				<article>
 					<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/modern-tribe-logo.svg' ); ?>
 					Modern Tribe
 				</article>
 			</a>
-			<a class="work-places__item" href="#">
+			<a class="work-places__item" href="https://css-tricks.com/author/geoffgraham/">
 				<article>
 				<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/css-tricks-logo.svg' ); ?>
 					CSS-Tricks
 				</article>
 			</a>
-			<a class="work-places__item" href="#">
+			<a class="work-places__item" href="https://codepen.io/geoffgraham">
 				<article>
 					<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/codepen-logo.svg' ); ?>
 					CodePen
 				</article>
 			</a>
-			<a class="work-places__item" href="#">
+			<a class="work-places__item" href="/contact">
 				<article>
 					<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/toilet.svg' ); ?>
 					Brainstorming

@@ -1,35 +1,19 @@
-*~
-.DS_Store
-.buildpath
-.project
-.settings
-*.sass-cache/
-*.sublime*
-db/
-docs/
-backups/
-webroot/
-.htaccess
-.ftppass
-wp-content/themes/*/compass_app_log.txt
-wp-content/w3tc
-wp-content/avatars
-wp-content/cache
-local-config.php
-wp-config.php
-.buildpath
-.project
-.settings
-db
-docs/
-.DS_Store
-/.gitattributes
-wp-content/debug.log
-*.codekit-cache/
-*config.codekit
-*codekit-config.json
-wp-content/uploads/
-wp-content/cache/
-wp-content/w3tc-config/
-wp-content/db.php
-wp-content/object-cache.php
+# Generic Stuff we just never want in a repo #
+*.DS_Store
+*/.sass-cache/
+*/.sass-cache/*
+*.scssc
+#*.sql
+*Thumbs.db
+
+#======= WordPress =======#
+
+
+# sitemaps #
+sitemap.xml
+sitemap.xml.gz
+
+#
+
+# ignore node/grunt dependency directories
+*/node_modules/
