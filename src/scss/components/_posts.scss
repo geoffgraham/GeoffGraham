@@ -1,0 +1,50 @@
+.posts .post {
+	@include font-size( 1.1 );
+	align-items: center;
+	border-top: 1px solid var(--border-color);
+	display: grid;
+	padding: 1em 0;
+
+	@media #{$lake} {
+		grid-gap: 65px;
+		grid-template-columns: 150px auto;
+	}
+
+	&:last-child {
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.post__date {
+		@include font-size( .85 );
+		color: var(--gray-medium);
+		margin-bottom: .5em;
+		position: relative;
+		top: 2px;
+	}
+
+	.post__title {
+		font-weight: 800;
+		line-height: 1.25;
+		margin-bottom: .25em;
+
+		@media #{$lake} {
+			font-weight: normal;
+			line-height: 1.5;
+		}
+	}
+
+	.post__title a {
+		box-shadow: none;
+
+		&:hover {
+			color: var(--primary-color);
+			box-shadow: none;
+		}
+	}
+}
+
+.posts__pagination {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2em;
+}

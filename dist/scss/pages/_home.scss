@@ -1,0 +1,61 @@
+.home {
+
+	.main-content {
+		@media #{$pond} {
+			padding-top: 2em;
+		}
+
+		&:before {
+			height: 0;
+		}
+	}
+}
+
+.home__logo {
+	margin-bottom: 0;
+	width: 85px;
+
+	@media #{$pond} {
+		width: 136px;
+	}
+}
+
+.home__title {
+	line-height: 1.2;
+
+	@media #{$pond} {
+		@include font-size( 2.5 );
+	}
+
+	@media #{$lake} {
+		@include font-size( 2 );
+	}
+
+	@media #{$bay} {
+		@include font-size( 2.5 );
+	}
+	
+	span {
+		display: block;
+	}
+}
+
+.home__image img {
+	@include box-shadow;
+	border-radius: 15px;
+}
+
+.home__body {
+	margin-top: 2em;
+	
+	p {
+		line-height: 1.65;
+		margin-top: 0;
+
+		@media #{$pool} {
+			column-count: 2;
+			column-fill: balance;
+			column-gap: 1em;
+		}
+	}
+}

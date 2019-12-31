@@ -1,0 +1,79 @@
+[class*='wp-block-'] {
+	margin: 2em 0;
+}
+
+.wp-block-pullquote,
+.wp-block-quote {
+	@include box-shadow();
+	@include font-size( 1.1 );
+
+	cite {
+		@include font-size( .65 );
+		font-style: normal;
+		font-weight: 800;
+		text-transform: uppercase;
+
+		&:before {
+			content: "— "
+		}
+	}
+}
+
+.wp-block-quote {
+	border-left: 10px solid var(--primary-color);
+	margin-left: 0;
+	padding: 1em;
+	width: 100%;
+
+	p {
+		margin: 0 0 .5em;
+	}
+
+	cite {
+		@include font-size( .75 );
+	}
+}
+
+.wp-block-image {
+	@include box-shadow();
+	background: var(--background);
+
+	figcaption {
+		background-color: var(--table-background);
+		border-top: 1px dashed var(--border-color);
+		font-size: $font-size-small;
+		margin: -.4em 0 0;
+		padding: 1em;
+	}
+}
+
+.wp-block-file {
+	@include box-shadow--alt();
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 1.5em;
+}
+.wp-block-file a.wp-block-file__button {
+	@include box-shadow--alt();
+	background: var(--white);
+	color: var(--gray-dark);
+
+	&:hover {
+		color: var(--gray-dark);
+	}
+
+	&:active {
+		background: none;
+	}
+}
+
+.wp-block-separator {
+	background-color: var(--border-color);
+	margin: 3em 0;
+}
+
+.wp-block-latest-posts__post-date {
+	margin: 0 0 1em 0;
+}

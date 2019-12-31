@@ -1,0 +1,66 @@
+.site-footer {
+	grid-area: footer;
+	margin-top: 2em;
+	width: 100%;
+
+	@media #{$lake} {
+		margin-top: 0;
+	}
+}
+
+.site-footer__cta {
+	@include font-size ( .85 );
+	border: 3px dashed var(--primary-color);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1em;
+	padding: 1em;
+	text-align: center;
+
+	@media #{$pond} {
+		@include font-size ( 1 );
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.site-footer__nav {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+
+	svg {
+		width: 50px;
+
+		@media #{$pond} {
+			width: 70px;
+		}
+	}
+}
+
+// Overrides the header style that hides it
+.site-footer .navigation__social {
+	display: block;
+
+	ul {
+		align-items: center;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	ul li {
+		font-size: 1em;
+		margin-right: .5em;
+
+		@media #{$pond} {
+			margin-right: 1em;
+		}
+	
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

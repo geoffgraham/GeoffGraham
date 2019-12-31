@@ -1,3 +1,1 @@
-# My Personal WordPress Site
-
-Feel free to use.
+The WordPress theme for my personal site.

@@ -1,17 +1,32 @@
 <?php
 /**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
+ * The main template file
  *
- * @package WordPress
+ * @package Geoff_Graham
  */
 
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define('WP_USE_THEMES', true);
+get_header();
+?>
 
-/** Loads the WordPress Environment and Template */
-require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+	<main class="main-content posts">
+
+		<?php if ( is_main_query() && have_posts() ) : ?>
+
+			<h1>Blog Archive</h1>
+
+			<?php while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/loop/loop', 'posts' );
+			endwhile;
+
+		endif; ?>
+
+		<footer class="posts__pagination">
+			<?php next_posts_link( 'Older' ); ?>
+			<?php previous_posts_link( 'Newer' ); ?>
+		</footer>
+
+	</main>
+
+<?php
+get_footer();
+?>

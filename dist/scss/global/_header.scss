@@ -1,0 +1,39 @@
+.site-header {
+	align-content: center;
+	display: flex;
+	flex-flow: column nowrap;
+	grid-area: navigation;
+	justify-content: space-between;
+	margin-bottom: 5em;
+	padding-top: 1.5em;
+
+	@media #{$pool} {
+		flex-flow: row wrap;
+	}
+
+	@media #{$lake} {
+		align-content: flex-start;
+		flex-flow: column;
+		justify-content: flex-start;
+	}
+}
+
+.site-title {
+	line-height: .75;
+	margin: 0 0 .25em 0;
+
+	a {
+		box-shadow: none;
+		color: var(--text-color);
+		font-size: 30px;
+		margin: 0;
+		text-decoration: none;
+		transition: color .2s ease-in;
+
+		&:hover {
+			box-shadow: none;
+			color: var(--primary-color);
+		}
+	}
+}
+

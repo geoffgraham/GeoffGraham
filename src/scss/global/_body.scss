@@ -1,0 +1,46 @@
+*,
+*:before,
+*:after { 
+	/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+html {
+	background-color: var(--background);
+	font-size: $font-size-medium;
+
+	@media #{$pond} {
+		font-size: calc($font-size-medium + 6 * ((100vw - 320px) / 680));
+	}	
+	@media #{$lake} {
+		font-size: $font-size-large;
+	}
+
+	&:before {
+		content: "";
+		border: 7px solid $orange;
+		height: 100vh;
+		position: fixed;
+		width: 100vw;
+		z-index: -1;
+	}
+}
+
+body {
+	@include center-block;
+	color: var(--text-color);
+	font-family: $font-body;
+	line-height: 1.5;
+	max-width: 1440px;
+	overflow-x: hidden;
+	padding: 2em;
+
+	@media #{$lake} {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-template-areas: 
+			"navigation main"
+			". footer";
+		grid-gap: 75px;
+	}
+}

@@ -1,8 +1,0 @@
-// RGBA
-// Uses rgba() function to convert color variables into rgba
-// ---------------------------------------------------------
-
-@mixin rgba($color, $opacity: 0.5) {
-    color: $color; /* The Fallback */
-    color: rgba($color, $opacity);
-}

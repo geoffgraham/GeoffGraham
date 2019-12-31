@@ -1,0 +1,29 @@
+ul, ol {
+	margin: 0 0 1.5em 0;
+}
+
+ul {
+	list-style: square outside none;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li {
+	margin-bottom: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

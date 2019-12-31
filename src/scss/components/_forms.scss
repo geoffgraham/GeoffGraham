@@ -1,0 +1,47 @@
+// Overrides Gravity Forms plugin styles.
+// Button styles managed in pieces/_buttons.scss
+
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.gform_wrapper textarea {
+	@include box-shadow--alt;
+	border: 0 !important;
+	border-radius: 0;
+	line-height: 1.2;
+	transition: all .25s ease-out;
+}
+
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus, 
+.gform_wrapper textarea:focus {
+	box-shadow: none;
+	transform: translateY( 5px );
+}
+
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=submit] {
+	font-size: .75em !important;
+}
+
+.gform_wrapper div.validation_error {
+	@include box-shadow--alt;
+	background-color: var(--error-color);
+	border: 0 !important;
+	color: var(--white) !important;
+	font-size: .75em !important;
+	padding-left: 1em !important;
+	text-align: left !important;
+}
+
+.gform_wrapper .gfield_error .gfield_label,
+.gform_wrapper .gfield_required {
+	color: var(--error-color) !important;
+}
+
+.gform_wrapper li.gfield.gfield_error,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+	background: none !important;
+	border: 0 !important;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+	display: none;
+}

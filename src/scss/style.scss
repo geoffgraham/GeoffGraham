@@ -1,0 +1,22 @@
+/*!
+Theme Name: Geoff Graham
+Theme URI: http://underscores.me/
+Author: Geoff Graham
+Author URI: https://geoffgraham.me
+Description: My personal WordPress theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: geoff-graham
+*/
+
+@import "vendor/normalize";
+@import "variables/index";
+@import "mixins/index";
+@import "typography/index";
+@import "accessibility/index";
+@import "global/index";
+@import "components/index";
+@import "pieces/index";
+@import "pages/index";
+@import "vendor/prism";
