@@ -172,3 +172,21 @@ function exclude_category_posts( $query ) {
 	}
 	}
 	add_action( 'pre_get_posts', 'exclude_category_posts' );
+
+/**
+ * Remove Jetpack's CSS File
+ */
+add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
+
+/**
+ * Remove WordPress jQuery from front-end
+ */
+
+function change_default_jquery( &$scripts){
+	if(!is_admin()){
+		$scripts->remove( 'jquery');
+		$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
+	}
+}
+add_filter( 'wp_default_scripts', 'change_default_jquery' );

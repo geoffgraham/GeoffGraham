@@ -6,23 +6,15 @@
 }
 
 html {
+	@include font-size( 1.1 );
 	background-color: var(--background);
-	font-size: $font-size-medium;
+	border: 7px solid $orange;
 
 	@media #{$pond} {
 		font-size: calc($font-size-medium + 6 * ((100vw - 320px) / 680));
 	}	
 	@media #{$lake} {
 		font-size: $font-size-large;
-	}
-
-	&:before {
-		content: "";
-		border: 7px solid $orange;
-		height: 100vh;
-		position: fixed;
-		width: 100vw;
-		z-index: -1;
 	}
 }
 

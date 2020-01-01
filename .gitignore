@@ -1,19 +1,10 @@
-# Generic Stuff we just never want in a repo #
+# Generic stuff we just never want in a repo #
 *.DS_Store
 */.sass-cache/
 */.sass-cache/*
 *.scssc
 #*.sql
 *Thumbs.db
-
-#======= WordPress =======#
-
-
-# sitemaps #
+node_modules/
 sitemap.xml
 sitemap.xml.gz
-
-#
-
-# ignore node/grunt dependency directories
-*/node_modules/

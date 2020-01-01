@@ -12,12 +12,15 @@
 
 		&:before,
 		&:after {
-			content: "";
-			border-bottom: 3px solid var(--primary-color);
-			height: 1px;
-			position: absolute;
-			top: .75em;
-			width: 50%;
+
+			@media #{$bath} {
+				content: "";
+				border-bottom: 3px solid var(--primary-color);
+				height: 1px;
+				position: absolute;
+				top: .75em;
+				width: 25%;
+			}
 
 			@media #{$pond} {
 				width: 90%;
