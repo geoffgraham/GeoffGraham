@@ -33,7 +33,7 @@
 	justify-content: space-between;
 
 	svg {
-		width: 50px;
+		width: 100px;
 
 		@media #{$pond} {
 			width: 70px;
@@ -48,14 +48,19 @@
 	ul {
 		align-items: center;
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: column wrap;
+
+		@media #{$pool} {
+			flex-flow: row wrap;
+		}
 	}
 
 	ul li {
-		font-size: 1em;
+		@include font-size( .9 );
 		margin-right: .5em;
 
 		@media #{$pond} {
+			@include font-size( 1 );
 			margin-right: 1em;
 		}
 	
