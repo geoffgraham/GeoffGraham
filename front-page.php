@@ -39,8 +39,6 @@ get_header(); ?>
 	</article>
 
 	<?php get_template_part( 'template-parts/content/content', 'clients' );  ?>
-	
-</main>
 
 <?php 
 	get_footer();

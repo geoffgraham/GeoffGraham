@@ -4,25 +4,25 @@
 			<a class="work-places__item" href="https://tri.be">
 				<article>
 					<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/modern-tribe-logo.svg' ); ?>
-					Modern Tribe
+					<div role="heading" aria-level="1">Modern Tribe</div>
 				</article>
 			</a>
 			<a class="work-places__item" href="https://css-tricks.com/author/geoffgraham/">
 				<article>
 				<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/css-tricks-logo.svg' ); ?>
-					CSS-Tricks
+				<div role="heading" aria-level="1">CSS-Tricks</div>
 				</article>
 			</a>
 			<a class="work-places__item" href="https://codepen.io/geoffgraham">
 				<article>
 					<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/codepen-logo.svg' ); ?>
-					CodePen
+					<div role="heading" aria-level="1">CodePen</div>
 				</article>
 			</a>
 			<a class="work-places__item" href="/contact">
 				<article>
 					<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/toilet.svg' ); ?>
-					Brainstorming
+					<div role="heading" aria-level="1">Brainstorming</div>
 				</article>
 			</a>
 		</div>

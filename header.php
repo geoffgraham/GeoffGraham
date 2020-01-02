@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 
-	<header class="site-header">
+	<header class="site-header" role="header">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
 		<?php get_template_part( 'template-parts/header/navigation', 'title' ); ?>
 		<div class="site-navigation">
