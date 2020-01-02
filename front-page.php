@@ -16,9 +16,9 @@ get_header(); ?>
 		<?php
 		$geoff_graham_description = get_bloginfo( 'description', 'display' );
 		if ( $geoff_graham_description || is_customize_preview() ) : ?>
-			<h2 class="home__title">
+			<h1 class="home__title">
 				<?php echo html_entity_decode( $geoff_graham_description ); ?>
-			</h2>
+			</h1>
 
 			<?php
 			$post_id = 25;
