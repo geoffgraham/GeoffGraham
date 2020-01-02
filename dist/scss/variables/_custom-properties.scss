@@ -24,7 +24,7 @@
 	--link-current: var(--gray-darkest);
 	--code-blocks: var(--white);
 	--error-color: var(--red);
-	--table-background: var(--gray-lightest);
+	--table-background: var(--gray-lighter);
 
 	@media (prefers-color-scheme: dark) {
 		--text-color: var(--white);
