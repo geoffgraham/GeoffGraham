@@ -71,6 +71,7 @@ if ( ! function_exists( 'geoff_graham_setup' ) ) :
 
 	}
 endif;
+
 add_action( 'after_setup_theme', 'geoff_graham_setup' );
 
 /**
@@ -86,6 +87,7 @@ function geoff_graham_content_width() {
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'geoff_graham_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'geoff_graham_content_width', 0 );
 
 /**
@@ -104,6 +106,7 @@ function geoff_graham_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
+
 add_action( 'widgets_init', 'geoff_graham_widgets_init' );
 
 /**
@@ -122,6 +125,7 @@ function geoff_graham_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'geoff_graham_scripts' );
 
 /**
@@ -142,13 +146,14 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Allow SVG uploads in the Media Library
  */
-function gg_add_file_types_to_uploads($file_types){
+function gg_add_file_types_to_uploads($file_types) {
 	$new_filetypes = array();
 	$new_filetypes['svg'] = 'image/svg+xml';
 	$file_types = array_merge($file_types, $new_filetypes );
 	return $file_types;
-	}
-	add_filter('upload_mimes', 'gg_add_file_types_to_uploads');
+}
+
+add_filter('upload_mimes', 'gg_add_file_types_to_uploads');
 
 /**
 	* Add page slug to body classes
@@ -168,10 +173,11 @@ add_filter( 'body_class', 'add_slug_body_class' );
  */
 function exclude_category_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
-		$query->set( 'cat', '-5, -54' );
+		$query->set( 'cat', '-52, -54' );
 	}
-	}
-	add_action( 'pre_get_posts', 'exclude_category_posts' );
+}
+
+add_action( 'pre_get_posts', 'exclude_category_posts' );
 
 /**
  * Remove Jetpack's CSS File
@@ -189,4 +195,5 @@ function change_default_jquery( &$scripts){
 		$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
 	}
 }
+
 add_filter( 'wp_default_scripts', 'change_default_jquery' );
