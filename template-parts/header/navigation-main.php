@@ -1,4 +1,4 @@
-<nav id="main-navigation" class="navigation__primary">
+<nav class="navigation__primary">
 	<?php
 	wp_nav_menu( array(
 		'theme_location' => 'menu-1',
