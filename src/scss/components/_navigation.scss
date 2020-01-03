@@ -50,8 +50,10 @@
 	font-weight: 500;
 
 	&:after {
-		content: " →";
-		color: var(--primary-color);
+		@media #{$lake} {
+			content: " →";
+			color: var(--primary-color);
+		}
 	}
 }
 .navigation__social {

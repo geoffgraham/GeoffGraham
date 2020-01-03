@@ -35,6 +35,7 @@
 	a {
 		box-shadow: none;
 		color: var(--text-color);
+		padding: .75em 1.5em .75em 0;
 		text-decoration: none;
 	}
 
@@ -49,8 +50,10 @@
 	font-weight: 500;
 
 	&:after {
-		content: " →";
-		color: var(--primary-color);
+		@media #{$lake} {
+			content: " →";
+			color: var(--primary-color);
+		}
 	}
 }
 .navigation__social {

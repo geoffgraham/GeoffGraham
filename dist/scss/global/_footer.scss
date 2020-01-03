@@ -9,7 +9,6 @@
 }
 
 .site-footer__cta {
-	@include font-size ( .85 );
 	border: 3px dashed var(--primary-color);
 	border-radius: 15px;
 	display: flex;
@@ -17,10 +16,6 @@
 	margin-bottom: 1em;
 	padding: 1em;
 	text-align: center;
-
-	@media #{$pond} {
-		@include font-size ( 1 );
-	}
 
 	p {
 		margin: 0;
