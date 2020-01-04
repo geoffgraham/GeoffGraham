@@ -6,15 +6,16 @@
 }
 
 html {
-	@include font-size( 1.1 );
 	background-color: var(--background);
 	border: 7px solid $orange;
+	font-size: 24px;
 
 	@media #{$pond} {
-		font-size: calc($font-size-medium + 6 * ((100vw - 320px) / 680));
-	}	
+		font-size: calc(22 + 12 * ((100vw - 320px) / 680));
+	}
+
 	@media #{$lake} {
-		font-size: $font-size-large;
+		font-size: 26px;
 	}
 }
 
@@ -22,10 +23,10 @@ body {
 	@include center-block;
 	color: var(--text-color);
 	font-family: $font-body;
-	line-height: 1.5;
+	line-height: 1.6;
 	max-width: 1440px;
 	overflow-x: hidden;
-	padding: 2em;
+	padding: 2em 1.25em;
 
 	@media #{$lake} {
 		display: grid;

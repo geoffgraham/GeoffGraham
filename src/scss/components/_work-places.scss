@@ -13,25 +13,20 @@
 		&:before,
 		&:after {
 
-			@media #{$bath} {
+			@media #{$pool} {
 				content: "";
 				border-bottom: 3px solid var(--primary-color);
 				height: 1px;
 				position: absolute;
 				top: .75em;
-				width: 25%;
 			}
 
 			@media #{$pond} {
-				width: 90%;
+				width: 25%;
 			}
 
-			@media #{$lake} {
+			@media #{$ocean} {
 				width: 50%;
-			}
-
-			@media #{$bay} {
-				width: 80%;
 			}
 		}
 
@@ -50,22 +45,26 @@
 .work-places__items {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-evenly;
 }
 
 .work-places__item {
 	@include box-shadow--alt();
 	@include font-size( .75 );
 	flex: 1;
+	margin-bottom: .75em;
 	margin-right: 1em;
-	padding: 1em;
+	padding: .75em;
 
 	@media #{$pond} {
 		@include font-size( .85 );
+		padding: 1em;
 	}
 
 	&:last-child {
-		margin-right: 0;
+
+		@media #{$pond} {
+			margin-right: 0;
+		}
 	}
 
 	&:hover {

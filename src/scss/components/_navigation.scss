@@ -1,7 +1,9 @@
 .site-navigation {
+	margin-top: .5em;
 	
 	@media #{$pool} {
 		align-self: center;
+		margin-top: 0;
 	}
 
 	@media #{$lake} {
@@ -14,7 +16,12 @@
 	margin: 0;
 	padding-left: 0;
 
+	@media #{$pool} {
+		display: flex;
+	}
+
 	@media #{$lake} {
+		display: block;
 		margin: 2em 0;
 	}
 }
@@ -24,19 +31,19 @@
 	display: inline;
 	font-size: $font-size-medium + 2;
 	line-height: $line-height + .3;
-	margin-right: .5em;
 
 	@media #{$lake} {
 		display: block;
 		font-size: $font-size-large - 2;
-		margin-right: 0;
 	}
 
 	a {
 		box-shadow: none;
 		color: var(--text-color);
+		min-height: 48px;
 		padding: .75em 1.5em .75em 0;
 		text-decoration: none;
+		min-width: 48px;
 	}
 
 	a:hover {
@@ -46,8 +53,13 @@
 
 .navigation__primary .current-menu-item a,
 .navigation__social .current-menu-item a {
-	color: var(--text-color);
-	font-weight: 500;
+	color: var(--primary-color);
+	font-weight: 800;
+
+	@media #{$lake} {
+		color: var(--text-color);
+		font-weight: 500;
+	}
 
 	&:after {
 		@media #{$lake} {

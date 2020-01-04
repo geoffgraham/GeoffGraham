@@ -1,13 +1,13 @@
 .posts .post {
 	@include font-size( 1.1 );
-	align-items: center;
+	align-items: baseline;
 	border-top: 1px solid var(--border-color);
 	display: grid;
 	padding: 1em 0;
 
 	@media #{$lake} {
 		grid-gap: 65px;
-		grid-template-columns: 150px auto;
+		grid-template-columns: 175px auto;
 	}
 
 	&:last-child {
@@ -15,7 +15,7 @@
 	}
 
 	.post__date {
-		@include font-size( .85 );
+		@include font-size( 1 );
 		color: var(--gray-medium);
 		margin-bottom: .5em;
 		position: relative;

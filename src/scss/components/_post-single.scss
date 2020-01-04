@@ -49,3 +49,11 @@
 	max-width: 800px;
 	order: 3;
 }
+
+.rss-note {
+	@include font-size( .65 );
+	background-color: var(--table-background);
+	border: 1px dashed var(--primary-color);
+	font-family: $font-code;
+	padding: .75em;
+}
