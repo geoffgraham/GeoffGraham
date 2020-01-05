@@ -1,8 +1,9 @@
 .main-content {
 	grid-area: main;
+	margin-bottom: 75px;
 
 	@media #{$pond} {
-		padding-top: 4.5em;
+		padding-top: 3.75em;
 	}
 
 	&:before {
@@ -11,7 +12,7 @@
 		height: 10px;
 		position: absolute;
 		transform: translateY( -2em );
-		width: 280px;
+		width: 125px;
 	}
 
 	h1 {

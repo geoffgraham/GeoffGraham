@@ -30,10 +30,9 @@ body {
 
 	@media #{$lake} {
 		display: grid;
-		grid-template-columns: 1fr 3fr;
+		grid-template-columns: 25% 75%;
 		grid-template-areas: 
 			"navigation main"
 			". footer";
-		grid-gap: 75px;
 	}
 }
