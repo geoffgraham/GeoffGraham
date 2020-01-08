@@ -12,7 +12,7 @@
 }
 
 .home__logo {
-	margin-bottom: 0;
+	margin-bottom: .5em;
 	width: 85px;
 
 	@media #{$pond} {
@@ -21,14 +21,17 @@
 }
 
 .home__title {
+	@include font-size( 1.5 );
 	line-height: 1.2;
+	margin: 1em 0;
+
+	@media #{$pool} {
+		@include font-size( 2 );
+	}
 
 	@media #{$pond} {
 		@include font-size( 2.5 );
-	}
-
-	@media #{$lake} {
-		@include font-size( 2 );
+		margin: 0;
 	}
 
 	@media #{$bay} {
@@ -43,16 +46,25 @@
 .home__image img {
 	@include box-shadow;
 	border-radius: 15px;
+	display: none;
+
+	@media #{$pool} {
+		display: block;
+	}
 }
 
 .home__body {
-	margin-top: 2em;
+	margin-top: 1em;
+
+	@media #{$pond} {
+		margin-top: 2em;
+	}
 	
 	p {
 		line-height: 1.65;
 		margin-top: 0;
 
-		@media #{$pool} {
+		@media #{$pond} {
 			column-count: 2;
 			column-fill: balance;
 			column-gap: 1em;

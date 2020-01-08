@@ -1,18 +1,21 @@
 .site-header {
-	align-content: center;
 	display: flex;
 	flex-flow: column nowrap;
 	grid-area: navigation;
 	justify-content: space-between;
-	margin-bottom: 5em;
+	margin-bottom: 3em;
 	padding-top: 1.5em;
 
 	@media #{$pool} {
 		flex-flow: row wrap;
 	}
 
+	@media #{$pond} {
+		margin-bottom: 0;
+	}
+
 	@media #{$lake} {
-		align-content: flex-start;
+		align-items: flex-start;
 		flex-flow: column;
 		justify-content: flex-start;
 	}

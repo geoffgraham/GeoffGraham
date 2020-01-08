@@ -1,7 +1,6 @@
 .post-single {
 	display: flex;
 	flex-direction: column;
-	padding-top: 1em;
 }
 
 .post-single__date {
@@ -48,4 +47,15 @@
 .post-single__body {
 	max-width: 800px;
 	order: 3;
+}
+
+.rss-note {
+	@include font-size( .55 );
+	font-family: $font-code;
+
+	@media #{$pool} {
+		background-color: var(--table-background);
+		border: 1px dashed var(--primary-color);
+		padding: .75em;
+	}
 }

@@ -20,12 +20,29 @@
 	p {
 		margin: 0;
 	}
+
+	span {
+		display: block;
+
+		@media #{$pool} {
+			display: inline;
+		}
+	}
 }
 
 .site-footer__nav {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+
+	a {
+		box-shadow: none;
+		line-height: 0;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
 
 	svg {
 		width: 100px;
@@ -36,12 +53,15 @@
 	}
 }
 
+.site-footer__nav a:hover > svg ellipse:first-child {
+	fill: var(--primary-color);
+}
+
 // Overrides the header style that hides it
 .site-footer .navigation__social {
 	display: block;
 
 	ul {
-		align-items: center;
 		display: flex;
 		flex-flow: column wrap;
 
@@ -51,13 +71,8 @@
 	}
 
 	ul li {
-		@include font-size( .9 );
+		@include font-size( .75 );
 		margin-right: .5em;
-
-		@media #{$pond} {
-			@include font-size( 1 );
-			margin-right: 1em;
-		}
 	
 		&:last-child {
 			margin-right: 0;

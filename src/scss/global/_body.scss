@@ -7,7 +7,6 @@
 
 html {
 	background-color: var(--background);
-	border: 7px solid $orange;
 	font-size: 24px;
 
 	@media #{$pond} {
@@ -16,6 +15,15 @@ html {
 
 	@media #{$lake} {
 		font-size: 26px;
+	}
+
+	&:before {
+		content: "";
+		border: 7px solid $orange;
+		height: 98.5vh;
+		pointer-events: none;
+		position: fixed;
+		width: 98.5vw;
 	}
 }
 
