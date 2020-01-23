@@ -1,8 +1,7 @@
 *,
 *:before,
 *:after { 
-	/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 html {
@@ -19,11 +18,11 @@ html {
 
 	&:before {
 		content: "";
-		border: 7px solid $orange;
-		height: 98.5vh;
+		border: 15px solid $orange;
+		height: 100vh;
 		pointer-events: none;
 		position: fixed;
-		width: 98.5vw;
+		width: 100vw;
 	}
 }
 

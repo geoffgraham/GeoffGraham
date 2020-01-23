@@ -6,6 +6,7 @@
 }
 
 html {
+	background-color: var(--background);
 	font-size: 24px;
 
 	@media #{$pond} {
@@ -17,11 +18,12 @@ html {
 	}
 
 	&:before {
-		background-color: var(--background);
+		content: "";
 		border: 7px solid $orange;
-		height: 100vh;
+		height: 98.5vh;
 		pointer-events: none;
 		position: fixed;
+		width: 98.5vw;
 	}
 }
 
