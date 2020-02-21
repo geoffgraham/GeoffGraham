@@ -34,12 +34,8 @@
 	}
 
 	.post__title a {
-		box-shadow: none;
-
-		&:hover {
-			color: var(--primary-color);
-			box-shadow: none;
-		}
+		@include link;
+		border-bottom: 0;
 	}
 }
 
