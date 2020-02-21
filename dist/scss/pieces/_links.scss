@@ -1,11 +1,14 @@
 a {
-	box-shadow: inset 0 -.35em 0 lighten($orange, 20%);
 	color: var(--link-color);
 	text-decoration: none;
-	transition: all .25s ease-in-out;
+	transition: all .25s ease;
 
 	&:hover {
-		box-shadow: inset 0 -1.1em 0 var(--link-border);
-		color: var(--link-hover);
+		color: var(--primary-color);
+		text-decoration: none;
 	}
+}
+
+.post-single a {
+	@include link;
 }

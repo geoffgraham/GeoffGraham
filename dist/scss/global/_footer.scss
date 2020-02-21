@@ -21,6 +21,10 @@
 		margin: 0;
 	}
 
+	a {
+		@include link;
+	}
+
 	span {
 		display: block;
 

@@ -28,19 +28,10 @@ html {
 }
 
 body {
-	@include center-block;
 	color: var(--text-color);
 	font-family: $font-body;
 	line-height: 1.6;
 	max-width: 1440px;
 	overflow-x: hidden;
 	padding: 2em;
-
-	@media #{$lake} {
-		display: grid;
-		grid-template-columns: 25% 75%;
-		grid-template-areas: 
-			"navigation main"
-			". footer";
-	}
 }

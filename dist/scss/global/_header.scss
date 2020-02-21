@@ -22,22 +22,10 @@
 }
 
 .site-title {
+	@include link;
+	border-bottom: 0;
+	font-size: 30px;
+	font-weight: 700;
 	line-height: .75;
 	margin: 0 0 .25em 0;
-
-	a {
-		box-shadow: none;
-		color: var(--text-color);
-		font-size: 30px;
-		font-weight: 700;
-		margin: 0;
-		text-decoration: none;
-		transition: color .2s ease-in;
-
-		&:hover {
-			box-shadow: none;
-			color: var(--primary-color);
-		}
-	}
 }
-
