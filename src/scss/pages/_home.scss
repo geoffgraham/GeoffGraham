@@ -70,4 +70,8 @@
 			column-gap: 1em;
 		}
 	}
+
+	a {
+		@include link;
+	}
 }
