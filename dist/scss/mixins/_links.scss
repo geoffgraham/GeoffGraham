@@ -7,8 +7,8 @@
   background-size: 200% 100%;
 	background-position: 100%;
 	border-bottom: 2px solid var(--primary-color);
-  transition: all 275ms ease;
-	text-decoration: underline;
+	transition: all 275ms ease;
+	white-space: nowrap;
 
 	&:hover {
     background-position: 0 100%;

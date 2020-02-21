@@ -73,5 +73,6 @@
 
 	a {
 		@include link;
+		white-space: nowrap;
 	}
 }
