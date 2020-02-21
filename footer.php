@@ -22,6 +22,7 @@
 			<a href="<?php echo home_url(); ?> "><?php echo file_get_contents( get_template_directory_uri() . '/dist/img/logo-geoff.svg' ); ?></a>
 		</div>
 	</footer>
+</div><!-- .site-wrapper -->
 
 <?php wp_footer(); ?>
 

@@ -1,0 +1,9 @@
+.site-wrapper {
+	@media #{$lake} {
+		display: grid;
+		grid-template-columns: 25% 75%;
+		grid-template-areas: 
+			"navigation main"
+			". footer";
+	}
+}
