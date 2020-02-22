@@ -6,7 +6,6 @@ import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
 import webpack from 'webpack-stream';
-import gulpif from 'gulp-if';
 import imagemin from 'gulp-imagemin';
 import browserSync from "browser-sync";
 
