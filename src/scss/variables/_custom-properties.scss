@@ -19,7 +19,7 @@
 	--site-title: var(--gray-dark);
 	--border-color: var(--gray);
 	--link-color: var(--text-color);
-	--link-hover: var(--white);
+	--link-hover: var(--orange);
 	--link-current: var(--gray-darkest);
 	--code-blocks: var(--white);
 	--error-color: var(--red);
@@ -31,6 +31,7 @@
 		--site-title: var(--gray);
 		--border-color: var(--gray-lightest);
 		--link-current: var(--white);
+		--link-hover: var(--yellow);
 		--code-blocks: var(--black);
 		--table-background: var(--gray-darker);
 	}
