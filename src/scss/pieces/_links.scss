@@ -1,5 +1,5 @@
 a {
-	color: var(--link-color);
+	color: var(--text-color);
 	text-decoration: none;
 	transition: all .25s ease;
 
@@ -7,8 +7,4 @@ a {
 		color: var(--primary-color);
 		text-decoration: none;
 	}
-}
-
-.post-single a {
-	@include link;
 }
