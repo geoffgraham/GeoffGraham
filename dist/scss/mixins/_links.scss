@@ -1,14 +1,14 @@
 // Common link styles
 @mixin link {
-	color: var(--link-color);
-	background: linear-gradient(to right, var(--yellow), var(--yellow) 50%, var(--white) 50%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+	color: var(--text-color);
+	background: linear-gradient(to right, var(--link-hover), var(--link-hover) 50%, var(--text-color) 50%);
+	background-clip: text;
   background-size: 200% 100%;
 	background-position: 100%;
 	border-bottom: 2px solid var(--primary-color);
+	box-decoration-break: clone;
 	transition: all 275ms ease;
-	white-space: nowrap;
+	-webkit-text-fill-color: transparent;
 
 	&:hover {
     background-position: 0 100%;

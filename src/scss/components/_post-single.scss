@@ -1,6 +1,10 @@
 .post-single {
 	display: flex;
 	flex-direction: column;
+
+	a:not( .button--secondary ) {
+		@include link;
+	}
 }
 
 .post-single__date {

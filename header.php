@@ -24,12 +24,17 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="site-wrapper">
-		<header class="site-header">
-			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
-			<?php get_template_part( 'template-parts/header/navigation', 'title' ); ?>
-			<div class="site-navigation">
-				<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
-				<?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
-			</div>
-		</header>
+		<?php if ( ! is_404() ) { ?>
+
+		<div class="site-wrapper">
+		
+			<header class="site-header">
+				<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
+				<?php get_template_part( 'template-parts/header/navigation', 'title' ); ?>
+				<div class="site-navigation">
+					<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
+					<?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
+				</div>
+			</header>
+
+		<?php } ?>

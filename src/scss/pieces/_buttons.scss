@@ -1,8 +1,7 @@
 .button,
 .button--secondary,
 .wp-block-button__link,
-.posts__pagination a,
-.nf-form-content input[type=button] {
+.posts__pagination a {
 	@include box-shadow--alt();
 	@include font-size( .85 );
 	border-radius: 30px !important;
@@ -17,23 +16,8 @@
 	transition: transform .25s ease-out;
 }
 
-.nf-form-content input[type=button] {
-	// Hate doing this, but there's no other way to override NF styles.
-	background: var(--primary-color) !important;
-
-	&:hover {
-		background: darken($orange, 10%) !important;
-		color: var(--white) !important;
-	}
-
-	&:active {
-		box-shadow: 0 0 15px rgba(0, 0, 0, .25) inset;
-	}
-}
-
 .button,
-.wp-block-button__link,
-.nf-form-content input[type=button] {
+.wp-block-button__link {
 	background: var(--primary-color);
 	color: var(--white);
 
@@ -53,7 +37,7 @@
 	@include box-shadow--alt();
 	background: transparent;
 	border: 3px solid var(--primary-color);
-	color: var(--primary-color);
+	color: var(--text-color);
 
 	@media (prefers-color-scheme: dark) {
 		border: 3px solid var(--primary-color);
@@ -61,7 +45,7 @@
 
 	&:hover {
 		background: var(--primary-color);
-		color: var(--link-hover);
+		color: var(--white);
 		transform: translateY( 5px );
 	}
 
