@@ -38,10 +38,14 @@ get_header();
 		</article>
 
 		<?php 
-		endwhile;
-	endif; ?>
-
+			endwhile;
+		endif; ?>
 	</main>
 
-<?php
-get_footer();
+	<?php if ( comments_open() || get_comments_number() ) {
+		comments_template();
+	}
+	?>
+
+
+<?php get_footer();

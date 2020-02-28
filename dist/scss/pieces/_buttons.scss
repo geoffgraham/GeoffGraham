@@ -33,7 +33,8 @@
 }
 
 .button--secondary,
-.posts__pagination a {
+.posts__pagination a,
+.comment-reply-link {
 	@include box-shadow--alt();
 	background: transparent;
 	border: 3px solid var(--primary-color);

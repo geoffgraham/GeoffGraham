@@ -1,0 +1,38 @@
+.comments {
+	grid-area: comments;
+	max-width: 800px;
+}
+
+.comments__list {
+	padding-left: 0;
+}
+
+.comment {
+	background: rgba(0, 0, 0, .15);
+	border-radius: 16px;
+	list-style: none;
+	margin-bottom: 2em;
+	padding: 2em;
+}
+
+.comment__wrapper {
+
+	@media #{$pond} {
+		display: grid;
+		grid-template-columns: 100px 4fr;
+		grid-gap: 2rem;
+	}
+}
+
+.comment__avatar img {
+	border-radius: 50%;
+}
+
+.comment__body img {
+	width: 100px;
+
+	@media #{$pond} {
+		grid-column: 2;
+		width: 100%;
+	}
+}

@@ -14,10 +14,10 @@ background-position: 0 0, 40px 30px, 130px 270px, 70px 100px;
   left: 0;
   margin: -100% 0 0 -50%;
 	opacity: .6;
+	pointer-events: none;
 	position: absolute;
   top: 0;
 	width: 200%;
-	z-index: -1;
 }
 
 @media (prefers-reduced-motion: reduce) {

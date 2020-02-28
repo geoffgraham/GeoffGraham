@@ -4,6 +4,7 @@
 		grid-template-columns: 25% 75%;
 		grid-template-areas: 
 			"navigation main"
+			". comments"
 			". footer";
 	}
 }
