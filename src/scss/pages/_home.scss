@@ -11,31 +11,34 @@
 	}
 }
 
-.home__logo {
-	margin-bottom: .5em;
-	width: 85px;
+.home__intro {
 
-	@media #{$pond} {
-		width: 136px;
+	@media #{$puddle} {
+		align-items: flex-start;
+		display: grid;
+		grid-gap: 1.5em;
+		grid-template-columns: minmax(85px, 135px) auto;
 	}
 }
 
+.home__logo svg {
+	margin-bottom: .5em;
+	width: 100%;
+}
+
 .home__title {
-	@include font-size( 1.5 );
+	@include font-size( 2 );
 	line-height: 1.2;
 	margin: 1em 0;
 
-	@media #{$pool} {
-		@include font-size( 2 );
-	}
-
 	@media #{$pond} {
-		@include font-size( 2.5 );
+		@include font-size( 2.75 );
 		margin: 0;
 	}
 
-	@media #{$bay} {
-		@include font-size( 2.5 );
+	@media #{$lake} {
+		@include font-size( 2.25 );
+		margin: 0;
 	}
 	
 	span {

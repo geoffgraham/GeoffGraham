@@ -34,3 +34,31 @@
 		width: 100%;
 	}
 }
+
+.comment-form {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(2, 1fr);
+	margin: 0 0 1rem;
+
+	.required {
+		display: none;
+	}
+}
+
+.comment-form-comment {
+	grid-column: 1/-1;
+
+	label {
+		position: absolute;
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+}
+
+.comment-form-url {
+	grid-column: 1/-1;
+}
+
+.comment-form-cookies-consent {
+	grid-column: 1/-1;
+}

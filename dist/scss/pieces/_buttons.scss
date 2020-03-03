@@ -1,7 +1,8 @@
 .button,
 .button--secondary,
 .wp-block-button__link,
-.posts__pagination a {
+.posts__pagination a,
+.comment-reply-link {
 	@include box-shadow--alt();
 	@include font-size( .85 );
 	border-radius: 30px !important;

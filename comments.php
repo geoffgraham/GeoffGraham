@@ -28,7 +28,11 @@ if ( post_password_required() ) {
 
 	endif;
 
-	comment_form();
+	comment_form(
+		$args, array (
+			'comment_notes_before' => '',
+		)
+	);
 	?>
 
 </section>
