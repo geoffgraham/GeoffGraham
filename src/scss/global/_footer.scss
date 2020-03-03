@@ -2,6 +2,9 @@
 	grid-area: footer;
 	margin-top: 2em;
 	width: 100%;
+	position: sticky;
+  bottom: 0;
+  left: 0;
 
 	@media #{$lake} {
 		margin-top: 0;

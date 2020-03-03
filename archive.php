@@ -9,29 +9,31 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main class="main-content">
+		<div class="post-wrapper">
+			<main class="main-content">
 
-		<?php if ( have_posts() ) :
+			<?php if ( have_posts() ) :
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-				echo the_content();
+					the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					echo the_content();
 
-			endwhile;
+				endwhile;
 
-			the_posts_navigation();
+				the_posts_navigation();
 
-		else :
+			else :
 
-			get_template_part( 'template-parts/content', 'none' );
+				get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
+			endif;
+			?>
 
-		</main><!-- #main -->
+			</main><!-- #main -->
+		</div>
 	</div><!-- #primary -->
 
 <?php

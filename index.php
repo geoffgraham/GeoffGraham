@@ -7,26 +7,27 @@
 
 get_header();
 ?>
+	<div class="post-wrapper">
+		<main class="main-content posts">
 
-	<main class="main-content posts">
+			<?php if ( is_main_query() && have_posts() ) : ?>
 
-		<?php if ( is_main_query() && have_posts() ) : ?>
+				<h1>Blog Archive</h1>
 
-			<h1>Blog Archive</h1>
+				<?php while ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/loop/loop', 'posts' );
+				endwhile;
 
-			<?php while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/loop/loop', 'posts' );
-			endwhile;
+			endif; ?>
 
-		endif; ?>
+			<footer class="posts__pagination">
+				<?php next_posts_link( 'Older' ); ?>
+				<?php previous_posts_link( 'Newer' ); ?>
+			</footer>
 
-		<footer class="posts__pagination">
-			<?php next_posts_link( 'Older' ); ?>
-			<?php previous_posts_link( 'Newer' ); ?>
-		</footer>
-
-	</main>
-
-<?php
-get_footer();
-?>
+		</main>
+	</div>
+	
+	<?php
+	get_footer();
+	?>

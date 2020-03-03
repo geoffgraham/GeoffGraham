@@ -202,10 +202,10 @@ add_filter( 'wp_default_scripts', 'change_default_jquery' );
 function gg_comments($comment, $args, $depth) {
 	if ( 'div' === $args['style'] ) {
 		$tag       = 'div';
-		$add_below = 'comment';
+		$add_below = 'comment-item';
 	} else {
 		$tag       = 'li';
-		$add_below = 'comment';
+		$add_below = 'commentitem';
 	}?>
 	<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'comment--parent' ); ?> id="comment-<?php comment_ID() ?>"><?php 
 	if ( 'div' != $args['style'] ) { ?>
