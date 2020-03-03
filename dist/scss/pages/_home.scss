@@ -12,10 +12,13 @@
 }
 
 .home__intro {
+
+	@media #{$puddle} {
 		align-items: flex-start;
 		display: grid;
 		grid-gap: 1.5em;
-		grid-template-columns: minmax(55px, 135px) auto;
+		grid-template-columns: minmax(85px, 135px) auto;
+	}
 }
 
 .home__logo svg {
@@ -29,7 +32,12 @@
 	margin: 1em 0;
 
 	@media #{$pond} {
-		@include font-size( 2.5 );
+		@include font-size( 2.75 );
+		margin: 0;
+	}
+
+	@media #{$lake} {
+		@include font-size( 2.25 );
 		margin: 0;
 	}
 	
@@ -44,7 +52,7 @@
 	display: none;
 
 	@media #{$pool} {
-
+		display: block;
 	}
 }
 
