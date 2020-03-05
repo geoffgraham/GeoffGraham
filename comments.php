@@ -8,7 +8,8 @@ if ( post_password_required() ) {
 ?>
 
 <section class="comments">
-
+	<h2>Comments</h2>
+	
 	<ol class="comments__list">
 		<?php wp_list_comments("callback=gg_comments"); ?>
 	</ol>
@@ -22,9 +23,9 @@ if ( post_password_required() ) {
 	endif;
 
 	$comments_args = array(
-		'title_reply'=>'Comments',
 		'comment_notes_before' => '',
 		'comment_notes_after' => '',
+		'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Keep calm and comment on."></textarea></p>',
 );
 
 comment_form($comments_args);
