@@ -205,7 +205,7 @@ function gg_comments($comment, $args, $depth) {
 		$add_below = 'comment-item';
 	} else {
 		$tag       = 'li';
-		$add_below = 'commentitem';
+		$add_below = 'comment-item';
 	}?>
 	<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'comment--parent' ); ?> id="comment-<?php comment_ID() ?>"><?php 
 	if ( 'div' != $args['style'] ) { ?>
@@ -226,11 +226,11 @@ function gg_comments($comment, $args, $depth) {
 				<span class="comment__notice"><?php _e( 'Your comment is waiting for approval.' ); ?></span><?php 
 			} ?>
 				<div class="comment__meta">
-					<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>"><?php
+					<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">#</a>
+					<?php
 					printf( 
 						get_comment_date()
 					); ?>
-					</a>
 				</div>
 				<div class="comment__text">
 					<?php comment_text(); ?>
