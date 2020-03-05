@@ -2,7 +2,8 @@
 .button--secondary,
 .wp-block-button__link,
 .posts__pagination a,
-.comment-reply-link {
+.comment-reply-link,
+input[type='submit'] {
 	@include box-shadow--alt();
 	@include font-size( .85 );
 	border-radius: 30px !important;
@@ -18,8 +19,10 @@
 }
 
 .button,
-.wp-block-button__link {
+.wp-block-button__link,
+input[type='submit'] {
 	background: var(--primary-color);
+	border: 0;
 	color: var(--white);
 
 	&:hover {

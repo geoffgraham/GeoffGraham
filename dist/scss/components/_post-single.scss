@@ -1,3 +1,11 @@
+.post-wrapper {
+	background: var(--background);
+	margin-bottom: 75px;
+	min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
 .post-single {
 	display: flex;
 	flex-direction: column;

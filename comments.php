@@ -9,11 +9,6 @@ if ( post_password_required() ) {
 
 <section class="comments">
 
-	<?php
-		if ( have_comments() ) :
-	?>
-	<h2 class="comments__title">Comments</h2>
-
 	<ol class="comments__list">
 		<?php wp_list_comments("callback=gg_comments"); ?>
 	</ol>
@@ -26,13 +21,13 @@ if ( post_password_required() ) {
 		<?php
 	endif;
 
-	endif;
+	$comments_args = array(
+		'title_reply'=>'Comments',
+		'comment_notes_before' => '',
+		'comment_notes_after' => '',
+);
 
-	comment_form(
-		$args, array (
-			'comment_notes_before' => '',
-		)
-	);
+comment_form($comments_args);
 	?>
 
 </section>

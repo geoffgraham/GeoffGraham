@@ -1,5 +1,11 @@
+h1,
+h2,
+h3 {
+	font-family: utopia-std-headline, serif;
+}
+
 h1 {
-	@include font-size( 1.85 );
+	@include font-size( 2.5 );
 	line-height: 1.25;
 	margin-top: 0.5em;
 }

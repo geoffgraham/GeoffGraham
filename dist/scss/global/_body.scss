@@ -6,24 +6,24 @@
 
 html {
 	background-color: var(--background);
-	font-size: 20px;
+	font-size: 18px;
 
 	@media #{$pond} {
-		font-size: calc(20 + 12 * ((100vw - 320px) / 680));
-	} 
+		font-size: calc(22 + 12 * ((100vw - 320px) / 680));
+	}
 
 	@media #{$lake} {
-		font-size: 24px;
+		font-size: 22px;
 	}
 
 	&:before {
 		content: "";
-		border: 15px solid $orange;
+		border: 15px solid var(--primary-color);
 		height: 100vh;
 		pointer-events: none;
 		position: fixed;
 		width: 100vw;
-		z-index: 1;
+		z-index: 2;
 	}
 }
 

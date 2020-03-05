@@ -1,6 +1,11 @@
 .home {
 
 	.main-content {
+		background: var(--background);
+		min-height: 100vh;
+		position: relative;
+		z-index: 1;
+
 		@media #{$pond} {
 			padding-top: 2em;
 		}
@@ -11,34 +16,17 @@
 	}
 }
 
-.home__intro {
-
-	@media #{$pond} {
-		align-items: flex-start;
-		display: grid;
-		grid-gap: 1.5em;
-		grid-template-columns: minmax(85px, 135px) auto;
-	}
-}
-
 .home__logo svg {
+	height: auto;
 	margin-bottom: .5em;
-	width: 100%;
 }
 
 .home__title {
 	@include font-size( 2 );
 	line-height: 1.2;
-	margin: 1em 0;
 
-	@media #{$pond} {
-		@include font-size( 2.75 );
-		margin: 0;
-	}
-
-	@media #{$lake} {
+	@media #{$pool} {
 		@include font-size( 2.25 );
-		margin: 0;
 	}
 	
 	span {
@@ -57,11 +45,6 @@
 }
 
 .home__body {
-	margin-top: 1em;
-
-	@media #{$pond} {
-		margin-top: 2em;
-	}
 	
 	p {
 		line-height: 1.65;
