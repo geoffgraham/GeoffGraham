@@ -1,29 +1,37 @@
 // Overrides Gravity Forms plugin styles.
 // Button styles managed in pieces/_buttons.scss
 
+input[type=email],
+input[type=password],
+input[type=search], input[type=text],
+input[type=url],
 textarea {
-	@include box-shadow--alt;
 	background: rgba(0,0,0,.15);
-	background-color: var(--background);
+	border: 2px solid transparent;
 	color: var(--text-color);
-	border-radius: 16px;
-	padding: 1em;
+	border-radius: 8px;
+	padding: 1rem;
 	width: 100%;
-}
 
-input[type="text"],
-input[type="url"],
-input[type="email"] {
-	width: 100%;
+	&:focus {
+		border: 2px solid var(--primary-color);
+		outline: 0;
+	}
 
 	label {
 		display: block;
 	}
 }
 
+input[type='checkbox'],
+input[type='radio'] {
+	margin-right: .5rem;
+	position: relative;
+	top: -2px;
+}
+
 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
 .gform_wrapper textarea {
-	@include box-shadow--alt;
 	border: 0 !important;
 	border-radius: 0;
 	line-height: 1.2;
