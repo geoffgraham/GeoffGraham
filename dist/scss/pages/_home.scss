@@ -26,7 +26,9 @@
 	line-height: 1.2;
 
 	@media #{$pool} {
-		@include font-size( 2.25 );
+		@include font-size( 3.5 );
+		color: var(--code-blocks);
+		text-shadow: 0rem 0rem 65px var(--primary-color);
 	}
 	
 	span {

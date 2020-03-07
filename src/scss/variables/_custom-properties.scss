@@ -2,6 +2,11 @@
 	--red: #fd1e1e;
 	--orange: #fd5a1e;
 	--yellow: #fdbe1e;
+	--honey: #ffd99d;
+	--brown-light: #6F6155;
+	--brown: #4b4036;
+	--brown-medium: #43382e;
+	--brown-dark: #372d24;
 	--gray-lightest: #f7f2f1;
 	--gray-lighter: #e8e3e1;
 	--gray-light: #cabdb9;
@@ -26,13 +31,14 @@
 	--table-background: var(--gray-light);
 
 	@media (prefers-color-scheme: dark) {
+		--primary-color: var(--honey);
 		--text-color: var(--white);
-		--background: var(--gray-darkest);
+		--background: var(--brown-light);
 		--site-title: var(--gray);
 		--border-color: var(--gray-lightest);
 		--link-current: var(--white);
 		--link-hover: var(--yellow);
-		--code-blocks: var(--black);
+		--code-blocks: var(--brown-dark);
 		--table-background: var(--gray-darker);
 	}
 }
