@@ -8,7 +8,6 @@
 }
 
 @mixin box-shadow--alt {
-	border: 1px solid var(--gray-light);
 	border-radius: 15px;
 	box-shadow: 
 		-6px -6px 26px 0 var(--white),
