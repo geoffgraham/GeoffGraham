@@ -16,6 +16,13 @@
 	}
 }
 
+.home__intro {
+	@media #{$pond} {
+		text-align: center;
+	}
+
+}
+
 .home__logo svg {
 	height: auto;
 	margin-bottom: .5em;

@@ -43,12 +43,8 @@
 	justify-content: space-between;
 
 	a {
-		box-shadow: none;
+		border: 0;
 		line-height: 0;
-
-		&:hover {
-			box-shadow: none;
-		}
 	}
 
 	svg {
