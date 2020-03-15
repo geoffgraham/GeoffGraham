@@ -2,21 +2,18 @@
 	grid-area: footer;
 	margin-top: 2em;
 	width: 100%;
-	position: sticky;
-  bottom: 0;
-  left: 0;
 
 	@media #{$lake} {
 		margin-top: 0;
 	}
-}
+} 
 
 .site-footer__cta {
 	border: 3px dashed var(--primary-color);
 	border-radius: 15px;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 1em;
+	margin-bottom: 2rem;
 	padding: 1em;
 	text-align: center;
 
@@ -43,12 +40,8 @@
 	justify-content: space-between;
 
 	a {
-		box-shadow: none;
+		border: 0;
 		line-height: 0;
-
-		&:hover {
-			box-shadow: none;
-		}
 	}
 
 	svg {

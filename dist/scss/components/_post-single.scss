@@ -1,18 +1,10 @@
 .post-wrapper {
-	background: var(--background);
 	margin-bottom: 75px;
-	min-height: 100vh;
-  position: relative;
-  z-index: 1;
 }
 
 .post-single {
 	display: flex;
 	flex-direction: column;
-
-	a:not( .button--secondary ) {
-		@include link;
-	}
 }
 
 .post-single__date {
@@ -29,7 +21,7 @@
 	}
 
 	@media (prefers-color-scheme: dark) {
-		color: var(--gray);
+		color: var(--white);
 	}
 
 	span {
@@ -44,7 +36,7 @@
 			background: var(--primary-color);
 			border: 0;
 			border-radius: 16px;
-			color: var(--white);
+			color: var(--background);
 			margin-left: 1em;
 			margin-top: 0;
 			padding: .25em .75em;

@@ -25,13 +25,21 @@ input[type='submit'] {
 	border: 0;
 	color: var(--white);
 
+	@media (prefers-color-scheme: dark) {
+		color: var(--brown-light);
+	}
+
 	&:hover {
 		box-shadow: none;
 		transform: translateY( 5px );
+
+		@media (prefers-color-scheme: dark) {
+			color: var(--brown);
+		}
 	}
 
 	&:active {
-		background: darken($orange, 10%);
+		background: var(--primary-color);
 		box-shadow: 0 0 15px rgba(0, 0, 0, .25) inset;
 	}
 }
@@ -50,12 +58,12 @@ input[type='submit'] {
 
 	&:hover {
 		background: var(--primary-color);
-		color: var(--white);
+		color: var(--brown-light);
 		transform: translateY( 5px );
 	}
 
 	&:active {
-		background: darken($orange, 10%);
+		background: var(--primary-color);
 		box-shadow: 0 0 15px rgba(0, 0, 0, .05) inset
 	}
 }

@@ -8,34 +8,10 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<div class="post-wrapper">
-			<main class="main-content">
+<div class="post-wrapper">
+	<section class="posts">
+		<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
+	</section>
+</div>
 
-			<?php if ( have_posts() ) :
-
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-
-					the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-					echo the_content();
-
-				endwhile;
-
-				the_posts_navigation();
-
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif;
-			?>
-
-			</main><!-- #main -->
-		</div>
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

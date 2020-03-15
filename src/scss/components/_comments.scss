@@ -78,8 +78,10 @@
 .comment-form {
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-columns: repeat(2, 1fr);
-	margin: 0 0 1rem;
+
+	@media #{$pond} {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
 	.required {
 		display: none;
@@ -93,7 +95,10 @@
 .comment-form-comment,
 .comment-form-url,
 .comment-form-cookies-consent {
-	grid-column: 1/-1;
+
+	@media #{$pond} {
+		grid-column: 1/-1;
+	}
 }
 
 .comment-form-comment label {
