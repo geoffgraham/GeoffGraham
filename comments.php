@@ -8,7 +8,9 @@ if ( post_password_required() ) {
 ?>
 
 <section class="comments">
-	<h2>Comments</h2>
+	<?php if ( have_comments() ) : ?>
+		<h2>Comments</h2>
+	<?php endif; ?>
 	
 	<ol class="comments__list">
 		<?php wp_list_comments("callback=gg_comments"); ?>

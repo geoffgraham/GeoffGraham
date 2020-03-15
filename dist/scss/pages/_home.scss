@@ -1,69 +1,7 @@
 .home {
 
-	.main-content {
-		background: var(--background);
-		min-height: 100vh;
+	.site-wrapper {
 		position: relative;
 		z-index: 1;
-
-		@media #{$pond} {
-			padding-top: 2em;
-		}
-
-		&:before {
-			height: 0;
-		}
-	}
-}
-
-.home__logo svg {
-	height: auto;
-	margin-bottom: .5em;
-}
-
-.home__title {
-	@include font-size( 2 );
-	line-height: 1.2;
-
-	@media #{$pool} {
-		@include font-size( 3.5 );
-		color: var(--white);
-		text-shadow: 0rem 0rem 65px var(--primary-color);
-
-		@media (prefers-color-scheme: dark) {
-			color: var(--brown-light);
-		}
-	}
-	
-	span {
-		display: block;
-	}
-}
-
-.home__image img {
-	@include box-shadow;
-	border-radius: 15px;
-	display: none;
-
-	@media #{$pool} {
-		display: block;
-	}
-}
-
-.home__body {
-	
-	p {
-		line-height: 1.65;
-		margin-top: 0;
-
-		@media #{$pond} {
-			column-count: 2;
-			column-fill: balance;
-			column-gap: 1em;
-		}
-	}
-
-	a {
-		@include link;
 	}
 }

@@ -6,14 +6,14 @@
 
 html {
 	background-color: var(--background);
-	font-size: 18px;
+	font-size: 20px;
 
 	@media #{$pond} {
-		font-size: calc(22 + 12 * ((100vw - 320px) / 680));
+		font-size: calc(24 + 20 * ((100vw - 320px) / 680));
 	}
 
 	@media #{$lake} {
-		font-size: 22px;
+		font-size: 24px;
 	}
 
 	&:before {
@@ -29,9 +29,14 @@ html {
 
 body {
 	color: var(--text-color);
+	display: flex;
+	flex-direction: column;
 	font-family: $font-body;
+	justify-content: center;
 	line-height: 1.6;
-	max-width: 1440px;
 	overflow-x: hidden;
-	padding: 2em;
+}
+
+#top {
+	display: inline-block;
 }

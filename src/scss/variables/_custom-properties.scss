@@ -3,6 +3,8 @@
 	--orange: #fd5a1e;
 	--yellow: #fdbe1e;
 	--honey: #ffd99d;
+	--brown-lightest: #cdbcae;
+	--brown-lighter: #96887c;
 	--brown-light: #6F6155;
 	--brown: #4b4036;
 	--brown-medium: #43382e;
@@ -30,15 +32,17 @@
 	--error-color: var(--red);
 	--table-background: var(--gray-light);
 
+	--site-width: 1440px;
+
 	@media (prefers-color-scheme: dark) {
 		--primary-color: var(--honey);
 		--text-color: var(--white);
 		--background: var(--brown-light);
 		--site-title: var(--gray);
-		--border-color: var(--gray-lightest);
+		--border-color: var(--honey);
 		--link-current: var(--white);
 		--link-hover: var(--yellow);
 		--code-blocks: var(--brown-dark);
-		--table-background: var(--gray-darker);
+		--table-background: var(--brown-lighter);
 	}
 }

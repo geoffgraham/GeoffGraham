@@ -1,7 +1,38 @@
-<article class="post">
+<div class="post-wrapper">
+	<section class="posts">
 
-	<div class="post__date"><?php the_date( 'M d, Y' );?></div>
-	<?php the_title( '<div class="post__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></div>' );
-?>
+	<?php // If "TIL" category, let's show a title.
+	if ( is_category( 'TIL' ) ) :
+	?>
+	<main class="main-content">
+		<h1>Today I Learned...</h1>
 
-</article>
+	<?php
+	endif;
+	
+	// All categories, except TIL
+	if ( have_posts() && ! is_category( 'TIL' ) ) : ?>
+
+		<h1>Blog</h1>
+
+		<?php while ( have_posts() ) : the_post();
+
+		get_template_part( 'template-parts/loop/category', 'all' );
+
+		endwhile;
+	
+	// Only TIL
+	else :
+
+		while ( have_posts() ) : the_post(); ?>
+
+		<?php		
+		get_template_part( 'template-parts/loop/category', 'til' );
+
+		endwhile;
+
+	endif;
+	?>
+
+</section>
+</div>

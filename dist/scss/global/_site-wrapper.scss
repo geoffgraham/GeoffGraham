@@ -1,4 +1,13 @@
 .site-wrapper {
+	@include box-shadow--alt;
+	background-color: var(--background);
+}
+
+.site-content {
+	margin: auto;
+	padding: 2rem;
+	position: relative;
+	max-width: var(--site-width);
 
 	@media #{$lake} {
 		display: grid;
