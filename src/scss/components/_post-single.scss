@@ -9,20 +9,12 @@
 
 .post-single__date {
 	align-items: flex-start;
-	color: var(--gray-dark);
+	color: var(--primary-color);
 	display: flex;
 	flex-direction: column;
 	font-weight: 300;
 	margin: 0 0 1em 0;
 	order: 1;
-
-	@media #{$pool} {
-		flex-direction: row;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		color: var(--white);
-	}
 
 	span {
 		border-left: 3px solid var(--primary-color);
@@ -45,6 +37,7 @@
 }	
 
 .post-single__title {
+	margin-top: 0;
 	order: 2;
 }
 

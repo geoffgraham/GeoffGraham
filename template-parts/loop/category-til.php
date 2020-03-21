@@ -1,8 +1,7 @@
 <article class="post-single">
 
 	<?php the_title( '<h2 class="post-single__title">', '</h2>' ); ?>
-	<div class="post-single__body">
-		<div class="post-single__date">
+	<div class="post-single__date">
 		<?php 
 			$j_date = get_the_date('j');
 			$j_modified_date = get_the_modified_time('j');
@@ -13,7 +12,8 @@
 			} else {
 				echo the_date('F j, Y');
 		} ?>
-		</div>
+	</div>
+	<div class="post-single__body">
 		<?php echo the_content(); ?>
 	</div>
 
