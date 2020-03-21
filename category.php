@@ -15,7 +15,7 @@
 	get_header();
 ?>
 
-<mai id="content" class="main-content">
+<main id="content" class="main-content">
 	<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
 </main>
 
