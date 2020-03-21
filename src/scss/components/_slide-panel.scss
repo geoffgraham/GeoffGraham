@@ -9,20 +9,25 @@
 	top: 0;
 	width: 100%;
 	z-index: 1;
+
+	@media #{$pool} {
+		padding: 5rem 2rem;
+	}
 }
 
 .slide-panel__wrapper {
 	@include center-block;
+	text-align: center;
 	max-width: var(--site-width);
 }
 
 .slide-panel__image {
 	svg {
-		width: 60px;
-	}
+		width: 75px;
 
-	@media #{$pond} {
-		text-align: center;
+		@media #{$pool} {
+			width: 130px;
+		}
 	}
 
 	svg {
