@@ -8,7 +8,6 @@
 }
 
 @mixin box-shadow--alt {
-	@include overlay;
 	border: 1px solid var(--brown);
 	border-radius: 15px;
 	box-shadow: 
