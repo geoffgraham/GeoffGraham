@@ -14,9 +14,9 @@
 		6px 6px 16px 0 var(--gray-light);
 	
 	@media (prefers-color-scheme: dark) {
-		border: 1px solid var(--brown);
+		border: 1px solid var(--black);
 		box-shadow: 
-			-6px -6px 26px 0 var(--brown-light),
-			6px 6px 16px 0 var(--brown);
+			-6px -6px 26px 0 var(--black),
+			6px 6px 16px 0 var(--brown-dark);
 	}
 }
