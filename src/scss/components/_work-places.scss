@@ -58,7 +58,7 @@
 	@include box-shadow--alt();
 	@include center-flex;
 	@include font-size( .75 );
-	background-color: var(--background);
+	background-color: var(--code-blocks);
 	flex-direction: column;
 	margin-bottom: .75em;
 	padding: .75em;

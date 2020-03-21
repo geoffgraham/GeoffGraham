@@ -29,8 +29,8 @@
 .navigation__primary li,
 .navigation__social li {
 	display: inline;
-	font-size: $font-size-medium + 2;
-	line-height: $line-height + .3;
+	font-size: $font-size-medium;
+	line-height: $line-height;
 
 	@media #{$lake} {
 		display: block;
