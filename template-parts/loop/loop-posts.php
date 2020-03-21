@@ -1,10 +1,10 @@
-<div class="post-wrapper">
+
 	<section class="posts">
 
 	<?php // If "TIL" category, let's show a title.
 	if ( is_category( 'TIL' ) ) :
 	?>
-	<main class="main-content">
+
 		<h1>Today I Learned...</h1>
 
 	<?php
@@ -35,4 +35,3 @@
 	?>
 
 </section>
-</div>

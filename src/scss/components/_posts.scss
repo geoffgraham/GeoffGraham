@@ -1,7 +1,3 @@
-.posts {
-	display: grid;
-}
-
 .posts .post {
 	@include font-size( 1.1 );
 	align-items: baseline;
