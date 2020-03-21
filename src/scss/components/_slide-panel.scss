@@ -10,6 +10,14 @@
 	width: 100%;
 	z-index: 1;
 
+	@media #{$sink} {
+		padding: 3rem 2rem;
+	}
+
+	@media #{$bath} {
+		padding: 4rem 2rem;
+	}
+
 	@media #{$pool} {
 		padding: 5rem 2rem;
 	}
@@ -25,6 +33,14 @@
 	svg {
 		width: 75px;
 
+		@media #{$sink} {
+			width: 85px;
+		}
+
+		@media #{$bath} {
+			width: 100px;
+		}
+
 		@media #{$pool} {
 			width: 130px;
 		}
@@ -39,6 +55,10 @@
 .slide-panel__title {
 	@include font-size( 1.3 );
 	line-height: 1.2;
+
+	@media #{$bath} {
+		@include font-size( 1.75 );
+	}
 
 	@media #{$pool} {
 		@include font-size( 2.5 );
