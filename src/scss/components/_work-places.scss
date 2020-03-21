@@ -65,7 +65,6 @@
 	transition: all .15s;
 
 	@media #{$pond} {
-		@include font-size( .85 );
 		flex: 1;
 		padding: 1em;
 
@@ -81,11 +80,12 @@
 
 	svg {
 		margin-bottom: 1em;
-		height: 80px;
-		width: 80px;
+		height: 70px;
+		width: 70px;
 	}
 
 	a {
+		@include font-size( .5 );
 		border: 0;
 		font-weight: 500;
 	}

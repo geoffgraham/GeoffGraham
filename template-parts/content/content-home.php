@@ -8,7 +8,7 @@
 			<?php
 			$geoff_graham_description = get_bloginfo( 'description', 'display' );
 			if ( $geoff_graham_description || is_customize_preview() ) : ?>
-				<h1 class="home__title">
+				<h1 class="slide-panel__title">
 					<?php echo html_entity_decode( $geoff_graham_description ); ?>
 				</h1>
 		</div>

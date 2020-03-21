@@ -9,6 +9,7 @@
 	--brown: #4b4036;
 	--brown-medium: #43382e;
 	--brown-dark: #372d24;
+	--brown-darker: #272019;
 	--gray-lightest: #f7f2f1;
 	--gray-lighter: #e8e3e1;
 	--gray-light: #cabdb9;
@@ -20,22 +21,21 @@
 	--white: #fff;
 	--black: #000;
 
-	--primary-color: var(--orange);
-	--text-color: var(--gray-darkest);
-	--background: var(--gray-lightest);
-	--site-title: var(--gray-dark);
-	--border-color: var(--gray);
-	--link-color: var(--text-color);
-	--link-hover: var(--orange);
-	--link-current: var(--gray-darkest);
-	--code-blocks: var(--gray-darkest);
-	--error-color: var(--red);
-	--table-background: var(--gray-light);
+	--primary-color: var(--honey);
+	--text-color: var(--white);
+	--background: var(--brown-light);
+	--site-title: var(--gray);
+	--border-color: var(--honey);
+	--link-current: var(--white);
+	--link-hover: var(--yellow);
+	--code-blocks: var(--brown-dark);
+	--table-background: var(--brown-lighter);
 
 	--site-width: 1440px;
 
 	@media (prefers-color-scheme: dark) {
 		--primary-color: var(--honey);
+		--secondary-color: var(--brown-darker);
 		--text-color: var(--white);
 		--background: var(--brown-dark);
 		--site-title: var(--gray);

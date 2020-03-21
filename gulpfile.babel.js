@@ -63,23 +63,18 @@ export const images = () => {
     .pipe(dest('dist/img'));
 }
 
-export const copy = () => {
-  return src(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/*'])
-    .pipe(dest('dist/'));
-}
-
 export const watchForChanges = () => {
   watch('src/scss/**/*.scss', series(styles, reload));
   watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload));
-  watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
+  watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(reload));
   watch('src/js/**/*.js', series(scripts, reload));
   watch("**/*.php", reload);
 }
 
-export const dev = series(parallel(styles, images, scripts, copy), serve, watchForChanges, reload);
+export const dev = series(parallel(styles, images, scripts), serve, watchForChanges, reload);
 
 export const build = done => {
-	series(parallel(styles, images, copy, scripts));
+	series(parallel(styles, images, scripts));
 	done();
 };
 
