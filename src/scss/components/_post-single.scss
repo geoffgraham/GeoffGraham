@@ -16,6 +16,10 @@
 	margin: 0 0 1em 0;
 	order: 1;
 
+	@media #{$pool} {
+		flex-direction: row;
+	}
+
 	span {
 		border-left: 3px solid var(--primary-color);
 		display: inline-block;
