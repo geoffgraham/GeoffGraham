@@ -1,13 +1,17 @@
 h1,
 h2,
 h3 {
-	font-family: utopia-std-headline, serif;
+	font-family: serif;
 }
 
 h1 {
-	@include font-size( 2.75 );
+	@include font-size( 2.25 );
 	line-height: 1.25;
 	margin-top: 0.5em;
+
+	@media #{$pool} {
+		@include font-size( 2.75 );
+	}
 }
 
 h2 {
