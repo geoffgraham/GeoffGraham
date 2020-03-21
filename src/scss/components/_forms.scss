@@ -6,7 +6,7 @@ input[type=password],
 input[type=search], input[type=text],
 input[type=url],
 textarea {
-	background: rgba(0,0,0,.15);
+	background: rgba(0,0,0,.35);
 	border: 2px solid transparent;
 	color: var(--text-color);
 	border-radius: 8px;
@@ -23,6 +23,13 @@ textarea {
 	}
 }
 
+input[type=email],
+input[type=password],
+input[type=search], input[type=text],
+input[type=url] {
+	height: 50px;
+}
+
 input[type='checkbox'],
 input[type='radio'] {
 	margin-right: .5rem;
@@ -35,6 +42,7 @@ input[type='radio'] {
 	border: 0 !important;
 	border-radius: 0;
 	line-height: 1.2;
+	padding: 1rem !important;
 	transition: all .25s ease-out;
 }
 

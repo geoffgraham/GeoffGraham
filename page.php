@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-<main class="main-content">
+<main id="content" class="main-content">
 	<div class="post-wrapper">
 	<?php while ( have_posts() ) : the_post();
 		get_template_part( 'template-parts/content/content', 'page' );
