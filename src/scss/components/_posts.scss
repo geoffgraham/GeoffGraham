@@ -1,3 +1,8 @@
+.posts {
+	display: flex;
+	flex-direction: column;
+}
+
 .posts .post {
 	@include font-size( 1.1 );
 	align-items: baseline;
@@ -7,7 +12,7 @@
 
 	@media #{$lake} {
 		grid-gap: 65px;
-		grid-template-columns: 175px auto;
+		grid-template-columns: 150px auto;
 	}
 
 	&:last-child {
