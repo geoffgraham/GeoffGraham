@@ -1,7 +1,14 @@
-.category {
+.category-today-i-learned {
 
 	.post-single {
+		background: var(--background-alt);
+		border-radius: 8px;
 		margin-top: 3em;
+		padding: 1rem;
+
+		@media #{$pond} {
+			padding: 2rem;
+		}
 	}
 
 	.post-single__date {
