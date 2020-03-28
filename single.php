@@ -30,7 +30,7 @@ get_header();
 					} ?>
 				</div>
 				<div class="post-single__body">
-				<?php if ( in_category( 'RSS Club', $post_id ) ) : ?>
+				<?php if ( in_category( 'RSS Club') ) : ?>
 					<span class="rss-note">👋 Hey! This post is exclusive for RSS subscribers.</span>
 				<?php endif; ?>
 					<?php echo the_content(); ?>

@@ -1,37 +1,23 @@
 
 	<section class="posts">
 
-	<?php // If "TIL" category, let's show a title.
-	if ( is_category( 'TIL' ) ) :
-	?>
+		<?php // If "TIL" category, let's show a title.
+		if ( is_category( 'TIL' ) ):
+			echo '<h1>Today I Learned...</h1>';
+		else:
+			echo '<h1>Blog</h1>';
+		endif; ?>
 
-		<h1>Today I Learned...</h1>
+		<?php if ( have_posts() )
+			while ( have_posts() ) : the_post();
 
-	<?php
-	endif;
-	
-	// All categories, except TIL
-	if ( have_posts() && ! is_category( 'TIL' ) ) : ?>
+			if ( ! is_category( 'TIL' ) ) :
+				get_template_part( 'template-parts/loop/category', 'all' );
+			elseif ( is_category( 'TIL' ) ) :
+				get_template_part( 'template-parts/loop/category', 'all' );
+			endif;
 
-		<h1>Blog</h1>
+			endwhile;
+		?>
 
-		<?php while ( have_posts() ) : the_post();
-
-		get_template_part( 'template-parts/loop/category', 'all' );
-
-		endwhile;
-	
-	// Only TIL
-	else :
-
-		while ( have_posts() ) : the_post(); ?>
-
-		<?php		
-		get_template_part( 'template-parts/loop/category', 'til' );
-
-		endwhile;
-
-	endif;
-	?>
-
-</section>
+	</section>
