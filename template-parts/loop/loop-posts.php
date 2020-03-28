@@ -11,9 +11,9 @@
 		<?php if ( have_posts() )
 			while ( have_posts() ) : the_post();
 
-			if ( ! is_category( 'TIL' ) ) :
-				get_template_part( 'template-parts/loop/category', 'all' );
-			elseif ( is_category( 'TIL' ) ) :
+			if ( is_category( 'TIL' ) ) :
+				get_template_part( 'template-parts/loop/category', 'til' );
+			else :
 				get_template_part( 'template-parts/loop/category', 'all' );
 			endif;
 
