@@ -4,7 +4,7 @@
 .posts__pagination a,
 .comment-reply-link,
 input[type='submit'] {
-	@include box-shadow--alt();
+	@include box-shadow();
 	@include font-size( .85 );
 	border-radius: 30px !important;
 	cursor: pointer;
@@ -23,7 +23,7 @@ input[type='submit'] {
 input[type='submit'] {
 	background: var(--primary-color);
 	border: 0;
-	color: var(--white);
+	color: var(--brown-darker);
 
 	@media (prefers-color-scheme: dark) {
 		color: var(--brown-light);

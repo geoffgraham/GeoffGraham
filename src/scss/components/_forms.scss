@@ -13,9 +13,21 @@ textarea {
 	padding: 1rem;
 	width: 100%;
 
+	@media (prefers-color-scheme: light) {
+		background: var(--brown);
+	}
+
 	&:focus {
 		border: 2px solid var(--primary-color);
 		outline: 0;
+	}
+
+	&::placeholder {
+		color: var(--brown-lighter)
+	}
+
+	&:focus::placeholder {
+		color: var(--brown-light);
 	}
 
 	label {
@@ -39,17 +51,14 @@ input[type='radio'] {
 
 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
 .gform_wrapper textarea {
-	border: 0 !important;
-	border-radius: 0;
+	border: 2px solid transparent;
 	line-height: 1.2;
 	padding: 1rem !important;
-	transition: all .25s ease-out;
 }
 
 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus, 
 .gform_wrapper textarea:focus {
-	box-shadow: none;
-	transform: translateY( 5px );
+	border-color: var(--primary-color);
 }
 
 .gform_wrapper .gform_footer input.button,
