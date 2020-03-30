@@ -48,7 +48,7 @@
 }
 
 .wp-block-file {
-	@include box-shadow--alt();
+	@include box-shadow;
 	align-items: center;
 	display: flex;
 	flex-flow: row wrap;
@@ -57,16 +57,21 @@
 }
 
 .wp-block-file a.wp-block-file__button {
-	@include box-shadow--alt();
-	background: var(--white);
-	color: var(--gray-dark);
+	@include box-shadow;
+	background: transparent;
+	border: 3px solid var(--primary-color);
+	border-radius: 30px;
+	color: var(--text-color);
 
 	&:hover {
-		color: var(--gray-dark);
+		background: var(--primary-color);
+		color: var(--brown);
+		transform: translateY( 5px );
 	}
 
 	&:active {
-		background: none;
+		background: var(--primary-color);
+		box-shadow: 0 0 15px rgba(0, 0, 0, .05) inset
 	}
 }
 

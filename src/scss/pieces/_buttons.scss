@@ -31,6 +31,7 @@ input[type='submit'] {
 
 	&:hover {
 		box-shadow: none;
+		color: var(--brown-darkest) !important;
 		transform: translateY( 5px );
 
 		@media (prefers-color-scheme: dark) {
@@ -47,7 +48,7 @@ input[type='submit'] {
 .button--secondary,
 .posts__pagination a,
 .comment-reply-link {
-	@include box-shadow--alt();
+	@include box-shadow;
 	background: transparent;
 	border: 3px solid var(--primary-color);
 	color: var(--text-color);

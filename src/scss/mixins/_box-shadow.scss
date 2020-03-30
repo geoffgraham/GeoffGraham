@@ -1,4 +1,5 @@
 @mixin box-shadow {
+	border-radius: 15px;
 	box-shadow: 0 2.8px 2.2px rgba(66, 58, 54, 0.034),
   0 6.7px 5.3px rgba(66, 58, 54, 0.048),
   0 12.5px 10px rgba(66, 58, 54, 0.06),
