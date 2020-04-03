@@ -58,15 +58,21 @@ export const scripts = () => {
 }
 
 export const images = () => {
-  return src('src/img/**/*.{jpg,jpeg,png,svg,gif}')
+  return src('src/img/**/*.{jpg,jpeg,png,gif}')
     .pipe(imagemin())
+    .pipe(dest('dist/img'));
+}
+
+export const svg = () => {
+  return src('src/img/**/*.{svg}')
     .pipe(dest('dist/img'));
 }
 
 export const watchForChanges = () => {
   watch('src/scss/**/*.scss', series(styles, reload));
-  watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload));
-  watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(reload));
+  watch('src/images/**/*.{jpg,jpeg,png,gif}', series(images, reload));
+	watch('src/images/**/*.{svg}', series(images, reload));
+	watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(reload));
   watch('src/js/**/*.js', series(scripts, reload));
   watch("**/*.php", reload);
 }
