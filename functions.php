@@ -16,13 +16,6 @@ if ( ! function_exists( 'geoff_graham_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function geoff_graham_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Geoff Graham, use a find and replace
-		 * to change 'geoff-graham' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'geoff-graham', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -60,12 +53,6 @@ if ( ! function_exists( 'geoff_graham_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'geoff_graham_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -73,22 +60,6 @@ if ( ! function_exists( 'geoff_graham_setup' ) ) :
 endif;
 
 add_action( 'after_setup_theme', 'geoff_graham_setup' );
-
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function geoff_graham_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'geoff_graham_content_width', 640 );
-}
-
-add_action( 'after_setup_theme', 'geoff_graham_content_width', 0 );
 
 /**
  * Register widget area.
@@ -114,12 +85,6 @@ add_action( 'widgets_init', 'geoff_graham_widgets_init' );
  */
 function geoff_graham_scripts() {
 	wp_enqueue_style( 'geoff-graham-stylesheet', get_template_directory_uri() . '/dist/css/style.css', array(), '1.0.0', 'all' );
-
-	wp_enqueue_script( 'geoff-graham-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array(), '1.0.0', true );
-
-	if ( is_single() || is_archive() ) {
-		wp_enqueue_script( 'geoff-graham-prism', get_template_directory_uri() . '/dist/js/prism.js', array(), '1.0.0', true );
-	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

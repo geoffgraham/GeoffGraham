@@ -72,7 +72,7 @@ export const watchForChanges = () => {
   watch('src/scss/**/*.scss', series(styles, reload));
   watch('src/images/**/*.{jpg,jpeg,png,gif}', series(images, reload));
 	watch('src/images/**/*.{svg}', series(images, reload));
-	watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(reload));
+	watch(['src/**/*','!src/{img,js,scss}','!src/{img,js,scss}/**/*'], series(reload));
   watch('src/js/**/*.js', series(scripts, reload));
   watch("**/*.php", reload);
 }
