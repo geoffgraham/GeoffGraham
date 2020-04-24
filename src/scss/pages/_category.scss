@@ -3,11 +3,15 @@
 	.post-single {
 		background: var(--background-alt);
 		border-radius: 8px;
-		margin-top: 3em;
+		margin-block-start: 3em;
 		padding: 1rem;
 
 		@media #{$pond} {
 			padding: 2rem;
+		}
+
+		&:first-child {
+			margin-block-start: none;
 		}
 	}
 
