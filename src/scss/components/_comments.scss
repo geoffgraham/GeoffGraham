@@ -8,6 +8,8 @@
 #webmention-form {
 	border: 1px solid var(--table-background);
 	border-radius: 16px;
+	margin-block-end: 3rem;
+	margin-block-start: 3rem;
 	padding: 2rem;
 
 	h3 {
@@ -17,6 +19,10 @@
 	ul {
 		margin-block-end: 0;
 		padding-left: 0;
+	}
+
+	p {
+		margin-block-start: 0;
 	}
 }
 
