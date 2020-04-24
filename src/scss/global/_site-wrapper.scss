@@ -1,6 +1,9 @@
 .site-wrapper {
-	@include box-shadow--alt;
 	background-color: var(--background);
+
+	@media (prefers-color-scheme: light) {
+		@include box-shadow--alt;
+	}
 }
 
 .site-content {
