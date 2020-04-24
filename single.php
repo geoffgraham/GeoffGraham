@@ -23,7 +23,7 @@ get_header();
 					$j_modified_date = get_the_modified_time('j');
 					if ($j_modified_date >= $j_date + 1) { 
 						echo the_date('F j, Y');
-						echo "<span>Updated: "; the_modified_time('F j, Y');
+						echo "<span>Updated: "; the_modified_time('n/d/Y');
 						echo "</span>";
 					} else {
 						echo the_date('F jS, Y');

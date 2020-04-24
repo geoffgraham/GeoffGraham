@@ -1,5 +1,5 @@
 .post-wrapper {
-	margin-bottom: 75px;
+	margin-block-end: 75px;
 }
 
 .post-single {
@@ -8,36 +8,21 @@
 }
 
 .post-single__date {
-	align-items: flex-start;
 	color: var(--primary-color);
-	display: flex;
-	flex-direction: column;
 	font-size: $font-size-small;
 	font-weight: 300;
-	margin: 2.5rem 0 0;
+	margin: 2.5rem 0 -1.25rem;
 	order: 1;
 
-	@media #{$pool} {
-		flex-direction: row;
-	}
-
 	span {
+		background: var(--code-blocks);
 		border-left: 3px solid var(--primary-color);
 		display: inline-block;
-		font-size: $font-size-small;
-		margin-top: .5em;
-		padding-left: .25em;
+		margin-block-start: .5rem;
+		margin-inline-start: 1rem;
+		padding-inline-end: .5rem;
+		padding-inline-start: .5rem;
 		position: relative;
-
-		@media #{$pool} {
-			background: var(--primary-color);
-			border: 0;
-			border-radius: 16px;
-			color: var(--background);
-			margin-left: 1em;
-			margin-top: 0;
-			padding: .25em .75em;
-		}
 	}
 }	
 
