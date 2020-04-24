@@ -1,6 +1,17 @@
 .comments {
 	grid-area: comments;
+	margin-top: 2rem;
 	max-width: 800px;
+}
+
+.mentions {
+	border: 1px solid var(--table-background);
+	border-radius: 16px;
+	padding: 2rem;
+
+	h3 {
+		margin-top: 0;
+	}
 }
 
 .comments h2::before {
@@ -8,7 +19,7 @@
 	background: var(--primary-color);
 	height: 10px;
 	position: absolute;
-	transform: translateY( -.5rem );
+	transform: translateY( -1rem );
 	width: 125px;
 }
 
@@ -27,6 +38,10 @@
 		display: grid;
 		grid-template-columns: 100px 4fr;
 		grid-gap: 2rem;
+	}
+
+	h3 {
+		margin-top: 0;
 	}
 }
 
