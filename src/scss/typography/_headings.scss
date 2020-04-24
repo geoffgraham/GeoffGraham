@@ -2,11 +2,11 @@ h1,
 h2,
 h3 {
 	font-family: serif;
+	line-height: 1.1rem;
 }
 
 h1 {
 	@include font-size( 2.25 );
-	line-height: 1.1;
 	margin-top: 2rem;
 
 	@media #{$pool} {
@@ -16,11 +16,9 @@ h1 {
 
 h2 {
 	@include font-size( 1.75 );
-	line-height: 1.25;
 	margin-bottom: 0.5rem;
 }
 
 h3 {
 	@include font-size( 1.6 );
-	line-height: 1.25;
 }
