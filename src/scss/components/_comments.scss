@@ -10,7 +10,12 @@
 	padding: 2rem;
 
 	h3 {
-		margin-top: 0;
+		margin-block-start: 0;
+	}
+
+	ul {
+		margin-block-end: 0;
+		padding-left: 0;
 	}
 }
 
@@ -73,6 +78,10 @@
 	}
 }
 
+.comment-reply-title {
+	margin-bottom: .5rem;
+}
+
 .comment-reply-link {
 	box-shadow: none;
 	font-size: $font-size-small;
@@ -100,6 +109,10 @@
 
 	.required {
 		display: none;
+	}
+
+	.logged-in-as {
+		font-size: $font-size-small;
 	}
 
 	p {
