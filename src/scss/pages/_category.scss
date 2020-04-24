@@ -16,7 +16,9 @@
 	}
 
 	.post-single__date {
-		margin-top: 0;
+		font-size: $font-size-small;
+		margin-block-end: .5rem;
+		margin-block-start: 0;
 	}
 
 	.post-single__title {
