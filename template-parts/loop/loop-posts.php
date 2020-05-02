@@ -19,5 +19,10 @@
 
 			endwhile;
 		?>
+		<div class="posts__navigation">
+			<?php
+				echo paginate_links( array( add_fragment => '#top' ) );
+			?>
+		</div>
 
 	</section>

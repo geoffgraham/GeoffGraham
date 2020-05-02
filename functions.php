@@ -217,13 +217,11 @@ function gg_comments($comment, $args, $depth) {
 	endif;
 }
 
-// define the comment_form_submit_button callback
+// Markdown support notice after comment form submit button
 function filter_comment_form_submit_button( $submit_button, $args ) {
 	// make filter magic happen here...
 	$submit_before = '';
 	$submit_after = '<small>Markdown supported</small>';
 	return $submit_before . $submit_button . $submit_after;
 };
-
-// add the filter
 add_filter( 'comment_form_submit_button', 'filter_comment_form_submit_button', 10, 2 );
