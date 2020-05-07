@@ -20,9 +20,8 @@
 		border-top: 0;
 	}
 
-	&:last-child {
+	&:last-of-type {
 		border-bottom: 1px solid var(--border-color);
-		margin-bottom: 2.5rem;
 	}
 
 	.post__date {
@@ -55,4 +54,9 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: 2em;
+
+	a:not(.next):not(.prev),
+	.dots {
+		display: none;
+	}
 }
