@@ -84,7 +84,7 @@ add_action( 'widgets_init', 'geoff_graham_widgets_init' );
  * Enqueue scripts and styles.
  */
 function geoff_graham_scripts() {
-	wp_enqueue_style( 'geoff-graham-stylesheet', get_template_directory_uri() . '/dist/css/style.css', array(), '1.0.0', 'all' );
+	wp_enqueue_style( 'geoff-graham-stylesheet', get_template_directory_uri() . '/dist/css/style.css', array(), wp_date( DATE_RFC3339, $timestamp ), 'all' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
