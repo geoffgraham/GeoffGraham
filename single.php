@@ -19,13 +19,15 @@ get_header();
 				<?php the_title( '<h1 class="post-single__title">', '</h1>' ); ?>
 				<div class="post-single__date">
 					<?php 
-						$j_date = get_the_date('j');
-						$j_modified_date = get_the_modified_time('j');
-						echo the_date('F j, Y');
-						if ( ($j_modified_date >= $j_date + 1) && !in_category('TIL') ) { 
-							echo "<span>Updated: " . the_modified_time('n/d/Y') . "</span>";
+						echo the_date( 'F j, Y' );
+
+						$j_date = get_the_date( 'j' );
+						$j_modified_date = get_the_modified_time( 'j' );
+
+						if ( ($j_modified_date >= $j_date + 1) && !in_category( 'TIL' ) ) { 
+							echo '<span>Updated: ' . the_modified_time( 'n/d/Y' ) . '</span>';
 						}
-						if ( in_category('TIL') ) {
+						if ( in_category( 'TIL' ) ) {
 							echo ", I learned";
 						}
 					?>
