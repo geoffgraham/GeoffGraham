@@ -18,17 +18,17 @@ get_header();
 			<article class="post-single">
 				<?php the_title( '<h1 class="post-single__title">', '</h1>' ); ?>
 				<div class="post-single__date">
-					<?php 
-						echo the_date( 'F j, Y' );
-
+					<?php echo the_date( 'F j, Y' ); ?>
+					
+					<?php
 						$j_date = get_the_date( 'j' );
 						$j_modified_date = get_the_modified_time( 'j' );
 
 						if ( ($j_modified_date >= $j_date + 1) && !in_category( 'TIL' ) ) { 
-							echo '<span>Updated: ' . the_modified_time( 'n/d/Y' ) . '</span>';
+							echo '<span>Updated: ' . get_the_modified_time( 'n/d/Y' ) . '</span>';
 						}
 						if ( in_category( 'TIL' ) ) {
-							echo ", I learned";
+							echo ", I learned...";
 						}
 					?>
 				</div>
