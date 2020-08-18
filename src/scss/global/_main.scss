@@ -1,13 +1,4 @@
 .main-content {
 	grid-area: main;
 	margin-block-start: .75rem;
-
-	&:before {
-		content: "";
-		background: var(--primary-color);
-		height: 5px;
-		position: absolute;
-		transform: translateY( 1rem );
-		width: 125px;
-	}
 }
