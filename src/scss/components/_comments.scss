@@ -70,11 +70,11 @@
 
 .comment__author {
 	@include font-size( 1.2 );
-	font-family: $font-display;
+	font-family: var(--font-display);
 }
 
 .comment__meta {
-	font-size: $font-size-small;
+	font-size: var(--font-size-small);
 
 	a {
 		color: var(--primary-color);
@@ -92,7 +92,7 @@
 
 .comment-reply-link {
 	box-shadow: none;
-	font-size: $font-size-small;
+	font-size: var(--font-size-small);
 	padding: 5px 25px;
 }
 
@@ -120,7 +120,7 @@
 	}
 
 	.logged-in-as {
-		font-size: $font-size-small;
+		font-size: var(--font-size-small);
 	}
 
 	.form-submit {
@@ -148,12 +148,12 @@
 }
 
 .comment-form-cookies-consent {
-	font-size: $font-size-small;
+	font-size: var(--font-size-small);
 }
 
 // Featured comment styles
 .feature-burry-comments {
-	font-size: $font-size-small;
+	font-size: var(--font-size-small);
 	margin-bottom: 1rem;
 }
 

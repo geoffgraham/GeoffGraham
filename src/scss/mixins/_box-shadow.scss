@@ -9,16 +9,9 @@
 }
 
 @mixin box-shadow--alt {
-	border: 1px solid var(--brown);
+	border: 1px solid var(--black);
 	border-radius: 15px;
 	box-shadow: 
 		12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-		-8px -8px 12px 0 var(--brown);
-	
-	@media (prefers-color-scheme: dark) {
-		border: 1px solid var(--brown-dark);
-		box-shadow: 
-		12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-		-8px -8px 12px 0 var(--brown-dark);
-	}
+		-8px -8px 12px 0 var(--black);
 }

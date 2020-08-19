@@ -29,12 +29,12 @@
 .navigation__primary li,
 .navigation__social li {
 	display: inline;
-	font-size: $font-size-medium;
+	font-size: var(--font-size-medium);
 	line-height: $line-height;
 
 	@media #{$lake} {
 		display: block;
-		font-size: $font-size-large - 2;
+		font-size: calc( var(--font-size-large - 2) );
 	}
 
 	a {

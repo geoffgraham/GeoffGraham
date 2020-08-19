@@ -65,11 +65,6 @@
 	padding: .75em;
 	transition: all .15s;
 
-	@media (prefers-color-scheme: light) {
-		@include box-shadow();
-		background: var(--brown-light);
-	}
-
 	@media #{$pond} {
 		flex: 1;
 		padding: 1em;
@@ -96,8 +91,8 @@
 	}
 
 	a {
-		@include font-size( .65 );
 		border: 0;
+		font-size: var(--font-size-small);
 		font-weight: 500;
 	}
 }

@@ -11,8 +11,4 @@ figure {
 .codepen-logo path,
 .toilet-logo {
 	stroke: var(--text-color);
-
-	@media (prefers-color-scheme: dark) {
-		fill: var(--white);
-	}
 }

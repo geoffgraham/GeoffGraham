@@ -31,13 +31,8 @@ body {
 	color: var(--text-color);
 	display: flex;
 	flex-direction: column;
-	font-family: $font-body;
+	font-family: var(--font-body);
 	justify-content: center;
 	line-height: 1.6;
 	overflow-x: hidden;
-}
-
-#top {
-	display: inline-block;
-	height: 0;
 }
