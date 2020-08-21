@@ -1,0 +1,28 @@
+.callout {
+	background-color: var(--white);
+	border: 10px solid var(--base-color);
+	margin-bottom: var(--spacer);
+	padding: var(--spacer-small);
+	position: relative;
+
+	&:before {
+		content: "";
+		background-color: var(--base-color);
+		height: 100%;
+		position: absolute;
+			top: var(--spacer-small);
+			left: var(--spacer-small);
+		width: 100%;
+		z-index: -1;
+	}
+}
+
+.callout__content {
+	display: grid;
+	gap: var(--spacer);
+	grid-template-columns: minmax(100px, 150px) auto;
+}
+
+.callout__image {
+	max-width: 150px;
+}
