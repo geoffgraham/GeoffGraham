@@ -11,9 +11,11 @@ $font-size-large: 24px;
 $line-height: 1.5;
 
 :root {
-	--font-body: sans-serif;
-	--font-display: serif;
-	--font-code: monospace;
+	--font-primary: Recursive;
+	
+	--font-body: var(--font-primary);
+	--font-display: var(--font-primary);
+	--font-code: var(--font-primary);
 
 	--font-size-small: 14px;
 	--font-size-medium: 18px;

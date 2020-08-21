@@ -1,6 +1,7 @@
 .callout {
 	background-color: var(--white);
 	border: 10px solid var(--base-color);
+	font-size: 1rem;
 	margin-bottom: var(--spacer);
 	padding: var(--spacer-small);
 	position: relative;
@@ -18,11 +19,28 @@
 }
 
 .callout__content {
-	display: grid;
-	gap: var(--spacer);
-	grid-template-columns: minmax(100px, 150px) auto;
+	text-align: center;
+
+	@media #{$pond} {
+		align-items: center;
+		display: grid;
+		gap: var(--spacer);
+		grid-template-columns: minmax(150px, 220px) auto;
+		grid-template-rows: auto;
+		text-align: left;
+	}
+
+	@media #{$lake} {
+		gap: calc( var(--spacer-large) - 10px );
+		padding: 1em;
+	}
 }
 
 .callout__image {
-	max-width: 150px;
+	max-width: 220px;
+}
+
+.callout__heading {
+	font-size: clamp(2em, 4vw, 6em);
+	text-transform: uppercase;
 }
