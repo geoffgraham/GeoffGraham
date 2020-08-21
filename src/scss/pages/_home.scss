@@ -1,7 +1,12 @@
-.home {
+.home-intro {
+	text-align: center;
 
-	.site-wrapper {
-		position: relative;
-		z-index: 0;
+	@media #{$pool} {
+		align-items: center;
+		display: grid;
+		gap: var(--spacer);
+		grid-template-columns: minmax(300px, 60%) minmax(150px, auto);
+		grid-template-rows: auto;
+		text-align: left;
 	}
 }

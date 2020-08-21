@@ -1,0 +1,11 @@
+.statement {
+	background-color: var(--base-color);
+	border: 10px solid var(--white);
+	color: var(--white);
+	filter: drop-shadow(10px 10px 0 var(--base-color));
+	font-size: clamp(3em, 4vw, 6em);
+	padding: var(--spacer);
+	position: relative;
+	text-align: center;
+	transform: rotateX(3deg) skew(-3deg, -2deg) translateZ(25px);
+}

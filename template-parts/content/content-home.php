@@ -1,8 +1,8 @@
-<div>
-	<h2>Hi, I'm Geoff</h2>
-	<div>
-		<img src="<?php echo esc_url( get_template_directory_uri() . '/dist/img/headshot.svg' ); ?>">
+<div class="home-intro">
+	<div class="slanted-container">
+		<h1 class="statement">Hi, I'm Geoff</h1>
 	</div>
+	<img class="home-headshot" src="<?php echo esc_url( get_template_directory_uri() . '/dist/img/headshot.svg' ); ?>">
 </div>
 
 <div class="callouts">
