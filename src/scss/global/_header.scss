@@ -3,8 +3,6 @@
 	flex-flow: column nowrap;
 	grid-area: navigation;
 	justify-content: space-between;
-	margin-bottom: 3em;
-	padding-top: 1.5em;
 
 	@media #{$pool} {
 		flex-flow: row wrap;
@@ -21,11 +19,10 @@
 	}
 }
 
+.site-header__logo svg {
+	max-width: 200px;
+}
+
 .side-header__title a {
 	@include link;
-	border: 0;
-	font-size: 30px;
-	font-weight: 700;
-	line-height: .75;
-	margin: 0 0 .25em 0;
 }

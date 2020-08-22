@@ -33,7 +33,7 @@
 }
 
 .card__heading {
-	font-size: clamp(2em, 3.5vw, 5.75em);
+	font-size: clamp(2.5em, 3.5vw, 5.75em);
 	order: 1;
 	text-transform: uppercase;
 }
@@ -54,6 +54,9 @@
 	}
 
 	.card__heading {
-		margin-right: var(--spacer);
+
+		@media #{$pond} {
+			margin-right: var(--spacer);
+		}
 	}
 }

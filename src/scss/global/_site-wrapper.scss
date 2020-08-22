@@ -1,15 +1,11 @@
 .site-wrapper {
 	background-color: var(--background);
-
-	@media (prefers-color-scheme: light) {
-		@include box-shadow--alt;
-	}
 }
 
 .site-content {
 	display: inline-block;
 	margin: auto;
-	padding: 2rem;
+	padding: var(--spacer);
 	position: relative;
 	max-width: var(--site-width);
 
