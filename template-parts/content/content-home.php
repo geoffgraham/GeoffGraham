@@ -1,21 +1,21 @@
 <div class="home-intro">
 	<div class="slanted-container">
-		<h1 class="statement">Hi, I'm Geoff</h1>
+		<h1 class="statement"><?php the_title() ?></h1>
 	</div>
 	<img class="home-headshot" src="<?php echo esc_url( get_template_directory_uri() . '/dist/img/headshot.svg' ); ?>">
 </div>
 
-<div class="callouts">
+<div class="cards">
 	<?php
-	if( have_rows('callout') ):
-		while( have_rows('callout') ) : the_row();
-			$image = get_sub_field('callout_image');
-			$heading = get_sub_field('callout_heading');
+	if( have_rows( 'card' ) ):
+		while( have_rows( 'card' ) ) : the_row();
+			$image = get_sub_field( 'card_image' );
+			$heading = get_sub_field( 'card_heading' );
 	?>
-	<article class="callout">
-		<div class="callout__content">
-			<img class="callout__image" src="<?php echo esc_url( $image ); ?>" alt="" />
-			<h3 class="callout__heading"><?php echo $heading ?></h3>
+	<article class="card">
+		<div class="card__content">
+			<img class="card__image" src="<?php echo esc_url( $image ); ?>" alt="" />
+			<h2 class="card__heading"><?php echo $heading ?></h2>
 		</div>
 	</article>
 
