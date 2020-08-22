@@ -1,0 +1,7 @@
+@mixin card( $bg: var(--white), $border: var(--accent-color), $shadow: var(--base-color) ) {
+	background-color: $bg;
+	border: 12px solid $border;
+	box-shadow: var(--spacer-small) var(--spacer-small) 0 $shadow;
+	padding: var(--spacer-small);
+	position: relative;
+}

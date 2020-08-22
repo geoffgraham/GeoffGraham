@@ -1,46 +1,51 @@
 .callout {
-	background-color: var(--white);
-	border: 10px solid var(--base-color);
+	@include card();
 	font-size: 1rem;
-	margin-bottom: var(--spacer);
-	padding: var(--spacer-small);
-	position: relative;
-
-	&:before {
-		content: "";
-		background-color: var(--base-color);
-		height: 100%;
-		position: absolute;
-			top: var(--spacer-small);
-			left: var(--spacer-small);
-		width: 100%;
-		z-index: -1;
-	}
+	margin-bottom: var(--spacer-large);
 }
 
 .callout__content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: var(--spacer-small);
 	text-align: center;
 
 	@media #{$pond} {
-		align-items: center;
-		display: grid;
-		gap: var(--spacer);
-		grid-template-columns: minmax(150px, 220px) auto;
-		grid-template-rows: auto;
+		align-items: space-between;
+		flex-direction: row;
 		text-align: left;
-	}
-
-	@media #{$lake} {
-		gap: calc( var(--spacer-large) - 10px );
-		padding: 1em;
 	}
 }
 
 .callout__image {
-	max-width: 220px;
+	flex-basis: 220px;
+	order: 1;
 }
 
 .callout__heading {
-	font-size: clamp(2em, 4vw, 6em);
+	font-size: clamp(2em, 3.5vw, 5.75em);
+	order: 1;
 	text-transform: uppercase;
+}
+
+.callout:nth-child(odd) {
+
+	.callout__image {
+		@media #{$pond} {
+			margin-right: var(--spacer);
+		}
+	}
+}
+
+.callout:nth-child(even) {
+	
+	.callout__image {
+		order: 2;
+	}
+
+	.callout__heading {
+		margin-right: var(--spacer);
+	}
 }

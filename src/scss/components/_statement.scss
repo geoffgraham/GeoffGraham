@@ -8,4 +8,12 @@
 	position: relative;
 	text-align: center;
 	transform: rotateX(3deg) skew(-3deg, -2deg) translateZ(25px);
+
+	&:before {
+		@include triangle();
+		content: "";
+		position: absolute;
+			top: 100%;
+			left: 50%;
+	}
 }
