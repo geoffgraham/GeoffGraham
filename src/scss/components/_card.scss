@@ -1,0 +1,59 @@
+@mixin card( $bg: var(--white), $border: var(--accent-color), $shadow: var(--base-color) ) {
+	background-color: $bg;
+	border: 12px solid $border;
+	box-shadow: var(--spacer-small) var(--spacer-small) 0 $shadow;
+	padding: var(--spacer-small);
+	position: relative;
+}
+
+.card {
+	@include card();
+	font-size: 1rem;
+	margin-bottom: var(--spacer-large);
+}
+
+.card__content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: var(--spacer-small);
+	text-align: center;
+
+	@media #{$pond} {
+		align-items: space-between;
+		flex-direction: row;
+		text-align: left;
+	}
+}
+
+.card__image {
+	flex-basis: 220px;
+	order: 1;
+}
+
+.card__heading {
+	font-size: clamp(2em, 3.5vw, 5.75em);
+	order: 1;
+	text-transform: uppercase;
+}
+
+.card:nth-child(odd) {
+
+	.card__image {
+		@media #{$pond} {
+			margin-right: var(--spacer);
+		}
+	}
+}
+
+.card:nth-child(even) {
+	
+	.card__image {
+		order: 2;
+	}
+
+	.card__heading {
+		margin-right: var(--spacer);
+	}
+}

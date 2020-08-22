@@ -1,12 +1,16 @@
 .home-intro {
-	text-align: center;
+	align-items: center;
+	display: grid;
+	justify-content: center;
+	margin-bottom: var(--spacer);
 
-	@media #{$pool} {
-		align-items: center;
-		display: grid;
+	@media #{$pond} {
 		gap: var(--spacer);
-		grid-template-columns: minmax(300px, 60%) minmax(150px, auto);
-		grid-template-rows: auto;
-		text-align: left;
+		grid-template-columns: minmax(100px, 100%) auto;
 	}
+}
+
+.home-headshot {
+	justify-self: center;
+	max-width: 250px;
 }

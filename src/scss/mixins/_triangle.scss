@@ -1,0 +1,7 @@
+@mixin triangle( $color: var(--base-color), $size: 80px ) {
+	border-left: 80px solid transparent;
+  border-right: 20px solid transparent;
+	border-top: $size solid $color;
+	height: 0; 
+	width: 0; 
+}

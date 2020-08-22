@@ -1,13 +1,14 @@
 .statement {
 	background-color: var(--base-color);
-	border: 10px solid var(--white);
 	color: var(--white);
-	filter: drop-shadow(10px 10px 0 var(--base-color));
-	font-size: clamp(3em, 4vw, 6em);
+	filter: 
+		drop-shadow(10px 10px 0 var(--white))
+		drop-shadow(10px 10px 0 var(--base-color));
+	font-size: clamp(2.5em, 3.75vw, 8em);
 	padding: var(--spacer);
 	position: relative;
 	text-align: center;
-	transform: rotateX(3deg) skew(-3deg, -2deg) translateZ(25px);
+	transform: rotateX(5deg) skew(-9deg, -2deg);
 
 	&:before {
 		@include triangle();
@@ -15,5 +16,12 @@
 		position: absolute;
 			top: 100%;
 			left: 50%;
+	}
+}
+
+.statement {
+
+	.home .slanted-container & {
+		margin-bottom: var(--spacer-large);
 	}
 }
