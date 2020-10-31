@@ -13,34 +13,38 @@
 }
 
 .card__content {
-	display: flex;
 	align-items: center;
-	flex-direction: column;
-	justify-content: center;
+	display: flex;
+	justify-content: space-between;
 	padding: var(--spacer-small);
-	text-align: center;
-
-	@media #{$pond} {
-		align-items: space-between;
-		flex-direction: row;
-		text-align: left;
-	}
+	text-align: left;
 }
 
 .card__image {
-	flex-basis: 220px;
+	width: clamp(30%, 300px, 50%);
 	order: 1;
 }
 
 .card__heading {
-	font-size: 3em;
+	--font-variation-display: "CASL" .05, "CRSV" 1, "MONO" .25, "wght" 800, "slnt" -25;
+	font-size: 2rem;
 	line-height: 1.1;
 	order: 1;
+
+	@media #{$pool} {
+		font-size: 2.5em;
+	}
+
+	@media #{$pond} {
+		font-size: 3.5em;
+	}
 }
 
 .card:nth-child(odd) {
 
 	.card__image {
+		margin-right: var(--spacer-small);
+
 		@media #{$pond} {
 			margin-right: var(--spacer);
 		}
@@ -54,6 +58,7 @@
 	}
 
 	.card__heading {
+		margin-right: var(--spacer-small);
 
 		@media #{$pond} {
 			margin-right: var(--spacer);

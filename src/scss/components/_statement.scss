@@ -4,28 +4,29 @@
 	filter: 
 		drop-shadow(10px 10px 0 var(--white))
 		drop-shadow(10px 10px 0 var(--base-color));
-	font-size: 2em;
-	padding: var(--spacer);
+	font-size: 1.5em;
+	padding: var(--spacer-small);
 	position: relative;
 	text-align: center;
 	transform: rotateX(5deg) skew(-9deg, -2deg);
 
 	@media #{$pond} {
-		font-size: 3em;
+		font-size: 2.8em;
+		padding: var(--spacer);
 	}
 
 	&:before {
-		@include triangle();
+		@include triangle($size: var(--spacer-small));
 		content: "";
+		border-right-width: 0;
 		position: absolute;
-			top: 100%;
+			top: 90%;
 			left: 50%;
-	}
-}
 
-.statement {
-
-	.home .slanted-container & {
-		margin-bottom: var(--spacer-large);
+			@media #{$pond} {
+				border-left-width: var(--spacer-large);
+				border-right-width: var(--spacer-small);
+				border-top-width: var(--spacer-large);
+			}
 	}
 }

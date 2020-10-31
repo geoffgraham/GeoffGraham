@@ -45,7 +45,7 @@
 	figcaption {
 		background-color: var(--table-background);
 		border-top: 1px dashed var(--border-color);
-		font-size: $font-size-small;
+		font-size: var(--font-size-small);
 		margin: -.4em 0 0;
 		padding: 1em;
 	}
@@ -70,7 +70,7 @@
 	&:hover {
 		background: var(--primary-color);
 		color: var(--brown);
-		transform: translateY( 5px );
+		transform: translateY(5px);
 	}
 
 	&:active {

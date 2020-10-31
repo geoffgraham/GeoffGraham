@@ -1,14 +1,5 @@
 .site-navigation {
-	margin-top: .5em;
-	
-	@media #{$pool} {
-		align-self: center;
-		margin-top: 0;
-	}
-
-	@media #{$bay} {
-		align-self: flex-start;
-	}
+	align-self: center;
 }
 
 .navigation__primary ul,
@@ -31,7 +22,7 @@
 .navigation__social li {
 	display: inline;
 	font-size: var(--font-size-large);
-	line-height: $line-height;
+	line-height: var(--line-height);
 
 	@media #{$bay} {
 		display: block;

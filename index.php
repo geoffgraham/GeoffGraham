@@ -10,13 +10,7 @@ get_header();
 	<div class="post-wrapper">
 		<main class="main-content posts">
 
-			<?php if ( is_main_query() && have_posts() ) : ?>
-
-				<?php while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/loop/loop', 'posts' );
-				endwhile;
-
-			endif; ?>
+			<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
 
 			<footer class="posts__pagination">
 				<?php next_posts_link( 'Older' ); ?>
