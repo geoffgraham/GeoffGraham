@@ -12,8 +12,6 @@ get_header();
 
 			<?php if ( is_main_query() && have_posts() ) : ?>
 
-				<h1>Blog Archive</h1>
-
 				<?php while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/loop/loop', 'posts' );
 				endwhile;

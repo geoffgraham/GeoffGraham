@@ -16,7 +16,6 @@
 		<div class="posts__pagination">
 			<?php echo paginate_links( 
 					array( 
-						'add_fragment' => '#top',
 						'before_page_number'=> '<span class="hide" aria-hidden="true">',
 						'after_page_number'=> '</span>',
 						'next_text'    => 'Older Posts',

@@ -4,11 +4,15 @@
 	filter: 
 		drop-shadow(10px 10px 0 var(--white))
 		drop-shadow(10px 10px 0 var(--base-color));
-	font-size: clamp(2.5em, 3.75vw, 8em);
+	font-size: 2em;
 	padding: var(--spacer);
 	position: relative;
 	text-align: center;
 	transform: rotateX(5deg) skew(-9deg, -2deg);
+
+	@media #{$pond} {
+		font-size: 3em;
+	}
 
 	&:before {
 		@include triangle();
