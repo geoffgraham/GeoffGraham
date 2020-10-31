@@ -12,17 +12,17 @@
 		margin-bottom: 0;
 	}
 
-	@media #{$lake} {
+	@media #{$bay} {
 		align-items: flex-start;
 		flex-flow: column;
 		justify-content: flex-start;
 	}
 }
 
-.site-header__logo svg {
-	max-width: 200px;
+.site-header__logo a {
+	border: 0;
 }
 
-.side-header__title a {
-	@include link;
+.site-header__logo svg {
+	max-width: 275px;
 }

@@ -9,9 +9,10 @@
 	position: relative;
 	max-width: var(--site-width);
 
-	@media #{$lake} {
+	@media #{$bay} {
 		display: grid;
-		grid-template-columns: 25% 75%;
+		grid-gap: calc( var(--spacer) * 3 );
+		grid-template-columns: 20% auto;
 		grid-template-areas: 
 			"navigation main"
 			". comments"

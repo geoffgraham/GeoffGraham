@@ -1,6 +1,6 @@
-@mixin card( $bg: var(--white), $border: var(--accent-color), $shadow: var(--base-color) ) {
+@mixin card( $bg: var(--white), $border: var(--base-color), $shadow: var(--base-color) ) {
 	background-color: $bg;
-	border: 12px solid $border;
+	border: 15px solid $border;
 	box-shadow: var(--spacer-small) var(--spacer-small) 0 $shadow;
 	padding: var(--spacer-small);
 	position: relative;
@@ -33,9 +33,9 @@
 }
 
 .card__heading {
-	font-size: clamp(2.5em, 3.5vw, 5.75em);
+	font-size: 3em;
+	line-height: 1.1;
 	order: 1;
-	text-transform: uppercase;
 }
 
 .card:nth-child(odd) {

@@ -58,7 +58,6 @@ if ( ! function_exists( 'geoff_graham_setup' ) ) :
 
 	}
 endif;
-
 add_action( 'after_setup_theme', 'geoff_graham_setup' );
 
 /**
@@ -94,21 +93,6 @@ function geoff_graham_scripts() {
 add_action( 'wp_enqueue_scripts', 'geoff_graham_scripts' );
 
 /**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
  * Allow SVG uploads in the Media Library
  */
 function gg_add_file_types_to_uploads($file_types) {
@@ -141,7 +125,6 @@ function exclude_category_posts( $query ) {
 		$query->set( 'cat', '-52, -54' );
 	}
 }
-
 add_action( 'pre_get_posts', 'exclude_category_posts' );
 
 /**
@@ -160,7 +143,6 @@ function change_default_jquery( &$scripts){
 		$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
 	}
 }
-
 add_filter( 'wp_default_scripts', 'change_default_jquery' );
 
 // Custom markup for comments

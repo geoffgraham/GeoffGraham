@@ -1,6 +1,6 @@
 .h1, .h2, .h3, 
 h1, h2, h3 {
 	font-family: var(--font-display);
-	font-variation-settings: "CASL" .05, "CRSV" 1, "MONO" .25, "wght" 800, "slnt" -5;
+	font-variation-settings: var(--font-variation-display);
 	line-height: 1.25;
 }

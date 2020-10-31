@@ -6,7 +6,7 @@
 		margin-top: 0;
 	}
 
-	@media #{$lake} {
+	@media #{$bay} {
 		align-self: flex-start;
 	}
 }
@@ -20,19 +20,20 @@
 		display: flex;
 	}
 
-	@media #{$lake} {
+	@media #{$bay} {
 		display: block;
 		margin: 2em 0 1em;
+		padding-left: var(--spacer);
 	}
 }
 
 .navigation__primary li,
 .navigation__social li {
 	display: inline;
-	font-size: var(--font-size-medium);
+	font-size: var(--font-size-large);
 	line-height: $line-height;
 
-	@media #{$lake} {
+	@media #{$bay} {
 		display: block;
 		font-size: calc( var(--font-size-large - 2) );
 	}
@@ -56,13 +57,13 @@
 	color: var(--primary-color);
 	font-weight: 800;
 
-	@media #{$lake} {
+	@media #{$bay} {
 		color: var(--text-color);
 		font-weight: 500;
 	}
 
 	&:after {
-		@media #{$lake} {
+		@media #{$bay} {
 			content: " →";
 			color: var(--primary-color);
 		}
@@ -71,7 +72,7 @@
 .navigation__social {
 	display: none;
 
-	@media #{$lake} {
+	@media #{$bay} {
 		display: block;
 	}
 }
