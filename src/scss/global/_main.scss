@@ -1,3 +1,6 @@
 .main-content {
+	background-color: var(--background);
 	grid-area: main;
+	position: relative;
+	z-index: 1;
 }

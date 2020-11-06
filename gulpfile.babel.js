@@ -63,15 +63,27 @@ export const images = () => {
     .pipe(dest('dist/img'));
 }
 
+// SVG Sprite
 export const svg = () => {
-  return src('src/img/**/*.{svg}')
-    .pipe(dest('dist/img'));
+	var svgSprite = require('gulp-svg-sprite');
+	var gulp = require('gulp'),
+	config = {
+		shape: {
+			dest: 'dist/img/icons'
+		},
+		mode: {
+			symbol: true
+		}
+	};
+	return gulp.src('**/*.svg', { cwd: 'src/img/icons' })
+  .pipe(svgSprite(config))
+  .pipe(gulp.dest('.'));
 }
 
 export const watchForChanges = () => {
   watch('src/scss/**/*.scss', series(styles, reload));
-  watch('src/images/**/*.{jpg,jpeg,png,gif}', series(images, reload));
-	watch('src/images/**/*.{svg}', series(images, reload));
+  watch('src/img/**/*.{jpg,jpeg,png,gif}', series(images, reload));
+	watch('src/img/icons/**/*.{svg}', series(svg, reload));
 	watch(['src/**/*','!src/{img,js,scss}','!src/{img,js,scss}/**/*'], series(reload));
   watch('src/js/**/*.js', series(scripts, reload));
   watch("**/*.php", reload);

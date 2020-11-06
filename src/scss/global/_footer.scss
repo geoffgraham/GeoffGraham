@@ -1,38 +1,22 @@
 .site-footer {
+	align-items: center;
+	background-color: var(--yellow-mellow);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23fd5a1e' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%230f1031' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23ff780a' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%233f194d' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23ff9400' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2378185c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ffb000' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23b01359' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ffca00' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23df2b45' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23ffe417' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23fd5a1e' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-position-x: 90%;
+	background-position-y: bottom;
+	background-repeat: no-repeat;
+	background-size: 700px;
+	bottom: 0;
+	display: flex;
 	grid-area: footer;
-	margin-top: 2em;
-	width: 100%;
+	min-height: 300px;
+	z-index: 0;
 
 	@media #{$lake} {
 		margin-top: 0;
 	}
 } 
-
-.site-footer__cta {
-	border: 3px dashed var(--primary-color);
-	border-radius: 15px;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 2rem;
-	padding: 1em;
-	text-align: center;
-
-	p {
-		margin: 0;
-	}
-
-	a {
-		@include link;
-	}
-
-	span {
-		display: block;
-
-		@media #{$pool} {
-			display: inline;
-		}
-	}
-}
 
 .site-footer__nav {
 	align-items: center;
@@ -43,14 +27,6 @@
 		border: 0;
 		line-height: 0;
 	}
-
-	svg {
-		width: 100px;
-
-		@media #{$pond} {
-			width: 70px;
-		}
-	}
 }
 
 .site-footer__nav a:hover > svg ellipse:first-child {
@@ -59,7 +35,9 @@
 
 // Overrides the header style that hides it
 .site-footer .navigation__social {
+	bottom: calc( var(--spacer) * 3 );
 	display: block;
+	position: fixed;
 
 	ul {
 		display: flex;

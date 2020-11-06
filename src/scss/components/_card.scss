@@ -12,6 +12,10 @@
 	margin-bottom: var(--spacer-large);
 }
 
+.card:last-child {
+	margin-bottom: 0;
+}
+
 .card__content {
 	align-items: center;
 	display: flex;
