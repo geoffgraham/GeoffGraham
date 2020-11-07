@@ -15,9 +15,8 @@ $args = array(
 );
 
 $fact_query = new WP_Query( $args );
-?>
 
-<?php if ( $fact_query->have_posts() ) ?>
+if ( $fact_query->have_posts() ) ?>
 
 <div class="cards">
 	<?php while ( $fact_query->have_posts() ) : $fact_query->the_post(); ?>

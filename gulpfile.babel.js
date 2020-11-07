@@ -69,11 +69,20 @@ export const svg = () => {
 	var gulp = require('gulp'),
 	config = {
 		shape: {
-			dest: 'dist/img/icons'
+			dest: 'dist/img'
 		},
 		mode: {
-			symbol: true
-		}
+			dest: 'dist/img',
+			symbol: true,
+			inline: true,
+			bust: true
+		},
+		svg: {
+			spriteWidth: 0,
+			spriteHeight: 0,
+			xmlDeclaration: false,
+			doctypeDeclaration: false,
+		},
 	};
 	return gulp.src('**/*.svg', { cwd: 'src/img/icons' })
   .pipe(svgSprite(config))
