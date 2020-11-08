@@ -5,6 +5,8 @@ import cleanCss from 'gulp-clean-css';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
+import concat from 'gulp-concat';
+import minify from 'gulp-minify';
 import webpack from 'webpack-stream';
 import imagemin from 'gulp-imagemin';
 import browserSync from "browser-sync";
@@ -33,28 +35,12 @@ export const styles = () => {
 }
 
 export const scripts = () => {
-  return src('src/js/scripts.js')
-  .pipe(webpack({
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: []
-            }
-          }
-        }
-      ]
-    },
-    mode: PRODUCTION ? 'production' : 'development',
-    devtool: !PRODUCTION ? 'inline-source-map' : false,
-    output: {
-      filename: 'scripts.js'
-    },
-  }))
-  .pipe(dest('dist/js'));
+	var gulp = require('gulp')
+	return gulp.src('src/js/**/*.js')
+		.pipe(concat('scripts.js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(minify())
+		.pipe(gulp.dest('dist/js'))
 }
 
 export const images = () => {
