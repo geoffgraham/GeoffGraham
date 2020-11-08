@@ -18,7 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="efKVLT92Kr6XcuOj2WBHTOI3S1F9bdJws5bsEF8qbXI" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/favicon.svg">
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/favicon.svg"git>
 	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.svg">
 	<?php wp_head(); ?>
 </head>
