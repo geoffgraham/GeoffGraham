@@ -32,19 +32,23 @@
 	a {
 		border: 0;
 		color: var(--text-color);
+		left: 0;
 		padding: .75em 1em .75em 0;
+		position: relative;
 		text-decoration: none;
+		transition: all .25s ease-out;
 	}
 
 	a:hover {
 		color: var(--primary-color);
+		left: 5px;
 
 		& .navigation__icon {
 			fill: var(--primary-color);
 		}
 	}
 
-	.navigation__icon{
+	.navigation__icon {
 		fill: var(--black);
 		margin-right: 10px;
 		position: relative;
@@ -55,19 +59,9 @@
 
 .navigation__primary .current-menu-item a,
 .navigation__social .current-menu-item a {
-	color: var(--primary-color);
-	font-weight: 800;
 
-	@media #{$bay} {
-		color: var(--text-color);
-		font-weight: 500;
-	}
-
-	&:after {
-		@media #{$bay} {
-			content: " →";
-			color: var(--primary-color);
-		}
+	& .navigation__icon {
+		fill: var(--primary-color);
 	}
 }
 .navigation__social {
