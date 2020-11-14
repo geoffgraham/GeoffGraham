@@ -10,11 +10,32 @@
 	}
 }
 
-.home-headshot {
+.headshot-sunglasses {
+	position: absolute;
+	right: 10.5%;
+	top: -1000px;
+	transition: top .5s ease-out;
+	width: 100px;
+
+	@media #{$lake} {
+		right: 9%;
+	}
+}
+
+.headshot {
 	justify-self: center;
 	max-width: 150px;
 
 	@media #{$pond} {
 		max-width: 250px;
+	}
+
+	&:hover {
+
+		& .headshot-sunglasses {
+			@media #{$lake} {
+				top: 52px;
+			}
+		}
 	}
 }

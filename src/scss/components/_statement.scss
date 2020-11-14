@@ -11,6 +11,11 @@
 	transform: rotateX(5deg) skew(-9deg, -2deg);
 
 	@media #{$pond} {
+		font-size: 2em;
+		padding: var(--spacer);
+	}
+
+	@media #{$ocean} {
 		font-size: 2.8em;
 		padding: var(--spacer);
 	}
