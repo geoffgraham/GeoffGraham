@@ -28,10 +28,12 @@ code, kbd, tt, var {
 code,
 abbr
 acronym {
-	background: rgba(0, 0, 0, .15);
-	border-bottom: 1px dashed var(--link-hover);
-	border-radius: 4px;
-	padding: 0 .25rem;
+	background: var(--white);
+	border: 1px solid var(--primary-color);
+	box-shadow: 3px 3px 0 var(--primary-color);
+	border-radius: 2px;
+	font-variation-settings: var(--font-variation-code);
+	padding: .15rem .25rem;
 }
 
 abbr, acronym {
