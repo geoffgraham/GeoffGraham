@@ -1,6 +1,7 @@
 .site-header {
+	align-items: center;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row;
 	grid-area: navigation;
 	justify-content: space-between;
 
@@ -22,7 +23,7 @@
 
 .site-header__logo svg {
 	height: auto;
-	max-width: 150px;
+	max-width: 125px;
 
 	@media #{$bay} {
 		max-width: 275px;

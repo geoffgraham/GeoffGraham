@@ -2,21 +2,27 @@
 	background-color: var(--base-color);
 	color: var(--white);
 	filter: 
-		drop-shadow(10px 10px 0 var(--white))
-		drop-shadow(10px 10px 0 var(--base-color));
-	font-size: 1.5em;
+		drop-shadow(5px 5px 0 var(--white))
+		drop-shadow(5px 5px 0 var(--base-color));
+	font-size: 1.25em;
 	padding: var(--spacer-small);
 	position: relative;
 	text-align: center;
-	transform: rotateX(5deg) skew(-9deg, -2deg);
+	transform: rotateX(5deg) skew(-9deg, -2deg) translateY(-10px);
 
 	@media #{$pond} {
 		font-size: 2em;
-		padding: var(--spacer);
+		padding: 25px var(--spacer);
+	}
+
+	@media #{bay} {
+		filter: 
+			drop-shadow(10px 10px 0 var(--white))
+			drop-shadow(10px 10px 0 var(--base-color));
 	}
 
 	@media #{$ocean} {
-		font-size: 2.8em;
+		font-size: 2em;
 		padding: var(--spacer);
 	}
 
@@ -29,9 +35,9 @@
 			left: 50%;
 
 			@media #{$pond} {
-				border-left-width: var(--spacer-large);
+				border-left-width: var(--spacer);
 				border-right-width: var(--spacer-small);
-				border-top-width: var(--spacer-large);
+				border-top-width: var(--spacer);
 			}
 	}
 }

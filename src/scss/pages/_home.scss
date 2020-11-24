@@ -1,9 +1,10 @@
 .home-intro {
+	align-items: center;
 	display: grid;
 	gap: var(--spacer);
 	grid-template-columns: minmax(100px, 100%) auto;
 	justify-content: center;
-	margin-bottom: var(--spacer);
+	margin-bottom: var(--spacer-small);
 
 	@media #{$pond} {
 		margin-bottom: var(--spacer-large);
@@ -17,14 +18,21 @@
 	transition: top .5s ease-out;
 	width: 100px;
 
-	@media #{$lake} {
+	@media #{$pond} {
+		right: 8%;
+	}
+
+	@media #{$bay} {
+		right: 10.25%;
+	}
+
+	@media #{$ocean} {
 		right: 9%;
 	}
 }
 
 .headshot {
 	justify-self: center;
-	max-width: 150px;
 
 	@media #{$pond} {
 		max-width: 250px;
@@ -33,7 +41,7 @@
 	&:hover {
 
 		& .headshot-sunglasses {
-			@media #{$lake} {
+			@media #{$pond} {
 				top: 52px;
 			}
 		}
