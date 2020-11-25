@@ -4,7 +4,6 @@
 
 .wp-block-pullquote,
 .wp-block-quote {
-	@include box-shadow();
 	@include font-size( 1.1 );
 
 	cite {
