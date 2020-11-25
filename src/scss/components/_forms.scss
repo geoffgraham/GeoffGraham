@@ -67,7 +67,6 @@ input[type='radio'] {
 }
 
 .gform_wrapper div.validation_error {
-	@include box-shadow--alt;
 	background-color: var(--error-color);
 	border: 0 !important;
 	color: var(--white) !important;
