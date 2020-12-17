@@ -13,26 +13,15 @@
 
 .headshot-sunglasses {
 	position: absolute;
-	right: 10.5%;
+	right: 29%;
 	top: -1000px;
 	transition: top .5s ease-out;
 	width: 100px;
-
-	@media #{$pond} {
-		right: 8%;
-	}
-
-	@media #{$bay} {
-		right: 10.25%;
-	}
-
-	@media #{$ocean} {
-		right: 9%;
-	}
 }
 
 .headshot {
 	justify-self: center;
+	position: relative;
 
 	@media #{$pond} {
 		max-width: 250px;
