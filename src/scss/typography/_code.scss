@@ -1,0 +1,15 @@
+pre {
+	background: var(--white);
+	border: 15px solid var(--base-color);
+	margin-bottom: 1.6em;
+	overflow-x: auto;
+	padding: var(--spacer);
+}
+
+pre code {
+	background-color: initial;
+	box-shadow: none;
+	border: none;
+	color: var(--primary-color);
+	padding: 0;
+}
