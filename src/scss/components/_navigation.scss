@@ -25,6 +25,7 @@
 		color: var(--text-color);
 		display: inline-block;
 		font-size: var(--font-size-medium);
+		font-variation-settings: var(--font-variation-display);
 		left: 0;
 		padding: .75em 1em .75em 0;
 		position: relative;
@@ -37,8 +38,10 @@
 		}
 
 		@media #{$bay} {
-			font-size: var(--font-size-large);
+			font-size: calc(var(--font-size-large) + 10px );
 			padding: var(--spacer-small) 0;
+			text-shadow: 1px 1px 0 var(--white),
+									 2px 2px 0 var(--text-color);
 		}
 	}
 
@@ -48,6 +51,8 @@
 
 	a:hover {
 		color: var(--primary-color);
+		text-shadow: 1px 1px 0 var(--white),
+								 2px 2px 0 var(--primary-color);
 		transform: translateY(-5px);
 
 		@media #{$bay} {
