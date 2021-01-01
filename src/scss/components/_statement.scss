@@ -21,22 +21,15 @@
 			drop-shadow(10px 10px 0 var(--base-color));
 	}
 
-	@media #{$ocean} {
-		padding: var(--spacer);
-	}
-
 	&:before {
 		@include triangle($size: var(--spacer-small));
 		content: "";
-		border-right-width: 0;
 		position: absolute;
-			top: 90%;
-			left: 50%;
+			top: 30%;
+			left: 100%;
 
-			@media #{$pond} {
-				border-left-width: var(--spacer);
-				border-right-width: var(--spacer-small);
-				border-top-width: var(--spacer);
-			}
+		@media #{$pond} {
+			top: 40%;
+		}
 	}
 }
