@@ -7,11 +7,11 @@
 }
 
 .site-content {
-	background-color: var(--primary-color);
+	background-color: var(--background);
 	display: inline-block;
 	margin: auto;
 	padding: 2rem;
-	position: fixed;
+	position: relative;
 	max-width: var(--site-width);
 
 	@media #{$lake} {
