@@ -11,7 +11,7 @@
 	display: inline-block;
 	margin: auto;
 	padding: 2rem;
-	position: relative;
+	position: fixed;
 	max-width: var(--site-width);
 
 	@media #{$lake} {
