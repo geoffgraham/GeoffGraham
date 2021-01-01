@@ -1,10 +1,13 @@
 .site-wrapper {
 	background-color: var(--background);
-	position: sticky;
-	top: 0;
 
 	@media (prefers-color-scheme: light) {
 		@include box-shadow--alt;
+	}
+
+	.home & {
+		position: sticky;
+		top: 0;
 	}
 }
 
