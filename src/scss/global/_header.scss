@@ -4,6 +4,8 @@
 	flex-flow: row;
 	grid-area: navigation;
 	justify-content: space-between;
+	position: sticky;
+	top: 2.5rem;
 
 	@media #{$pond} {
 		margin-bottom: 0;
