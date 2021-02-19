@@ -7,7 +7,7 @@
  * @package Geoff_Graham
  */
 
-if ( ! function_exists( 'geoff_graham_setup' ) ) :
+if ( !function_exists( 'geoff_graham_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -79,11 +79,18 @@ function geoff_graham_widgets_init() {
 
 add_action( 'widgets_init', 'geoff_graham_widgets_init' );
 
+wp_localize_script( 'scripts', 'ajax_posts', array(
+	'ajaxurl' => admin_url( 'admin-ajax.php' ),
+	'noposts' => __('No older posts found', 'gg'),
+));	
+
 /**
  * Enqueue scripts and styles.
  */
 function geoff_graham_scripts() {
-	wp_enqueue_style( 'geoff-graham-stylesheet', get_template_directory_uri() . '/dist/css/style.css', array(), wp_date( DATE_RFC3339, $timestamp ), 'all' );
+	wp_enqueue_style( 'geoff-graham-stylesheet', get_template_directory_uri() . '/dist/css/style.css', array(), wp_date( DATE_RFC3339 ), 'all' );
+
+	wp_register_script( 'scripts', get_template_directory_uri() . '/dist/js/scripts-min.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -144,6 +151,22 @@ function change_default_jquery( &$scripts){
 	}
 }
 add_filter( 'wp_default_scripts', 'change_default_jquery' );
+
+// Add ACF icon field to navigation
+add_filter('wp_nav_menu_objects', 'gg_wp_nav_menu_objects', 10, 2);
+
+function gg_wp_nav_menu_objects( $items, $args ) {
+	
+	foreach( $items as &$item ) {
+		$icon = get_field('icon', $item);
+		
+		if( $icon ) {		
+			$item->title = '<svg class="navigation__icon" width="30" height="30"><use xlink:href="#' . $icon . '"></use></svg>' . $item->title ;
+		}		
+	}
+	// return
+	return $items;
+}
 
 // Custom markup for comments
 function gg_comments($comment, $args, $depth) {

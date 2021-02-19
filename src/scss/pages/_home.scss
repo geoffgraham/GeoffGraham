@@ -1,16 +1,38 @@
 .home-intro {
 	align-items: center;
 	display: grid;
+	gap: var(--spacer);
+	grid-template-columns: minmax(100px, 100%) auto;
 	justify-content: center;
-	margin-bottom: var(--spacer);
+	margin-bottom: var(--spacer-small);
 
 	@media #{$pond} {
-		gap: var(--spacer);
-		grid-template-columns: minmax(100px, 100%) auto;
+		margin-bottom: var(--spacer);
 	}
 }
 
-.home-headshot {
+.headshot-sunglasses {
+	position: absolute;
+	right: 29%;
+	top: -1000px;
+	transition: top .5s ease-out;
+	width: 100px;
+}
+
+.headshot {
 	justify-self: center;
-	max-width: 250px;
+	position: relative;
+
+	@media #{$pond} {
+		max-width: 250px;
+	}
+
+	&:hover {
+
+		& .headshot-sunglasses {
+			@media #{$pond} {
+				top: 52px;
+			}
+		}
+	}
 }

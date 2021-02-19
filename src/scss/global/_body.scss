@@ -11,6 +11,7 @@ html {
 	&:before {
 		content: "";
 		border: 15px solid var(--primary-color);
+		border-right: 0;
 		height: 100vh;
 		pointer-events: none;
 		position: fixed;

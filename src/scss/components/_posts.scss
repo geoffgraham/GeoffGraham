@@ -12,7 +12,7 @@
 	padding: 1em 0;
 
 	@media #{$lake} {
-		grid-gap: 65px;
+		grid-gap: var(--spacer-large);
 		grid-template-columns: 150px minmax(300px, 800px);
 	}
 
@@ -25,15 +25,15 @@
 	}
 
 	.post__date {
-		@include font-size( 1 );
-		color: var(--primary-color);
-		margin-bottom: .5em;
+		@include font-size( .75 );
+		font-variation-settings: var(--font-variation-casual);
+		margin-bottom: .25em;
 		position: relative;
-		top: 2px;
+		text-transform: uppercase;
 	}
 
 	.post__title {
-		font-weight: 800;
+		font-variation-settings: var(--font-variation-casual);
 		line-height: 1.25;
 		margin-bottom: .25em;
 

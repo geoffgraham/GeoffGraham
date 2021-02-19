@@ -6,36 +6,21 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 
-pre {
-	background-color: var(--code-blocks);
-	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffd99d' fill-opacity='0.36' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-pre code {
-	background-color: initial;
-	border: 0;
-	color: var(--primary-color) !important;
-}
-
 code, kbd, tt, var {
 	@include font-size(0.875);
 }
 
-code,
+code:not(pre),
 abbr
 acronym {
-	background: rgba(0, 0, 0, .15);
-	border-bottom: 1px dashed var(--link-hover);
-	border-radius: 4px;
-	padding: 0 .25rem;
+	background-color: var(--white);
+	border: 1px solid var(--primary-color);
+	border-radius: 2px;
+	box-shadow: 3px 3px 0 var(--primary-color);
+	padding: .15rem .25rem;
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted var(--link-hover);
 	cursor: help;
 }
 

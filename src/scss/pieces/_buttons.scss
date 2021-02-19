@@ -4,7 +4,6 @@
 .posts__pagination a,
 .comment-reply-link,
 input[type='submit'] {
-	@include box-shadow();
 	@include font-size( .85 );
 	border-radius: 30px !important;
 	cursor: pointer;
@@ -48,7 +47,6 @@ input[type='submit'] {
 .button--secondary,
 .posts__pagination a,
 .comment-reply-link {
-	@include box-shadow;
 	background: transparent;
 	border: 3px solid var(--primary-color);
 	color: var(--text-color);
