@@ -1,11 +1,12 @@
 .site-header {
-	align-items: center;
 	display: flex;
-	flex-flow: row;
+	flex-flow: column nowrap;
 	grid-area: navigation;
 	justify-content: space-between;
-	position: sticky;
-	top: 2.5rem;
+
+	@media #{$pool} {
+		flex-flow: row wrap;
+	}
 
 	@media #{$pond} {
 		margin-bottom: 0;
@@ -15,7 +16,6 @@
 		align-items: flex-start;
 		flex-flow: column;
 		justify-content: flex-start;
-		padding-top: var(--spacer-small);
 	}
 }
 
@@ -24,10 +24,5 @@
 }
 
 .site-header__logo svg {
-	height: auto;
-	max-width: 125px;
-
-	@media #{$bay} {
-		max-width: 275px;
-	}
+	max-width: 275px;
 }

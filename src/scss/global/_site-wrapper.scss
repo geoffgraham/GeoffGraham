@@ -5,14 +5,13 @@
 .site-content {
 	display: inline-block;
 	margin: auto;
-	padding: var(--spacer) var(--spacer-large) 0;
+	padding: var(--spacer);
 	position: relative;
 	max-width: var(--site-width);
-	z-index: 1;
 
 	@media #{$bay} {
 		display: grid;
-		grid-gap: 0 calc( var(--spacer) * 3 );
+		grid-gap: calc( var(--spacer) * 3 );
 		grid-template-columns: 20% auto;
 		grid-template-areas: 
 			"navigation main"

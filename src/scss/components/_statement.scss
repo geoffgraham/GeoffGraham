@@ -2,34 +2,30 @@
 	background-color: var(--base-color);
 	color: var(--white);
 	filter: 
-		drop-shadow(5px 5px 0 var(--white))
-		drop-shadow(5px 5px 0 var(--base-color));
-	font-size: 1.25em;
-	padding: var(--spacer-small);
+		drop-shadow(10px 10px 0 var(--white))
+		drop-shadow(10px 10px 0 var(--base-color));
+	font-size: 2em;
+	padding: var(--spacer);
 	position: relative;
 	text-align: center;
-	transform: rotateX(5deg) skew(-9deg, -2deg) translateY(-10px);
+	transform: rotateX(5deg) skew(-9deg, -2deg);
 
 	@media #{$pond} {
 		font-size: 3em;
-		padding: 25px var(--spacer);
-	}
-
-	@media #{bay} {
-		filter: 
-			drop-shadow(10px 10px 0 var(--white))
-			drop-shadow(10px 10px 0 var(--base-color));
 	}
 
 	&:before {
-		@include triangle($size: var(--spacer-small));
+		@include triangle();
 		content: "";
 		position: absolute;
-			top: 30%;
-			left: 100%;
+			top: 100%;
+			left: 50%;
+	}
+}
 
-		@media #{$pond} {
-			top: 40%;
-		}
+.statement {
+
+	.home .slanted-container & {
+		margin-bottom: var(--spacer-large);
 	}
 }
