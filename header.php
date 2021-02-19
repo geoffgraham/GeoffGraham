@@ -16,11 +16,14 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="description" content="Web Design & Development Straight Outta Long Beach, CA."/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="rgb(253, 16, 0)">
 	<meta name="google-site-verification" content="efKVLT92Kr6XcuOj2WBHTOI3S1F9bdJws5bsEF8qbXI" />
+
+	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.ico"><!-- 32×32 -->
+	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri()?>/apple-touch-icon.png"><!-- 180×180 -->
+	<link rel="manifest" href="<?php echo get_template_directory_uri()?>/manifest.webmanifest">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/favicon.svg" color="#ffd99d">
-	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.svg">
-	<!--<link rel="stylesheet" href="https://use.typekit.net/xke1gdn.css">-->
 
 	<?php wp_head(); ?>
 </head>
