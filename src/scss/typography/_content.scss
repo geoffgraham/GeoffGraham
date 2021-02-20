@@ -6,11 +6,10 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 
-code, kbd, tt, var {
+kbd, tt, var {
 	@include font-size(0.875);
 }
 
-code:not(pre),
 abbr
 acronym {
 	background-color: var(--white);

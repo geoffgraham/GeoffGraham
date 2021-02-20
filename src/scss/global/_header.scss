@@ -1,7 +1,6 @@
 .site-header {
 	display: flex;
 	flex-flow: column nowrap;
-	grid-area: navigation;
 	justify-content: space-between;
 
 	@media #{$pool} {
@@ -21,8 +20,13 @@
 
 .site-header__logo a {
 	border: 0;
+
+	&:hover {
+		opacity: .75;
+	}
 }
 
 .site-header__logo svg {
-	max-width: 275px;
+	height: auto;
+	max-width: 150px;
 }

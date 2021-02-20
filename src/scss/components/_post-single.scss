@@ -1,7 +1,3 @@
-.post-wrapper {
-	margin-block-end: 75px;
-}
-
 .post-single {
 	display: flex;
 	flex-direction: column;
@@ -11,7 +7,7 @@
 	color: var(--primary-color);
 	font-size: var(--font-size-small);
 	font-weight: 300;
-	margin: 2.5rem 0 -1.25rem;
+	margin: .5rem 0 -1.25rem;
 	order: 1;
 
 	span {
@@ -34,8 +30,11 @@
 
 .post-single__body {
 	display: inline-grid;
-	max-width: 800px;
 	order: 3;
+
+	p {
+		width: 60ch;
+	}
 }
 
 .rss-note {
@@ -47,8 +46,4 @@
 		border: 1px dashed var(--primary-color);
 		padding: .75em;
 	}
-}
-
-.post-single figure img {
-	outline: 1px solid var(--base-color);
 }

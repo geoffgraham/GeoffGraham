@@ -1,3 +1,21 @@
+code {
+	@include font-size(0.875);
+	background-color: var(--white);
+	border: 1px solid var(--primary-color);
+	border-radius: 2px;
+	box-shadow: 3px 3px 0 var(--primary-color);
+	padding: .15rem .25rem;
+
+	a {
+		border-bottom: none;
+		color: var(--primary-color);
+
+		&:hover {
+			color: var(--text-color);
+		}
+	}
+}
+
 pre {
 	background: var(--white);
 	border: 15px solid var(--base-color);

@@ -15,7 +15,7 @@ const PRODUCTION = yargs.argv.prod;
 const server = browserSync.create();
 export const serve = done => {
   server.init({
-    proxy: "http://geoff.local"
+    proxy: "http://geoff.test"
   });
   done();
 };

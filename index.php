@@ -7,18 +7,16 @@
 
 get_header();
 ?>
-	<div class="post-wrapper">
-		<main class="main-content posts">
+	<main class="main-content posts">
 
-			<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
+		<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
 
-			<footer class="posts__pagination">
-				<?php next_posts_link( 'Older' ); ?>
-				<?php previous_posts_link( 'Newer' ); ?>
-			</footer>
+		<footer class="posts__pagination">
+			<?php next_posts_link( 'Older' ); ?>
+			<?php previous_posts_link( 'Newer' ); ?>
+		</footer>
 
-		</main>
-	</div>
+	</main>
 	
 	<?php
 	get_footer();

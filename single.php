@@ -9,8 +9,7 @@
 
 get_header();
 ?>
-	<div class="post-wrapper">
-		<main class="main-content">
+	<main class="main-content">
 
 		<?php if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); ?>
@@ -43,13 +42,12 @@ get_header();
 			<?php 
 				endwhile;
 			endif; ?>
-		</main>
 
 		<?php if ( comments_open() || get_comments_number() ) {
 			comments_template();
 		}
 		?>
-	</div>
+	</main>
 
 
 <?php get_footer();

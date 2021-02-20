@@ -26,7 +26,7 @@
 
 	.post__date {
 		@include font-size( .75 );
-		font-variation-settings: var(--font-variation-casual);
+		font-variation-settings: var(--font-variation-display);
 		margin-bottom: .25em;
 		position: relative;
 		text-transform: uppercase;
@@ -38,9 +38,7 @@
 		margin-bottom: .25em;
 
 		@media #{$lake} {
-			font-weight: normal;
 			line-height: 1.5;
-			max-width: 80%;
 		}
 	}
 
