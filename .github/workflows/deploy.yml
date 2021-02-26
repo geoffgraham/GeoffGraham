@@ -11,6 +11,14 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD}}
+        port: ${{ secrets.FTP_PORT}}
+        protocol: ftp
+        server-dir: ${{ secrets.FTP_DIRECTORY}}
+        exclude: .git*
+          - .git*/**
+          -  **/.git*/**
+          - node_modules/**
+          - node_modules/**/*
