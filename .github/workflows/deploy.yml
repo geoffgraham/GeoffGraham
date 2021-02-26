@@ -11,9 +11,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD}}
-        port: ${{ secrets.PORT}}
-        protocol: ftp
-        server-dir: domains/geoffgraham.me/html/wp-content/themes/v02/
+        port: ${{ secrets.FTP_PORT}}
+        protocol: ftps
+        server-dir: ${{ secrets.FTP_DIRECTORY}}
