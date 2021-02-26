@@ -14,3 +14,5 @@ jobs:
         server: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.FTP_PASSWORD}}
+        protocol: ftp
+        server-dir: /domains/geoffgraham.me/html/wp-content/themes/v02/
