@@ -22,7 +22,7 @@
 	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.ico"><!-- 32×32 -->
 	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri()?>/apple-touch-icon.png"><!-- 180×180 -->
-	<link rel="manifest" href="<?php echo get_template_directory_uri()?>/manifest.webmanifest">
+	<link rel="manifest" href="<?php echo get_template_directory_uri()?>/site.webmanifest">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
