@@ -21,6 +21,11 @@
 	}
 }
 
+.site-header__wrapper {
+	position: sticky;
+	top: 50px;
+}
+
 .site-title a {
 	@include link;
 	border: 0;
