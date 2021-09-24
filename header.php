@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="description" content="Web Design & Development Straight Outta Long Beach, CA."/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="rgb(253, 16, 0)">
+	<meta name="theme-color" content="#4b4036">
 	<meta name="google-site-verification" content="efKVLT92Kr6XcuOj2WBHTOI3S1F9bdJws5bsEF8qbXI" />
 
 	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.ico"><!-- 32×32 -->
