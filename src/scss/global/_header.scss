@@ -1,21 +1,7 @@
 .site-header {
 	display: flex;
-	flex-flow: column nowrap;
+	align-items: center;
 	justify-content: space-between;
-
-	@media #{$pool} {
-		flex-flow: row wrap;
-	}
-
-	@media #{$pond} {
-		margin-bottom: 0;
-	}
-
-	@media #{$bay} {
-		align-items: flex-start;
-		flex-flow: column;
-		justify-content: flex-start;
-	}
 }
 
 .site-header__logo a {
@@ -28,5 +14,5 @@
 
 .site-header__logo svg {
 	height: auto;
-	max-width: 150px;
+	max-width: 125px;
 }

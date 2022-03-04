@@ -33,7 +33,6 @@
 		<?php get_template_part( 'template-parts/header/header', 'logo' ); ?>
 		<div class="site-navigation">
 			<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
-			<?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
 		</div>
 	</header>
 

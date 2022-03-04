@@ -38,7 +38,7 @@
 }
 
 .rss-note {
-	@include font-size( .55 );
+	font-size: .55rem;
 	font-family: var(--font-code);
 
 	@media #{$pool} {

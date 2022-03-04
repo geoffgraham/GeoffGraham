@@ -1,14 +1,8 @@
 .site-wrapper {
 	background-color: var(--background);
-	margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-	padding-top: var(--spacer-large);
+	margin: 0 auto;
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 1.5rem;
+	padding-block-start: var(--spacer-large);
 	width: clamp(16rem, 90vw, 70rem);
-
-	@media #{$bay} {
-		display: grid;
-		grid-template-columns: 20% auto;
-	}
 }

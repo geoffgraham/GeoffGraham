@@ -4,10 +4,10 @@
 
 .wp-block-pullquote,
 .wp-block-quote {
-	@include font-size( 1.1 );
+	font-size: 1.1rem;
 
 	cite {
-		@include font-size( .65 );
+		font-size: .65rem;
 		font-style: normal;
 		font-weight: 800;
 		text-transform: uppercase;
@@ -29,7 +29,7 @@
 	}
 
 	cite {
-		@include font-size( .75 );
+		font-size: .75rem;
 	}
 }
 

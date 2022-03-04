@@ -4,7 +4,7 @@
 .posts__pagination a,
 .comment-reply-link,
 input[type='submit'] {
-	@include font-size( .85 );
+	font-size: .85rem;
 	border-radius: 30px !important;
 	cursor: pointer;
 	display: inline-block;

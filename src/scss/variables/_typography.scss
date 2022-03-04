@@ -11,13 +11,11 @@ $font-size-large: 24px;
 $line-height: 1.5;
 
 :root {
-	--font-primary: Recursive;
+	--font-primary: serif;
 	
 	--font-body: var(--font-primary);
 	--font-display: var(--font-primary);
-	--font-code: var(--font-primary);
-
-	--font-variation-display: "CASL" .05, "CRSV" 1, "MONO" .25, "wght" 800, "slnt" -5;
+	--font-code: mono;
 
 	--font-size-small: 14px;
 	--font-size-medium: 18px;

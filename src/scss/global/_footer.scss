@@ -48,7 +48,7 @@
 	}
 
 	ul li {
-		@include font-size( .75 );
+		font-size:  .75rem;
 		margin-right: .5em;
 	
 		&:last-child {

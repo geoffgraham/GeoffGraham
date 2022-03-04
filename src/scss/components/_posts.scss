@@ -5,10 +5,10 @@
 }
 
 .posts .post {
-	@include font-size( 1.1 );
 	align-items: baseline;
 	border-top: 1px solid var(--border-color);
 	display: grid;
+	font-size: 1.1rem;
 	padding: 1em 0;
 
 	@media #{$lake} {
@@ -25,15 +25,13 @@
 	}
 
 	.post__date {
-		@include font-size( .75 );
-		font-variation-settings: var(--font-variation-display);
+		font-size: .75rem;
 		margin-bottom: .25em;
 		position: relative;
 		text-transform: uppercase;
 	}
 
 	.post__title {
-		font-variation-settings: var(--font-variation-casual);
 		line-height: 1.25;
 		margin-bottom: .25em;
 
@@ -43,7 +41,6 @@
 	}
 
 	.post__title a {
-		@include link;
 		border-bottom: 0;
 	}
 }
