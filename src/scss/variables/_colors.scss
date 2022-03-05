@@ -1,11 +1,14 @@
 :root {
+	/* Alpha transparency */
+	--alpha: 1;
+
 	/* Color Palette */
-	--red: hsl(0,98.2%,55.5%);
-	--orange: hsl(16.1,98.2%,55.5%);
+	--red: hsl(0 98.2% 55.5% / var(--alpha));
+	--orange: hsl(16.1 98.2% 55.5% / var(--alpha));
 	--yellow: #ffe417;
-	--yellow-mellow: hsl(10,27.3%,95.7%);
-	--white: #fff;
-	--black: hsl(238.2,53.1%,12.5%);
+	--yellow-mellow: hsl(10 27.3% 95.7% / var(--alpha));
+	--white: rgb(255 255 255 / var(--alpha));
+	--black: hsl(238.2 53.1% 12.5% / var(--alpha));
 
 	/* Theme Colors */
 	--primary-color: var(--orange);
@@ -13,12 +16,12 @@
 	--base-color: var(--black);
 
 	/* Functional Colors */
-	--text-color: var(--black);
+	--text-color: var(--base-color);
 	--background: var(--yellow-mellow);
 	--site-title: var(--black);
-	--border-color: var(--orange);
+	--border-color: var(--primary-color);
 	--link-current: var(--white);
-	--link-hover: var(--yellow);
-	--code-blocks: var(--brown-darker);
-	--table-background: var(--brown-lighter);
+	--link-hover: var(--primary-color);
+	--code-blocks: var(--white);
+	--table-background: var(--white);
 }

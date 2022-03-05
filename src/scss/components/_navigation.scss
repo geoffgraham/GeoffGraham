@@ -14,7 +14,7 @@
 	display: inline;
 	font-size: 1.15rem;
 	font-variation-settings: var(--font-variation-display);
-	line-height: $line-height;
+	line-height: var(--line-height);
 
 	@media #{$bay} {
 		display: block;

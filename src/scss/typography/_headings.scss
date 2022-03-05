@@ -1,6 +1,11 @@
 .h1, .h2, .h3, 
 h1, h2, h3 {
 	font-family: var(--font-display);
-	font-variation-settings: var(--font-variation-display);
-	line-height: 1.25;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.h1,
+h1 {
+	font-size: calc(var(--font-size-large) * 3)
 }

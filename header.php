@@ -20,6 +20,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/favicon.svg"git>
 	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.svg">
+	<link rel="stylesheet" href="https://use.typekit.net/cux5cqe.css">
 	<?php wp_head(); ?>
 </head>
 
