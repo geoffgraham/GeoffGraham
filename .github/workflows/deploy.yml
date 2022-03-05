@@ -1,5 +1,6 @@
 on: push
 name: 🚀 Deploy website on push
+permissions: read-all
 jobs:
   web-deploy:
     name: 🎉 Deploy
