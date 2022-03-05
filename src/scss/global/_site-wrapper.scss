@@ -1,8 +1,8 @@
 .site-wrapper {
 	background-color: var(--background);
-	margin: 0 auto;
-  padding-inline-start: 1.5rem;
-  padding-inline-end: 1.5rem;
-	padding-block-start: var(--spacer-large);
-	width: clamp(16rem, 90vw, 70rem);
+	display: grid;
+	grid-template-rows: 150px auto 150px;
+	padding-block-start: var(--spacer-small);
+  padding-inline: 1.5rem;
+	width: clamp(320px, 90vw, 70rem);
 }

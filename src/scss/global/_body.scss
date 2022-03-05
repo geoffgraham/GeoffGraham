@@ -14,7 +14,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	font-family: var(--font-body);
-	justify-content: center;
-	line-height: 1.6;
+	line-height: 1.35;
 	overflow-x: hidden;
+	place-items: center start;
 }

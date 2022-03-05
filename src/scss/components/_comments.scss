@@ -87,7 +87,7 @@
 }
 
 .comment-reply-title {
-	margin-bottom: .5rem;
+	margin-block-end: .5rem;
 }
 
 .comment-reply-link {
@@ -154,7 +154,7 @@
 // Featured comment styles
 .feature-burry-comments {
 	font-size: var(--font-size-small);
-	margin-bottom: 1rem;
+	margin-block-end: 1rem;
 }
 
 .comments .featured {

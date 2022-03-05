@@ -7,9 +7,8 @@
 	background-position-y: bottom;
 	background-repeat: no-repeat;
 	background-size: 700px;
-	bottom: 0;
-	display: flex;
 	min-height: 300px;
+	position: relative;
 	z-index: 0;
 
 	@media #{$lake} {
@@ -19,8 +18,13 @@
 
 .site-footer__nav {
 	align-items: center;
+	bottom: 3rem;
 	display: flex;
-	justify-content: space-between;
+	position: absolute;
+
+	ul li {
+		font-size:  .75rem;
+	}
 
 	a {
 		border: 0;
@@ -30,29 +34,4 @@
 
 .site-footer__nav a:hover > svg ellipse:first-child {
 	fill: var(--primary-color);
-}
-
-// Overrides the header style that hides it
-.site-footer .navigation__social {
-	bottom: calc( var(--spacer) * 3 );
-	display: block;
-	position: fixed;
-
-	ul {
-		display: flex;
-		flex-flow: column wrap;
-
-		@media #{$pool} {
-			flex-flow: row wrap;
-		}
-	}
-
-	ul li {
-		font-size:  .75rem;
-		margin-right: .5em;
-	
-		&:last-child {
-			margin-right: 0;
-		}
-	}
 }

@@ -1,9 +1,8 @@
 code {
-	font-size: 0.875rem;
+	font-size: 0.875em;
 	background-color: var(--white);
 	border: 1px solid var(--primary-color);
 	border-radius: 2px;
-	box-shadow: 3px 3px 0 var(--primary-color);
 	padding: .15rem .25rem;
 
 	a {
@@ -18,15 +17,13 @@ code {
 
 pre {
 	background: var(--white);
-	border: 15px solid var(--base-color);
-	margin-bottom: 1.6em;
+	margin-block-end: 1.6em;
 	overflow-x: auto;
 	padding: var(--spacer);
 }
 
 pre code {
 	background-color: initial;
-	box-shadow: none;
 	border: none;
 	color: var(--primary-color);
 	padding: 0;

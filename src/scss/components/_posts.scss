@@ -1,18 +1,17 @@
 .posts {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 3rem;
+	margin-block-end: 3rem;
 }
 
 .posts .post {
 	align-items: baseline;
 	border-top: 1px solid var(--border-color);
 	display: grid;
-	font-size: 1.1rem;
 	padding: 1em 0;
 
 	@media #{$lake} {
-		grid-gap: var(--spacer-large);
+		gap: var(--spacer-large);
 		grid-template-columns: 150px minmax(300px, 800px);
 	}
 
@@ -26,14 +25,14 @@
 
 	.post__date {
 		font-size: .75rem;
-		margin-bottom: .25em;
+		margin-block-end: .25em;
 		position: relative;
 		text-transform: uppercase;
 	}
 
 	.post__title {
 		line-height: 1.25;
-		margin-bottom: .25em;
+		margin-block-end: .25em;
 
 		@media #{$lake} {
 			line-height: 1.5;

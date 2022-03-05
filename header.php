@@ -25,9 +25,7 @@
 
 <body <?php body_class(); ?>>
 
-<?php if ( ! is_404() ) { ?>
 <div class="site-wrapper">
-
 	<header class="site-header">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
 		<?php get_template_part( 'template-parts/header/header', 'logo' ); ?>
@@ -35,5 +33,3 @@
 			<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
 		</div>
 	</header>
-
-<?php } ?>
