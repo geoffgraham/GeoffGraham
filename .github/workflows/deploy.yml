@@ -16,7 +16,7 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD}}
         port: 22
-        protocol: sftp
+        protocol: ftps-legacy
         server-dir: ${{ secrets.FTP_DIRECTORY}}
         exclude: .git*
           - .git*/**
