@@ -1,22 +1,29 @@
+.navigation__primary {
+	background-color: var(--white);
+	border-radius: 8px;
+	box-shadow: 0 3px 25px rgba(0, 0, 0, .25);
+	padding: 1rem 1rem .5rem;
+}
+
 .navigation__primary ul,
 .navigation__social ul {
+	display: flex;
+	gap: 1rem;
 	margin: 0;
 	padding-left: 0;
-
-	@media #{$pool} {
-		display: flex;
-		gap: 1rem;
-	}
 }
 
 .navigation__primary li,
 .navigation__social li {
-	display: inline;
-	font-size: 1.15rem;
-	font-variation-settings: var(--font-variation-display);
-	line-height: var(--line-height);
+	font-size: .85rem;
+	line-height: 1;
+	list-style-type: none;
 
-	@media #{$bay} {
-		display: block;
+	@media #{$pool} {
+		font-size: 1rem;
 	}
+}
+
+.navigation__primary li a {
+	border-bottom: 0;
 }
