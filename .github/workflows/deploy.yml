@@ -1,19 +1,27 @@
-on: push
-name: 🚀 Deploy website on push
-jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
+name: rsync-deploy-action tester
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      with:
-        server: sftp.flywheelsites.com
-        username: geoffgraham
-        password: ${{ secrets.FTP_PASSWORD}}
-        protocol: ftps
-        server-dir: ${{ secrets.FTP_DIRECTORY}}
-        port: 22
+on:
+  push:
+    branches: [main]
+
+jobs:
+  hello_world_rsync_deploy:
+    runs-on: ubuntu-latest
+    name: A job to test rsync-deploy-action
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Modify files permissions
+        run: |
+          chmod 777 -R ./sync_files
+          ls -l
+      - name: Tester
+        uses: yeshan333/rsync-deploy-action@main
+        id: rsync-deploy-action
+        with:
+          ssh_login_username: geoff@geoffgraham.me
+          remote_server_ip: ${{ secrets.SERVER_IP }}
+          ssh_port: ${{ secrets.FTP_PORT }}
+          ssh_private_key: ${{ secrets.SERVER_SSH }}
+          source_path: ./*
+          destination_path: ${{ secrets.FTP_DIRECTORY }}
