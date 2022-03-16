@@ -2,7 +2,7 @@ name: rsync-deploy-action tester
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   hello_world_rsync_deploy:
