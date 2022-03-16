@@ -28,6 +28,6 @@ jobs:
         with:
           remote-protocol: "sftp"
           remote-host: "sftp.flywheelsites.com"
-          remote-user: "geoffgraham"
+          remote-user: ${{ secrets.FTP_USER }}
           ssh-private-key: ${{ secrets.FTP_PASSWORD }}
-          remote-path: "/geoffgraham/geoff-graham/wp-content/themes/v03"
+          remote-path: ${{ secrets.FTP_DIRECTORY }}
