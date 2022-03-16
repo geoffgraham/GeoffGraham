@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@main
       - name: Modify files permissions
         run: |
-          chmod 777 -R ./sync_files
+          chmod 777 -R ./
           ls -l
       - name: Tester
         uses: yeshan333/rsync-deploy-action@main
