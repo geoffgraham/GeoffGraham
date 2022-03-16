@@ -15,5 +15,5 @@ jobs:
         username: geoffgraham
         password: ${{ secrets.FTP_PASSWORD}}
         protocol: ftps
-        server-dir: ${{ secrets.FTP_DIRECTORY}}cd ~/.ssh
+        server-dir: ${{ secrets.FTP_DIRECTORY}}
         port: 22
