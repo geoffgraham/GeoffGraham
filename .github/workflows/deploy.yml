@@ -1,27 +1,33 @@
-name: rsync-deploy-action tester
+name: Deploy Files
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+  # Enables manually triggering of Workflow with file synchronization option
+  workflow_dispatch:
+    inputs:
+      sync:
+        description: "File synchronization"
+        required: true
+        default: "delta"
 
 jobs:
-  hello_world_rsync_deploy:
+  deploy-master:
+    name: "master branch"
+    if: ${{ github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
-    name: A job to test rsync-deploy-action
+    timeout-minutes: 30
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Modify files permissions
-        run: |
-          chmod 777 -R ./
-          ls -l
-      - name: Tester
-        uses: yeshan333/rsync-deploy-action@main
-        id: rsync-deploy-action
+      - name: "Checkout"
+        uses: actions/checkout@v2
         with:
-          ssh_login_username: geoff@geoffgraham.me
-          remote_server_ip: ${{ secrets.SERVER_IP }}
-          ssh_port: ${{ secrets.FTP_PORT }}
-          ssh_private_key: ${{ secrets.SERVER_SSH }}
-          source_path: ./*
-          destination_path: ${{ secrets.FTP_DIRECTORY }}
+          fetch-depth: 0
+      - name: "Deploy"
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: "sftp"
+          remote-host: "sftp.flywheelsites.com"
+          remote-user: "geoffgraham"
+          ssh-private-key: ${{ secrets.SERVER_SSH }}
+          remote-path: "/geoffgraham/geoff-graham/wp-content/themes/v03"
