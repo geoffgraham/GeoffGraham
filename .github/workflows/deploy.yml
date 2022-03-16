@@ -1,6 +1,5 @@
+on: push
 name: 🚀 Deploy website on push
-on: [ push ]
-permissions: write-all
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -8,18 +7,13 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-    
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
+        server: sftp.flywheelsites.com
+        username: geoffgraham
         password: ${{ secrets.FTP_PASSWORD}}
-        port: 21
-        protocol: ftp
-        server-dir: ${{ secrets.FTP_DIRECTORY}}
-        exclude: .git*
-          - .git*/**
-          -  **/.git*/**
-          - node_modules/**
-          - node_modules/**/*
+        protocol: ftps
+        server-dir: ${{ secrets.FTP_DIRECTORY}}cd ~/.ssh
+        port: 22
