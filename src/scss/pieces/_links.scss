@@ -5,7 +5,8 @@ a {
 	text-underline-offset: 5px;
 	transition: all .25s ease;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: var(--link-hover);
 		text-underline-offset: 2px;
 	}

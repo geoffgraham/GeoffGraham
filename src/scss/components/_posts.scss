@@ -47,7 +47,8 @@
 		text-decoration: none;
 		transition: all .15s ease-in;
 		
-		&:hover {
+		&:hover,
+		&:focus {
 			background-image: linear-gradient(to right, var(--white) 75%, var(--yellow-mellow));
 		}
 	}
