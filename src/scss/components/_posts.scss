@@ -5,14 +5,13 @@
 }
 
 .posts .post {
-	align-items: baseline;
 	border-top: 1px solid var(--border-color);
 	display: grid;
-	padding: 1em 0;
-
+	grid-template-rows: auto;
+	margin-block-end: 1px;
+	
 	@media #{$lake} {
-		gap: var(--spacer-large);
-		grid-template-columns: 150px minmax(300px, 800px);
+		grid-template-columns: 150px auto;
 	}
 
 	&:first-of-type {
@@ -22,32 +21,42 @@
 	&:last-of-type {
 		border-bottom: 1px solid var(--border-color);
 	}
-
+	
 	.post__date {
-		font-size: .75rem;
-		margin-block-end: .25em;
-		position: relative;
+		background-color: var(--primary-color);
+	}
+
+	.post__date span {
+		color: var(--white);
+		font-size: var(--font-size-small);
+		line-height: 1.7;
 		text-transform: uppercase;
+		display: block;
+		padding: var(--spacer-small);
 	}
 
 	.post__title {
-		line-height: 1.25;
-		margin-block-end: .25em;
-
-		@media #{$lake} {
-			line-height: 1.5;
-		}
+		background: var(--white);
 	}
 
 	.post__title a {
-		border-bottom: 0;
+		background: var(--white);
+		display: block;
+		font-size: clamp(.75rem,calc(.8rem + .25vw),20px);
+		padding: var(--spacer-small);
+		text-decoration: none;
+		transition: all .15s ease-in;
+		
+		&:hover {
+			background-image: linear-gradient(to right, var(--white) 75%, var(--yellow-mellow));
+		}
 	}
 }
 
 .posts__pagination {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 2em;
+	margin-top: var(--spacer);
 
 	a:not(.next):not(.prev),
 	.dots {

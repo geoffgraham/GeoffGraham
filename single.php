@@ -15,27 +15,36 @@ get_header();
 			while ( have_posts() ) : the_post(); ?>
 
 			<article class="post-single">
-				<?php the_title( '<h1 class="post-single__title">', '</h1>' ); ?>
 				<div class="post-single__date">
-					<?php echo the_date( 'F j, Y' ); ?>
+					<?php if ( in_category( 'TIL' ) ) {
+						echo "On ";
+					} ?>
+					<?php 
+						echo the_date( 'F j, Y' );
+					
+					if ( in_category( 'TIL' ) ) {
+						echo ", I learned...";
+					}?>
 					
 					<?php
 						$j_date = get_the_date( 'j' );
 						$j_modified_date = get_the_modified_time( 'j' );
-
+				
 						if ( ($j_modified_date >= $j_date + 1) && !in_category( 'TIL' ) ) { 
 							echo '<span>Updated: ' . get_the_modified_time( 'n/d/Y' ) . '</span>';
 						}
-						if ( in_category( 'TIL' ) ) {
-							echo ", I learned...";
-						}
 					?>
 				</div>
+				
+				<?php the_title( '<h1 class="post-single__title">', '</h1>' ); ?>
+				
 				<div class="post-single__body">
+				
 				<?php if ( in_category( 'RSS Club' ) ) : ?>
 					<span class="rss-note">👋 Hey! This post is exclusive for RSS subscribers.</span>
 				<?php endif; ?>
 					<?php echo the_content(); ?>
+				
 				</div>
 			</article>
 

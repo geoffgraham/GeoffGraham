@@ -1,13 +1,17 @@
 :root {
-	--font-primary: dashiell-fine, serif;
-	--font-display: chaloops, sans-serif;
-	
+	--font-primary: cairo, sans-serif;
+	--font-display: professor, sans-serif;
 	--font-body: var(--font-primary);
-	--font-code: mono;
+	--font-code: logic-monoscript, mono;
 
 	--font-size-small: 14px;
 	--font-size-medium: 18px;
 	--font-size-large: 22px;
+	--font-size-huge: 80px;
+	
+	--fluid-type-min: 2.5rem;
+	--fluid-type-max: 5rem;
+	--fluid-type-target: 5vw;
 
 	--line-height: 1.35;
 }

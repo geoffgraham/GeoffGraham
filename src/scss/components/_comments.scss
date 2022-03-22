@@ -27,15 +27,6 @@
 	}
 }
 
-.comments h2::before {
-	content: "";
-	background: var(--primary-color);
-	height: 10px;
-	position: absolute;
-	transform: translateY( -1rem );
-	width: 125px;
-}
-
 .comments__list {
 	list-style: none;
 	padding-left: 0;
@@ -56,6 +47,10 @@
 	h3 {
 		margin-top: 0;
 	}
+}
+
+.comments small {
+	margin-inline-start: var(--spacer);
 }
 
 .comment__avatar img {

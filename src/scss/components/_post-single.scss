@@ -1,7 +1,14 @@
 .post-single {
 	display: flex;
 	flex-direction: column;
-	font-size: 1.25rem;
+}
+
+.post-single__title {
+	max-width: 23ch;
+}
+
+.post-single p {
+	max-width: 60ch;
 }
 
 .post-single__date {
@@ -12,15 +19,10 @@
 		border: 1px solid var(--primary-color);
 		border-radius: 2px;
 		font-size: 0.875em;
-		padding: .15rem .25rem;
 		display: inline-block;
 		margin-inline-start: 0.5rem;
-		padding-inline-start: 0.5rem;
+		padding: 0.25rem 0.5rem;
 	}
-}	
-
-.post-single__title {
-	margin-block: 2rem 1rem;
 }
 
 .rss-note {

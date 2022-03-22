@@ -1,7 +1,7 @@
 .main-content {
 	background: var(--background);
 	border-radius: 8px;
-	box-shadow: 0 3px 25px rgba(0, 0, 0, .1);
+	box-shadow: 0 3px 50px var(--gray-lighter);
 	margin-block: var(--spacer);
-	padding: var(--spacer) var(--spacer) var(--spacer-large);
+	padding: var(--spacer) var(--spacer);
 }

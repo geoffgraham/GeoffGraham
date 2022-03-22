@@ -1,7 +1,7 @@
 <?php if ( is_main_query() && have_posts() ) : ?>
 	<section class="posts">
 
-		<?php // If "TIL" category, let's show it's title.
+		<?php // If "TIL" category, let's show its title.
 		if ( is_category( 'TIL' ) ) :
 			echo '<h1>Today I Learned...</h1>';
 		else:

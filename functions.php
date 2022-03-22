@@ -152,22 +152,6 @@ function change_default_jquery( &$scripts){
 }
 add_filter( 'wp_default_scripts', 'change_default_jquery' );
 
-// Add ACF icon field to navigation
-add_filter('wp_nav_menu_objects', 'gg_wp_nav_menu_objects', 10, 2);
-
-function gg_wp_nav_menu_objects( $items, $args ) {
-	
-	foreach( $items as &$item ) {
-		$icon = get_field('icon', $item);
-		
-		if( $icon ) {		
-			$item->title = '<svg class="navigation__icon" width="30" height="30"><use xlink:href="#' . $icon . '"></use></svg>' . $item->title ;
-		}		
-	}
-	// return
-	return $items;
-}
-
 // Custom markup for comments
 function gg_comments($comment, $args, $depth) {
 	if ( 'div' === $args['style'] ) {

@@ -4,13 +4,11 @@
 .posts__pagination a,
 .comment-reply-link,
 input[type='submit'] {
-	font-size: .85rem;
-	border-radius: 30px !important;
-	cursor: pointer;
-	display: inline-block;
-	margin: 0 1em 0 0;
+	font-size: 1rem;
+	border: 2px solid #000;
+	border-radius: 30px 2px 30% 3px / 4px 10px 3px 30px;
 	overflow-wrap: break-word;
-	padding: 12px 45px;
+	padding: 20px 45px;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -22,20 +20,10 @@ input[type='submit'] {
 input[type='submit'] {
 	background: var(--primary-color);
 	border: 0;
-	color: var(--brown-darker);
-
-	@media (prefers-color-scheme: dark) {
-		color: var(--brown-light);
-	}
+	color: var(--white);
 
 	&:hover {
-		box-shadow: none;
-		color: var(--brown-darkest) !important;
 		transform: translateY( 5px );
-
-		@media (prefers-color-scheme: dark) {
-			color: var(--brown);
-		}
 	}
 
 	&:active {
@@ -50,10 +38,6 @@ input[type='submit'] {
 	background: transparent;
 	border: 3px solid var(--primary-color);
 	color: var(--text-color);
-
-	@media (prefers-color-scheme: dark) {
-		border: 3px solid var(--primary-color);
-	}
 
 	&:hover {
 		background: var(--primary-color);

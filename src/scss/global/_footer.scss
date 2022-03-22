@@ -1,17 +1,15 @@
-.site-footer__nav {
+.site-footer .menu {
 	align-items: center;
 	display: flex;
+	flex-direction: row;
+	gap: var(--spacer-small);
 
 	ul li {
-		font-size:  .85rem;
+		font-size: var(--font-size-medium);
 	}
 
 	a {
 		border: 0;
 		line-height: 0;
 	}
-}
-
-.site-footer__nav a:hover > svg ellipse:first-child {
-	fill: var(--primary-color);
 }

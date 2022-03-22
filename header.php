@@ -25,6 +25,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+	
+<div class="site-background">
+	<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/bg-header.svg' ); ?>
+</div>
 
 <div class="site-wrapper">
 	<header class="site-header">

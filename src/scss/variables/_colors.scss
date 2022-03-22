@@ -1,14 +1,18 @@
 :root {
-	/* Alpha transparency */
-	--alpha: 1;
-
 	/* Color Palette */
-	--red: hsl(0 98.2% 55.5% / var(--alpha));
-	--orange: hsl(16.1 98.2% 55.5% / var(--alpha));
+	--orange: hsl(16.1 98.2% 55.5% / 1);
 	--yellow: #ffe417;
-	--yellow-mellow: hsl(10 27.3% 95.7% / var(--alpha));
-	--white: rgb(255 255 255 / var(--alpha));
-	--black: hsl(238.2 53.1% 12.5% / var(--alpha));
+	--yellow-mellow: hsl(10 27.3% 95.7% / 1);
+	
+	--white: hsl(100 100% 100% / 1);
+	--black: hsl(238.2 53.1% 12.5% / 1);
+	
+	--gray-dark: hsl(238.2 53.1% 12.5% / .75);
+	--gray: hsl(238.2 53.1% 12.5% / .5);
+	--gray-light: hsl(238.2 53.1% 12.5% / .25);
+	--gray-lighter: hsl(238.2 53.1% 12.5% / .15);
+	--gray-lightest: hsl(238.2 53.1% 12.5% / .1);
+	
 
 	/* Theme Colors */
 	--primary-color: var(--orange);
@@ -22,6 +26,4 @@
 	--border-color: var(--primary-color);
 	--link-current: var(--white);
 	--link-hover: var(--primary-color);
-	--code-blocks: var(--white);
-	--table-background: var(--white);
 }
