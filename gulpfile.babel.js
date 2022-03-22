@@ -70,7 +70,7 @@ export const svg = () => {
 			doctypeDeclaration: false,
 		},
 	};
-	return gulp.src('**/*.svg', { cwd: 'src/img/icons' })
+	return gulp.src('**/*.svg', { cwd: 'src/img/svg' })
   .pipe(svgSprite(config))
   .pipe(gulp.dest('.'));
 }
