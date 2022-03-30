@@ -7,14 +7,14 @@
 .navigation__primary ul,
 .navigation__social ul {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
 	margin: 0;
 	padding-left: 0; /* Overrides browser default */
 }
 
 .navigation__primary li,
 .navigation__social li {
-	font-size: .75rem;
+	font-size: .7rem;
 	line-height: 1;
 	list-style-type: none;
 

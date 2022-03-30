@@ -14,8 +14,11 @@
 
 .site-header__logo svg {
 	height: auto;
-	max-width: 125px;
+	width: clamp(75px, 50%, 125px);
 	transition: transform .25s ease-out;
+
+	@media #{$lake} {
+	}
 	
 	&:hover {
 		transform: scale(1.1);
@@ -23,5 +26,9 @@
 }
 
 .site-navigation {
-	flex: 1;
+	flex: 3;
+
+	@media #{$lake} {
+		flex: 1;
+	}
 }
