@@ -1,0 +1,4 @@
+@mixin shadow() {
+	box-shadow:  13px 13px 28px var(--gray-lightest),
+	-13px -13px 28px var(--gray-lighter);
+}

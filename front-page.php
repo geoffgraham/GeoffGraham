@@ -7,10 +7,10 @@
 
 	get_header(); ?>
 
-<main id="content" class="main-content">
+<main id="content">
 
 <?php if ( is_front_page() && ! is_404() ) {
-	get_template_part( 'template-parts/content/content', 'home' );
+	echo the_content();
 } ?>
 
 <?php get_footer(); ?>
