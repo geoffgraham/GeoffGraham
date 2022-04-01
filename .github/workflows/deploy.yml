@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Fast FTP Action
-      uses: anvil-solutions/Fast-FTP-Action@2.1.0
+    - name: Fast FTP
+      uses: anvil-solutions/Fast-FTP-Action@2.1.3
       with:
         server: sftp.flywheelsites.com
         username: myFtpUserName
