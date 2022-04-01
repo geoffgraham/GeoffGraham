@@ -1,11 +1,10 @@
 .home::before {
 	background-attachment: fixed;
-	background-image: url("/wp-content/themes/v3/src/img/geoff-large.webp");
+	background-image: url("/wp-content/themes/v03/dist/img/geoff-large.webp");
 	background-position-x: right;
 	background-position-y: -3rem;
 	background-repeat: no-repeat;
-	background-size: clamp(600px, 100vh, 1200px);
-	content: "";
+	background-size: clamp(500px, 15vh, 1000px);
 	height: 100%;
 	opacity: .75;
 	pointer-events: none;
@@ -13,6 +12,10 @@
 	width: 100%;
 	z-index: -1;
 	mix-blend-mode: luminosity;
+
+	@media #{$lake} {
+		content: "";
+	}
 }
 
 .home .main-content {
