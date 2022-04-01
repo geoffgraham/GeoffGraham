@@ -24,7 +24,7 @@
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri()?>/apple-touch-icon.png"><!-- 180×180 -->
 	<link rel="manifest" href="<?php echo get_template_directory_uri()?>/site.webmanifest">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/favicon.svg"git>
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/favicon.svg">
 	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.svg">
 	<link rel="stylesheet" href="https://use.typekit.net/cux5cqe.css">
 	<?php wp_head(); ?>
