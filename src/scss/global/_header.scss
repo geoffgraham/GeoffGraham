@@ -1,26 +1,40 @@
 .site-header {
 	display: flex;
-	flex-flow: column nowrap;
-	grid-area: navigation;
+	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 3em;
-	padding-top: 1.5em;
+	position: relative;
+	z-index: 2;
+}
 
-	@media #{$pool} {
-		flex-flow: row wrap;
-	}
+.site-header__logo {
+	flex: 1;
+}
 
-	@media #{$pond} {
-		margin-bottom: 0;
-	}
+.site-header__logo a {
+	border: 0;
+}
+
+.site-header__logo svg {
+	height: auto;
+	width: clamp(75px, 50%, 125px);
+	transition: transform .25s ease-out;
 
 	@media #{$lake} {
-		align-items: flex-start;
-		flex-flow: column;
-		justify-content: flex-start;
+	}
+	
+	&:hover {
+		transform: scale(1.1);
 	}
 }
 
+<<<<<<< HEAD
+.site-navigation {
+	flex: 3;
+
+	@media #{$lake} {
+		flex: 1;
+	}
+=======
 .site-header__wrapper {
 	position: sticky;
 	top: 50px;
@@ -33,4 +47,5 @@
 	font-weight: 700;
 	line-height: .75;
 	margin: 0 0 .25em 0;
+>>>>>>> master
 }

@@ -5,6 +5,8 @@ import cleanCss from 'gulp-clean-css';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
+import concat from 'gulp-concat';
+import minify from 'gulp-minify';
 import webpack from 'webpack-stream';
 import imagemin from 'gulp-imagemin';
 import browserSync from "browser-sync";
@@ -13,7 +15,7 @@ const PRODUCTION = yargs.argv.prod;
 const server = browserSync.create();
 export const serve = done => {
   server.init({
-    proxy: "http://geoff.local"
+    proxy: "http://geoff.test"
   });
   done();
 };
@@ -33,28 +35,12 @@ export const styles = () => {
 }
 
 export const scripts = () => {
-  return src('src/js/scripts.js')
-  .pipe(webpack({
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: []
-            }
-          }
-        }
-      ]
-    },
-    mode: PRODUCTION ? 'production' : 'development',
-    devtool: !PRODUCTION ? 'inline-source-map' : false,
-    output: {
-      filename: 'scripts.js'
-    },
-  }))
-  .pipe(dest('dist/js'));
+	var gulp = require('gulp')
+	return gulp.src('src/js/**/*.js')
+		.pipe(concat('scripts.js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(minify())
+		.pipe(gulp.dest('dist/js'))
 }
 
 export const images = () => {
@@ -63,15 +49,36 @@ export const images = () => {
     .pipe(dest('dist/img'));
 }
 
+// SVG Sprite
 export const svg = () => {
-  return src('src/img/**/*.{svg}')
-    .pipe(dest('dist/img'));
+	var svgSprite = require('gulp-svg-sprite');
+	var gulp = require('gulp'),
+	config = {
+		shape: {
+			dest: 'dist/img'
+		},
+		mode: {
+			dest: 'dist/img',
+			symbol: true,
+			inline: true,
+			bust: true
+		},
+		svg: {
+			spriteWidth: 0,
+			spriteHeight: 0,
+			xmlDeclaration: false,
+			doctypeDeclaration: false,
+		},
+	};
+	return gulp.src('**/*.svg', { cwd: 'src/img/svg' })
+  .pipe(svgSprite(config))
+  .pipe(gulp.dest('.'));
 }
 
 export const watchForChanges = () => {
   watch('src/scss/**/*.scss', series(styles, reload));
-  watch('src/images/**/*.{jpg,jpeg,png,gif}', series(images, reload));
-	watch('src/images/**/*.{svg}', series(images, reload));
+  watch('src/img/**/*.{jpg,jpeg,png,gif}', series(images, reload));
+	watch('src/img/icons/**/*.{svg}', series(svg, reload));
 	watch(['src/**/*','!src/{img,js,scss}','!src/{img,js,scss}/**/*'], series(reload));
   watch('src/js/**/*.js', series(scripts, reload));
   watch("**/*.php", reload);

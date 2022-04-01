@@ -6,28 +6,16 @@ input[type=password],
 input[type=search], input[type=text],
 input[type=url],
 textarea {
-	background: rgba(0,0,0,.35);
+	background: var(--white);
 	border: 2px solid transparent;
 	color: var(--text-color);
 	border-radius: 8px;
 	padding: 1rem;
 	width: 100%;
 
-	@media (prefers-color-scheme: light) {
-		background: var(--brown);
-	}
-
 	&:focus {
 		border: 2px solid var(--primary-color);
 		outline: 0;
-	}
-
-	&::placeholder {
-		color: var(--brown-lighter)
-	}
-
-	&:focus::placeholder {
-		color: var(--brown-light);
 	}
 
 	label {
@@ -67,7 +55,6 @@ input[type='radio'] {
 }
 
 .gform_wrapper div.validation_error {
-	@include box-shadow--alt;
 	background-color: var(--error-color);
 	border: 0 !important;
 	color: var(--white) !important;

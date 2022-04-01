@@ -10,24 +10,36 @@
   "author": "Geoff Graham",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/register": "^7.15.3",
-    "autoprefixer": "^9.7.3",
-    "babel-loader": "^8.0.6",
-    "browser-sync": "^2.27.5",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.2.0",
+    "gulp-minify": "^3.1.0",
     "gulp-postcss": "^8.0.0",
+<<<<<<< HEAD
+    "gulp-sass": "^4.1.0",
+=======
     "gulp-sass": "^4.1.1",
+>>>>>>> master
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
     "webpack-stream": "^5.2.1",
-    "yargs": "^15.0.2"
+    "yargs": "^15.4.1"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "core-util-is": "^1.0.2",
+    "node-sass": "^7.0.1"
+=======
     "core-util-is": "^1.0.3"
+>>>>>>> master
   }
 }

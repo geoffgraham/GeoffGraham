@@ -1,0 +1,12 @@
+.site-background {
+  inset: 0;
+  opacity: .15;
+  position: absolute;
+	width: 75%;
+	z-index: -2;
+}
+
+.site-background svg {
+	position: relative;
+	z-index: -3;
+}

@@ -24,30 +24,23 @@
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri()?>/apple-touch-icon.png"><!-- 180×180 -->
 	<link rel="manifest" href="<?php echo get_template_directory_uri()?>/site.webmanifest">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/favicon.svg"git>
+	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.svg">
+	<link rel="stylesheet" href="https://use.typekit.net/cux5cqe.css">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	
+<div class="site-background">
+	<?php echo file_get_contents( get_template_directory_uri() . '/dist/img/bg-header.svg' ); ?>
+</div>
 
-		<?php if ( is_front_page() && ! is_404() ) {
-			get_template_part( 'template-parts/content/content', 'home' );
-		} ?>
-
-		<?php if ( ! is_404() ) { ?>
-		<span id="top"></span>
-		<div class="site-wrapper">
-			<div class="site-content">
-		
-				<header class="site-header">
-					<div class="site-header__wrapper">
-						<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
-						<?php get_template_part( 'template-parts/header/navigation', 'title' ); ?>
-						<div class="site-navigation">
-							<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
-							<?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
-						</div>
-					</div>
-				</header>
-
-		<?php } ?>
+<div class="site-wrapper">
+	<header class="site-header">
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
+		<?php get_template_part( 'template-parts/header/header', 'logo' ); ?>
+		<div class="site-navigation">
+			<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
+		</div>
+	</header>

@@ -1,42 +1,29 @@
-.post-wrapper {
-	margin-block-end: 75px;
-}
-
 .post-single {
 	display: flex;
 	flex-direction: column;
 	max-width: 70ch;
 }
 
-.post-single__date {
-	color: var(--primary-color);
-	font-size: $font-size-small;
-	font-weight: 300;
-	margin: 2.5rem 0 -1.25rem;
-	order: 1;
-
-	span {
-		background: var(--code-blocks);
-		border-left: 3px solid var(--primary-color);
-		display: inline-block;
-		margin-block-start: .5rem;
-		margin-inline-start: 1rem;
-		padding-inline-end: .5rem;
-		padding-inline-start: .5rem;
-		position: relative;
-	}
-}	
-
 .post-single__title {
-	margin-block-end: 1rem;
-	margin-block-start: 2rem;
-	order: 2;
+	max-width: 23ch;
 }
 
-.post-single__body {
-	display: inline-grid;
-	max-width: 800px;
-	order: 3;
+.post-single p {
+	max-width: 60ch;
+}
+
+.post-single__date {
+	color: var(--primary-color);
+
+	span {
+		background-color: var(--white);
+		border: 1px solid var(--primary-color);
+		border-radius: 2px;
+		font-size: 0.875em;
+		display: inline-block;
+		margin-inline-start: 0.5rem;
+		padding: 0.25rem 0.5rem;
+	}
 }
 
 .post-single__body p {
@@ -44,8 +31,7 @@
 }
 
 .rss-note {
-	@include font-size( .55 );
-	font-family: $font-code;
+	font-family: var(--font-code);
 
 	@media #{$pool} {
 		background-color: var(--table-background);

@@ -1,81 +1,22 @@
 .site-footer {
-	grid-area: footer;
-	margin-top: 2em;
-	width: 100%;
-
-	@media #{$lake} {
-		margin-top: 0;
-	}
-} 
-
-.site-footer__cta {
-	border: 3px dashed var(--primary-color);
-	border-radius: 15px;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 2rem;
-	padding: 1em;
-	text-align: center;
-
-	p {
-		margin: 0;
-	}
-
-	a {
-		@include link;
-	}
-
-	span {
-		display: block;
-
-		@media #{$pool} {
-			display: inline;
-		}
-	}
+	position: sticky;
+  bottom: 0;
+  height: 50px;
+  z-index: -1;
 }
 
-.site-footer__nav {
+.site-footer .menu {
 	align-items: center;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: row;
+	gap: var(--spacer-small);
+
+	ul li {
+		font-size: var(--font-size-medium);
+	}
 
 	a {
 		border: 0;
 		line-height: 0;
-	}
-
-	svg {
-		width: 100px;
-
-		@media #{$pond} {
-			width: 70px;
-		}
-	}
-}
-
-.site-footer__nav a:hover > svg ellipse:first-child {
-	fill: var(--primary-color);
-}
-
-// Overrides the header style that hides it
-.site-footer .navigation__social {
-	display: block;
-
-	ul {
-		display: flex;
-		flex-flow: column wrap;
-
-		@media #{$pool} {
-			flex-flow: row wrap;
-		}
-	}
-
-	ul li {
-		@include font-size( .75 );
-		margin-right: .5em;
-	
-		&:last-child {
-			margin-right: 0;
-		}
 	}
 }

@@ -1,10 +1,17 @@
-$font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$font-display: utopia-std-headline, serif;
+:root {
+	--font-primary: cairo, sans-serif;
+	--font-display: professor, sans-serif;
+	--font-body: var(--font-primary);
+	--font-code: logic-monoscript, mono;
 
-$font-code: monospace;
+	--font-size-small: 14px;
+	--font-size-medium: 18px;
+	--font-size-large: 22px;
+	--font-size-huge: 80px;
+	
+	--fluid-type-min: 2.5rem;
+	--fluid-type-max: 5rem;
+	--fluid-type-target: 5vw;
 
-$font-size-small: 16px;
-$font-size-medium: 20px;
-$font-size-large: 24px;
-
-$line-height: 1.5;
+	--line-height: 1.35;
+}

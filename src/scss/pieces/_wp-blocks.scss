@@ -4,11 +4,10 @@
 
 .wp-block-pullquote,
 .wp-block-quote {
-	@include box-shadow();
-	@include font-size( 1.1 );
+	font-size: 1.1rem;
 
 	cite {
-		@include font-size( .65 );
+		font-size: .65rem;
 		font-style: normal;
 		font-weight: 800;
 		text-transform: uppercase;
@@ -30,29 +29,11 @@
 	}
 
 	cite {
-		@include font-size( .75 );
-	}
-}
-
-.wp-block-image {
-	margin-block-end: 0;
-
-	@media (prefers-color-scheme: light) {
-		@include box-shadow();
-		background: var(--background);
-	}
-
-	figcaption {
-		background-color: var(--table-background);
-		border-top: 1px dashed var(--border-color);
-		font-size: $font-size-small;
-		margin: -.4em 0 0;
-		padding: 1em;
+		font-size: .75rem;
 	}
 }
 
 .wp-block-file {
-	@include box-shadow;
 	align-items: center;
 	display: flex;
 	flex-flow: row wrap;
@@ -61,7 +42,6 @@
 }
 
 .wp-block-file a.wp-block-file__button {
-	@include box-shadow;
 	background: transparent;
 	border: 3px solid var(--primary-color);
 	border-radius: 30px;
@@ -70,7 +50,7 @@
 	&:hover {
 		background: var(--primary-color);
 		color: var(--brown);
-		transform: translateY( 5px );
+		transform: translateY(5px);
 	}
 
 	&:active {
@@ -82,8 +62,4 @@
 .wp-block-separator {
 	background-color: var(--border-color);
 	margin: 3em 0;
-}
-
-.wp-block-latest-posts__post-date {
-	margin: 0 0 1em 0;
 }

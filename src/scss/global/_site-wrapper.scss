@@ -1,30 +1,8 @@
 .site-wrapper {
-	background-color: var(--background);
-
-	@media (prefers-color-scheme: light) {
-		@include box-shadow--alt;
-	}
-
-	.home & {
-		position: sticky;
-		top: 0;
-	}
-}
-
-.site-content {
-	background-color: var(--background);
-	display: inline-block;
-	margin: auto;
-	padding: 2rem;
-	position: relative;
-	max-width: var(--site-width);
-
-	@media #{$lake} {
-		display: grid;
-		grid-template-columns: 25% 75%;
-		grid-template-areas: 
-			"navigation main"
-			". comments"
-			". footer";
-	}
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 150px auto 50px;
+	padding-block-start: var(--spacer-small);
+  padding-inline: 1.5rem;
+	width: clamp(320px, 100vw, var(--site-width));
 }

@@ -27,15 +27,6 @@
 	}
 }
 
-.comments h2::before {
-	content: "";
-	background: var(--primary-color);
-	height: 10px;
-	position: absolute;
-	transform: translateY( -1rem );
-	width: 125px;
-}
-
 .comments__list {
 	list-style: none;
 	padding-left: 0;
@@ -58,6 +49,10 @@
 	}
 }
 
+.comments small {
+	margin-inline-start: var(--spacer);
+}
+
 .comment__avatar img {
 	border-radius: 50%;
 	width: 100px;
@@ -69,12 +64,12 @@
 }
 
 .comment__author {
-	@include font-size( 1.2 );
-	font-family: $font-display;
+	font-family: var(--font-display);
+	font-size: 1.2rem;
 }
 
 .comment__meta {
-	font-size: $font-size-small;
+	font-size: var(--font-size-small);
 
 	a {
 		color: var(--primary-color);
@@ -87,12 +82,12 @@
 }
 
 .comment-reply-title {
-	margin-bottom: .5rem;
+	margin-block-end: .5rem;
 }
 
 .comment-reply-link {
 	box-shadow: none;
-	font-size: $font-size-small;
+	font-size: var(--font-size-small);
 	padding: 5px 25px;
 }
 
@@ -120,7 +115,7 @@
 	}
 
 	.logged-in-as {
-		font-size: $font-size-small;
+		font-size: var(--font-size-small);
 	}
 
 	.form-submit {
@@ -148,13 +143,13 @@
 }
 
 .comment-form-cookies-consent {
-	font-size: $font-size-small;
+	font-size: var(--font-size-small);
 }
 
 // Featured comment styles
 .feature-burry-comments {
-	font-size: $font-size-small;
-	margin-bottom: 1rem;
+	font-size: var(--font-size-small);
+	margin-block-end: 1rem;
 }
 
 .comments .featured {

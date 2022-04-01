@@ -4,18 +4,19 @@
 .posts__pagination a,
 .comment-reply-link,
 input[type='submit'] {
-	@include box-shadow();
-	@include font-size( .85 );
-	border-radius: 30px !important;
-	cursor: pointer;
-	display: inline-block;
-	margin: 0 1em 0 0;
+	font-size: 1rem;
+	border: 2px solid #000;
+	border-radius: 30px 2px 30% 3px / 4px 10px 3px 30px;
 	overflow-wrap: break-word;
-	padding: 12px 45px;
+	padding: 20px 45px;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: transform .25s ease-out;
+	
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .button,
@@ -23,20 +24,11 @@ input[type='submit'] {
 input[type='submit'] {
 	background: var(--primary-color);
 	border: 0;
-	color: var(--brown-darker);
+	color: var(--white);
 
-	@media (prefers-color-scheme: dark) {
-		color: var(--brown-light);
-	}
-
-	&:hover {
-		box-shadow: none;
-		color: var(--brown-darkest) !important;
+	&:hover,
+	&:focus {
 		transform: translateY( 5px );
-
-		@media (prefers-color-scheme: dark) {
-			color: var(--brown);
-		}
 	}
 
 	&:active {
@@ -48,14 +40,9 @@ input[type='submit'] {
 .button--secondary,
 .posts__pagination a,
 .comment-reply-link {
-	@include box-shadow;
 	background: transparent;
 	border: 3px solid var(--primary-color);
 	color: var(--text-color);
-
-	@media (prefers-color-scheme: dark) {
-		border: 3px solid var(--primary-color);
-	}
 
 	&:hover {
 		background: var(--primary-color);

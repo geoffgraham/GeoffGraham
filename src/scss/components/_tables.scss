@@ -1,7 +1,7 @@
 .table {
 
 	tbody tr {
-		background: var(--table-background);
+		background: var(--white);
 	}
 
 	th {
@@ -29,6 +29,6 @@
 	}
 
 	tbody tr:nth-child(even) {
-		background: var(--gray-light);
+		background: var(--yelloe-mellow);
 	}
 }
