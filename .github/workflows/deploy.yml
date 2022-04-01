@@ -1,18 +1,33 @@
-name: Publish Website
-
-on: push
+# Workflow name
+name: Deploy site to live
+ 
+on:
+  # Run automatically on push to main branch
+  push:
+    branches: [ main ]
+    paths:
+    - 'src/**'
+  # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
-  Fast-FTP-Action:
-    name: Fast FTP Action
+  web-deploy:
+    name: Deploy
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Fast FTP
-      uses: anvil-solutions/Fast-FTP-Action@2.1.3
+    - name: Get files
+      uses: actions/checkout@v2.3.4
+      
+    - name: FTP Deploy
+      uses: cinderblockgames/ftp-action@v1.2.2
       with:
+        # required
         server: sftp.flywheelsites.com
-        username: myFtpUserName
+        username: geoffgraham
         password: ${{ secrets.FTP_PASSWORD }}
+        # optional
+        port: 22
+        destination: wp-content/themes/
+        skipUnchanged: true
+        skipDirectories: .github|.well-known|configs|private-keys
+        test: true
