@@ -1,7 +1,9 @@
 @mixin card {
 	@include shadow();
 	background: var(--background);
-	border-radius: 8px;
+	border-end-end-radius: var(--spacer);
+	border-start-start-radius: var(--spacer);
+	border-block-start: var(--spacer-small) solid var(--primary-color);
 	margin-block: var(--spacer);
 	padding: var(--spacer);
 }

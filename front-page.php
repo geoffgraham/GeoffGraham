@@ -7,7 +7,7 @@
 
 	get_header(); ?>
 
-<main id="content">
+<main id="content" class="main-content">
 
 <?php if ( is_front_page() && ! is_404() ) {
 	echo the_content();

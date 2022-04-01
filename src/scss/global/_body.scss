@@ -17,5 +17,25 @@ body {
 	line-height: 1.35;
 	overflow-x: hidden;
 	place-items: center start;
+	position: relative;
 	width: 100%;
+
+	&::after {
+    background-image: linear-gradient(
+      130deg,
+      #3023ae,
+      #53a0fd 15%,
+      #fd5a1e 50%,
+      #ecb151 75%
+    );
+    content: "";
+		height: 100%;
+    inset: 0;
+    mix-blend-mode: multiply;
+    opacity: 0.25;
+    pointer-events: none;
+    position: absolute;
+    width: 120%;
+    z-index: -1;
+  }
 }

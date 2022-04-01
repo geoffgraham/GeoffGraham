@@ -1,7 +1,7 @@
 .site-wrapper {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 150px auto 150px;
+	grid-template-rows: 150px auto 50px;
 	padding-block-start: var(--spacer-small);
   padding-inline: 1.5rem;
 	width: clamp(320px, 100vw, var(--site-width));

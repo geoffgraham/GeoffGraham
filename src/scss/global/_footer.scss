@@ -1,3 +1,10 @@
+.site-footer {
+	position: sticky;
+  bottom: 0;
+  height: 50px;
+  z-index: -1;
+}
+
 .site-footer .menu {
 	align-items: center;
 	display: flex;
