@@ -1,33 +1,18 @@
-name: Deploy Files
+name: Publish Website
 
-on:
-  push:
-    branches:
-      - master
-  # Enables manually triggering of Workflow with file synchronization option
-  workflow_dispatch:
-    inputs:
-      sync:
-        description: "File synchronization"
-        required: true
-        default: "delta"
+on: push
 
 jobs:
-  deploy-master:
-    name: "master branch"
-    if: ${{ github.ref == 'refs/heads/master' }}
+  Fast-FTP-Action:
+    name: Fast FTP Action
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+
     steps:
-      - name: "Checkout"
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: "Deploy"
-        uses: milanmk/actions-file-deployer@master
-        with:
-          remote-protocol: "sftp"
-          remote-host: "sftp.flywheelsites.com"
-          remote-user: ${{ secrets.FTP_USER }}
-          ssh-private-key: ${{ secrets.FTP_PASSWORD }}
-          remote-path: ${{ secrets.FTP_DIRECTORY }}
+    - uses: actions/checkout@v2
+
+    - name: Fast FTP Action
+      uses: anvil-solutions/Fast-FTP-Action@2.1.0
+      with:
+        server: sftp.flywheelsites.com
+        username: myFtpUserName
+        password: ${{ secrets.FTP_PASSWORD }}
