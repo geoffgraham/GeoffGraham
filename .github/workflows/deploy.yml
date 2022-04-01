@@ -4,9 +4,7 @@ name: Deploy site to live
 on:
   # Run automatically on push to main branch
   push:
-    branches: [ main ]
-    paths:
-    - 'src/**'
+    branches: [ master ]
   # Allow manual trigger
   workflow_dispatch:
 
