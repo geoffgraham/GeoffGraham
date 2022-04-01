@@ -27,10 +27,25 @@
 	}
 }
 
+<<<<<<< HEAD
 .site-navigation {
 	flex: 3;
 
 	@media #{$lake} {
 		flex: 1;
 	}
+=======
+.site-header__wrapper {
+	position: sticky;
+	top: 50px;
+}
+
+.site-title a {
+	@include link;
+	border: 0;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: .75;
+	margin: 0 0 .25em 0;
+>>>>>>> master
 }
