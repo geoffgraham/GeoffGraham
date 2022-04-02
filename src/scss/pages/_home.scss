@@ -4,7 +4,7 @@
 	background-position-x: right;
 	background-position-y: -3rem;
 	background-repeat: no-repeat;
-	background-size: clamp(500px, 15vh, 1000px);
+	background-size: clamp(500px, 50vh, 1000px);
 	height: 100%;
 	opacity: .75;
 	pointer-events: none;
@@ -22,6 +22,7 @@
 	border: 0;
 	border-radius: 0;
 	position: relative;
+	width: 100%;
 
 	@media #{$lake} {
 		width: clamp(300px, 60%, 800px);
