@@ -165,13 +165,6 @@ function gg_comments($comment, $args, $depth) {
 	if ( 'div' != $args['style'] ) { ?>
 		<div id="comment-<?php comment_ID() ?>" class="comment__wrapper">
 		<?php } ?>
-			<div class="comment__avatar">
-			<?php 
-				if ( $args['avatar_size'] != 0 ) {
-					echo get_avatar( $comment, $args['avatar_size'] ); 
-				}
-			?>
-			</div>
 			<div class="comment__body">
 				<div class="comment__author"> 
 					<?php printf( __( '%s' ), get_comment_author_link() ); ?>
