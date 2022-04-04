@@ -17,7 +17,7 @@
 		<div class="posts__pagination">
 			<?php echo paginate_links( 
 					array( 
-						'before_page_number'=> '<span class="hide" aria-hidden="true">',
+						'before_page_number'=> '<span class="visually-hidden" aria-hidden="true">',
 						'after_page_number'=> '</span>',
 						'next_text'    => 'Older Posts',
 						'prev_text'    => 'Newer Posts'

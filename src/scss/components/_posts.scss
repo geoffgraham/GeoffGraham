@@ -56,6 +56,7 @@
 
 .posts__pagination {
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	margin-top: var(--spacer);
 
@@ -63,4 +64,9 @@
 	.dots {
 		display: none;
 	}
+}
+
+.posts__pagination .button {
+	font-size: var(--font-size-small);
+	padding: 10px 25px;
 }
