@@ -29,20 +29,12 @@
 
 .comments__list {
 	list-style: none;
-	padding-left: 0;
+	padding-inline-start: 0;
 }
 
 .comments .comment__wrapper {
-	background-color: var(--table-background);
-	border-radius: 16px;
 	list-style: none;
-	padding: 2em;
-
-	@media #{$pond} {
-		display: grid;
-		grid-template-columns: 100px 4fr;
-		grid-gap: 2rem;
-	}
+	padding: .5em;
 
 	h3 {
 		margin-top: 0;
@@ -53,19 +45,8 @@
 	margin-inline-start: var(--spacer);
 }
 
-.comment__avatar img {
-	border-radius: 50%;
-	width: 100px;
-
-	@media #{$pond} {
-		grid-column: 2;
-		width: 100%;
-	}
-}
-
 .comment__author {
 	font-family: var(--font-display);
-	font-size: 1.2rem;
 }
 
 .comment__meta {
@@ -103,10 +84,10 @@
 }
 
 .comment-form {
-	display: grid;
-	grid-gap: 1rem;
 
-	@media #{$pond} {
+	@media #{$lake} {
+		display: grid;
+		grid-gap: 1rem;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -120,7 +101,7 @@
 
 	.form-submit {
 		grid-column: 1 / 3;
-		margin-top: 1rem;
+		margin-block-start: 1rem;
 	}
 
 	p {
@@ -160,6 +141,10 @@
 		background-position: center center;
 		background-size: cover;
 		background-repeat: repeat repeat;
+	}
+
+	.comment__avatar {
+		display: none;
 	}
 
 	.comment__meta a {
