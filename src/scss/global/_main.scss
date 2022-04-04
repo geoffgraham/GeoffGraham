@@ -1,3 +1,5 @@
 .main-content {
 	@include card();
+	position: relative;
+	z-index: 1;
 }
