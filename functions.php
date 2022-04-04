@@ -88,7 +88,7 @@ wp_localize_script( 'scripts', 'ajax_posts', array(
  * Enqueue scripts and styles.
  */
 function geoff_graham_scripts() {
-	wp_register_style( 'screen', get_template_directory_uri().'/dist/css/style.css', array(), filemtime( get_template_directory().'/dist/style/style.css' ) );
+	wp_register_style( 'screen', get_template_directory_uri().'/dist/css/style.css', array(), filemtime( get_template_directory().'/dist/css/style.css' ) );
 
 	wp_register_script( 'scripts', get_template_directory_uri() . '/dist/js/scripts-min.js');
 
