@@ -15,6 +15,7 @@ body {
 	flex-direction: column;
 	font-family: var(--font-body);
 	line-height: 1.35;
+	min-height: 100vh;
 	overflow-x: hidden;
 	place-items: center start;
 	position: relative;
