@@ -207,3 +207,10 @@ function filter_comment_form_submit_button( $submit_button, $args ) {
 	return $submit_before . $submit_button . $submit_after;
 };
 add_filter( 'comment_form_submit_button', 'filter_comment_form_submit_button', 10, 2 );
+
+// Auto-approve webmentions
+function unspam_webmentions($approved, $commentdata) {
+	return $commentdata['comment_type'] == 'webmention' ? 1 : $approved;
+}
+
+add_filter('pre_comment_approved', 'unspam_webmentions', '99', 2);
