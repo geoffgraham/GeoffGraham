@@ -2,7 +2,7 @@
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Home">
 		<svg width="331px" height="270px" viewBox="0 0 331 270" version="1.1" xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink">
-			<title>Geoff Graham</title>
+			<title class="p-name">Geoff Graham</title>
 			<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 				<g id="logo" transform="translate(14.499278, 14.500405)">
 					<rect id="BG" fill="#FFFFFF" x="22.5007219" y="23.4995954" width="257" height="194"></rect>
