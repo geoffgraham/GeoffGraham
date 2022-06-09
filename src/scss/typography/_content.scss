@@ -1,19 +1,3 @@
-p {
-	font-size: clamp(
-		var(--fluid-type-min),
-		calc(1rem + var(--fluid-type-target)),
-		var(--fluid-type-max)
-	);
-	line-height: 1.45;
-	margin-block-end: .25rem;
-}
-
-p {
-	--fluid-type-min: 0.85rem;
-	--fluid-type-max: 1.3rem;
-	--fluid-type-target: .5vw;
-}
-
 dfn, cite, em, i {
 	font-style: italic;
 }
@@ -23,22 +7,10 @@ kbd, tt, var {
 }
 
 abbr
-acronym {
-	background-color: var(--white);
-	border: 1px solid var(--primary-color);
-	border-radius: 2px;
-	box-shadow: 3px 3px 0 var(--primary-color);
-	padding: .15rem .25rem;
-}
+acronym {}
 
 abbr, acronym {
 	cursor: help;
 }
 
-mark, ins {
-	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
-}
+mark, ins {}

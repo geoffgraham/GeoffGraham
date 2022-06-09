@@ -1,36 +1,5 @@
 .site-header {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	position: relative;
-	z-index: 2;
-}
-
-.site-header__logo {
-	flex: 1;
-}
-
-.site-header__logo a {
-	border: 0;
-}
-
-.site-header__logo svg {
-	height: auto;
-	width: clamp(75px, 50%, 125px);
-	transition: transform .25s ease-out;
-
-	@media #{$lake} {
-	}
-	
-	&:hover {
-		transform: scale(1.1);
-	}
-}
-
-.site-navigation {
-	flex: 3;
-
-	@media #{$lake} {
-		flex: 1;
-	}
+	margin-block-end: var(--spacer);
 }

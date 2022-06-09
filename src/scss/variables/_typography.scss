@@ -1,17 +1,17 @@
 :root {
-	--font-primary: cairo, sans-serif;
-	--font-display: professor, sans-serif;
-	--font-body: var(--font-primary);
-	--font-code: logic-monoscript, mono;
+	--font-primary: ;
+	--font-display: ;
+	--font-body: ;
+	--font-code: ;
 
-	--font-size-small: 14px;
-	--font-size-medium: 18px;
-	--font-size-large: 22px;
-	--font-size-huge: 80px;
+	--font-size-small: 18px;
+	--font-size-medium: 22px;
+	--font-size-large: 28px;
+	--font-size-huge: 46px;
 	
 	--fluid-type-min: 2.5rem;
 	--fluid-type-max: 5rem;
 	--fluid-type-target: 5vw;
 
-	--line-height: 1.35;
+	--line-height: 1.5;
 }
