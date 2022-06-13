@@ -1,38 +1,7 @@
 ul, ol {
-	--fluid-type-min: 0.85rem;
-	--fluid-type-max: 1.3rem;
-	--fluid-type-target: .5vw;
-	
-	font-size: clamp(
-		var(--fluid-type-min),
-		calc(1rem + var(--fluid-type-target)),
-		var(--fluid-type-max)
-	);
-	margin: 1em 0 1.75em 0;
-}
-
-ul {
-	list-style: square outside none;
-}
-
-ol {
-	list-style: decimal;
+	line-height: var(--line-height);
 }
 
 li {
-	margin-block-end: 1em;
-}
-
-li > ul,
-li > ol {
-	margin-block-end: 0;
-	margin-inline-end: 1.5em;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin: 0 1.5em 1.5em;
+	margin-block-end: var(--spacer-small);
 }
