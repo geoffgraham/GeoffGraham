@@ -3,3 +3,7 @@
 	justify-content: space-between;
 	margin-block-end: var(--spacer);
 }
+
+.site-header__logo svg:hover {
+  transform: scale(1.2);
+}
