@@ -2,8 +2,6 @@ html {
 	background-color: var(--background);
 	font-kerning: normal;
 	font-size: 18px;
-	min-height: 100%;
-	overflow-y: scroll;
 }
 
 @supports (hanging-punctuation:first) {
@@ -16,11 +14,10 @@ body {
 	color: var(--text-color);
 	display: grid;
 	font-family: var(--font-body);
-		font-size: 150%;
+	font-size: 150%;
 	line-height: 1.35;
 	min-height: 100vh;
 	overflow-x: hidden;
 	place-items: start center;
-	padding: var(--spacer-small);
 	position: relative;
 }
