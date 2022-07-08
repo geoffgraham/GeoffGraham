@@ -1,19 +1,22 @@
+.button::before,
+.button--secondary::before,
+.wp-block-button__link::before,
+.comment-reply-link::before,
+input[type='submit']::before {
+	border: 2px solid #000;
+	overflow-wrap: break-word;
+	padding: 10px 25px;
+	text-align: center;
+	transition: transform .25s ease-out;
+}
+
 .button,
 .button--secondary,
 .wp-block-button__link,
 .comment-reply-link,
 input[type='submit'] {
-	border: 2px solid #000;
-	overflow-wrap: break-word;
-	padding: 10px 25px;
-	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: transform .25s ease-out;
-
-	@media #{$pond} {
-		padding: 20px 45px;
-	}
 	
 	&:hover {
 		cursor: pointer;
