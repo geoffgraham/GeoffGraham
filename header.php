@@ -31,10 +31,13 @@
 
 	<div class="site-wrapper">
 		<p class="notice"><strong>Excuse my dust!</strong> I'm in the process of re-designing this site. You may experience some turbulence along the way.</p>
-		<header class="site-header">
-			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
+	</div>
+	<header class="site-header">
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
+		<div class="site-wrapper">
 			<?php get_template_part( 'template-parts/header/header', 'logo' ); ?>
 			<div class="site-navigation">
 				<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
 			</div>
-		</header>
+		</div>
+	</header>

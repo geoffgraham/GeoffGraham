@@ -1,12 +1,27 @@
 .site-header {
+	background: var(--white);
+	box-shadow: 0 10px 15px rgba(0,0,0,.15);
+	display: flex;
+	justify-content: center;
+	padding-block: var(--spacer) var(--spacer-small);
+	width: 100%;
+}
+
+.site-header .site-wrapper {
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	margin-block-end: var(--spacer);
-
+	width: 100%;
+	
 	@media #{$lake} {
 		flex-direction: row;
 	}
+}
+
+.site-header__logo svg {
+	transition: all var(--anim-transition) ease-in;
 }
 
 .site-header__logo svg:hover {
