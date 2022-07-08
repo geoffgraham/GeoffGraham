@@ -1,4 +1,3 @@
 .site-wrapper {
-	padding-block: var(--spacer-small) var(--spacer-large);
-	width: clamp(320px, 100vw, var(--site-width));
+	max-width: var(--site-width);
 }

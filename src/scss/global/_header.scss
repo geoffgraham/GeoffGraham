@@ -1,7 +1,12 @@
 .site-header {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	margin-block-end: var(--spacer);
+
+	@media #{$lake} {
+		flex-direction: row;
+	}
 }
 
 .site-header__logo svg:hover {
