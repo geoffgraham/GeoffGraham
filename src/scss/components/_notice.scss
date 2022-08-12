@@ -1,5 +1,7 @@
 .notice {
 	background-color: var(--white);
 	border: 1px solid var(--primary-color);
-	padding: var(--spacer-small);
+	font-size: .85rem;
+	margin-block-end: var(--spacer-small);
+	padding: calc(var(--spacer-small) / 2);
 }
