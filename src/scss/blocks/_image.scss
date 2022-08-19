@@ -1,0 +1,30 @@
+figure {
+	box-shadow:
+		-8px 8px 0 var(--white),
+		-16px 16px 0 var(--accent-color),
+		-24px 24px 0 var(--primary-color);
+}
+
+/* when there is a figcaption */
+figure:has(figcaption) {
+	background: var(--white);
+	border: 1px solid var(--gray-lighter);
+	padding: var(--spacer-small);
+}
+
+figure img {
+	margin-block-end: var(--spacer-small);
+}
+
+/* more space to account for box shadows on figure */
+figure + * {
+	margin-block-start: calc(var(--spacer) + var(--spacer-small));
+}
+
+/* override default WP block styles */
+.wp-block-image figcaption {
+	color: var(--gray-dark);
+	font-size: var(--font-size-small);
+	margin: 0;
+	text-align: center;
+}
