@@ -8,13 +8,9 @@
 .site-header .site-wrapper {
 	align-items: center;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
-	
-	@media #{$lake} {
-		flex-direction: row;
-	}
 }
 
 .site-header__logo svg {
