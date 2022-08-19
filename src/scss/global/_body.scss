@@ -17,7 +17,12 @@ body {
 	font-size: 1.5rem;
 	line-height: 1.35;
 	overflow-x: hidden;
+	padding-inline: var(--spacer-small);
 	place-items: start center;
 	position: relative;
 	width: 100%;
+
+	@media #{$lake} {
+		padding-inline: 0;
+	}
 }
