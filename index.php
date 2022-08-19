@@ -11,11 +11,6 @@ get_header();
 
 		<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
 
-		<footer class="posts__pagination">
-			<?php next_posts_link( 'Older' ); ?>
-			<?php previous_posts_link( 'Newer' ); ?>
-		</footer>
-
 	</main>
 	
 	<?php
