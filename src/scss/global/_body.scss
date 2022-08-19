@@ -16,7 +16,6 @@ body {
 	--fluid-type-target: 3vw;
 	
 	color: var(--text-color);
-	display: grid;
 	font-family: var(--font-body);
 	font-size: clamp(
 		var(--fluid-type-min, 1rem),
@@ -24,9 +23,9 @@ body {
 		var(--fluid-type-max, 1.3rem)
 	);
 	line-height: 1.35;
+	margin-left: 0 !important; /* not sure where this is coming from! */
 	overflow-x: hidden;
-	padding-inline: var(--spacer-small);
-	place-items: start center;
+	padding-inline: 1rem;
 	position: relative;
 	width: 100%;
 

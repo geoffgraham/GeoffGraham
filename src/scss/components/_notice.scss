@@ -3,6 +3,7 @@
 	border: 1px solid var(--primary-color);
 	font-size: .85rem;
 	margin-block-end: var(--spacer-small);
+	margin-inline: auto;
 	padding: calc(var(--spacer-small) / 2);
-	max-width: 80ch;
+	width: clamp(300px, 100%, 85ch);
 }
