@@ -9,7 +9,7 @@ get_header();
 ?>
 	<main class="main-content posts">
 
-		<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
+		<?php echo the_content(); ?>
 
 	</main>
 	
