@@ -15,6 +15,11 @@
 
 .site-header__logo svg {
 	transition: all var(--anim-transition) ease-in;
+	width: 75px;
+
+	@media #{$lake} {
+		width: auto;
+	}
 }
 
 .site-header__logo svg:hover {

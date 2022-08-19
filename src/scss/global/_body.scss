@@ -11,10 +11,18 @@ html {
 }
 
 body {
+	--fluid-type-min: 1.2rem;
+	--fluid-type-max: 1.5rem;
+	--fluid-type-target: 3vw;
+	
 	color: var(--text-color);
 	display: grid;
 	font-family: var(--font-body);
-	font-size: 1.5rem;
+	font-size: clamp(
+		var(--fluid-type-min, 1rem),
+		var(--fluid-type-target, 3vw),
+		var(--fluid-type-max, 1.3rem)
+	);
 	line-height: 1.35;
 	overflow-x: hidden;
 	padding-inline: var(--spacer-small);
