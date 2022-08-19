@@ -7,10 +7,11 @@
 
 get_header();
 ?>
-	<main class="main-content posts">
 
+<div class="site-wrapper">
+	<section class="posts">
 		<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
+	</section>
+</div>
 
-	</main>
-	
-	<?php get_footer() ?>
+<?php get_footer(); ?>
