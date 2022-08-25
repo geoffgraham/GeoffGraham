@@ -23,6 +23,7 @@ body {
 	);
 	line-height: 1.35;
 	margin-left: 0 !important; /* not sure where this is coming from! */
+	min-height: 100vh;
 	overflow-x: hidden;
 	padding-inline: 1rem;
 	position: relative;
