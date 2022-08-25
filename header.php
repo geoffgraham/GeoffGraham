@@ -39,4 +39,6 @@
 		</div>
 	</header>
 
-	<p class="notice"><strong>Excuse my dust!</strong> I'm in the process of re-designing this site. You may experience some turbulence along the way.</p>
+	<div class="site-wrapper">
+		<p class="notice"><strong>Excuse my dust!</strong> I'm in the process of re-designing this site. You may experience some turbulence along the way.</p>
+</div>
