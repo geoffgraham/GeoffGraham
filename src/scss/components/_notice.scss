@@ -5,5 +5,5 @@
 	margin-block-end: var(--spacer-small);
 	margin-inline: auto;
 	padding: calc(var(--spacer-small) / 2);
-	width: clamp(300px, 100%, 85ch);
+	width: min(600px, 100%);
 }
