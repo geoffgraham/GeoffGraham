@@ -14,8 +14,10 @@
 		</main>
 
 		<footer class="site-footer">
-			<div class="site-footer__nav" role="navigation" aria-label="Footer Links">
-				<?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
+			<div class="site-wrapper">
+				<div class="site-footer__nav" role="navigation" aria-label="Footer Links">
+					<?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
+				</div>
 			</div>
 		</footer>
 
