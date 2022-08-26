@@ -2,7 +2,8 @@
 	background-color: var(--white);
 	border: 1px solid var(--primary-color);
 	font-size: .85rem;
-	margin-block-end: var(--spacer-small);
+	grid-area: main;
+	grid-row: 2 / 3;
 	margin-inline: auto;
 	padding: calc(var(--spacer-small) / 2);
 	width: 100%;

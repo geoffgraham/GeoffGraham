@@ -1,5 +1,19 @@
 .site-wrapper {
+	display: grid;
+	gap: 1rem;
+	grid-template-areas:
+		"head"
+		"main"
+		"main"
+		"foot";
 	margin: auto;
-	max-width: var(--site-width);
 	width: 100%;
+
+	@media #{$pond} {
+		grid-template-areas:
+			"head head head"
+			".... main ...."
+			".... foot ....";
+		grid-template-columns: auto minmax(auto, 50ch) auto;
+	}
 }

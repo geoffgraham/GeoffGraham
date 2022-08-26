@@ -8,10 +8,8 @@
 get_header();
 ?>
 
-<div class="site-wrapper">
-	<section class="posts">
-		<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
-	</section>
-</div>
+<section class="posts">
+	<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
+</section>
 
 <?php get_footer(); ?>

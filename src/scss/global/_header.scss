@@ -1,17 +1,13 @@
 .site-header {
 	background: var(--white);
 	display: flex;
-	justify-content: center;
-	width: 100%;
-}
-
-.site-header .site-wrapper {
-	align-items: center;
-	display: flex;
-	flex-direction: row;
+	grid-column: -1 / 1;
 	justify-content: space-between;
-	padding: 1rem;
-	width: 100%;
+	padding-inline: var(--spacer-small);
+
+	@media #{$pond} {
+		padding-inline: var(--spacer-large);
+	}
 }
 
 .site-header__logo svg {

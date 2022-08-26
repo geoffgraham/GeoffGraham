@@ -29,16 +29,13 @@
 
 <body <?php body_class('h-card'); ?>>
 
-	<header class="site-header">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
-		<div class="site-wrapper">
-			<?php get_template_part( 'template-parts/header/header', 'logo' ); ?>
-			<div class="site-navigation">
-				<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
-			</div>
-		</div>
-	</header>
-
-	<div class="site-wrapper">
+	<div class="site-wrapper"><?php // ends in footer.php ?>
+		<header class="site-header">
+			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'geoff-graham' ); ?></a>
+				<?php get_template_part( 'template-parts/header/header', 'logo' ); ?>
+				<div class="site-navigation">
+					<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
+				</div>
+		</header>
+		
 		<p class="notice"><strong>Excuse my dust!</strong> I'm in the process of re-designing this site. You may experience some turbulence along the way.</p>
-</div>

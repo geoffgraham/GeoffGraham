@@ -9,11 +9,9 @@ get_header();
 ?>
 
 <main id="content" class="main-content">
-	<div class="site-wrapper">
-		<?php while ( have_posts() ) : the_post();
-			get_template_part( 'template-parts/content/content', 'page' );
-		endwhile; ?>
-	</div>
+	<?php while ( have_posts() ) : the_post();
+		get_template_part( 'template-parts/content/content', 'page' );
+	endwhile; ?>
 </main>
 
 <?php get_footer(); ?>
