@@ -4,14 +4,14 @@
 	--font-body: ;
 	--font-code: ;
 
-	--font-size-small: 18px;
-	--font-size-medium: 22px;
-	--font-size-large: 28px;
-	--font-size-huge: 46px;
+	--font-size-small: clamp(.95rem, 3vw, 1.2rem);
+	--font-size-medium: clamp(1.2rem, 3vw, 1.5rem);
+	--font-size-large: clamp(2rem, 4vw, 3rem);
+	--font-size-huge: clamp(2.5rem, 5vw, 5rem);
 	
-	--fluid-type-min: 2.5rem;
-	--fluid-type-max: 5rem;
-	--fluid-type-target: 5vw;
+	--fluid-type-min: 1.2rem;
+	--fluid-type-max: 1.5rem;
+	--fluid-type-target: 3vw;
 
-	--line-height: 1.5;
+	--line-height: 1.35;
 }

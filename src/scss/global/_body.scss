@@ -1,26 +1,10 @@
 html {
 	background-color: var(--background);
-	font-kerning: normal;
-}
-
-@supports (hanging-punctuation:first) {
-	html {
-		hanging-punctuation: first;
-	}
 }
 
 body {
-	--fluid-type-min: 1.2rem;
-	--fluid-type-max: 1.5rem;
-	--fluid-type-target: 3vw;
-	
 	color: var(--text-color);
-	font-family: var(--font-body);
-	font-size: clamp(
-		var(--fluid-type-min, 1rem),
-		var(--fluid-type-target, 3vw),
-		var(--fluid-type-max, 1.3rem)
-	);
+	font-size: var(--font-size-medium);
 	line-height: 1.35;
 	margin-left: 0 !important; /* not sure where this is coming from! */
 	min-height: 100vh;

@@ -2,25 +2,16 @@
 h1, h2, h3 {
 	font-family: var(--font-display);
 	font-weight: 400;
-	font-size: clamp(
-		var(--fluid-type-min, 1rem),
-		calc(1rem + var(--fluid-type-target, 3vw)),
-		var(--fluid-type-max, 1.3rem)
-	);
 	font-style: normal;
 }
 
 .h1,
 h1 {
-	--fluid-type-min: 2.5rem;
-	--fluid-type-max: 5rem;
-	--fluid-type-target: 5vw;
+	font-size: var(--font-size-huge);
 	line-height: 1.15;
 }
 
 .h2,
 	h2 {
-		--fluid-type-min: 2.3rem;
-		--fluid-type-max: 2.5rem;
-		--fluid-type-target: 6vw;
+		font-size: var(--font-size-large);
 	}

@@ -1,7 +1,7 @@
 .notice {
 	background-color: var(--white);
 	border: 1px solid var(--primary-color);
-	font-size: .85rem;
+	font-size: var(--font-size-small);
 	grid-area: main;
 	grid-row: 2 / 3;
 	margin-inline: auto;
