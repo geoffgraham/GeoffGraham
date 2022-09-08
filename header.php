@@ -38,4 +38,4 @@
 				</div>
 		</header>
 		
-		<p class="notice"><strong>Excuse my dust!</strong> I'm this site live. You may experience some turbulence along the way.</p>
+		<p class="notice"><strong>Excuse my dust!</strong> I'm redesigning this site live. You may experience some turbulence along the way.</p>
