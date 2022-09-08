@@ -235,7 +235,7 @@ function disable_emojis() {
 	* Filter function used to remove the tinymce emoji plugin.
 	* 
 	* @param array $plugins 
-	* @return array Difference betwen the two arrays
+	* @return array Difference between the two arrays
 	*/
  function disable_emojis_tinymce( $plugins ) {
 	if ( is_array( $plugins ) ) {
