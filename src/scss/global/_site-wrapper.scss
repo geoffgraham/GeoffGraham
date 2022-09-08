@@ -7,6 +7,7 @@
 		"main"
 		"foot";
 	margin: auto;
+	padding-block: var(--spacer);
 	width: 100%;
 
 	@media #{$pond} {
