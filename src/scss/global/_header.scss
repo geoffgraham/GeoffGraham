@@ -1,8 +1,16 @@
 .site-header {
-	background: var(--white);
+	background: var(--primary-color);
+	position: sticky;
+	inset-block-start: 0;
+	width: 100%;
+}
+
+.site-header__inner {
 	display: flex;
-	grid-area: head;
 	justify-content: space-between;
+	margin: auto;
+	padding-block: var(--spacer-small);
+	width: #{"min(95%, 65ch)"};
 }
 
 .site-header__logo svg {

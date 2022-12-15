@@ -1,4 +1,9 @@
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
 html {
+	background-color: var(--primary-color);
 	border-block: 5px solid var(--primary-color);
 
 	@media #{$lake} {
@@ -10,14 +15,10 @@ body {
 	color: var(--text-color);
 	font-size: var(--font-size-medium);
 	line-height: 1.35;
-	margin-left: 0 !important; /* not sure where this is coming from! */
+	margin: auto;
+
 	min-height: 100vh;
 	overflow-x: hidden;
-	padding-inline: 1rem;
 	position: relative;
-	width: 100%;
-
-	@media #{$lake} {
-		padding-inline: 0;
-	}
+	width: #{"min(95%, 80ch)"}
 }

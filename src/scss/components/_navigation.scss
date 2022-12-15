@@ -14,3 +14,12 @@
 .navigation__social li {
 	margin: 0;
 }
+
+.navigation__primary ul li a {
+	color: var(--white);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration-style: solid;
+	}
+}
