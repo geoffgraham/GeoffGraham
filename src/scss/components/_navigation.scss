@@ -17,9 +17,11 @@
 
 .navigation__primary ul li a {
 	color: var(--white);
+  font-weight: 900;
 	text-decoration: none;
+  text-shadow: 1px 1px 1px var(--orange-dark);
 
 	&:hover {
-		text-decoration-style: solid;
+		opacity: .5;
 	}
 }
