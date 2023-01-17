@@ -58,9 +58,7 @@ get_header();
 			endif; ?>
 
 		<?php if ( comments_open() || get_comments_number() ) { ?>
-			<div class="site-wrapper">
-				<?php comments_template(); ?>
-			</div>
+			<?php comments_template(); ?>
 		<?php } ?>
 	</main>
 
