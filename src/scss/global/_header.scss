@@ -6,14 +6,14 @@
   box-sizing: content-box;
   height: var(--spacer);
   padding-inline: var(--spacer-small);
-	position: sticky;
-	inset-block-start: calc(var(--spacer) - 10px);
+  inset-block-start: 0;
 }
 
 .site-header__inner {
 	display: flex;
 	justify-content: space-between;
 	margin: auto;
+  position: sticky;
 }
 
 .site-header__logo svg {
