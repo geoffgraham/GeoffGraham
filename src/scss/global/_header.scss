@@ -5,15 +5,15 @@
   box-shadow: 0 2px 10px var(--gray-light);
   box-sizing: content-box;
   height: var(--spacer);
-  padding-inline: var(--spacer-small);
   inset-block-start: 0;
+  padding-inline: var(--spacer-small);
+  position: sticky;
 }
 
 .site-header__inner {
 	display: flex;
 	justify-content: space-between;
 	margin: auto;
-  position: sticky;
 }
 
 .site-header__logo svg {
