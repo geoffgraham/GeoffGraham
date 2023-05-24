@@ -152,6 +152,16 @@ function change_default_jquery( &$scripts){
 }
 add_filter( 'wp_default_scripts', 'change_default_jquery' );
 
+/**
+ * Dequeue WordPress Styles
+ */
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_classic_theme_styles' );
+
+add_action( 'wp_enqueue_scripts', function() {
+  wp_dequeue_style( 'global-styles' );
+  wp_deregister_style( 'global-styles' );
+}, 100000 );
+
 // Custom markup for comments
 function gg_comments($comment, $args, $depth) {
 	if ( 'div' === $args['style'] ) {
