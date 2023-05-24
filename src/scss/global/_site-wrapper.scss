@@ -1,11 +1,9 @@
 .site-wrapper {
-	background-color: var(--white);
 	border-radius: var(--spacer-small);
 	margin: auto;
 	padding-block: var(--spacer);
 	padding-inline: 1rem;
-	position: sticky;
-	width: 100%;
+	width: #{"min(95%, 80ch)"};
 
 	@media #{$lake} {
 		padding-inline: 0;
