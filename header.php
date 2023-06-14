@@ -14,7 +14,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="description" content="Web Design & Development Straight Outta Long Beach, CA."/>
+	<meta name="description" content="Web Design & Development Straight Outta Fort Collins, CO."/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#FD581C">
 	<meta name="google-site-verification" content="efKVLT92Kr6XcuOj2WBHTOI3S1F9bdJws5bsEF8qbXI" />
