@@ -6,6 +6,7 @@
 .h1,
 h1 {
   font-family: var(--font-display);
+  font-display: fallback;
 	font-size: var(--font-size-huge);
 	line-height: 1.15;
   margin-block: var(--spacer);
