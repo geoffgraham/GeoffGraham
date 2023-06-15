@@ -36,7 +36,7 @@ get_header();
 					<div class="post-single__date">
 						<?php
 						if ( !in_category( 'TIL' ) ) {
-							echo 'Handwritten by ';
+							echo '✏️ Handwritten by ';
 							the_author();
 							echo ' on ';
 							echo the_date( 'F j, Y' );

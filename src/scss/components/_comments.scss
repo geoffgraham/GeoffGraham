@@ -1,3 +1,19 @@
+.comments h2 {
+  display: inline-block;
+  margin-block-start: 0;
+  position: relative;
+  inset-block-start: .5rem;
+}
+
 .required-field-message {
 	display: none;
+}
+
+.comment-form-cookies-consent {
+  font-size: 70%;
+}
+
+.form-submit small {
+  font-size: 70%;
+  margin-inline-start: var(--spacer-small);
 }

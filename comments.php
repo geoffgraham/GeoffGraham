@@ -9,29 +9,33 @@ if ( post_password_required() ) {
 
 <section class="comments">
 	<?php if ( have_comments() ) : ?>
-		<h2>Comments</h2>
+		<details>
+    <summary>  
+      <h2>Comments</h2>
+    </summary>
 	<?php endif; ?>
 	
 	<ol class="comments__list">
 		<?php wp_list_comments("callback=gg_comments"); ?>
 	</ol>
 
-	<?php the_comments_navigation();
+	<?php the_comments_navigation(); ?>
 
-	if ( ! comments_open() ) :
-		?>
+  <?php if ( ! comments_open() ) : ?>
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'geoff-graham' ); ?></p>
-		<?php
-	endif;
+  <?php endif; ?>
 
-	$comments_args = array(
+	<?php 
+  $comments_args = array(
 		'title_reply_before' => '<h2 class="comment-reply-title">',
 		'title_reply_after' => '</h2>',
 		'comment_notes_before' => '',
 		'comment_notes_after' => '',
 		'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Keep calm and comment on."></textarea></p>',
-);
+    'class_submit' => 'button'
+  );
 	comment_form($comments_args);
 	?>
+  </details>
 
 </section>
