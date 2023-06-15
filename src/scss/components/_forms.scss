@@ -2,4 +2,9 @@ textarea {
 	display: block;
   font-size: var(--font-size-small);
   padding: calc(var(--spacer-small) / 2);
+
+  &:focus {
+    border-color: var(--primary-color);
+    outline-color: var(--primary-color);
+  }
 }
