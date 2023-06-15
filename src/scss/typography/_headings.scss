@@ -1,14 +1,19 @@
-.h1, .h2, .h3, 
-h1, h2, h3 {
-	font-family: var(--font-display);
-	font-weight: 400;
-	font-style: normal;
+@font-face {
+  font-family: 'SuperFlyTwo';
+  src: url('/wp-content/themes/v04/dist/fonts/SuperFlyTwo.woff2') format('woff2');
 }
 
 .h1,
 h1 {
+  font-family: var(--font-display);
 	font-size: var(--font-size-huge);
 	line-height: 1.15;
+}
+
+.h2, .h3, 
+h2, h3 {
+	font-weight: 400;
+	font-style: normal;
 }
 
 .h2,

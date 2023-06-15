@@ -1,13 +1,13 @@
 :root {
 	--font-primary: ;
-	--font-display: ;
+	--font-display: "SuperFlyTwo", system-serif;
 	--font-body: ;
 	--font-code: ;
 
 	--font-size-small: clamp(.95rem, 3vw, 1.2rem);
 	--font-size-medium: clamp(1.2rem, 3vw, 1.5rem);
 	--font-size-large: clamp(2rem, 4vw, 3rem);
-	--font-size-huge: clamp(2.5rem, 5vw, 5rem);
+	--font-size-huge: clamp(3.5rem, 9vw, 7rem);
 	
 	--fluid-type-min: 1.2rem;
 	--fluid-type-max: 1.5rem;
