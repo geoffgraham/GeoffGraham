@@ -11,7 +11,7 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<details>
     <summary>  
-      <h2>Comments</h2>
+      <h2><?php echo get_comments_number(); ?> Comments</h2>
     </summary>
 	<?php endif; ?>
 	
