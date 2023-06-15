@@ -5,6 +5,23 @@
   inset-block-start: .5rem;
 }
 
+.comments__list {
+  list-style: none;
+  margin-trim: block;
+  padding-inline-start: 0;
+}
+
+.comments .comment {
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  margin-block: var(--spacer);
+  padding: var(--spacer);
+}
+
+.comment__meta {
+  font-size: 70%;
+}
+
 .required-field-message {
 	display: none;
 }
