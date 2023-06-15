@@ -1,3 +1,5 @@
 textarea {
 	display: block;
+  font-size: var(--font-size-small);
+  padding: calc(var(--spacer-small) / 2);
 }

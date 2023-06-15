@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 		'title_reply_after' => '</h2>',
 		'comment_notes_before' => '',
 		'comment_notes_after' => '',
-		'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Keep calm and comment on."></textarea></p>',
+		'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Your Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Keep calm and comment on."></textarea></p>',
     'class_submit' => 'button'
   );
 	comment_form($comments_args);
