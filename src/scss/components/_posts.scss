@@ -4,7 +4,8 @@
 
 .posts__pagination {
   display: flex;
-  gap: var(--spacer);
+  flex-direction: row-reverse;
+  justify-content: space-between;
 
   .next,
   .prev {
