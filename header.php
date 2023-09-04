@@ -39,4 +39,3 @@
 			</div>
 		</header>
 		<div class="site-wrapper">
-			<p class="notice">👋 <strong>Excuse my dust!</strong> I'm redesigning this site live. You may experience some turbulence.</p>
