@@ -3,9 +3,6 @@
 	border: 1px solid var(--primary-color);
   border-radius: 4px;
 	font-size: var(--font-size-small);
-	grid-area: main;
-	grid-row: 2 / 3;
-	margin-inline: auto;
 	padding: calc(var(--spacer-small) / 2);
 	width: 100%;
 }

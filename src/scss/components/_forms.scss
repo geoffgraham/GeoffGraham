@@ -1,6 +1,7 @@
 textarea {
 	display: block;
   font-size: var(--font-size-small);
+  max-inline-size: 100%;
   padding: calc(var(--spacer-small) / 2);
 
   &:focus {
