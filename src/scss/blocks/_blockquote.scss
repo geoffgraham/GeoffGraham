@@ -1,8 +1,15 @@
-.wp-block-quote {
-	border-block: 3px solid var(--orange);
-	font-size: 125%;
+blockquote {
+  border-radius: 4px;
+  margin-inline-start: 0;
+}
 
-  @media #{$bay} {
-    margin-block: var(--spacer);
+.wp-block-quote {
+  background-image: linear-gradient(to right, var(--yellow-mellow), transparent 80%);
+	border-inline-start: 3px solid var(--orange);
+	font-size: 125%;
+  padding: 1.5rem;
+
+  p {
+    margin: 0;
   }
 }
