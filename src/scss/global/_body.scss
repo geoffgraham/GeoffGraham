@@ -3,6 +3,7 @@
 }
 
 html {
+  background-color: var(--background);
 	border-block-end: 5px solid var(--primary-color);
 
 	@media #{$lake} {
