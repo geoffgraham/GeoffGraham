@@ -1,6 +1,7 @@
 .navigation__primary ul,
 .navigation__social ul {
 	display: flex;
+  flex-wrap: wrap;
   font-size: var(--font-size-small);
 	gap: var(--spacer-small);
 	list-style: none;
