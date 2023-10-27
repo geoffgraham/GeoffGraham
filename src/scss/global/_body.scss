@@ -13,8 +13,7 @@ html {
 
 body {
 	color: var(--text-color);
-	font-size: var(--font-size-medium);
-	line-height: 1.55;
+  font: var(--font-size-medium) / 1.55 system-ui;
 	margin: auto;
 
 	min-height: 100vh;
