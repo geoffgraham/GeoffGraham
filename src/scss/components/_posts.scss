@@ -2,6 +2,12 @@
 	margin-block-end: var(--spacer);
 }
 
+.posts .post__date {
+  color: var(--primary-color);
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+}
+
 .posts__pagination {
   display: flex;
   flex-direction: row-reverse;
