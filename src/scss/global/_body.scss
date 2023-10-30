@@ -2,6 +2,8 @@
 	-webkit-font-smoothing: antialiased;
 }
 
+:root { accent-color: var(--brand); }
+
 html {
   background-color: var(--background);
 	border-block-end: 5px solid var(--primary-color);

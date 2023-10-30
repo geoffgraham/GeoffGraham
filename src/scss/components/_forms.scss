@@ -1,3 +1,12 @@
+:is(
+  ::-webkit-calendar-picker-indicator,
+  ::-webkit-clear-button,
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button
+) {
+  accent-color: var(--primary-color);
+}
+
 textarea {
 	display: block;
   font-size: var(--font-size-small);

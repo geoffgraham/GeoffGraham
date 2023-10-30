@@ -46,3 +46,8 @@
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
+
+/* Accent colors */
+:focus-visible { outline-color: var(--primary-color); }
+::selection { background-color: var(--primary-color); }
+::marker { color: var(--primary-color); }
