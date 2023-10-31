@@ -7,14 +7,13 @@
   accent-color: var(--primary-color);
 }
 
+input[type="text"],
+input[type="email"]
+input[type="url"]
 textarea {
-	display: block;
+  border: 1px solid var(--gray-dark);
+  display: block;
   font-size: var(--font-size-small);
-  max-inline-size: 100%;
+  max-inline-size: 50ch;
   padding: calc(var(--spacer-small) / 2);
-
-  &:focus {
-    border-color: var(--primary-color);
-    outline-color: var(--primary-color);
-  }
 }
