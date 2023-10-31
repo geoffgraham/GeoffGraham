@@ -88,3 +88,8 @@
 .reaction-list {
   padding-inline-start: 0;
 }
+
+/* Fixes IndieWeb stacking context */
+.avatar-only .comment-body {
+  z-index: -1;
+}
