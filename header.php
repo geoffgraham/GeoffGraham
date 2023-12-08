@@ -17,6 +17,7 @@
 	<meta name="description" content="Web Design & Development Straight Outta Fort Collins, CO."/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#FD581C">
+  <meta name="view-transition" content="same-origin" />
 	<meta name="google-site-verification" content="efKVLT92Kr6XcuOj2WBHTOI3S1F9bdJws5bsEF8qbXI" />
 
 	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.ico"><!-- 32×32 -->
