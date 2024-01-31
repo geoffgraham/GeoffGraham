@@ -125,11 +125,11 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 /**
- * Exclude "Today I Learned" and "RSS Club" categories from blog loop
+ * Exclude "One Liners" (109) "Today I Learned" (52) and "RSS Club" (54) categories from blog loop
  */
 function exclude_category_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
-		$query->set( 'cat', '-52, -54' );
+		$query->set( 'cat', '-52, -54, -109' );
 	}
 }
 add_action( 'pre_get_posts', 'exclude_category_posts' );
