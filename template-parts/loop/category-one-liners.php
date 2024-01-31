@@ -5,6 +5,7 @@
 	</div>
 	<?php 
 		the_title( '<div class="post__title">', '</div>' );
+    the_content();
 	?>
 
 </article>
