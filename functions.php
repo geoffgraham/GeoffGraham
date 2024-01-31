@@ -125,19 +125,6 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 /**
- * Include CPTs in main RSS Feed
- * https://www.wpbeginner.com/wp-tutorials/how-to-add-custom-post-types-to-your-main-wordpress-rss-feed/
- */
-
-function myfeed_request($qv) {
-  if (isset($qv['feed']))
-  $qv['post_type'] = get_post_types();
-  return $qv;
-}
-
-add_filter('request', 'myfeed_request');
-
-/**
  * Exclude "Today I Learned" and "RSS Club" categories from blog loop
  */
 function exclude_category_posts( $query ) {
