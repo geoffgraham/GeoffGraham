@@ -4,6 +4,8 @@
 		<?php // If "TIL" category, let's show its title.
 		if ( is_category( 'TIL' ) ) :
 			echo '<h1>Today I Learned...</h1>';
+    elseif ( is_category( 'one-liners' ) ) :
+      echo '<h1>One Liners</h1>';
 		else:
 			echo '<h1>Blog</h1>';
 		endif; ?>
