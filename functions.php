@@ -162,7 +162,9 @@ add_action( 'wp_enqueue_scripts', function() {
   wp_deregister_style( 'global-styles' );
 }, 100000 );
 
-// Custom markup for comments
+/**
+ * Custom Markup for Comments
+ */
 function gg_comments($comment, $args, $depth) {
 	if ( 'div' === $args['style'] ) {
 		$tag       = 'div';
@@ -211,14 +213,16 @@ function gg_comments($comment, $args, $depth) {
 
 // Markdown support notice after comment form submit button
 function filter_comment_form_submit_button( $submit_button, $args ) {
-	// make filter magic happen here...
+	// Make filter magic happen here...
 	$submit_before = '';
 	$submit_after = '<small>Markdown supported</small>';
 	return $submit_before . $submit_button . $submit_after;
 };
 add_filter( 'comment_form_submit_button', 'filter_comment_form_submit_button', 10, 2 );
 
-// Auto-approve webmentions
+/**
+ * Auto-approve Webmentions
+ */
 function unspam_webmentions($approved, $commentdata) {
 	return $commentdata['comment_type'] == 'webmention' ? 1 : $approved;
 }
@@ -239,6 +243,7 @@ function disable_emojis() {
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 	add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
 }
+
 add_action( 'init', 'disable_emojis' );
 
 /**
@@ -248,11 +253,11 @@ add_action( 'init', 'disable_emojis' );
 * @return array Difference between the two arrays
 */
 function disable_emojis_tinymce( $plugins ) {
-if ( is_array( $plugins ) ) {
-return array_diff( $plugins, array( 'wpemoji' ) );
-} else {
-return array();
-}
+  if ( is_array( $plugins ) ) {
+    return array_diff( $plugins, array( 'wpemoji' ) );
+  } else {
+    return array();
+  }
 }
 
 /**
@@ -264,14 +269,13 @@ return array();
 * @return array Difference between the two arrays.
 */
 function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
-if ( 'dns-prefetch' == $relation_type ) {
-/** This filter is documented in wp-includes/formatting.php */
-$emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
+  if ( 'dns-prefetch' == $relation_type ) {
+    // This filter is documented in wp-includes/formatting.php */
+    $emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
 
-$urls = array_diff( $urls, array( $emoji_svg_url ) );
-}
-
-return $urls;
+    $urls = array_diff( $urls, array( $emoji_svg_url ) );
+  }
+  return $urls;
 }
 
 /**
@@ -279,10 +283,20 @@ return $urls;
 */
 add_action( 'login_head', 'gg_login_favicon' );
 
-function gg_login_favicon()
-{
-?>
+function gg_login_favicon() { ?>
 <link rel='shortcut icon' href='<?php get_template_directory_uri() . '/favicon.ico' ?>'>
 
-<?php
+<?php }
+
+/**
+  * Remove Items From Admin Toolbar
+  * https://paulund.co.uk/how-to-remove-links-from-wordpress-admin-bar
+**/
+function remove_admin_bar_links() {
+  global $wp_admin_bar;
+  $wp_admin_bar->remove_menu('wp-logo'); // WordPress logo
+  $wp_admin_bar->remove_menu('customize'); // WordPress Customizer
+  $wp_admin_bar->remove_menu('rank-math'); // RankMath Plugin
 }
+
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
