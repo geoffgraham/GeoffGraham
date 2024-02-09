@@ -1,7 +1,6 @@
 <article class="post">
 
 	<?php
-    echo get_avatar( 'geoff@geoffgraham.me', 75 );
 		the_title( '<div class="post__title">', '</div>' );
     the_content();
 	?>
