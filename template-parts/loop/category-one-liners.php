@@ -12,7 +12,7 @@
         ['size' => '30']); 
       ?>"
     >
-    <span class="post__date"><?php the_date( 'M d, Y' );?></span>
+    <span class="post__date"><?php the_time( get_option( 'date_format' ) ); ?></span>
   </footer>
 
 </article>
