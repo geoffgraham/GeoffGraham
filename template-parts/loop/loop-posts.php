@@ -7,6 +7,8 @@
     // If "One Liners" category, let's show its title.
     elseif ( is_category( 'one-liners' ) ) :
       echo '<h1>One Liners</h1>';
+      elseif ( is_category( 'links' ) ) :
+        echo '<h1>Links</h1>';
 		else:
 			echo '<h1>Blog</h1>';
 		endif; ?>
@@ -14,7 +16,7 @@
 		<?php // The posts
 			while ( have_posts() ) : the_post();
         if ( is_category( 'one-liners' ) ) :
-				  get_template_part( 'template-parts/loop/category', 'one-liners' );
+          get_template_part( 'template-parts/loop/category', 'one-liners' );
         else: 
           get_template_part( 'template-parts/loop/category', 'all' );
         endif;
