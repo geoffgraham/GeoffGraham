@@ -125,7 +125,7 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 /**
- * Exclude "One Liners" (109) "Today I Learned" (52) and "RSS Club" (54) categories from blog loop
+ * Exclude "One Liners" (109) "Today I Learned" (52), "RSS Club" (54), and Links (112) categories from blog loop
  */
 function exclude_category_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
