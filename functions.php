@@ -129,7 +129,7 @@ add_filter( 'body_class', 'add_slug_body_class' );
  */
 function exclude_category_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
-		$query->set( 'cat', '-52, -54, -109' );
+		$query->set( 'cat', '-52, -54, -109, -112' );
 	}
 }
 add_action( 'pre_get_posts', 'exclude_category_posts' );
