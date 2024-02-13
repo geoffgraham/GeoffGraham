@@ -4,5 +4,6 @@
   border-radius: 4px;
 	font-size: var(--font-size-small);
 	padding: calc(var(--spacer-small) / 2);
-	width: 100%;
+  // https://github.com/sass/node-sass/issues/2815#issuecomment-575926329
+	width: calc(max(80ch, 100%));
 }
