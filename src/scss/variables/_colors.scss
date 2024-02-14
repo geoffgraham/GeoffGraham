@@ -1,5 +1,6 @@
 :root {
 	/* Color Palette */
+  --orange-light: hsl(16.1 98.2% 95% / 1);
 	--orange: hsl(16.1 98.2% 55.5% / 1);
   --orange-dark: hsl(16.1 98.2% 25% / 1);
 	--yellow: #ffe417;
@@ -9,7 +10,7 @@
 	--black: hsl(238.2 53.1% 12.5% / 1);
 	
 	--gray-dark: hsl(238.2 53.1% 12.5% / .75);
-	--gray: hsl(238.2 53.1% 12.5% / .5);
+	--gray: hsla(238, 18%, 72%, 0.5);
 	--gray-light: hsl(238.2 53.1% 12.5% / .25);
 	--gray-lighter: hsl(238.2 53.1% 12.5% / .15);
 	--gray-lightest: hsl(238.2 53.1% 12.5% / .05);

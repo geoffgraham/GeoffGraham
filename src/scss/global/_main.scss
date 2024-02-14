@@ -3,7 +3,7 @@
 	margin: auto;
 	width: 100%;
 
-  p,
+  p:not(.footnote),
   ul,
   ol {
     max-inline-size: 50ch;
