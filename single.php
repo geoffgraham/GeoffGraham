@@ -25,13 +25,16 @@ get_header();
 				<?php the_title( '<h1 class="post-single__title">', '</h1>' ); ?>
 			
 				<div class="post-single__body">
-			
-				<?php if ( in_category( 'RSS Club' ) ) : ?>
-					<span class="rss-note">👋 Hey! This post is exclusive for RSS subscribers.</span>
-				<?php endif; ?>
-					<?php echo the_content(); ?>
-			
+          <?php if ( in_category( 'RSS Club' ) ) : ?>
+            <span class="rss-note">👋 Hey! This post is exclusive for RSS subscribers.</span>
+          <?php endif; ?>
+            <?php echo the_content(); ?>
 				</div>
+        
+        <?php if ( in_category( 'one-liners' ) ) { ?>
+          <hr>
+        <?php } ?>
+
 				<footer class="post-single__footer">
 					<div class="post-single__date">
 						<?php
@@ -50,12 +53,22 @@ get_header();
 							}
 						?>
 					</div>
+          
+          <?php if ( in_category( 'one-liners' ) ) {
+            the_post_navigation( array(
+              'prev_text'  => __( '👈 Previous' ),
+              'next_text'  => __( 'Next 👉' ),
+              'in_same_term' => true, 
+              'taxonomy' => __( 'category' ),
+            ) );
+					} ?>
 				</footer>
 			</article>
 
-			<?php 
-				endwhile;
-			endif; ?>
+		<?php 
+			endwhile;
+			endif; 
+    ?>
 
 		<?php if ( comments_open() || get_comments_number() ) { ?>
 			<?php comments_template(); ?>

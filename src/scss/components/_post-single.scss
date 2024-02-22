@@ -1,4 +1,18 @@
-.post-single__footer {
-  font-size: 0.875em;
-	margin-block: var(--spacer-large);
+.post-single {
+  &__body + hr {
+    color: var(--gray-lighter);
+    margin-inline-start: 0;
+    width: 25%;
+  }
+  &__footer {
+    display: grid;
+    font-size: var(--font-size-small);
+    gap: var(--spacer);
+    margin-block: var(--spacer-large);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--spacer);
+  }
 }

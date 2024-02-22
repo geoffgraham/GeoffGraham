@@ -1,6 +1,8 @@
 .button,
 .button--secondary,
 .wp-block-button__link,
+.nav-next a,
+.nav-previous a,
 input[type='submit'] {
   background: color-mix(in srgb, var(--primary-color) 25%, white);
 	border: 1px solid color-mix(in srgb, var(--primary-color) 50%, white);
