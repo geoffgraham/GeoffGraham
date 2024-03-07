@@ -20,8 +20,7 @@
   <meta name="view-transition" content="same-origin" />
 	<meta name="google-site-verification" content="efKVLT92Kr6XcuOj2WBHTOI3S1F9bdJws5bsEF8qbXI" />
 
-	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.ico"><!-- 32×32 -->
-	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="<?php echo get_template_directory_uri()?>/favicon.jpg"><!-- 32×32 -->
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri()?>/apple-touch-icon.png"><!-- 180×180 -->
 	<link rel="manifest" href="<?php echo get_template_directory_uri()?>/site.webmanifest">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
