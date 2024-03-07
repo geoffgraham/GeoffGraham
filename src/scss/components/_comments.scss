@@ -57,6 +57,11 @@
   display: flex;
   flex-flow: row wrap;
   gap: 5px;
+  max-inline-size: 50ch;
+
+  a {
+    display: block;
+  }
 }
 
 .required-field-message {
