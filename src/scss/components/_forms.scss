@@ -9,8 +9,9 @@
 
 input:is(
   [type="text"],
-  [type="email"]
-  [type="url"]),
+  [type="email"],
+  [type="url"]
+),
 textarea {
   border: 1px solid var(--gray-dark);
   display: block;
