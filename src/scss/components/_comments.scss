@@ -76,8 +76,9 @@
 }
 
 .form-submit small {
+  display: block;
   font-size: var(--font-size-small);
-  margin-inline-start: var(--spacer-small);
+  margin-block-end: var(--spacer-small);
 }
 
 .reaction-list h2 {
