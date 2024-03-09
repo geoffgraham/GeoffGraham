@@ -1,6 +1,7 @@
 figure {
 	border: 1px solid var(--primary-color);
   border-radius: 4px;
+  max-width: max-content;
   padding: var(--spacer-small);
 }
 
