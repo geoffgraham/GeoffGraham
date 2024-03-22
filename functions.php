@@ -300,3 +300,6 @@ function remove_admin_bar_links() {
 }
 
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+// Quick fix 'Incompatible Archive Error'
+add_filter('unzip_file_use_ziparchive', '__return_false');
