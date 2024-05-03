@@ -4,8 +4,14 @@
 
 .posts .post__date {
   color: var(--primary-color);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-tiny);
   text-transform: uppercase;
+}
+
+.posts .post__title {
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  margin-block: var(--spacer-tiny) 0;
 }
 
 .posts__pagination {
