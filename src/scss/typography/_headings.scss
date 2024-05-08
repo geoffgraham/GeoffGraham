@@ -16,6 +16,8 @@
 }
 
 h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-huge);
   line-height: 1.25;
 }
 
@@ -28,11 +30,6 @@ h2, h3 {
   line-height: var(--line-height);
   margin-block: var(--spacer);
   text-wrap: balance;
-}
-
-.h1,
-h1 {
-  font-size: var(--font-size-huge);
 }
 
 .h2,
