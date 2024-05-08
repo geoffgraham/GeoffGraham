@@ -15,8 +15,12 @@
   font-style: italic;
 }
 
-.h1, .h2, .h3, 
-h1, h2, h3 {
+h1, .h1 {
+  line-height: 1.25;
+}
+
+.h2, .h3, 
+h2, h3 {
   font-display: swap;
   font-family: var(--font-display);
 	font-weight: 400;
