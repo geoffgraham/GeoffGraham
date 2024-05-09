@@ -4,9 +4,10 @@
 .nav-next a,
 .nav-previous a,
 input[type='submit'] {
-  background: color-mix(in srgb, var(--primary-color) 25%, white);
-	border: 1px solid color-mix(in srgb, var(--primary-color) 50%, white);
+  background: var(--primary-color);
+  border: 1px solid transparent;
   border-radius: 4px;
+  color: var(--white);
 	font-size: 80%;
 	overflow-wrap: break-word;
 	padding: 10px 25px;
@@ -16,8 +17,9 @@ input[type='submit'] {
 	
 	&:hover,
   &:focus {
-    background: var(--primary-color);
-    color: var(--white);
+    background: color-mix(in srgb, var(--primary-color) 25%, white);
+    border: 1px solid color-mix(in srgb, var(--primary-color) 50%, white);
+    color: var(--black);
 		cursor: pointer;
 	}
 }
