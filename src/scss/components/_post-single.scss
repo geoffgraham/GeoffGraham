@@ -1,4 +1,7 @@
 .post-single {
+  &__title {
+    margin-block-end: 0;
+  }
   &__body + hr {
     color: var(--gray-lighter);
     margin-inline-start: 0;
