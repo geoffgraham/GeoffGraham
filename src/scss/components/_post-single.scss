@@ -4,9 +4,6 @@
     margin-inline-start: 0;
     width: 25%;
   }
-  &__body:is(ul, ol) {
-    margin-block: var(--spacer);
-  }
   &__footer {
     display: grid;
     font-size: var(--font-size-small);
