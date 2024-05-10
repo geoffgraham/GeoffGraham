@@ -6,10 +6,14 @@ blockquote {
 .wp-block-quote {
   background-image: linear-gradient(to right, var(--yellow-mellow), transparent 80%);
 	border-inline-start: 3px solid var(--orange);
-	font-size: 125%;
-  padding: 1.5rem;
+	font-size: 110%;
+  padding: var(--spacer-small);
 
   p {
     margin: 0;
+  }
+
+  cite {
+    margin-block-start: var(--spacer-small);
   }
 }
