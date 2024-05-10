@@ -5,8 +5,10 @@
     // If "One Liners" category, let's show its title.
     elseif ( is_category( 'one-liners' ) ) :
       echo '<h1>One Liners</h1>';
-      elseif ( is_category( 'links' ) ) :
-        echo '<h1>Links</h1>';
+    elseif ( is_category( 'links' ) ) :
+      echo '<h1>Links</h1>';
+    elseif ( is_category( 'notes' ) ) :
+      echo '<h1>Notes</h1>';
 		else:
 			echo '<h1>Blog</h1>';
 		endif; ?>
