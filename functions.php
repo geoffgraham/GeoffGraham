@@ -163,6 +163,16 @@ add_action( 'wp_enqueue_scripts', function() {
 }, 100000 );
 
 /**
+ * Disable Dashicons on the front end for unauthenticated users
+ */
+add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
+function bs_dequeue_dashicons() {
+  if ( ! is_user_logged_in() ) {
+    wp_deregister_style( 'dashicons' );
+  }
+}
+
+/**
  * Custom Markup for Comments
  */
 function gg_comments($comment, $args, $depth) {
