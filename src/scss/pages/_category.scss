@@ -1,0 +1,23 @@
+.archive .post {
+  margin-block-end: var(--spacer);
+}
+
+.category-one-liners {
+  
+  .post {
+    border-block-end: 1px solid #eaeaea;
+    margin-block-end: 1rem;
+    padding-block-end: 1rem;
+    padding-inline: var(--spacer-small);
+  }
+  .post__footer {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin-block-start: var(--spacer-small);
+
+    img {
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/wp-content/themes/v04/dist/fonts/Poppins-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/wp-content/themes/v04/dist/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/wp-content/themes/v04/dist/fonts/Poppins-RegularItalic.woff2') format('woff2');
+  font-style: italic;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+kbd, tt, var {
+	font-size: 0.875em;
+}
+
+abbr, acronym {
+	cursor: help;
+}

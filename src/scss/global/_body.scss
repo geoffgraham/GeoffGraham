@@ -1,0 +1,30 @@
+@view-transition {
+  navigation: auto;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+:root { accent-color: var(--brand); }
+
+html {
+  background-color: var(--background);
+	border-block-end: 5px solid var(--primary-color);
+
+	@media #{$lake} {
+		border: 10px solid var(--primary-color);
+    border-block-start: 0;
+	}
+}
+
+body {
+	color: var(--text-color);
+  font: var(--font-size-medium) / 1.55 var(--font-body);
+  font-weight: 400;
+	margin: auto;
+
+	min-height: 100vh;
+	overflow-x: hidden;
+	position: relative;
+}

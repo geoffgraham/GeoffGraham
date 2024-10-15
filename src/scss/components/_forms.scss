@@ -1,0 +1,25 @@
+:is(
+  ::-webkit-calendar-picker-indicator,
+  ::-webkit-clear-button,
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button
+) {
+  accent-color: var(--primary-color);
+}
+
+input:is(
+  [type="text"],
+  [type="email"],
+  [type="url"]
+),
+textarea {
+  border: 1px solid var(--gray-dark);
+  display: block;
+  font-size: var(--font-size-small);
+  width: calc(min(100%, 50ch));
+  padding: calc(var(--spacer-small) / 2);
+}
+
+label {
+  display: block;
+}

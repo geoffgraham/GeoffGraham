@@ -1,0 +1,26 @@
+.posts .post__date {
+  color: var(--primary-color);
+  font-size: var(--font-size-tiny);
+  text-transform: uppercase;
+}
+
+.posts .post__title {
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  margin-block: var(--spacer-tiny) 0;
+}
+
+.posts__pagination {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  .next,
+  .prev {
+    @extend .button;
+  }
+
+  .dots {
+    display: none;
+  }
+}

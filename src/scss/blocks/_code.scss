@@ -1,0 +1,24 @@
+.wp-block-code {
+  background: var(--orange-light);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  color: var(--orange-dark);
+  font-size: var(--font-size-tiny);
+  line-height: 1.75;
+  padding: var(--spacer);
+  position: relative;
+  max-inline-size: fit-content;
+
+  &::before {
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    content: "Code";
+    height: 1lh;
+    inset: -.75rem 0 0 .75rem;
+    padding-inline: .75rem;
+    position: absolute;
+    text-transform: uppercase;
+    width: max-content;
+  }
+}

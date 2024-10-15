@@ -19,7 +19,6 @@
 			</div>
 		</footer>
 
-	</div><!-- .site-content -->
 </div><!-- .site-wrapper -->
 
 <?php get_template_part( 'template-parts/footer/footer', 'svg' ); ?>

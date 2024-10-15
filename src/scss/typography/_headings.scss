@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Canela';
+  src: url('/wp-content/themes/v04/dist/fonts/Canela-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Canela';
+  src: url('/wp-content/themes/v04/dist/fonts/Canela-Bold.woff2') format('woff2');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Canela';
+  src: url('/wp-content/themes/v04/dist/fonts/Canela-RegularItalic.woff2') format('woff2');
+  font-style: italic;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-huge);
+  line-height: 1.25;
+}
+
+.h2, .h3, 
+h2, h3 {
+  font-display: swap;
+  font-family: var(--font-display);
+	font-weight: 400;
+	font-style: normal;
+  line-height: var(--line-height);
+  margin-block: var(--spacer);
+  text-wrap: balance;
+}
+
+.h2,
+h2 {
+  font-size: var(--font-size-large);
+  font-weight: 800;
+}

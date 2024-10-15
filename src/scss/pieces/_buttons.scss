@@ -1,0 +1,25 @@
+.button,
+.button--secondary,
+.wp-block-button__link,
+.nav-next a,
+.nav-previous a,
+input[type='submit'] {
+  background: var(--primary-color);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--white);
+	font-size: 80%;
+	overflow-wrap: break-word;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	transition: all .25s ease-out;
+	
+	&:hover,
+  &:focus {
+    background: color-mix(in srgb, var(--primary-color) 25%, white);
+    border: 1px solid color-mix(in srgb, var(--primary-color) 50%, white);
+    color: var(--black);
+		cursor: pointer;
+	}
+}

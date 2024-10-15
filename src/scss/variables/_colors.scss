@@ -1,0 +1,31 @@
+:root {
+	/* Color Palette */
+  --orange-light: hsl(16.1 98.2% 95% / 1);
+	--orange: hsl(16.1 98.2% 55.5% / 1);
+  --orange-dark: hsl(16.1 98.2% 25% / 1);
+	--yellow: #ffe417;
+	--yellow-mellow: hsl(10 27.3% 95.7% / 1);
+	
+	--white: hsl(100 100% 100% / 1);
+	--black: hsl(238.2 53.1% 12.5% / 1);
+	
+	--gray-dark: hsl(238.2 53.1% 12.5% / .75);
+	--gray: hsla(238, 18%, 72%, 0.5);
+	--gray-light: hsl(238.2 53.1% 12.5% / .25);
+	--gray-lighter: hsl(238.2 53.1% 12.5% / .15);
+	--gray-lightest: hsl(238.2 53.1% 12.5% / .05);
+	
+
+	/* Theme Colors */
+	--primary-color: var(--orange);
+	--accent-color: var(--yellow);
+	--base-color: var(--black);
+
+	/* Functional Colors */
+	--text-color: var(--base-color);
+	--background: var(--white);
+	--site-title: var(--black);
+	--border-color: var(--primary-color);
+	--link-current: var(--white);
+	--link-hover: var(--primary-color);
+}

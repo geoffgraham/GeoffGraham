@@ -1,0 +1,12 @@
+.main-content {
+	grid-area: 3 / main-start / 4 / main-end;
+	margin: auto;
+	width: 100%;
+
+  p:not(.footnote),
+  ul,
+  ol {
+    margin-block: var(--spacer);
+    max-inline-size: 50ch;
+  }
+}

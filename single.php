@@ -9,11 +9,10 @@
 
 get_header();
 ?>
-	<main class="main-content">
+	<main id="content" class="main-content">
 
 		<?php if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); ?>
-
 			<article class="post-single">
 				<div class="post-single__date">
 					<?php if ( in_category( 'TIL' ) ) {
@@ -37,25 +36,23 @@ get_header();
 				</div>
 				
 				<?php the_title( '<h1 class="post-single__title">', '</h1>' ); ?>
-				
+			
 				<div class="post-single__body">
-				
-				<?php if ( in_category( 'RSS Club' ) ) : ?>
-					<span class="rss-note">👋 Hey! This post is exclusive for RSS subscribers.</span>
-				<?php endif; ?>
-					<?php echo the_content(); ?>
-				
+          <?php if ( in_category( 'RSS Club' ) ) : ?>
+            <span class="rss-note">👋 Hey! This post is exclusive for RSS subscribers.</span>
+          <?php endif; ?>
+            <?php echo the_content(); ?>
 				</div>
 			</article>
 
-			<?php 
-				endwhile;
-			endif; ?>
+		<?php 
+			endwhile;
+			endif; 
+    ?>
 
-		<?php if ( comments_open() || get_comments_number() ) {
-			comments_template();
-		}
-		?>
+		<?php if ( comments_open() || get_comments_number() ) { ?>
+			<?php comments_template(); ?>
+		<?php } ?>
 	</main>
 
 

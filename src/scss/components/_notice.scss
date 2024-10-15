@@ -1,0 +1,9 @@
+.notice {
+	background-color: var(--white);
+	border: 1px solid var(--primary-color);
+  border-radius: 4px;
+	font-size: var(--font-size-small);
+	padding: calc(var(--spacer-small) / 2);
+  // https://github.com/sass/node-sass/issues/2815#issuecomment-575926329
+	max-inline-size: 50ch;
+}

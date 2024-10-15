@@ -1,0 +1,21 @@
+.site-wrapper {
+	border-radius: var(--spacer-small);
+	margin: auto;
+	padding-block: var(--spacer);
+	padding-inline: 1rem;
+	width: #{"min(95%, 80ch)"};
+
+	@media #{$lake} {
+		padding-inline: 0;
+	}
+
+	@media #{$pond} {
+		display: grid;
+		gap: 1rem;
+		grid-template-areas:
+			".... main ...."
+			".... main ...."
+			".... foot ....";
+		grid-template-columns: 1fr #{"min(95%, 65ch)"} 1fr;
+	}
+}

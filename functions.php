@@ -125,11 +125,11 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 /**
- * Exclude "Today I Learned" and "RSS Club" categories from blog loop
+ * Exclude "One Liners" (109) "Today I Learned" (52), "RSS Club" (54), and Links (112) categories from blog loop
  */
 function exclude_category_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
-		$query->set( 'cat', '-52, -54' );
+		$query->set( 'cat', '-52, -54, -109, -112' );
 	}
 }
 add_action( 'pre_get_posts', 'exclude_category_posts' );
@@ -152,7 +152,29 @@ function change_default_jquery( &$scripts){
 }
 add_filter( 'wp_default_scripts', 'change_default_jquery' );
 
-// Custom markup for comments
+/**
+ * Dequeue WordPress Styles
+ */
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_classic_theme_styles' );
+
+add_action( 'wp_enqueue_scripts', function() {
+  wp_dequeue_style( 'global-styles' );
+  wp_deregister_style( 'global-styles' );
+}, 100000 );
+
+/**
+ * Disable Dashicons on the front end for unauthenticated users
+ */
+add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
+function bs_dequeue_dashicons() {
+  if ( ! is_user_logged_in() ) {
+    wp_deregister_style( 'dashicons' );
+  }
+}
+
+/**
+ * Custom Markup for Comments
+ */
 function gg_comments($comment, $args, $depth) {
 	if ( 'div' === $args['style'] ) {
 		$tag       = 'div';
@@ -201,16 +223,93 @@ function gg_comments($comment, $args, $depth) {
 
 // Markdown support notice after comment form submit button
 function filter_comment_form_submit_button( $submit_button, $args ) {
-	// make filter magic happen here...
-	$submit_before = '';
-	$submit_after = '<small>Markdown supported</small>';
+	// Make filter magic happen here...
+	$submit_before = '<small>Markdown supported</small>';
+	$submit_after = '';
 	return $submit_before . $submit_button . $submit_after;
 };
 add_filter( 'comment_form_submit_button', 'filter_comment_form_submit_button', 10, 2 );
 
-// Auto-approve webmentions
+/**
+ * Auto-approve Webmentions
+ */
 function unspam_webmentions($approved, $commentdata) {
 	return $commentdata['comment_type'] == 'webmention' ? 1 : $approved;
 }
 
 add_filter('pre_comment_approved', 'unspam_webmentions', '99', 2);
+
+/**
+ * Disable emojis
+ */
+function disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' ); 
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' ); 
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+	add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
+}
+
+add_action( 'init', 'disable_emojis' );
+
+/**
+* Filter function used to remove the tinymce emoji plugin.
+* 
+* @param array $plugins 
+* @return array Difference between the two arrays
+*/
+function disable_emojis_tinymce( $plugins ) {
+  if ( is_array( $plugins ) ) {
+    return array_diff( $plugins, array( 'wpemoji' ) );
+  } else {
+    return array();
+  }
+}
+
+/**
+* Remove emoji CDN hostname from DNS prefetching hints.
+* https://kinsta.com/knowledgebase/disable-emojis-wordpress/
+*
+* @param array $urls URLs to print for resource hints.
+* @param string $relation_type The relation type the URLs are printed for.
+* @return array Difference between the two arrays.
+*/
+function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
+  if ( 'dns-prefetch' == $relation_type ) {
+    // This filter is documented in wp-includes/formatting.php */
+    $emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
+
+    $urls = array_diff( $urls, array( $emoji_svg_url ) );
+  }
+  return $urls;
+}
+
+/**
+* Add favicon to login screen
+*/
+add_action( 'login_head', 'gg_login_favicon' );
+
+function gg_login_favicon() { ?>
+<link rel='shortcut icon' href='<?php get_template_directory_uri() . '/favicon.ico' ?>'>
+
+<?php }
+
+/**
+  * Remove Items From Admin Toolbar
+  * https://paulund.co.uk/how-to-remove-links-from-wordpress-admin-bar
+**/
+function remove_admin_bar_links() {
+  global $wp_admin_bar;
+  $wp_admin_bar->remove_menu('wp-logo'); // WordPress logo
+  $wp_admin_bar->remove_menu('customize'); // WordPress Customizer
+  $wp_admin_bar->remove_menu('rank-math'); // RankMath Plugin
+}
+
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+// Quick fix 'Incompatible Archive Error'
+add_filter('unzip_file_use_ziparchive', '__return_false');

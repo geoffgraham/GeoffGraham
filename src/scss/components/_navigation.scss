@@ -1,0 +1,26 @@
+.navigation__primary ul,
+.navigation__social ul {
+	display: flex;
+  flex-wrap: wrap;
+  font-size: var(--font-size-small);
+	gap: var(--spacer-small);
+	list-style: none;
+  margin: 0;
+	padding-inline-start: 0; /* Overrides browser default */
+}
+
+.navigation__primary li {
+  display: grid;
+	margin: 0;
+  place-items: center;
+
+  @media #{$pool} {
+		border-inline-start: 1px solid var(--gray-light);
+    padding-inline-start: 1rem;
+	}
+}
+
+.navigation__primary ul li a {
+  font-weight: 700;
+	text-decoration: none;
+}

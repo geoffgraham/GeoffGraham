@@ -1,0 +1,23 @@
+figure {
+	border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  max-width: max-content;
+  padding: var(--spacer-small);
+}
+
+figure img {
+	margin-block-end: var(--spacer-small);
+}
+
+/* more space to account for box shadows on figure */
+figure + * {
+	margin-block-start: calc(var(--spacer) + var(--spacer-small));
+}
+
+/* override default WP block styles */
+.wp-block-image figcaption {
+	color: var(--gray-dark);
+	font-size: var(--font-size-small);
+	margin: 0;
+	text-align: center;
+}

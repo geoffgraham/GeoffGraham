@@ -5,12 +5,12 @@
  * @package Geoff_Graham
  */
 
-	get_header(); ?>
+get_header(); ?>
 
 <main id="content" class="main-content">
-
-<?php if ( is_front_page() && ! is_404() ) {
-	echo the_content();
-} ?>
+	<?php if ( is_front_page() && ! is_404() ) {
+		echo the_content();
+	} ?>
+</main>
 
 <?php get_footer(); ?>
