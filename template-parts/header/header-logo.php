@@ -1,6 +1,6 @@
 <div class="site-header__logo">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Home">
-		<svg width="100px" viewBox="0 0 331 270" version="1.1" xmlns="http://www.w3.org/2000/svg"
+		<svg width="331px" height="270px" viewBox="0 0 331 270" version="1.1" xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink">
 			<title class="p-name">Geoff Graham</title>
 			<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
