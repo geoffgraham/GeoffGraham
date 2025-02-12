@@ -88,7 +88,7 @@ wp_localize_script( 'scripts', 'ajax_posts', array(
  * Enqueue scripts and styles.
  */
 function geoff_graham_scripts() {
-	wp_enqueue_style( 'geoff-graham-stylesheet', get_template_directory_uri() . '/dist/css/style.css', array(), filemtime( get_template_directory().'/dist/css/style.css' ), 'all' );
+  wp_enqueue_style('geoff-graham-stylesheet', get_template_directory_uri() . '/dist/css/style.css', array(), filemtime(get_template_directory() . '/dist/css/style.css'), false);
 
 	wp_register_script( 'scripts', get_template_directory_uri() . '/dist/js/scripts-min.js');
 
