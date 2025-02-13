@@ -1,3 +1,5 @@
+@use "../variables/media-queries";
+
 .site-wrapper {
 	border-radius: var(--spacer-small);
 	margin: auto;
@@ -5,11 +7,11 @@
 	padding-inline: 1rem;
 	width: #{"min(95%, 80ch)"};
 
-	@media #{$lake} {
+	@media #{media-queries.$lake} {
 		padding-inline: 0;
 	}
 
-	@media #{$pond} {
+	@media #{media-queries.$pond} {
 		display: grid;
 		gap: 1rem;
 		grid-template-areas:

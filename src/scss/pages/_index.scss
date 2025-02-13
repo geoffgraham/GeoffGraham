@@ -1,5 +1,4 @@
-@import "home";
-@import "blog";
-@import "category";
-@import "newsletter";
-@import "404";
+@use "home";
+@use "blog";
+@use "category";
+@use "newsletter";

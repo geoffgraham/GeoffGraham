@@ -10,13 +10,13 @@ License URI: LICENSE
 Text Domain: geoff-graham
 */
 
-@import "vendor/reset";
-@import "variables/index";
-@import "mixins/index";
-@import "typography/index";
-@import "accessibility/index";
-@import "pieces/index";
-@import "global/index";
-@import "components/index";
-@import "blocks/index";
-@import "pages/index";
+@use "vendor/reset";
+@use "variables/index";
+@use "mixins/index" as index2;
+@use "typography/index" as index3;
+@use "accessibility/index" as index4;
+@use "pieces/index" as index5;
+@use "global/index" as index6;
+@use "components/index" as index7;
+@use "blocks/index" as index8;
+@use "pages/index" as index9;

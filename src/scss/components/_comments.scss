@@ -28,11 +28,6 @@
   font-size: var(--font-size-small);
 }
 
-.comment-reply-link,
-.feature-comments {
-  @extend .button;
-}
-
 .comment .children {
   padding-inline-start: 0;
   list-style: none;
@@ -53,7 +48,6 @@
 }
 
 .comment-form .logged-in-as {
-  @extend .notice;
   display: flex;
   flex-flow: row wrap;
   gap: 5px;

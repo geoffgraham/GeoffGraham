@@ -15,11 +15,6 @@
   flex-direction: row-reverse;
   justify-content: space-between;
 
-  .next,
-  .prev {
-    @extend .button;
-  }
-
   .dots {
     display: none;
   }
