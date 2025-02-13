@@ -1,3 +1,5 @@
+@use "../variables/media-queries";
+
 .site-header {
   background: var(--background);
   border-block-start: 10px solid var(--primary-color);
@@ -21,7 +23,7 @@
 	transition: all var(--anim-transition) ease-in;
 	width: 75px;
 
-	@media #{$lake} {
+	@media #{media-queries.$lake} {
 		width: auto;
 	}
 }

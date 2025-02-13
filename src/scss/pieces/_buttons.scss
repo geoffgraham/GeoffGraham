@@ -3,7 +3,11 @@
 .wp-block-button__link,
 .nav-next a,
 .nav-previous a,
-input[type='submit'] {
+input[type='submit'],
+.prev,
+.next,
+.comment-reply-link,
+.feature-comments {
   background: var(--primary-color);
   border: 1px solid transparent;
   border-radius: 4px;

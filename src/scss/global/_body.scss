@@ -1,3 +1,5 @@
+@use "../variables/media-queries";
+
 @view-transition {
   navigation: auto;
 }
@@ -12,7 +14,7 @@ html {
   background-color: var(--background);
 	border-block-end: 5px solid var(--primary-color);
 
-	@media #{$lake} {
+	@media #{media-queries.$lake} {
 		border: 10px solid var(--primary-color);
     border-block-start: 0;
 	}

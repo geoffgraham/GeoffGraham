@@ -1,3 +1,5 @@
+@use "../variables/media-queries";
+
 .navigation__primary ul,
 .navigation__social ul {
 	display: flex;
@@ -14,7 +16,7 @@
 	margin: 0;
   place-items: center;
 
-  @media #{$pool} {
+  @media #{media-queries.$pool} {
 		border-inline-start: 1px solid var(--gray-light);
     padding-inline-start: 1rem;
 	}
