@@ -16,12 +16,25 @@ get_header();
 			<article class="post-single">
 				<div class="post-single__date">
 					<?php if ( in_category( 'TIL' ) ) {
-						echo 'On ';
-						echo the_date( 'F j, Y' );
-						echo ', I learned...';
+						echo "On ";
 					} ?>
+					<?php 
+						echo the_date( 'F j, Y' );
+					
+					if ( in_category( 'TIL' ) ) {
+						echo ", I learned...";
+					}?>
+					
+					<?php
+						$j_date = get_the_date( 'j' );
+						$j_modified_date = get_the_modified_time( 'j' );
+				
+						if ( ($j_modified_date >= $j_date + 1) && !in_category( 'TIL' ) ) { 
+							echo '<span>Updated: ' . get_the_modified_time( 'n/d/Y' ) . '</span>';
+						}
+					?>
 				</div>
-
+				
 				<?php the_title( '<h1 class="post-single__title">', '</h1>' ); ?>
 			
 				<div class="post-single__body">
@@ -30,39 +43,6 @@ get_header();
           <?php endif; ?>
             <?php echo the_content(); ?>
 				</div>
-        
-        <?php if ( in_category( 'one-liners' ) ) { ?>
-          <hr>
-        <?php } ?>
-
-				<footer class="post-single__footer">
-					<div class="post-single__date">
-						<?php
-						if ( !in_category( 'TIL' ) ) {
-							echo '✏️ Handwritten by ';
-							the_author();
-							echo ' on ';
-							echo the_date( 'F j, Y' );
-						}
-					
-							$j_date = get_the_date( 'j' );
-							$j_modified_date = get_the_modified_time( 'j' );
-					
-							if ( ($j_modified_date >= $j_date + 1) ) { 
-								echo '(<span>Updated on ' . get_the_modified_time( 'n/d/Y' ) . '</span>)';
-							}
-						?>
-					</div>
-          
-          <?php if ( in_category( 'one-liners' ) ) {
-            the_post_navigation( array(
-              'prev_text'  => __( '👈 Previous' ),
-              'next_text'  => __( 'Next 👉' ),
-              'in_same_term' => true, 
-              'taxonomy' => __( 'category' ),
-            ) );
-					} ?>
-				</footer>
 			</article>
 
 		<?php 
