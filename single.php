@@ -35,7 +35,8 @@ get_header();
 					?>
 				</div>
 				
-				<?php the_title( '<h1 class="post-single__title">', '</h1>' ); ?>
+				<?php the_title( '<h1 class="post-single__title" style=
+    "view-transition-name: post-' . get_the_id() . '">', '</h1>' ); ?>
 			
 				<div class="post-single__body">
           <?php if ( in_category( 'RSS Club' ) ) : ?>
