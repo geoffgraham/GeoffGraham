@@ -8,11 +8,4 @@
     "view-transition-name: post-' . get_the_id() . '">', '</a></h2>' );
 	?>
 
-  <style>
-    @media not (prefers-reduced-motion: reduce) {
-      .post__title a { view-transition-name: <?php echo 'post-' . get_the_id(); ?>; }
-      .post-single__title { view-transition-name: <?php echo 'post-' . get_the_id(); ?>; }
-    }
-  </style>
-
 </article>
