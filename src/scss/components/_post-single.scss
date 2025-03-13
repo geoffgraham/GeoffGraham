@@ -1,6 +1,7 @@
 .post-single {
   &__title {
     margin-block-end: 0;
+    width: fit-content;
   }
   &__body + hr {
     color: var(--gray-lighter);
