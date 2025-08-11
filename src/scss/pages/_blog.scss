@@ -20,10 +20,6 @@
   h2 a {
     text-decoration: none;
 
-    &:hover, :focus {
-      color: var(--text-color);
-    }
-
     &::after {
       content: "";
       position: absolute;
@@ -36,6 +32,14 @@
 
 .blog .post:has(:hover, :focus) {
   background-color: var(--orange-light);
+
+  h2 a {
+    color: var(--black);
+  }
+}
+
+[data-theme="dark"] .blog .post:has(:hover, :focus) h2 a {
+  color: var(--bg-color);
 }
 
 .blog .post:nth-child(31n + 1) {
