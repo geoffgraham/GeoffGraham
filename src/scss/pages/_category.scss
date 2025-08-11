@@ -3,9 +3,8 @@
 }
 
 .category-one-liners {
-  
   .post {
-    border-block-end: 1px solid #eaeaea;
+    border-block-end: 1px solid light-dark(#eaeaea, var(--white));
     margin-block-end: 1rem;
     padding-block-end: 1rem;
     padding-inline: var(--spacer-small);

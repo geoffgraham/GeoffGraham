@@ -3,7 +3,6 @@
   margin-block-start: 0;
   position: relative;
   inset-block-start: .5rem;
-  z-index: -1;
 }
 
 .comments__list {
@@ -13,7 +12,7 @@
 }
 
 .comments .comment {
-  border: 1px solid var(--primary-color);
+  border: 1px solid light-dark(var(--primary-color), var(--white));
   border-radius: 8px;
   margin-block: var(--spacer);
   padding: var(--spacer);
@@ -44,7 +43,7 @@
 }
 
 .comment .children .comment {
-  background-color: var(--gray-lightest);
+  background-color: light-dark(var(--gray-lightest), var(--gray-dark));
 }
 
 .comment-form .logged-in-as {

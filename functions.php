@@ -90,7 +90,7 @@ wp_localize_script( 'scripts', 'ajax_posts', array(
 function geoff_graham_scripts() {
   wp_enqueue_style('geoff-graham-stylesheet', get_template_directory_uri() . '/dist/css/style.css', array(), filemtime(get_template_directory() . '/dist/css/style.css'), false);
 
-	wp_register_script( 'scripts', get_template_directory_uri() . '/dist/js/scripts-min.js');
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/dist/js/scripts-min.js', array(), filemtime(get_template_directory() . '/dist/js/scripts-min.js'), true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -1,7 +1,7 @@
 .notice,
 .comment-form .logged-in-as {
-	background-color: var(--white);
-	border: 1px solid var(--primary-color);
+	background-color: light-dark(var(--white), var(--black));
+	border: 1px solid light-dark(var(--primary-color), var(--white));
   border-radius: 4px;
 	font-size: var(--font-size-small);
 	padding: calc(var(--spacer-small) / 2);

@@ -35,6 +35,9 @@
 				<?php get_template_part( 'template-parts/header/header', 'logo' ); ?>
 				<div class="site-navigation">
 					<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
+					<button data-theme-toggle class="theme-toggle" aria-label="Toggle dark/light mode">
+						🌙/☀️
+					</button>
 				</div>
 			</div>
 		</header>

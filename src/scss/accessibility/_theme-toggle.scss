@@ -1,0 +1,33 @@
+:root {
+  color-scheme: light dark;
+  --bg-color: light-dark(var(--white), var(--black));
+  --text-color: light-dark(var(--black), var(--white));
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-inline-start: 0.5rem;
+  
+  &:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+  }
+}

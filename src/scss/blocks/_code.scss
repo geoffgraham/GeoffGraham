@@ -1,8 +1,8 @@
 .wp-block-code {
-  background: var(--orange-light);
-  border: 1px solid var(--primary-color);
+  background: light-dark(var(--orange-light), var(--black));
+  border: 1px solid light-dark(var(--primary-color), var(--white));
   border-radius: 4px;
-  color: var(--orange-dark);
+  color: light-dark(var(--orange-dark), var(--white));
   font-size: var(--font-size-tiny);
   line-height: 1.75;
   padding: var(--spacer);
@@ -10,8 +10,8 @@
   max-inline-size: fit-content;
 
   &::before {
-    background-color: var(--white);
-    border: 1px solid var(--primary-color);
+    background-color: light-dark(var(--white), var(--black));
+    border: 1px solid light-dark(var(--primary-color), var(--white));
     border-radius: 4px;
     content: "Code";
     height: 1lh;

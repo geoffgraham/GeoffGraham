@@ -8,7 +8,7 @@
 	gap: var(--spacer-small);
 	list-style: none;
   margin: 0;
-	padding-inline-start: 0; /* Overrides browser default */
+	padding-inline-start: 0;
 }
 
 .navigation__primary li {
@@ -20,6 +20,25 @@
 		border-inline-start: 1px solid var(--gray-light);
     padding-inline-start: 1rem;
 	}
+}
+
+.navigation__primary li:last-child {
+  @media #{media-queries.$pool} {
+    border-inline-end: 1px solid var(--gray-light);
+    padding-inline-end: 1rem;
+  }
+}
+
+[data-theme="dark"] .navigation__primary li {
+  @media #{media-queries.$pool} {
+    border-inline-start: none;
+  }
+}
+
+[data-theme="dark"] .navigation__primary li:last-child {
+  @media #{media-queries.$pool} {
+    border-inline-end: none;
+  }
 }
 
 .navigation__primary ul li a {
