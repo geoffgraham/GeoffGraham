@@ -66,6 +66,12 @@ body {
   border-radius: 4px;
   margin-inline-start: 0.5rem;
   
+  @media (max-width: 600px) {
+    margin-inline-start: 0.25rem;
+    padding: 0.25rem;
+    font-size: 0.8rem;
+  }
+  
   &:hover {
     background-color: var(--text-color);
     color: var(--bg-color);

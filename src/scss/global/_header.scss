@@ -16,7 +16,9 @@
 .site-header__inner {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin: auto;
+	height: 100%;
 }
 
 .site-header__logo svg {
