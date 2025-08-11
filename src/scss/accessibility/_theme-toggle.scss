@@ -4,23 +4,23 @@
   --text-color: light-dark(var(--black), var(--white));
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
+::view-transition-old(theme-toggle),
+::view-transition-new(theme-toggle) {
   animation-duration: 0.5s;
 }
 
-::view-transition-new(root) {
+::view-transition-new(theme-toggle) {
   clip-path: circle(0 at var(--x, 50%) var(--y, 50%));
   animation-name: reveal;
 }
 
-::view-transition-old(root) {
+::view-transition-old(theme-toggle) {
   animation: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
+  ::view-transition-old(theme-toggle),
+  ::view-transition-new(theme-toggle) {
     animation: none;
   }
 }
@@ -69,5 +69,26 @@ body {
   &:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
+  }
+}
+
+::view-transition-old(theme-toggle),
+::view-transition-new(theme-toggle) {
+  animation-duration: 0.5s;
+}
+
+::view-transition-new(theme-toggle) {
+  clip-path: circle(0 at var(--x, 50%) var(--y, 50%));
+  animation-name: reveal;
+}
+
+::view-transition-old(theme-toggle) {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(theme-toggle),
+  ::view-transition-new(theme-toggle) {
+    animation: none;
   }
 }

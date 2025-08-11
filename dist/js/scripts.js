@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.style.setProperty('--r', endRadius + 'px');
         
         document.startViewTransition(() => {
+          document.documentElement.style.viewTransitionName = 'theme-toggle';
           html.setAttribute('data-theme', newTheme);
+        }).finished.finally(() => {
+          document.documentElement.style.viewTransitionName = '';
         });
       } else {
         html.setAttribute('data-theme', newTheme);
