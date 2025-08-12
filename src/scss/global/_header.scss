@@ -1,10 +1,11 @@
+@use "../variables/media-queries";
+
 .site-header {
   background: var(--bg-color);
   border-block-start: 10px solid var(--primary-color);
   border-block-end: light-dark(1px solid var(--gray-lighter), none);
   box-shadow: light-dark(0 2px 10px var(--gray-light), none);
   box-sizing: content-box;
-  height: var(--spacer);
   inset-block-start: 0;
   padding-inline: var(--spacer-small);
   position: sticky;
@@ -17,7 +18,6 @@
 	align-items: center;
 	margin: auto;
 	height: 100%;
-	padding-block-start: var(--spacer);
 }
 
 .site-header__logo svg {
