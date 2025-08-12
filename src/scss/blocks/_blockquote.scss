@@ -17,8 +17,3 @@ blockquote {
     margin-block-start: var(--spacer-small);
   }
 }
-
-[data-theme="dark"] .wp-block-quote {
-  background-image: none;
-  padding-block: 0;
-}
