@@ -5,9 +5,11 @@
 .category-one-liners {
   .post {
     border-block-end: 1px solid light-dark(#eaeaea, var(--white));
+    display: grid;
     margin-block-end: var(--spacer);
     padding-block-end: var(--spacer);
     padding-inline: var(--spacer-small);
+    row-gap: .75lh;
   }
   .post__footer {
     align-items: center;
