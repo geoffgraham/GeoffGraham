@@ -5,8 +5,8 @@
 .category-one-liners {
   .post {
     border-block-end: 1px solid light-dark(#eaeaea, var(--white));
-    margin-block-end: 1rem;
-    padding-block-end: 1rem;
+    margin-block-end: var(--spacer);
+    padding-block-end: var(--spacer);
     padding-inline: var(--spacer-small);
   }
   .post__footer {
