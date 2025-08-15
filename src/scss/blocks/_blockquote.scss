@@ -1,13 +1,12 @@
 blockquote {
-  border-radius: 4px;
   margin-inline-start: 0;
 }
 
 .wp-block-quote {
-  background-image: linear-gradient(to right, var(--yellow-mellow), transparent 80%);
 	border-inline-start: 3px solid var(--orange);
 	font-size: 110%;
-  padding: var(--spacer-small);
+  padding-inline: var(--spacer-small);
+  margin-inline-start: var(--spacer);
 
   p {
     margin: 0;
@@ -16,4 +15,9 @@ blockquote {
   cite {
     margin-block-start: var(--spacer-small);
   }
+}
+
+[data-theme="dark"] .wp-block-quote {
+  background-image: none;
+  border-radius: 0;
 }
