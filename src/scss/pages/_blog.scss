@@ -1,15 +1,9 @@
 .blog .posts {
   display: flex;
   flex-direction: column;
+  gap: var(--spacer-small);
   margin-block-end: var(--spacer);
   width: 100%;
-
-  @media (min-width: 500px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: var(--spacer-small);
-    grid-auto-flow: dense;
-  }
 }
 
 .blog .post {
