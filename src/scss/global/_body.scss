@@ -13,11 +13,16 @@
 html {
   background-color: var(--background);
 	border-block-end: 5px solid var(--primary-color);
+  box-sizing: border-box;
 
 	@media #{media-queries.$lake} {
 		border: 10px solid var(--primary-color);
     border-block-start: 0;
 	}
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
