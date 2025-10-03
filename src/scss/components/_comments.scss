@@ -65,7 +65,7 @@
   align-items: start;
   display: flex;
   gap: var(--spacer-small);
-  font-size:   var(--font-size-small);
+  font-size: var(--font-size-small);
 }
 
 .form-submit small {
@@ -85,9 +85,4 @@
 /* IndieWeb likes */
 .reaction-list {
   padding-inline-start: 0;
-}
-
-/* Fixes IndieWeb stacking context */
-.avatar-only .comment-body {
-  z-index: -1;
 }
