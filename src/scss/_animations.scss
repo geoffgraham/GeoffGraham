@@ -1,0 +1,10 @@
+@keyframes slide-in {
+  from {
+    transform: translateX(var(--kf-slide-distance, var(--spacer)));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

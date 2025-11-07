@@ -7,6 +7,10 @@
 }
 
 .blog .post {
+  --kf-slide-distance: calc(var(--spacer) * -1);
+  animation: slide-in ease-in both;
+  animation-timeline: view();
+  animation-range: entry 0% contain 10%;
   border: 1px solid light-dark(var(--gray-lighter), var(--white));
   padding: var(--spacer-small);
   position: relative;
