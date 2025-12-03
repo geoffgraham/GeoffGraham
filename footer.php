@@ -23,6 +23,15 @@
 
 <?php get_template_part( 'template-parts/footer/footer', 'svg' ); ?>
 
+<script type="speculationrules">
+  {
+    "prerender": [{
+      "where": { "href_matches": "/*" },
+      "eagerness": "moderate"
+    }]
+  }
+</script>
+
 <?php wp_footer(); ?>
 
 </body>
