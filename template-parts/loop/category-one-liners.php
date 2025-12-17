@@ -15,7 +15,7 @@
     <span class="post__date">
       <?php the_time( get_option( 'date_format' ) ) ?> 
       at 
-      <?php the_time( 'g:i a' ); ?>
+      <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php the_time( 'g:i a' ); ?></a>
     </span>
   </footer>
 
