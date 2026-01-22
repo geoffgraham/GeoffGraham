@@ -1,24 +1,4 @@
 .post-single {
-  margin-block: var(--spacer-small) var(--spacer-large);
-
-  &__title {
-    margin-block-end: 0;
-    width: fit-content;
-  }
-  &__body {
-    text-wrap: pretty;
-  }
-  &__body + hr {
-    color: var(--gray-lighter);
-    margin-inline-start: 0;
-    width: 25%;
-  }
-  &__footer {
-    display: grid;
-    font-size: var(--font-size-small);
-    gap: var(--spacer);
-    margin-block: var(--spacer-large);
-  }
 
   .nav-links {
     display: flex;

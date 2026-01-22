@@ -7,23 +7,4 @@ input[type='submit'],
 .posts__pagination .prev,
 .posts__pagination .next,
 .comment-reply-link,
-.feature-comments {
-  background: var(--primary-color);
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: var(--white);
-	font-size: 80%;
-	overflow-wrap: break-word;
-	padding: 10px 25px;
-	text-align: center;
-	text-decoration: none;
-	transition: all .25s ease-out;
-	
-	&:hover,
-  &:focus {
-    background: color-mix(in srgb, var(--primary-color) 25%, white);
-    border: 1px solid color-mix(in srgb, var(--primary-color) 50%, white);
-    color: var(--black);
-		cursor: pointer;
-	}
-}
+.feature-comments { }

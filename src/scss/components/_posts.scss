@@ -4,12 +4,7 @@
   text-transform: uppercase;
 }
 
-.posts .post__title {
-  font-size: var(--font-size-medium);
-  font-weight: 400;
-  margin-block: var(--spacer-tiny) 0;
-  width: fit-content;
-}
+.posts .post__title { }
 
 .posts__pagination {
   display: flex;
