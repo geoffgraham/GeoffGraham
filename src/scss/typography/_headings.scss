@@ -8,7 +8,7 @@ h2 {
 
 :is(h1, h2, h3, h4, h5, h6) a,
 :is(.h1, .h2, .h3, .h4, .h5, .h6) a {
-  color: white;
+  color: light-dark(var(--black), var(--white));
   text-decoration-color: var(--primary-color);
   text-decoration-thickness: 5px;
 }
