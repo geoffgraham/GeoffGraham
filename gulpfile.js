@@ -4,7 +4,6 @@ const sass = require('gulp-sass')(require('sass'));
 const cleanCss = require('gulp-clean-css');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('autoprefixer');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const webpack = require('webpack-stream');
@@ -30,7 +29,7 @@ const styles = () => {
   return src(['src/scss/style.scss'], { allowEmpty: true })
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([autoprefixer]))
+    .pipe(postcss([]))
     .pipe(cleanCss({ compatibility: 'ie11' }))
     .pipe(sourcemaps.write())
     .pipe(dest('dist/css'))

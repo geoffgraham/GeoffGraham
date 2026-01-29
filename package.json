@@ -13,7 +13,6 @@
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.17.0",
-    "autoprefixer": "^10.4.20",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.27.7",
     "chokidar": "^4.0.3",
@@ -46,7 +45,7 @@
   },
   "dependencies": {
     "core-util-is": "^1.0.2",
-    "node-fetch": "^2.6.1",
-    "fsevents": "^2.3.3"
+    "fsevents": "^2.3.3",
+    "node-fetch": "^2.6.1"
   }
 }
