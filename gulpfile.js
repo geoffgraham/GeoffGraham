@@ -1,6 +1,6 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 const yargs = require('yargs');
-const gulpSass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass'));
 const cleanCss = require('gulp-clean-css');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
@@ -29,7 +29,7 @@ const reload = done => {
 const styles = () => {
   return src(['src/scss/style.scss'], { allowEmpty: true })
     .pipe(sourcemaps.init())
-    .pipe(gulpSass().on('error', gulpSass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer]))
     .pipe(cleanCss({ compatibility: 'ie11' }))
     .pipe(sourcemaps.write())
