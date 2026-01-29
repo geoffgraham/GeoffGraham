@@ -13,7 +13,7 @@
     }
   }
 
-  .post-body p:first-of-type::first-letter {
+  body:not(.page) & .post-body p:first-of-type::first-letter {
     -webkit-initial-letter: 2;
     initial-letter: 2;
     margin: 0 .5ch 0 0;

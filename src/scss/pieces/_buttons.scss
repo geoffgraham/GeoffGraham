@@ -7,4 +7,17 @@ input[type='submit'],
 .posts__pagination .prev,
 .posts__pagination .next,
 .comment-reply-link,
-.feature-comments { }
+.feature-comments {
+  background: var(--primary-color);
+  border-radius: 8px;
+  color: var(--white);
+  corner-shape: scoop;
+  padding-inline: var(--spacer-small);
+  text-shadow: 0 1px var(--black);
+  transition: .15s;
+
+  &:hover,
+  &:focus {
+    background-color: var(--orange-dark);
+  }
+}

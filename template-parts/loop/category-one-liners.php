@@ -15,7 +15,9 @@
     <time class="post-date">
       <?php the_time( get_option( 'date_format' ) ) ?> 
       at 
-      <?php the_time( 'g:i a' ); ?>
+      <a href="<?php the_permalink() ?>">
+        <?php the_time( 'g:i a' ); ?>
+      </a>
     </time>
   </footer>
 

@@ -15,11 +15,16 @@ input:is(
 textarea {
   border: 1px solid light-dark(var(--gray-dark), var(--white));
   display: block;
-  font-size: var(--font-size-small);
   width: calc(min(100%, 50ch));
-  padding: calc(var(--spacer-small) / 2);
+  padding: calc(var(--spacer-medium) / 2);
 }
 
 label {
   display: block;
+}
+
+.gform_legacy_markup_wrapper div.validation_error,
+.gform_legacy_markup_wrapper div li.gfield.gfield_error {
+  background: var(--white) !important;
+  padding: var(--spacer-medium);
 }
