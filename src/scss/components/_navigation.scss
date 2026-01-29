@@ -1,4 +1,18 @@
-.navigation__primary ul,
+.navigation__primary {
+  overflow-x: auto;
+}
+
+.navigation__primary ul {
+	display: flex;
+  flex-wrap: nowrap;
+  font-size: var(--font-size-small);
+	gap: var(--spacer-small);
+	list-style: none;
+  margin: 0;
+	padding-inline-start: 0;
+  overflow-x: auto;
+}
+
 .navigation__social ul {
 	display: flex;
   flex-wrap: wrap;
@@ -10,6 +24,23 @@
 }
 
 .navigation__primary li {
-  display: grid;
 	margin: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width: 599px) {
+  .navigation__primary {
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 2rem;
+      background: linear-gradient(to left, light-dark(var(--white), var(--black)), transparent);
+      pointer-events: none;
+    }
+  }
 }
