@@ -29,7 +29,7 @@
   }
 }
 
-.post {
+.posts .post {
   --kf-slide-distance: calc(var(--spacer) * -1);
   animation: slide-in ease-in both;
   animation-timeline: view();
