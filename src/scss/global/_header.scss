@@ -15,9 +15,12 @@
 }
 
 .site-logo {
-  svg {
+  img {
+    border-radius: 50%;
+    inset-block-start: var(--spacer-tiny);
+    position: relative;
     transition: var(--transition) ease-in;
-    width: 50px;
+    width: 75px;
 
     &:hover {
       transform: scale(1.2);
