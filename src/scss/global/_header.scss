@@ -1,15 +1,32 @@
 @use "../variables/media-queries";
 
 .site-header {
-  inset-block-start: 0;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1rem;
   position: sticky;
+  top: 0;
   z-index: 1;
+  background-image: linear-gradient(hsl(0 0% 0% / .15), transparent);
+
+  @media (width > 600px) {
+    padding-inline: 2rem;
+  }
 }
 
-.site-header__logo svg {
-	width: 75px;
+.site-logo {
+  svg {
+    transition: var(--transition) ease-in;
+    width: 50px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
 
-.site-header__logo svg:hover {
-  transform: scale(1.2);
+.site-navigation {
+  display: flex;
 }

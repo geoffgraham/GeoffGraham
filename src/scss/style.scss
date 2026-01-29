@@ -10,8 +10,8 @@ License URI: LICENSE
 Text Domain: geoff-graham
 */
 
-@use "global/reset";
-@use "variables/index" as index2;
+@use "variables/index";
+@use "global/reset" as index2;
 @use "typography/index" as index3;
 @use "accessibility/index" as index4;
 @use "pieces/index" as index5;

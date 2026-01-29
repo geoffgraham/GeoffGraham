@@ -1,18 +1,22 @@
 .wp-block-code {
-  background: light-dark(var(--orange-light), var(--black));
+  background: var(--black);
   border: 1px solid light-dark(var(--primary-color), var(--white));
   border-radius: 4px;
-  color: light-dark(var(--orange-dark), var(--white));
-  font-size: var(--font-size-tiny);
+  color: var(--white);
+  font-family: 'Monaspace Krypton', monospace;
   line-height: 1.75;
-  padding: var(--spacer);
-  position: relative;
+  margin-block: var(--spacer-large);
   max-inline-size: fit-content;
+  overflow-wrap: break-word;
+  padding: var(--spacer-medium);
+  position: relative;
+  white-space: pre-wrap;
 
   &::before {
-    background-color: light-dark(var(--white), var(--black));
+    background-color: var(--black);
     border: 1px solid light-dark(var(--primary-color), var(--white));
     border-radius: 4px;
+    color: var(--white);
     content: "Code";
     height: 1lh;
     inset: -.75rem 0 0 .75rem;

@@ -1,12 +1,18 @@
-.posts .post__date {
-  color: var(--primary-color);
-  font-size: var(--font-size-tiny);
-  text-transform: uppercase;
+.posts .one-liner {
+  margin-block-end: var(--spacer-large);
+
+  .post-footer {
+    display: flex;
+    gap: var(--spacer);
+    margin-block-start: var(--spacer-tiny);
+
+    img {
+      border-radius: 50%;
+    }
+  }
 }
 
-.posts .post__title { }
-
-.posts__pagination {
+.posts-pagination {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -14,4 +20,14 @@
   .dots {
     display: none;
   }
+}
+
+.post-header .post-title {
+  text-grow: per-line scale;
+}
+
+.post-date {
+  color: var(--primary-color);
+  font-size: var(--font-size-tiny);
+  text-transform: uppercase;
 }

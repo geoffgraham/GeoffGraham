@@ -11,15 +11,14 @@
 
 ?>
 
-		</main>
+  </main>
+</div> <!-- .site-wrapper  -->
 
-		<footer class="site-footer">
-			<div class="site-footer__nav" role="navigation" aria-label="Footer Links">
-				<?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
-			</div>
-		</footer>
-
-</div><!-- .site-wrapper -->
+<footer class="site-footer">
+  <div class="site-footer__nav" role="navigation" aria-label="Footer Links">
+    <?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
+  </div>
+</footer>
 
 <?php get_template_part( 'template-parts/footer/footer', 'svg' ); ?>
 

@@ -1,0 +1,14 @@
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6) a,
+:is(.h1, .h2, .h3, .h4, .h5, .h6) a {
+  color: white;
+  text-decoration-color: var(--primary-color);
+  text-decoration-thickness: 5px;
+}

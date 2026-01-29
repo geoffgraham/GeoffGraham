@@ -1,6 +1,6 @@
 html {
   color-scheme: light dark;
-  font: clamp(1rem, 1rem + 0.5vw, 2rem) / 1.4 system-ui;
+  font: clamp(1.2rem, 1rem + 0.5vw, 2rem) / 1.4 system-ui;
   tab-size: 2;
   hanging-punctuation: first allow-end last;
   word-break: break-word;
@@ -8,11 +8,6 @@ html {
 
 body {
   margin: 0;
-  padding: 2rem;
-
-  @media (width < 500px) {
-    padding: 1rem;
-  }
 }
 
 *,
@@ -26,31 +21,36 @@ h2 {
   font-weight: 900;
   letter-spacing: -0.02rem;
 }
+
 h1,
 h2,
 h3 {
-  line-height: 1.1;
+  line-height: 1.2;
 }
+
 :where(h1, h2, h3, h4, h5, h6),
 :where(.h1, .h2, .h3, .h4, .h5, .h6)
 /* FUTURE :heading */ {
   text-wrap: balance;
   margin-block-start: 0;
+  margin-block-end: .5lh;
 }
 
 p,
 li,
 dd {
   text-wrap: pretty;
-  max-inline-size: 88ch;
+  max-inline-size: 75ch;
 }
 
 a {
-  color: oklch(0.68 0.17 228);
-  text-underline-offset: 2px;
+  color: var(--primary-color);
+  text-underline-offset: 5px;
+  transition-duration: .15s;
 
   &:not(:is(:hover, :focus)) {
-    text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
+    text-decoration-color: color-mix(in srgb, var(--primary-color), transparent 50%);
+    text-underline-offset: 2px;
   }
 }
 
@@ -61,9 +61,11 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   inset-block-end: -0.25em;
 }
+
 sup {
   inset-block-start: -0.5em;
 }
@@ -73,7 +75,7 @@ ol,
 dl {
   margin: 0;
   padding: 0;
-  list-style-position: inside;
+
   ul,
   ol,
   dl {
@@ -94,6 +96,7 @@ figure {
   inline-size: fit-content;
   margin-inline: auto;
 }
+
 figcaption {
   contain: inline-size;
   font-size: 90%;
@@ -106,9 +109,11 @@ button {
   font: inherit;
   /* FUTURE: appearance: base; */
 }
+
 label {
   display: block;
 }
+
 input:not(
   :where(
     [type="submit"],
@@ -120,6 +125,7 @@ input:not(
 ) {
   inline-size: 100%;
 }
+
 button,
 input:where(
   [type="submit"],
@@ -130,6 +136,7 @@ input:where(
   color: Canvas;
   border: 1px solid transparent;
 }
+
 textarea {
   field-sizing: content;
   min-block-size: 5lh;
@@ -152,9 +159,11 @@ svg {
 [disabled] {
   cursor: not-allowed;
 }
+
 [hidden] {
   display: none !important;
 }
+
 [disabled],
 label:has(input[disabled]) {
   opacity: 0.5;
@@ -187,9 +196,11 @@ hr {
 table {
   caption-side: bottom;
   border-collapse: collapse;
+
   td {
     font-size: 90%;
   }
+
   td,
   th {
     word-break: normal;
@@ -197,6 +208,7 @@ table {
     padding: 0.5rem;
   }
 }
+
 [role="region"][aria-labelledby][tabindex] {
   overflow: auto;
 }
@@ -226,6 +238,7 @@ caption {
   
   html {
     interpolate-size: allow-keywords;
+
     &:focus-within {
       scroll-behavior: smooth;
     }

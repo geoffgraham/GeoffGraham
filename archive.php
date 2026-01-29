@@ -8,8 +8,7 @@
 get_header();
 ?>
 
-<main id="content" class="main-content">
-	<section id="content" class="posts-container">
+	<section id="posts" class="posts-wrapper">
 		<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
 	</section>
 </main>

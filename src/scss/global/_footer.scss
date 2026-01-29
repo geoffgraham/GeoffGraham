@@ -1,0 +1,7 @@
+.site-footer {
+  padding: 1rem;
+
+  @media (width > 600px) {
+    padding-inline: 2rem;
+  }
+}

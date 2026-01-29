@@ -1,8 +1,8 @@
 <?php if ( is_main_query() && have_posts() ) : ?>
-		<?php // If "TIL" category, let's show its title.
+		<?php // If "TIL" category
 		if ( is_category( 'TIL' ) ) :
 			echo '<h1>Today I Learned...</h1>';
-    // If "One Liners" category, let's show its title.
+    // If "One Liners" category
     elseif ( is_category( 'one-liners' ) ) :
       echo '<h1>One Liners</h1>';
     elseif ( is_category( 'links' ) ) :
@@ -25,7 +25,7 @@
 		?>
   </section>
 		
-  <footer class="posts__pagination">
+  <footer class="posts-pagination">
     <?php echo paginate_links( 
         array( 
           'before_page_number'=> '<span class="visually-hidden" aria-hidden="true">',

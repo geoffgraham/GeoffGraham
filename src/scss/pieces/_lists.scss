@@ -1,0 +1,8 @@
+ul, ol {
+  margin-block: var(--spacer-medium);
+  padding-inline-start: var(--spacer-large);
+}
+
+li {
+  margin-block-end: var(--spacer-tiny);
+}

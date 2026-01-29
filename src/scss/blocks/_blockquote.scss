@@ -1,23 +1,10 @@
-blockquote {
-  margin-inline-start: 0;
-}
-
 .wp-block-quote {
-	border-inline-start: 3px solid var(--orange);
+	border-inline-start: 10px solid var(--orange);
 	font-size: 110%;
   padding-inline: var(--spacer-small);
   margin-inline-start: var(--spacer);
 
-  p {
-    margin: 0;
-  }
-
   cite {
     margin-block-start: var(--spacer-small);
   }
-}
-
-[data-theme="dark"] .wp-block-quote {
-  background-image: none;
-  border-radius: 0;
 }
