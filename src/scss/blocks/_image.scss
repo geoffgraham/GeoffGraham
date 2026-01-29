@@ -1,23 +1,25 @@
 figure {
-	border: 1px solid light-dark(var(--primary-color), var(--white));
+  background: color-mix(in srgb, var(--primary-color), transparent 70%);
+	border: 1px solid var(--primary-color);
   border-radius: 4px;
-  max-width: max-content;
-  padding: var(--spacer-small);
+  margin-block: var(--spacer-large);
+  padding: var(--spacer-medium);
+  padding-block-end: 0;
+  
+  /* Scroll-driven animation */
+  animation: slide-in-fade linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 
 figure img {
 	margin-block-end: var(--spacer-small);
-}
-
-/* more space to account for box shadows on figure */
-figure + * {
-	margin-block-start: calc(var(--spacer) + var(--spacer-small));
+	max-width: 100%;
+	height: auto;
 }
 
 /* override default WP block styles */
 .wp-block-image figcaption {
-	color: var(--gray-dark);
-	font-size: var(--font-size-small);
-	margin: 0;
+	color: light-dark(var(--gray-dark), white);
 	text-align: center;
 }

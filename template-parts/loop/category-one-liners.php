@@ -1,22 +1,24 @@
-<article class="post">
+<article class="post one-liner">
 
 	<?php
-		the_title( '<div class="post__title">', '</div>' );
+		the_title( '<div class="post-title">', '</div>' );
     the_content();
 	?>
 
-  <footer class="post__footer">
+  <footer class="post-footer">
     <img src="
       <?php
         print get_avatar_url( get_current_user_id(),
         ['size' => '30'] ); 
       ?>"
     >
-    <span class="post__date">
+    <time class="post-date">
       <?php the_time( get_option( 'date_format' ) ) ?> 
       at 
-      <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php the_time( 'g:i a' ); ?></a>
-    </span>
+      <a href="<?php the_permalink() ?>">
+        <?php the_time( 'g:i a' ); ?>
+      </a>
+    </time>
   </footer>
 
 </article>

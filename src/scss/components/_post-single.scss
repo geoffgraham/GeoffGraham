@@ -1,27 +1,21 @@
 .post-single {
-  margin-block: var(--spacer-small) var(--spacer-large);
-
-  &__title {
-    margin-block-end: 0;
-    width: fit-content;
-  }
-  &__body {
-    text-wrap: pretty;
-  }
-  &__body + hr {
-    color: var(--gray-lighter);
-    margin-inline-start: 0;
-    width: 25%;
-  }
-  &__footer {
-    display: grid;
-    font-size: var(--font-size-small);
-    gap: var(--spacer);
-    margin-block: var(--spacer-large);
-  }
 
   .nav-links {
     display: flex;
     gap: var(--spacer);
+  }
+
+  .post-title {
+    @supports (animation-range: 0) {
+      animation: fade-out linear both;
+      animation-timeline: scroll();
+      animation-range: 0 400px;
+    }
+  }
+
+  body:not(.page) & .post-body p:first-of-type::first-letter {
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+    margin: 0 .5ch 0 0;
   }
 }

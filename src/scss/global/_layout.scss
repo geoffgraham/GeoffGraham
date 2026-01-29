@@ -1,0 +1,15 @@
+.site-wrapper {
+  padding: 1rem;
+  container-type: inline-size;
+
+  @media (width > 600px) {
+    display: grid;
+    grid-template-areas: ". main .";
+    grid-template-columns: 1fr 55ch 1fr;
+    padding: 2rem;
+  }
+}
+
+.main-content {
+  grid-area: main;
+}

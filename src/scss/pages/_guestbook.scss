@@ -1,0 +1,15 @@
+li.guestbook {
+  background: light-dark(var(--black), var(--white));
+  color: light-dark(var(--white), var(--black));
+  border-radius: 8px;
+  margin-block-end: var(--spacer-large);
+  padding: var(--spacer-medium);
+
+  p, time {
+    font-size: 16px;
+  }
+
+  time {
+    color: light-dark(var(--white), var(--black));
+  }
+}

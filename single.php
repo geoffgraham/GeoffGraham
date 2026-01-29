@@ -9,52 +9,46 @@
 
 get_header();
 ?>
-	<main id="content" class="main-content">
+  <?php if ( have_posts() ) :
+    while ( have_posts() ) : the_post(); ?>
 
-		<?php if ( have_posts() ) :
-			while ( have_posts() ) : the_post(); ?>
-			<article class="post-single">
-				<div class="post-single__date">
-					<?php if ( in_category( 'TIL' ) ) {
-						echo "On ";
-					} ?>
-					<?php 
-						echo the_date( 'F j, Y' );
-					
-					if ( in_category( 'TIL' ) ) {
-						echo ", I learned...";
-					}?>
-					
-					<?php
-						$j_date = get_the_date( 'j' );
-						$j_modified_date = get_the_modified_time( 'j' );
-				
-						if ( ($j_modified_date >= $j_date + 1) && !in_category( 'TIL' ) ) { 
-							echo '<span>Updated: ' . get_the_modified_time( 'n/d/Y' ) . '</span>';
-						}
-					?>
-				</div>
-				
-				<?php the_title( '<h1 class="post-single__title" style=
-    "view-transition-name: post-' . get_the_id() . '">', '</h1>' ); ?>
-			
-				<div class="post-single__body">
-          <?php if ( in_category( 'RSS Club' ) ) : ?>
-            <span class="rss-note">👋 Hey! This post is exclusive for RSS subscribers.</span>
-          <?php endif; ?>
-            <?php echo the_content(); ?>
-				</div>
-			</article>
+    <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-single' ); ?>>
+      <header class="post-header">
+      
+        <?php the_title( '<h1 class="post-title" style=
+  "view-transition-name: post-' . get_the_id() . '">', '</h1>' ); ?>
+        <?php if ( in_category( 'RSS Club' ) ) : ?>
+        <span class="rss-note">👋 Hey! This post is exclusive for RSS subscribers.</span>
+      <?php endif; ?>
 
-		<?php 
-			endwhile;
-			endif; 
-    ?>
+      <div class="post-date">
+          <?php if ( in_category( 'TIL' ) ) {
+            echo "What I learned on ";
+          } ?>
+          <?php echo the_date( 'F j, Y' ); ?>
+          
+          <?php
+            $j_date = get_the_date( 'j' );
+            $j_modified_date = get_the_modified_time( 'j' );
+      
+            if ( ($j_modified_date >= $j_date + 1) && !in_category( 'TIL' ) ) { 
+              echo '<span>Updated: ' . get_the_modified_time( 'n/d/Y' ) . '</span>';
+            }
+          ?>
+        </div>
+      </header>
+      <div class="post-body">
+        <?php echo the_content(); ?>
+      </div>
+    </article>
 
-		<?php if ( comments_open() || get_comments_number() ) { ?>
-			<?php comments_template(); ?>
-		<?php } ?>
-	</main>
+  <?php 
+    endwhile;
+    endif; 
+  ?>
 
+  <?php if ( comments_open() || get_comments_number() ) { ?>
+    <?php comments_template(); ?>
+  <?php } ?>
 
 <?php get_footer();

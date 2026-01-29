@@ -1,17 +1,25 @@
-.posts .post__date {
-  color: var(--primary-color);
-  font-size: var(--font-size-tiny);
-  text-transform: uppercase;
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-small);
+  margin-block-end: var(--spacer);
 }
 
-.posts .post__title {
-  font-size: var(--font-size-medium);
-  font-weight: 400;
-  margin-block: var(--spacer-tiny) 0;
-  width: fit-content;
+.posts .one-liner {
+  margin-block-end: var(--spacer-large);
+
+  .post-footer {
+    display: flex;
+    gap: var(--spacer);
+    margin-block-start: var(--spacer-tiny);
+
+    img {
+      border-radius: 50%;
+    }
+  }
 }
 
-.posts__pagination {
+.posts-pagination {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -19,4 +27,22 @@
   .dots {
     display: none;
   }
+}
+
+.post {
+  --kf-slide-distance: calc(var(--spacer) * -1);
+  animation: slide-in ease-in both;
+  animation-timeline: view();
+  animation-range: entry 0% contain 10%;
+  position: relative;
+}
+
+.post-header .post-title {
+  text-grow: per-line scale;
+}
+
+.post-date {
+  color: var(--primary-color);
+  font-size: var(--font-size-tiny);
+  text-transform: uppercase;
 }

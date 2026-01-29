@@ -1,5 +1,7 @@
 .site-footer {
-	grid-area: -1 / foot;
-	margin-block: var(--spacer);
-	width: 100%;
+  padding: 1rem;
+
+  @media (width > 600px) {
+    padding-inline: 2rem;
+  }
 }

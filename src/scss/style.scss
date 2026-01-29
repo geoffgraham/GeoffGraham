@@ -11,11 +11,12 @@ Text Domain: geoff-graham
 */
 
 @use "variables/index";
-@use "typography/index" as index2;
-@use "accessibility/index" as index3;
-@use "pieces/index" as index4;
-@use "global/index" as index5;
-@use "components/index" as index6;
-@use "blocks/index" as index7;
-@use "pages/index" as index8;
-@use "animations" as index9;
+@use "global/reset" as index2;
+@use "typography/index" as index3;
+@use "accessibility/index" as index4;
+@use "pieces/index" as index5;
+@use "global/index" as index6;
+@use "components/index" as index7;
+@use "blocks/index" as index8;
+@use "pages/index" as index9;
+@use "animations" as index10;
