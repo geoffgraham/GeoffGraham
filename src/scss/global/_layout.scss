@@ -1,29 +1,33 @@
 body {
   
-  &::before, &::after {
-    --grad: 
-			radial-gradient(at 25%, 
-					var(--primary-color), transparent 70%);
-		--mask: var(--grad), var(--grad), var(--grad);
+  /* Targeting Safari and Chrome only;
+     will break when Firefox adds support. */
+  @supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+    &::before, &::after {
+      --grad: 
+        radial-gradient(at 25%, 
+            var(--primary-color), transparent 70%);
+      --mask: var(--grad), var(--grad), var(--grad);
 
-    content: '';
-    height: 100dvh;
-		inset: 0;
-    mask: var(--mask);
-    mask-composite: intersect;
-		mix-blend-mode: color-dodge;
-    position: fixed;
-		z-index: -1;
-	}
-	
-	&::before {
-		background: #000;
-		filter: url(#f)
-	}
-	
-	&::after {
-		background: linear-gradient(90deg, purple, navy 20%, aqua);
-	}
+      content: '';
+      height: 100dvh;
+      inset: 0;
+      mask: var(--mask);
+      mask-composite: intersect;
+      mix-blend-mode: color-dodge;
+      position: fixed;
+      z-index: -1;
+    }
+    
+    &::before {
+      background: #000;
+      filter: url(#f)
+    }
+    
+    &::after {
+      background: linear-gradient(90deg, purple, navy 20%, aqua);
+    }
+  }
 }
 
 .site-wrapper {
