@@ -20,10 +20,10 @@
   </div>
 
   <svg>
-	<filter id='f'>
-		<feTurbulence type='fractalNoise' baseFrequency='7.5'/>
-	</filter>
-</svg>
+    <filter id='f'>
+      <feTurbulence type='fractalNoise' baseFrequency='7.5'/>
+    </filter>
+  </svg>
 </footer>
 
 <script type="speculationrules">
