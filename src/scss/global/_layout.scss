@@ -9,11 +9,11 @@ body {
     content: '';
     height: 100dvh;
 		inset: 0;
-    position: fixed;
-		z-index: -1;
     mask: var(--mask);
     mask-composite: intersect;
 		mix-blend-mode: color-dodge;
+    position: fixed;
+		z-index: -1;
 	}
 	
 	&::before {
