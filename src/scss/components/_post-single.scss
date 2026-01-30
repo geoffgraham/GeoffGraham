@@ -1,5 +1,28 @@
 .post-single {
 
+  .post-body {
+    background-color: light-dark(var(--white), var(--black));
+    border-radius: 16px;
+    corner-shape: squircle bevel;
+    margin-block: var(--spacer-medium);
+    padding: var(--spacer-medium);
+
+    @media (prefers-color-scheme: light) {
+      box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+    }
+
+    @media (width > 60px) {
+      border-radius: 50% / 1.1rem 0.5rem 0.9rem 0.7rem;
+      corner-shape: squircle bevel;
+    }
+  }
+
   .nav-links {
     display: flex;
     gap: var(--spacer);
@@ -9,7 +32,7 @@
     @supports (animation-range: 0) {
       animation: fade-out linear both;
       animation-timeline: scroll();
-      animation-range: 0 400px;
+      animation-range: 0 250px;
     }
   }
 

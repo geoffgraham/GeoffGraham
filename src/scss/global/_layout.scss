@@ -1,3 +1,31 @@
+body {
+  
+  &::before, &::after {
+    --grad: 
+			radial-gradient(at 25%, 
+					var(--primary-color), transparent 70%);
+		--mask: var(--grad), var(--grad), var(--grad);
+
+    content: '';
+    height: 100dvh;
+		inset: 0;
+    position: absolute;
+		z-index: -1;
+    mask: var(--mask);
+    mask-composite: intersect;
+		mix-blend-mode: color-dodge;
+	}
+	
+	&::before {
+		background: #000;
+		filter: url(#f)
+	}
+	
+	&::after {
+		background: linear-gradient(90deg, purple, navy 20%, aqua);
+	}
+}
+
 .site-wrapper {
   padding: 1rem;
   container-type: inline-size;

@@ -9,3 +9,5 @@
 ?>
 
 	<?php get_template_part( 'template-parts/loop/loop', 'posts' ); ?>
+
+<?php get_footer(); ?>

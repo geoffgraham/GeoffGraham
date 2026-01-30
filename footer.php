@@ -18,9 +18,13 @@
   <div class="site-footer__nav" role="navigation" aria-label="Footer Links">
     <?php get_template_part( 'template-parts/header/navigation', 'social' ); ?>
   </div>
-</footer>
 
-<?php get_template_part( 'template-parts/footer/footer', 'svg' ); ?>
+  <svg>
+	<filter id='f'>
+		<feTurbulence type='fractalNoise' baseFrequency='7.5'/>
+	</filter>
+</svg>
+</footer>
 
 <script type="speculationrules">
   {
