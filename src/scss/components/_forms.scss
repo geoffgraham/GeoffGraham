@@ -1,3 +1,11 @@
+:is(#specificity, .gform-theme--framework) {
+    --gf-local-color: light-dark(var(--primary-color-dark), var(--primary-color)) !important;
+    --gf-color-primary: light-dark(var(--primary-color-dark), var(--primary-color)) !important;
+    --gf-color-primary-darker: light-dark(var(--primary-color), var(--primary-color-dark)) !important;
+    --gf-color-primary-contrast: var(--black) !important;
+    --gf-color-danger: light-dark(var(--primary-color-dark), var(--primary-color)) !important;
+}
+
 :is(
   ::-webkit-calendar-picker-indicator,
   ::-webkit-clear-button,
@@ -21,10 +29,4 @@ textarea {
 
 label {
   display: block;
-}
-
-.gform_legacy_markup_wrapper div.validation_error,
-.gform_legacy_markup_wrapper div li.gfield.gfield_error {
-  background: var(--white) !important;
-  padding: var(--spacer-medium);
 }

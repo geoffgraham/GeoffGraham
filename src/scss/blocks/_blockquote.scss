@@ -1,8 +1,8 @@
 .wp-block-quote {
-	border-inline-start: 10px solid var(--orange);
+	border-inline-start: 10px solid light-dark(var(--primary-color-dark), var(--primary-color));
 	font-size: 110%;
   padding-inline: var(--spacer-small);
-  margin-inline-start: var(--spacer);
+  margin-inline-start: var(--spacer--small);
 
   cite {
     margin-block-start: var(--spacer-small);

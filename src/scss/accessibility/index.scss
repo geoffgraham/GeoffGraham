@@ -49,5 +49,8 @@
 
 /* Accent colors */
 :focus-visible { outline-color: var(--primary-color); }
-::selection { background-color: var(--primary-color); }
-::marker { color: var(--primary-color); }
+::selection {
+  background-color: var(--primary-color);
+  color: var(--black)
+}
+::marker { color: light-dark(var(--primary-color-dark), var(--primary-color)); }

@@ -2,6 +2,15 @@
   background-color: light-dark(var(--black), var(--white));
   padding: 1rem;
 
+  a {
+    color: light-dark(var(--primary-color), var(--primary-color-dark));
+
+    &:not(:is(:hover, :focus)) {
+      text-decoration-color: color-mix(in srgb, light-dark(var(--primary-color), var(--primary-color-dark)), transparent 50%);
+      text-underline-offset: 2px;
+    }
+  }
+
   @media (width > 600px) {
     padding-inline: 2rem;
   }

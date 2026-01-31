@@ -12,7 +12,7 @@
 }
 
 .comments .comment {
-  border: 1px solid light-dark(var(--primary-color), var(--white));
+  border: 1px solid light-dark(var(--primary-color-dark), var(--primary-color));
   border-radius: 8px;
   margin-block: var(--spacer);
   padding: var(--spacer);

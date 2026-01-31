@@ -1,5 +1,6 @@
 html {
   color-scheme: light dark;
+  color: light-dark(var(--black), hsl(255 0% 100% / .85));
   font: clamp(1.2rem, 1rem + 0.5vw, 2rem) / 1.4 system-ui;
   tab-size: 2;
   hanging-punctuation: first allow-end last;
@@ -30,7 +31,7 @@ h3 {
 
 :where(h1, h2, h3, h4, h5, h6),
 :where(.h1, .h2, .h3, .h4, .h5, .h6)
-/* FUTURE :heading */ {
+  /* FUTURE :heading */ {
   text-wrap: balance;
   margin-block-start: 0;
   margin-block-end: .5lh;
@@ -44,12 +45,12 @@ dd {
 }
 
 a {
-  color: var(--primary-color);
+  color: light-dark(var(--primary-color-dark), var(--primary-color));
   text-underline-offset: 5px;
   transition-duration: .15s;
 
   &:not(:is(:hover, :focus)) {
-    text-decoration-color: color-mix(in srgb, var(--primary-color), transparent 50%);
+    text-decoration-color: color-mix(in srgb, light-dark(var(--primary-color-dark), var(--primary-color)), transparent 50%);
     text-underline-offset: 2px;
   }
 }

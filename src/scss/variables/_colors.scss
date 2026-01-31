@@ -1,11 +1,18 @@
 :root {
 	/* Color Palette */
   --orange-light: hsl(16.1 98.2% 95% / 1);
-	--orange: oklch(67.68% 0.2109 37.69);
+	--orange: oklch(79.444% 0.17083 71.184);
   --orange-dark: hsl(16.1 98.2% 25% / 1);
+  --yellow: oklch(94.929% 0.16521 105.075);
+  --green: oklch(89.605% 0.16245 180.152);
+  --green-dark: oklch(39.605% 0.16245 180.152);
+  --blue: oklch(79.491% 0.14683 221.939);
+  --blue-dark: oklch(39.491% 0.14683 221.939);
+  --purple: oklch(62.173% 0.30583 315.337);
+  --purple-dark: oklch(32.173% 0.30583 315.337);
 	
-	--white: hsl(100 100% 100% / .8);
-	--black: hsl(0 0 0);
+	--white: hsl(100 100% 100% / .9);
+	--black: hsl(0, 0%, 0%);
 	
 	--gray-dark: hsl(0 0 0 / .75);
 	--gray: hsl(0 0 0 / 0.5);
@@ -15,9 +22,8 @@
 	
 
 	/* Theme Colors */
-	--primary-color: var(--orange);
-	--accent-color: var(--yellow);
-	--base-color: var(--black);
+	--primary-color: var(--yellow);
+  --primary-color-dark: color-mix(in srgb, var(--primary-color), var(--black) 50%);
 
 	/* Functional Colors */
 	--border-color: var(--primary-color);

@@ -8,16 +8,19 @@ input[type='submit'],
 .posts__pagination .next,
 .comment-reply-link,
 .feature-comments {
-  background: var(--primary-color);
-  border-radius: 8px;
-  color: var(--white);
-  corner-shape: scoop;
-  padding-inline: var(--spacer-small);
-  text-shadow: 0 1px var(--black);
+  background-color: light-dark(var(--primary-color-dark), var(--primary-color));
+  border: 1px solid var(--black);
+  border-radius: 12px;
+  color: light-dark(var(--white), var(--black));
+  corner-shape: squircle bevel;
+  padding: var(--spacer-tiny) var(--spacer-small);
+  text-decoration: none;
   transition: .15s;
 
   &:hover,
   &:focus {
-    background-color: var(--orange-dark);
+    background-color: light-dark(var(--black), var(--white));
+    color: light-dark(var(--white), var(--black));
+    corner-shape: squircle;
   }
 }

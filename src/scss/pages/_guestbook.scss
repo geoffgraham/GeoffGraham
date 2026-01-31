@@ -1,15 +1,35 @@
 li.guestbook {
-  background: light-dark(var(--black), var(--white));
-  color: light-dark(var(--white), var(--black));
-  border-radius: 8px;
-  margin-block-end: var(--spacer-large);
+  background-color: var(--white);
+  border-radius: 16px;
+  color: var(--black);
+  corner-shape: squircle bevel;
+  margin-block: var(--spacer-medium);
   padding: var(--spacer-medium);
 
+  @media (prefers-color-scheme: light) {
+    box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12)
+  }
+
   p, time {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   time {
-    color: light-dark(var(--white), var(--black));
+    color: var(--black);
+  }
+
+  .is-layout-flex {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .wp-block-group p {
+    margin-block-end: var(--spacer-tiny);
   }
 }
