@@ -26,6 +26,20 @@
 .navigation__primary li {
   flex-shrink: 0;
 	margin: 0;
+
+  a {
+    background-color: var(--primary-color);
+    box-shadow: inset 2px 2px 3px var(--orange);
+    corner-shape: bevel;
+    border-radius: 0 8px 0 8px;
+    color: black;
+    padding-inline: 1ch;
+
+    &:hover, &:focus {
+      background-color: var(--primary-color-dark);
+      box-shadow: inset 2px 2px 3px color-mix(in srgb, var(--black), transparent 75%);
+    }
+  }
 }
 
 @media (width < 500px) {

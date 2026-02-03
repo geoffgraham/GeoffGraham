@@ -1,3 +1,9 @@
+.wp-singular .post-body a {
+  background-color: color-mix(in srgb, var(--primary-color), transparent 75%);
+  border-radius: 3px;
+  padding-inline: .25ch;
+}
+
 .post-single {
 
   .post-body {
